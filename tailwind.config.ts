@@ -137,6 +137,23 @@ const config: Config = {
           900: "#331759",
         },
       },
+
+      maxWidth: {
+        content: "1440px",
+      },
+
+      width: {
+        content: "90%",
+        "4.5": "1.125rem",
+      },
+
+      height: {
+        "4.5": "1.125rem",
+      },
+
+      lineHeight: {
+        base: "160%",
+      },
     },
   },
   plugins: [],
