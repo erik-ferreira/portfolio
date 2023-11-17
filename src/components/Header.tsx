@@ -1,7 +1,6 @@
 import Image from "next/image"
 import { ComponentProps } from "react"
 
-import { Link } from "@/components/Link"
 import { Navbar } from "@/components/Navbar"
 
 import logo from "../assets/logo.svg"
@@ -15,10 +14,6 @@ export function Header({ ...rest }: HeaderProps) {
         <Image src={logo} alt="Erik Ferreira" width={150} height={40} />
 
         <Navbar />
-      </div>
-
-      <div className="mx-auto max-w-[400px]">
-        <Link href="/" label="Ver mais" hideIcon />
       </div>
     </header>
   )
