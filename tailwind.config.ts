@@ -15,6 +15,9 @@ const config: Config = {
       },
 
       colors: {
+        page: "#090B0E",
+        section: "#0F172A",
+
         dark: {
           50: "#e6e6e6",
           100: "#dadada",
