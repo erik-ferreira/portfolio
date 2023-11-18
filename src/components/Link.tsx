@@ -38,7 +38,11 @@ export function Link({
   ...rest
 }: LinkProps) {
   return (
-    <LinkPrimitive prefetch={false} className={link({ variant })} {...rest}>
+    <LinkPrimitive
+      prefetch={false}
+      className={link({ variant, className })}
+      {...rest}
+    >
       {label}
       {!hideIcon && <ArrowRight className="w-4.5 h-4.5" />}
     </LinkPrimitive>
