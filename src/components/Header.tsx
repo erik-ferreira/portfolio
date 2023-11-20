@@ -2,7 +2,7 @@ import Image from "next/image"
 import { ComponentProps } from "react"
 
 import { Navbar } from "@/components/Navbar"
-import { ButtonIcon } from "@/components/ButtonIcon"
+import { SwitchTheme } from "@/components/SwitchTheme"
 
 import logo from "../assets/logo.svg"
 
@@ -16,7 +16,7 @@ export function Header({ ...rest }: HeaderProps) {
 
         <div className="flex items-center gap-8">
           <Navbar />
-          <ButtonIcon />
+          <SwitchTheme />
         </div>
       </div>
     </header>
