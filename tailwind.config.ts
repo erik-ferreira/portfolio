@@ -14,6 +14,11 @@ const config: Config = {
         marker: ["var(--font-marker)"],
       },
 
+      fontSize: {
+        "4.5xl": "2.5rem",
+        "6.5xl": "4rem",
+      },
+
       colors: {
         page: "#090B0E",
         section: "#0F172A",
