@@ -25,9 +25,6 @@ const config: Config = {
         page: "#090B0E",
         section: "#0F172A",
 
-        "start-gradient": "rgb(16, 18, 21)",
-        "end-gradient": "rgba(255, 255, 255, 0)",
-
         dark: {
           50: "#e6e6e6",
           100: "#dadada",
@@ -163,6 +160,13 @@ const config: Config = {
 
       lineHeight: {
         base: "160%",
+      },
+
+      keyframes: {
+        scroll: {
+          "0%": { transform: "translateX(0%)" },
+          "100%": { transform: "translateX(-65%)" },
+        },
       },
 
       animation: {

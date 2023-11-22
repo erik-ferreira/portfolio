@@ -16,28 +16,33 @@ export function Skills({ className, ...rest }: SkillsProps) {
   return (
     <div
       className={twMerge(
-        "border max-w-content w-content mx-auto flex flex-col items-center justify-center gap-6 p-8 overflow-hidden relative",
-        // before styles
-        "before:content-normal before:w-[100px] before:h-full before:absolute before:top-0 before:left-0 before:z-[2] ",
-
-        "before:bg-gradient-to-r before:from-start-gradient before:from-0% before:to-end-gradient before:to-100%",
-        // after styles
-        "after:content-normal after:w-[100px] after:h-full after:absolute after:top-0 after:right-0 after:rotate-180 after:z-[2]",
-
-        "after:bg-gradient-to-r after:from-start-gradient after:from-0% after:to-end-gradient after:to-100%",
+        "max-w-content w-content mx-auto flex flex-col items-center justify-center gap-4 py-8",
         className
       )}
       {...rest}
     >
       <Title label="Habilidades" labelBackground="Skills" />
 
-      {/* Tech stack slider */}
-      <div className="flex gap-10 animate-slider">
-        {list.map((item) => (
-          <div key={item} className="border w-[100px] h-[100px]">
-            <TechIcon />
-          </div>
-        ))}
+      <div
+        className={twMerge(
+          "w-full flex overflow-hidden relative",
+
+          // before styles
+          "before:content-normal before:w-[100px] before:h-full before:absolute before:top-0 before:left-0 before:z-[2] ",
+
+          "before:bg-gradient-to-r before:from-page before:from-0% before:to-transparent before:to-100%",
+
+          // after styles
+          "after:content-normal after:w-[100px] after:h-full after:absolute after:top-0 after:right-0 after:rotate-180 after:z-[2]",
+
+          "after:bg-gradient-to-r after:from-page after:from-0% after:to-transparent after:to-100%"
+        )}
+      >
+        <div className="flex gap-10 animate-slider py-4 overflow-visible">
+          {list.map((item) => (
+            <TechIcon key={item} />
+          ))}
+        </div>
       </div>
     </div>
   )
