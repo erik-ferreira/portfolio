@@ -14,7 +14,7 @@ export function TechIcon({ className, ...rest }: TechIconProps) {
       {...rest}
     >
       <Image
-        src={reactSVG}
+        src="@/assets/techs/react.svg"
         alt="Ícone da tecnologia React"
         width={100}
         height={100}
