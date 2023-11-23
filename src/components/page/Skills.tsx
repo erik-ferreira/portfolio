@@ -3,12 +3,8 @@ import { ComponentProps } from "react"
 import { Title } from "@/components/Title"
 import { TechIcon } from "@/components/TechIcon"
 
+import { techs } from "@/defaults/techs"
 import { twMerge } from "@/utils/twMerge"
-
-const list = [
-  1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22,
-  23, 24, 25, 26, 27, 28,
-]
 
 interface SkillsProps extends ComponentProps<"div"> {}
 
@@ -39,8 +35,8 @@ export function Skills({ className, ...rest }: SkillsProps) {
         )}
       >
         <div className="flex gap-10 animate-slider py-4 overflow-visible">
-          {list.map((item) => (
-            <TechIcon key={item} />
+          {techs.map((tech) => (
+            <TechIcon key={tech.id} tech={tech} />
           ))}
         </div>
       </div>
