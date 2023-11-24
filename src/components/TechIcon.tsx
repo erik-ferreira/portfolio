@@ -4,7 +4,23 @@ import { ComponentProps } from "react"
 import { TechDTO } from "@/dtos/TechDTO"
 
 import { twMerge } from "@/utils/twMerge"
-import { labelColorVariants } from "@/defaults/label"
+
+export const labelColorVariants = {
+  react: "text-[#61DAFB]",
+  next: "text-[#F5F5F5]",
+  typescript: "text-[#007ACC]",
+  javascript: "text-[#F0DB4F]",
+  html: "text-[#E44D26]",
+  css: "text-[#1572B6]",
+  figma: "text-[#0ACF83]",
+  git: "text-[#F34F29]",
+  tailwind: "text-[#38B2AC]",
+  "styled-components": "text-[#9F70B8]",
+  sql: "text-[#00618A]",
+  redux: "text-[#764ABC]",
+  radix: "text-[#E2E8F0]",
+  api: "text-[#72B8CE]",
+} as const
 
 interface TechIconComponentProps extends ComponentProps<"div"> {
   tech: TechDTO

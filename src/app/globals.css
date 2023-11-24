@@ -11,15 +11,3 @@ body {
 .animate-slider:hover {
   animation-play-state: paused;
 }
-
-/*
-
-3882 - 100
-1440 - x
-
-3882 é o width total
-1440 é o que esta mostrando
-
-100% menos a porcentagem equivalente ao que mostrar é o que deve ser colocado no translateX
-
-*/

@@ -1,4 +1,4 @@
-import { labelColorVariants } from "@/defaults/label"
+import { labelColorVariants } from "@/components/TechIcon"
 
 export interface TechDTO {
   id: number
