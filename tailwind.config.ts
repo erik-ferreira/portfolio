@@ -172,8 +172,6 @@ const config: Config = {
       animation: {
         slider: "scroll 40s linear infinite",
       },
-
-      test: "before:absolute",
     },
   },
   plugins: [],
