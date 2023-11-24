@@ -1,15 +1,24 @@
 import Image from "next/image"
+import { ComponentProps } from "react"
 
 import { Link } from "@/components/Link"
+
+import { twMerge } from "@/utils/twMerge"
 
 import preview from "@/assets/preview.png"
 import websiteSVG from "@/assets/website.svg"
 
-interface ResumeProps {}
+interface ResumeProps extends ComponentProps<"div"> {}
 
-export function Resume({ ...rest }: ResumeProps) {
+export function Resume({ className, ...rest }: ResumeProps) {
   return (
-    <div className="max-w-content w-content mx-auto flex flex-col items-center gap-16 p-8">
+    <div
+      className={twMerge(
+        "max-w-content w-content mx-auto flex flex-col items-center gap-16 p-8",
+        className
+      )}
+      {...rest}
+    >
       <div className="w-full flex items-center justify-evenly">
         <Image
           src={websiteSVG}

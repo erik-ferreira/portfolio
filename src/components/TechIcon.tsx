@@ -20,7 +20,7 @@ export function TechIcon({ tech, className, ...rest }: TechIconComponentProps) {
     >
       <Image
         src={tech.src}
-        alt="Ícone da tecnologia React"
+        alt={`Ícone da tecnologia ${tech.label}`}
         width={100}
         height={100}
         className="transition duration-300 grayscale group-hover:grayscale-0 group-hover:transform group-hover:-translate-y-4"
