@@ -34,7 +34,7 @@ export function Skills({ className, ...rest }: SkillsProps) {
           "after:bg-gradient-to-r after:from-page after:from-0% after:to-transparent after:to-100%"
         )}
       >
-        <div className="flex gap-10 animate-slider py-4 overflow-visible">
+        <div className="flex gap-10 animate-slider pt-4 pb-12 overflow-visible">
           {techs.map((tech) => (
             <TechIcon key={tech.id} tech={tech} />
           ))}
