@@ -2,6 +2,8 @@ import { Link } from "@/components/Link"
 import { Title } from "@/components/Title"
 import { CertificateShort } from "@/components/CertificateShort"
 
+import { certificates } from "@/defaults/certificates"
+
 interface CertificationsProps {}
 
 export function Certifications({ ...rest }: CertificationsProps) {
@@ -9,11 +11,15 @@ export function Certifications({ ...rest }: CertificationsProps) {
     <div className="max-w-content w-content mx-auto flex flex-col items-center gap-6 p-8">
       <Title label="Certificados" labelBackground="Certificates" />
 
-      <div className="flex items-center justify-center gap-16">
-        <CertificateShort />
-        <CertificateShort />
-        <CertificateShort />
-        <CertificateShort />
+      <div className="flex items-center justify-center gap-12">
+        {certificates.map((certificate) => (
+          <CertificateShort
+            key={certificate.id}
+            href="/"
+            certificate={certificate}
+          />
+        ))}
+
         <Link
           href="/"
           label="Mais detalhes"

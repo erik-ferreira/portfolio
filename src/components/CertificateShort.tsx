@@ -1,23 +1,32 @@
 import Image from "next/image"
-import { ComponentProps } from "react"
+import Link, { LinkProps } from "next/link"
 
-import figmaPNG from "@/assets/figma.png"
+import { CertificateDTO } from "@/dtos/CertificateDTO"
 
-interface CertificateShortProps extends ComponentProps<"article"> {}
+interface CertificateShortProps extends LinkProps {
+  certificate: CertificateDTO
+}
 
-export function CertificateShort({ ...rest }: CertificateShortProps) {
+export function CertificateShort({
+  certificate,
+  ...rest
+}: CertificateShortProps) {
   return (
-    <article className="flex flex-col gap-1" {...rest}>
-      <h3 className="font-bold text-2xl">Figma for Devs</h3>
-      <p className="text-xl">Rocketseat</p>
+    <Link {...rest}>
+      <article className="flex flex-col gap-1 transition duration-300 hover:scale-105 hover:cursor-pointer">
+        <h3 className="font-bold text-2xl w-[300px] overflow-hidden text-ellipsis whitespace-nowrap">
+          {certificate.name}
+        </h3>
+        <p className="text-xl">{certificate.company}</p>
 
-      <Image
-        src={figmaPNG}
-        alt="Certificado de figma for devs"
-        width={300}
-        height={208}
-        className="rounded border border-sky-600"
-      />
-    </article>
+        <Image
+          src={certificate.src}
+          alt={`Certificado de ${certificate.name}`}
+          width={300}
+          height={208}
+          className="rounded border border-sky-600"
+        />
+      </article>
+    </Link>
   )
 }
