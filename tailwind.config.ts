@@ -172,6 +172,10 @@ const config: Config = {
       animation: {
         slider: "scroll 40s linear infinite",
       },
+
+      gap: {
+        42: "10.5rem",
+      },
     },
   },
   plugins: [],
