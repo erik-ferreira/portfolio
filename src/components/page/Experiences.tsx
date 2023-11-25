@@ -1,14 +1,22 @@
+import { ComponentProps } from "react"
+
 import { Title } from "@/components/Title"
 import { Experience } from "@/components/Experience"
 
 import { twMerge } from "@/utils/twMerge"
 import { experiences } from "@/defaults/experiences"
 
-interface ExperiencesProps {}
+interface ExperiencesProps extends ComponentProps<"div"> {}
 
-export function Experiences({ ...rest }: ExperiencesProps) {
+export function Experiences({ className, ...rest }: ExperiencesProps) {
   return (
-    <div className="max-w-content w-content mx-auto flex flex-col items-center gap-6 p-8">
+    <div
+      className={twMerge(
+        "max-w-content w-content mx-auto flex flex-col items-center gap-6 p-8",
+        className
+      )}
+      {...rest}
+    >
       <Title label="Experiência" labelBackground="Experience" />
 
       <div
