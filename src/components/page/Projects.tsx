@@ -1,6 +1,7 @@
 import { ComponentProps } from "react"
 
 import { Title } from "@/components/Title"
+import { Button } from "@/components/Button"
 import { Project } from "@/components/Project"
 
 import { twMerge } from "@/utils/twMerge"
@@ -26,6 +27,8 @@ export function Projects({ className, ...rest }: ProjectsProps) {
           <Project key={project.id} project={project} />
         ))}
       </div>
+
+      <Button variant="outline-gradient" size="large" />
     </div>
   )
 }

@@ -176,6 +176,14 @@ const config: Config = {
       gap: {
         42: "10.5rem",
       },
+
+      boxShadow: {
+        button: "0px 0px 24px 0px #2563EB",
+      },
+
+      transitionDuration: {
+        400: "400ms",
+      },
     },
   },
   plugins: [],
