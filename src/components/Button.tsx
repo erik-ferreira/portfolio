@@ -2,6 +2,8 @@ import { Send } from "lucide-react"
 import { ComponentProps, Fragment } from "react"
 import { tv, VariantProps } from "tailwind-variants"
 
+import { Icon, IconProps } from "@/components/Icon"
+
 const button = tv({
   slots: {
     gradient:
@@ -35,17 +37,23 @@ const button = tv({
   },
 
   defaultVariants: {
-    base: "default",
+    variant: "default",
     size: "default",
   },
 })
 
-type ButtonProps = VariantProps<typeof button> & ComponentProps<"button"> & {}
+type ButtonProps = VariantProps<typeof button> &
+  ComponentProps<"button"> & {
+    label?: string
+    iconProps?: IconProps
+  }
 
 export function Button({
   variant = "default",
   size,
+  label = "Enviar",
   className,
+  iconProps,
   ...rest
 }: ButtonProps) {
   const { base, icon, gradient } = button({ variant, size, className })
@@ -54,7 +62,7 @@ export function Button({
   return (
     <Gradient className={gradient()}>
       <button className={base()} {...rest}>
-        Enviar <Send className={icon()} />
+        {label} <Icon name="Send" className={icon()} {...iconProps} />
       </button>
     </Gradient>
   )

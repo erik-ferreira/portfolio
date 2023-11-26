@@ -1,18 +1,23 @@
-import { icons } from "lucide-react"
+import { icons, LucideProps } from "lucide-react"
 
 import { twMerge } from "@/utils/twMerge"
 
-interface IconProps {
-  name: keyof typeof icons
+export interface IconProps extends LucideProps {
+  name?: keyof typeof icons
   isSelected?: boolean
 }
 
-export function Icon({ name, isSelected = false, ...rest }: IconProps) {
+export function Icon({
+  name = "Send",
+  isSelected = false,
+  className,
+  ...rest
+}: IconProps) {
   const Component = icons[name]
 
   return (
     <Component
-      className={twMerge("w-6 h-6 transition-colors duration-200", {
+      className={twMerge("w-6 h-6 transition-colors duration-200", className, {
         "text-blue-600": isSelected,
       })}
       {...rest}
