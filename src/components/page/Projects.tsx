@@ -24,11 +24,15 @@ export function Projects({ className, ...rest }: ProjectsProps) {
 
       <div className="grid grid-cols-3 gap-8">
         {projects.map((project) => (
-          <Project key={project.id} project={project} />
+          <Project key={project.id} href="/" project={project} />
         ))}
       </div>
 
-      <Button variant="outline-gradient" size="large" />
+      <Button
+        label="Todos os Projetos"
+        variant="outline-gradient"
+        size="large"
+      />
     </div>
   )
 }

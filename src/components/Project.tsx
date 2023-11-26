@@ -1,8 +1,9 @@
+import Link, { LinkProps } from "next/link"
 import Image from "next/image"
 
 import { twMerge } from "@/utils/twMerge"
 
-interface ProjectProps {
+interface ProjectProps extends LinkProps {
   project: {
     id: number
     title: string
@@ -16,8 +17,11 @@ interface ProjectProps {
 
 export function Project({ project, ...rest }: ProjectProps) {
   return (
-    <div className="border-2 border-transparent rounded-lg overflow-auto relative transition-colors duration-300 hover:border-sky-600 hover:cursor-pointer group">
-      {/* Presentation */}
+    <Link
+      className="border-2 border-transparent rounded-lg overflow-auto relative transition-colors duration-300 hover:border-sky-600 hover:cursor-pointer group"
+      prefetch={false}
+      {...rest}
+    >
       <div
         className={twMerge(
           "w-full h-full p-6 flex flex-col justify-center absolute opacity-0 hover:opacity-100",
@@ -53,6 +57,6 @@ export function Project({ project, ...rest }: ProjectProps) {
         height={270}
         alt="Projeto"
       />
-    </div>
+    </Link>
   )
 }
