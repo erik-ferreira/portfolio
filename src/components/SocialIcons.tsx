@@ -1,23 +1,25 @@
+import Link from "next/link"
+
 import { Icon } from "@/components/Icon"
+import { IconSvgExternal } from "@/components/IconSvgExternal"
 
 interface SocialIconsProps {}
 
 export function SocialIcons({ ...rest }: SocialIconsProps) {
   return (
-    <ul className="mx-auto flex items-center gap-6">
-      <li>
+    <div className="mx-auto flex items-center gap-6">
+      <Link href="/" prefetch={false}>
         <Icon name="Github" />
-      </li>
-
-      <li>
+      </Link>
+      <Link href="/" prefetch={false}>
         <Icon name="Instagram" />
-      </li>
-      <li>
+      </Link>
+      <Link href="/" prefetch={false}>
         <Icon name="Linkedin" />
-      </li>
-      <li>
-        <Icon nameExternal="WhatsApp" className="border" />
-      </li>
-    </ul>
+      </Link>
+      <Link href="/" prefetch={false}>
+        <IconSvgExternal type="WhatsApp" />
+      </Link>
+    </div>
   )
 }

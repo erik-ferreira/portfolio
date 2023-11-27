@@ -11,3 +11,15 @@ body {
 .animate-slider:hover {
   animation-play-state: paused;
 }
+
+/* Component IconSvgExternal */
+
+.icon-svg-external path {
+  fill: #e2e8f0;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.icon-svg-external:hover path {
+  fill: #2563eb;
+}

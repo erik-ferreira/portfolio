@@ -17,9 +17,13 @@ export function Icon({
 
   return (
     <LucideIcon
-      className={twMerge("w-6 h-6 transition-colors duration-200", className, {
-        "text-blue-600": isSelected,
-      })}
+      className={twMerge(
+        "w-6 h-6 transition-colors hover:text-blue-600",
+        className,
+        {
+          "text-blue-600": isSelected,
+        }
+      )}
       {...rest}
     />
   )
