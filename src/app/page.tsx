@@ -9,11 +9,14 @@ import { Experiences } from "@/components/page/Experiences"
 import { Certifications } from "@/components/page/Certifications"
 
 import { SocialIcons } from "@/components/SocialIcons"
+import { ButtonGoToTop } from "@/components/ButtonGoToTop"
 
 export default function Home() {
   return (
     <main className="relative">
       <SocialIcons variant="fixed" />
+
+      <ButtonGoToTop />
 
       <Header />
 
