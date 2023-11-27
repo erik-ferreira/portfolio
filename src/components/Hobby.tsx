@@ -11,7 +11,7 @@ export function Hobby({ className, ...rest }: HobbyProps) {
   return (
     <article
       className={twMerge(
-        "w-[500px] space-y-8",
+        "max-w-[500px] space-y-8",
         "[&:nth-child(2n-2)]:relative [&:nth-child(2n-2)]:top-[25%]",
         className
       )}

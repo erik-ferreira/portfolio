@@ -5,11 +5,13 @@ import { twMerge } from "@/utils/twMerge"
 export interface IconProps extends LucideProps {
   name?: keyof typeof icons
   isSelected?: boolean
+  disabledHover?: boolean
 }
 
 export function Icon({
   name = "Send",
   isSelected = false,
+  disabledHover = false,
   className,
   ...rest
 }: IconProps) {
@@ -17,13 +19,10 @@ export function Icon({
 
   return (
     <LucideIcon
-      className={twMerge(
-        "w-6 h-6 transition-colors hover:text-blue-600",
-        className,
-        {
-          "text-blue-600": isSelected,
-        }
-      )}
+      className={twMerge("w-6 h-6 transition-colors", className, {
+        "text-blue-600": isSelected,
+        "hover:text-blue-600": !disabledHover,
+      })}
       {...rest}
     />
   )

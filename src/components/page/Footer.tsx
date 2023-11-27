@@ -12,7 +12,7 @@ export function Footer({ ...rest }: FooterProps) {
       </span>
 
       <span className="mx-auto flex gap-2">
-        Copyright <Icon name="Copyright" /> 2023
+        Copyright <Icon name="Copyright" disabledHover /> 2023
       </span>
 
       <SocialIcons />

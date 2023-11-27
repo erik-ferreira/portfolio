@@ -62,7 +62,8 @@ export function Button({
   return (
     <Gradient className={gradient()}>
       <button className={base()} {...rest}>
-        {label} <Icon name="Send" className={icon()} {...iconProps} />
+        {label}{" "}
+        <Icon name="Send" className={icon()} disabledHover {...iconProps} />
       </button>
     </Gradient>
   )

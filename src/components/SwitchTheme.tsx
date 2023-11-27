@@ -19,7 +19,7 @@ export function SwitchTheme({ className, ...rest }: SwitchThemeProps) {
 
   return (
     <div className="flex items-center gap-1">
-      <Icon name="MoonStar" isSelected={theme === "dark"} />
+      <Icon name="MoonStar" isSelected={theme === "dark"} disabledHover />
 
       <Switch.Root
         className={twMerge("w-16 h-7 bg-section rounded-full", className)}
@@ -35,7 +35,7 @@ export function SwitchTheme({ className, ...rest }: SwitchThemeProps) {
         />
       </Switch.Root>
 
-      <Icon name="Sun" isSelected={theme === "light"} />
+      <Icon name="Sun" isSelected={theme === "light"} disabledHover />
     </div>
   )
 }
