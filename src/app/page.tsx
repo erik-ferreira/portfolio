@@ -8,9 +8,13 @@ import { LetsTalk } from "@/components/page/LetsTalk"
 import { Experiences } from "@/components/page/Experiences"
 import { Certifications } from "@/components/page/Certifications"
 
+import { SocialIcons } from "@/components/SocialIcons"
+
 export default function Home() {
   return (
-    <main>
+    <main className="relative">
+      <SocialIcons variant="fixed" />
+
       <Header />
 
       <Resume />
