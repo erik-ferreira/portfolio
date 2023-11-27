@@ -1,6 +1,7 @@
 import { Header } from "@/components/page/Header"
 import { Resume } from "@/components/page/Resume"
 import { Skills } from "@/components/page/Skills"
+import { Footer } from "@/components/page/Footer"
 import { Hobbies } from "@/components/page/Hobbies"
 import { Projects } from "@/components/page/Projects"
 import { LetsTalk } from "@/components/page/LetsTalk"
@@ -25,6 +26,8 @@ export default function Home() {
       <Hobbies />
 
       <LetsTalk />
+
+      <Footer />
     </main>
   )
 }
