@@ -15,6 +15,7 @@ const link = tv({
     variant: {
       default: "text-slate-200",
       selected: "text-blue-500",
+      secondary: "text-violet-500 hover:text-violet-400 before:bg-violet-500",
     },
   },
 

@@ -1,5 +1,5 @@
-import Link, { LinkProps } from "next/link"
 import Image from "next/image"
+import Link, { LinkProps } from "next/link"
 
 import { twMerge } from "@/utils/twMerge"
 
