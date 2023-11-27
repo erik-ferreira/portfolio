@@ -9,7 +9,14 @@ interface HobbyProps extends ComponentProps<"article"> {}
 
 export function Hobby({ className, ...rest }: HobbyProps) {
   return (
-    <article className={twMerge("w-[500px] space-y-8", className)} {...rest}>
+    <article
+      className={twMerge(
+        "w-[500px] space-y-8",
+        "[&:nth-child(2n-2)]:relative [&:nth-child(2n-2)]:top-[25%]",
+        className
+      )}
+      {...rest}
+    >
       <Image
         src="/hobbies/basquete.png"
         width={500}

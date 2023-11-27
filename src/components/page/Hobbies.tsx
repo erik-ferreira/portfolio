@@ -18,8 +18,7 @@ export function Hobbies({ className, ...rest }: HobbiesProps) {
     >
       <Title label="Hobbies" labelBackground="Hobbies" />
 
-      <div className="grid grid-cols-2 gap-x-7 gap-y-8">
-        <Hobby />
+      <div className="grid place-items-center grid-cols-2 gap-x-7 gap-y-8">
         <Hobby />
         <Hobby />
         <Hobby />
