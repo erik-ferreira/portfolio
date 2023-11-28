@@ -18,24 +18,35 @@ export function SwitchTheme({ className, ...rest }: SwitchThemeProps) {
   }
 
   return (
-    <div className="flex items-center gap-1">
-      <Icon name="MoonStar" isSelected={theme === "dark"} disabledHover />
+    <Switch.Root
+      className={twMerge(
+        "w-16 h-7 bg-section rounded-full relative",
+        className
+      )}
+      checked={checked}
+      onCheckedChange={handleCheckedChange}
+      {...rest}
+    >
+      <Icon
+        name="MoonStar"
+        disabledHover
+        isSelected
+        className="w-5 h-5 absolute left-1 top-1/2 -translate-y-1/2"
+      />
 
-      <Switch.Root
-        className={twMerge("w-16 h-7 bg-section rounded-full", className)}
-        checked={checked}
-        onCheckedChange={handleCheckedChange}
-        {...rest}
-      >
-        <Switch.Thumb
-          className={twMerge(
-            "block w-6 h-6 rounded-full bg-slate-700",
-            "transition-transform translate-x-1 data-[state=checked]:translate-x-[36px] duration-100"
-          )}
-        />
-      </Switch.Root>
+      <Icon
+        name="Sun"
+        disabledHover
+        isSelected
+        className="w-5 h-5 absolute right-1 top-1/2 -translate-y-1/2"
+      />
 
-      <Icon name="Sun" isSelected={theme === "light"} disabledHover />
-    </div>
+      <Switch.Thumb
+        className={twMerge(
+          "block w-6 h-6 rounded-full bg-slate-700",
+          "transition-transform translate-x-1 data-[state=checked]:translate-x-[36px] duration-100"
+        )}
+      />
+    </Switch.Root>
   )
 }
