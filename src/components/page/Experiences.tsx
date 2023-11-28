@@ -27,7 +27,7 @@ export function Experiences({ className, ...rest }: ExperiencesProps) {
         )}
       >
         {experiences.map((experience) => (
-          <Experience key={experience.id} />
+          <Experience key={experience.id} experience={experience} />
         ))}
       </div>
     </div>

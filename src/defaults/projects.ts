@@ -1,26 +1,31 @@
-const projectsDefault = [
+import { ProjectDTO } from "@/dtos/ProjectDTO"
+
+type ProjectDefault = Omit<ProjectDTO, "id">
+
+const projectsDefault: ProjectDefault[] = [
   {
     title: "Estagiário",
     description:
       " Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-    techs: [
+    image: "/projects/spider.png",
+    skills: [
       {
         id: 1,
-        src: "/techs/javascript.svg",
+        src: "/skills/javascript.svg",
       },
       {
         id: 2,
-        src: "/techs/javascript.svg",
+        src: "/skills/javascript.svg",
       },
       {
         id: 3,
-        src: "/techs/javascript.svg",
+        src: "/skills/javascript.svg",
       },
     ],
   },
 ]
 
-export const projects = [
+export const projects: ProjectDTO[] = [
   ...projectsDefault,
   ...projectsDefault,
   ...projectsDefault,

@@ -1,9 +1,9 @@
 import { ComponentProps } from "react"
 
 import { Title } from "@/components/Title"
-import { TechIcon } from "@/components/TechIcon"
+import { SkillIcon } from "@/components/SkillIcon"
 
-import { techs } from "@/defaults/techs"
+import { skills } from "@/defaults/skills"
 import { twMerge } from "@/utils/twMerge"
 
 interface SkillsProps extends ComponentProps<"div"> {}
@@ -35,8 +35,8 @@ export function Skills({ className, ...rest }: SkillsProps) {
         )}
       >
         <div className="flex gap-10 animate-slider py-12 overflow-visible">
-          {techs.map((tech) => (
-            <TechIcon key={tech.id} tech={tech} />
+          {skills.map((skill) => (
+            <SkillIcon key={skill.id} skill={skill} />
           ))}
         </div>
       </div>

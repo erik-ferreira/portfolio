@@ -1,4 +1,6 @@
-export const experiences = [
+import { ExperienceDTO } from "@/dtos/ExperienceDTO"
+
+export const experiences: ExperienceDTO[] = [
   {
     id: 1,
     office: "Estagiário",

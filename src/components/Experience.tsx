@@ -2,17 +2,24 @@ import Image from "next/image"
 import { ComponentProps } from "react"
 
 import { twMerge } from "@/utils/twMerge"
+import { ExperienceDTO } from "@/dtos/ExperienceDTO"
 
-interface ExperienceProps extends ComponentProps<"div"> {}
+interface ExperienceProps extends ComponentProps<"div"> {
+  experience: ExperienceDTO
+}
 
-export function Experience({ className, ...rest }: ExperienceProps) {
+export function Experience({
+  experience,
+  className,
+  ...rest
+}: ExperienceProps) {
   return (
     <div
       className={twMerge("grid grid-cols-2 gap-42 relative group", className)}
       {...rest}
     >
       <Image
-        src="/experiences/softtek.png"
+        src={experience.image}
         width={70}
         height={70}
         alt="icon experience"
@@ -26,16 +33,11 @@ export function Experience({ className, ...rest }: ExperienceProps) {
         )}
       >
         <h3 className="text-3.5xl leading-snug text-sky-600 font-bold">
-          Estagiário
+          {experience.office}
         </h3>
         <h4 className="text-2xl text-violet-300 font-bold">Softtek</h4>
 
-        <span className="w-full text-slate-300">
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry standard dummy text ever
-          since the 1500s, when an unknown printer took a galley of type and
-          scrambled it to make a type specimen book.
-        </span>
+        <span className="w-full text-slate-300">{experience.description}</span>
       </div>
 
       <time
@@ -44,7 +46,7 @@ export function Experience({ className, ...rest }: ExperienceProps) {
           "group-even:order-1 group-even:text-right"
         )}
       >
-        Agosto 2019 - Dezembro 2019
+        {experience.date}
       </time>
     </div>
   )

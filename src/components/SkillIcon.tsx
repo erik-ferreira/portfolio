@@ -1,7 +1,7 @@
 import Image from "next/image"
 import { ComponentProps } from "react"
 
-import { TechDTO } from "@/dtos/TechDTO"
+import { SkillDTO } from "@/dtos/SkillDTO"
 
 import { twMerge } from "@/utils/twMerge"
 
@@ -22,12 +22,16 @@ export const labelColorVariants = {
   api: "text-[#72B8CE]",
 } as const
 
-interface TechIconComponentProps extends ComponentProps<"div"> {
-  tech: TechDTO
+interface SkillIconComponentProps extends ComponentProps<"div"> {
+  skill: SkillDTO
 }
 
-export function TechIcon({ tech, className, ...rest }: TechIconComponentProps) {
-  const idsTechStyledComponents = [10, 24]
+export function SkillIcon({
+  skill,
+  className,
+  ...rest
+}: SkillIconComponentProps) {
+  const idsSkillsStyledComponents = [10, 24]
 
   return (
     <div
@@ -35,8 +39,8 @@ export function TechIcon({ tech, className, ...rest }: TechIconComponentProps) {
       {...rest}
     >
       <Image
-        src={tech.src}
-        alt={`Ícone da tecnologia ${tech.label}`}
+        src={skill.src}
+        alt={`Ícone da tecnologia ${skill.label}`}
         width={100}
         height={100}
         className="transition duration-300 grayscale group-hover:grayscale-0 group-hover:transform group-hover:-translate-y-4"
@@ -45,12 +49,12 @@ export function TechIcon({ tech, className, ...rest }: TechIconComponentProps) {
         className={twMerge(
           "w-full text-center font-semibold opacity-0 transition duration-300 absolute -bottom-5 group-hover:opacity-100",
           {
-            "-bottom-10": idsTechStyledComponents.includes(tech.id),
+            "-bottom-10": idsSkillsStyledComponents.includes(skill.id),
           },
-          labelColorVariants[tech.typed]
+          labelColorVariants[skill.typed]
         )}
       >
-        {tech.label}
+        {skill.label}
       </p>
     </div>
   )

@@ -2,17 +2,10 @@ import Image from "next/image"
 import Link, { LinkProps } from "next/link"
 
 import { twMerge } from "@/utils/twMerge"
+import { ProjectDTO } from "@/dtos/ProjectDTO"
 
 interface ProjectProps extends LinkProps {
-  project: {
-    id: number
-    title: string
-    description: string
-    techs: Array<{
-      id: number
-      src: string
-    }>
-  }
+  project: ProjectDTO
 }
 
 export function Project({ project, ...rest }: ProjectProps) {
@@ -30,33 +23,27 @@ export function Project({ project, ...rest }: ProjectProps) {
         )}
       >
         <h3 className="text-3.5xl leading-none font-bold text-sky-600">
-          Estagiário
+          {project.title}
         </h3>
 
         <p className="text-sm font-semibold mt-0.5 mb-4">
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry.
+          {project.description}
         </p>
 
         <div className="flex items-center gap-4 flex-wrap">
-          {project.techs.map((item) => (
+          {project.skills.map((skill) => (
             <Image
-              key={item.id}
-              src={item.src}
+              key={skill.id}
+              src={skill.src}
               width={36}
               height={36}
-              alt="Tech"
+              alt="Skill"
             />
           ))}
         </div>
       </div>
 
-      <Image
-        src="/projects/spider.png"
-        width={400}
-        height={270}
-        alt="Projeto"
-      />
+      <Image src={project.image} width={400} height={270} alt="Projeto" />
     </Link>
   )
 }

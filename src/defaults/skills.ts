@@ -1,83 +1,83 @@
-import { TechDTO } from "@/dtos/TechDTO"
+import { SkillDTO } from "@/dtos/SkillDTO"
 
-type TechDefault = Omit<TechDTO, "id">
+type SkillDefault = Omit<SkillDTO, "id">
 
-const techsDefault = [
+const skillsDefault = [
   {
     label: "React",
-    src: "/techs/react.svg",
+    src: "/skills/react.svg",
     typed: "react",
   },
   {
     label: "Next",
-    src: "/techs/next.svg",
+    src: "/skills/next.svg",
     typed: "next",
   },
   {
     label: "Typescript",
-    src: "/techs/typescript.svg",
+    src: "/skills/typescript.svg",
     typed: "typescript",
   },
   {
     label: "Javascript",
-    src: "/techs/javascript.svg",
+    src: "/skills/javascript.svg",
     typed: "javascript",
   },
   {
     label: "HTML",
-    src: "/techs/html.svg",
+    src: "/skills/html.svg",
     typed: "html",
   },
   {
     label: "CSS",
-    src: "/techs/css.svg",
+    src: "/skills/css.svg",
     typed: "css",
   },
   {
     label: "Figma",
-    src: "/techs/figma.svg",
+    src: "/skills/figma.svg",
     typed: "figma",
   },
   {
     label: "Git",
-    src: "/techs/git.svg",
+    src: "/skills/git.svg",
     typed: "git",
   },
   {
     label: "TaiwindCSS",
-    src: "/techs/tailwindcss.svg",
+    src: "/skills/tailwindcss.svg",
     typed: "tailwind",
   },
   {
     label: "Styled Components",
-    src: "/techs/styled-components.svg",
+    src: "/skills/styled-components.svg",
     typed: "styled-components",
   },
   {
     label: "SQL",
-    src: "/techs/sql.svg",
+    src: "/skills/sql.svg",
     typed: "sql",
   },
   {
     label: "Redux",
-    src: "/techs/redux.svg",
+    src: "/skills/redux.svg",
     typed: "redux",
   },
   {
     label: "Radix",
-    src: "/techs/radix.svg",
+    src: "/skills/radix.svg",
     typed: "radix",
   },
   {
     label: "API Rest",
-    src: "/techs/api.svg",
+    src: "/skills/api.svg",
     typed: "api",
   },
-] as TechDefault[]
+] as SkillDefault[]
 
-export const techs: TechDTO[] = [...techsDefault, ...techsDefault].map(
-  (tech, index) => ({
+export const skills: SkillDTO[] = [...skillsDefault, ...skillsDefault].map(
+  (skill, index) => ({
     id: index + 1,
-    ...tech,
+    ...skill,
   })
 )
