@@ -1,3 +1,4 @@
+import Link from "next/link"
 import { ComponentProps } from "react"
 
 import { Icon } from "@/components/Icon"
@@ -27,9 +28,11 @@ export function Projects({ className, ...rest }: ProjectsProps) {
         ))}
       </div>
 
-      <Button variant="outline-gradient" size="large">
-        Todos os Projetos
-        <Icon size="large" disabledHover />
+      <Button variant="outline-gradient" size="large" asChild>
+        <Link href="/">
+          Todos os Projetos
+          <Icon size="large" disabledHover />
+        </Link>
       </Button>
     </div>
   )

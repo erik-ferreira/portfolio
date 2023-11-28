@@ -1,3 +1,4 @@
+import Link from "next/link"
 import Image from "next/image"
 import { ComponentProps } from "react"
 
@@ -32,9 +33,11 @@ export function LetsTalk({ className, ...rest }: LetsTalkProps) {
         <Image src={talkingSVG} width={380} height={340} alt="Talking" />
       </div>
 
-      <Button variant="outline-gradient" size="large">
-        Entre em contato
-        <Icon size="large" disabledHover />
+      <Button variant="outline-gradient" size="large" asChild>
+        <Link href="/">
+          Entre em contato
+          <Icon size="large" disabledHover />
+        </Link>
       </Button>
     </div>
   )
