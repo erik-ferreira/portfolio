@@ -7,8 +7,6 @@ import { Project } from "@/components/Project"
 import { twMerge } from "@/utils/twMerge"
 import { projects } from "@/defaults/projects"
 
-const list = [1, 2, 3]
-
 interface ProjectsProps extends ComponentProps<"div"> {}
 
 export function Projects({ className, ...rest }: ProjectsProps) {
@@ -24,7 +22,7 @@ export function Projects({ className, ...rest }: ProjectsProps) {
 
       <div className="grid grid-cols-3 gap-8">
         {projects.map((project) => (
-          <Project key={project.id} href="/" project={project} />
+          <Project key={project.id} href={project.href} project={project} />
         ))}
       </div>
 

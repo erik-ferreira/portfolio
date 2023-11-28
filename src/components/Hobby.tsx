@@ -21,7 +21,7 @@ export function Hobby({ hobby, className, ...rest }: HobbyProps) {
       {...rest}
     >
       <Image
-        src={hobby.image}
+        src={hobby.src}
         width={500}
         height={333}
         alt="Hobby"
@@ -37,7 +37,7 @@ export function Hobby({ hobby, className, ...rest }: HobbyProps) {
           {hobby.description}
         </p>
 
-        <Link href={hobby.link} label="Ler mais" variant="secondary" />
+        <Link href={hobby.href} label="Ler mais" variant="secondary" />
       </div>
     </article>
   )

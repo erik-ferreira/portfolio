@@ -15,7 +15,7 @@ export function Certifications({ ...rest }: CertificationsProps) {
         {certificates.map((certificate) => (
           <CertificateShort
             key={certificate.id}
-            href="/"
+            href={certificate.href}
             certificate={certificate}
           />
         ))}

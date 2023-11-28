@@ -43,7 +43,7 @@ export function Project({ project, ...rest }: ProjectProps) {
         </div>
       </div>
 
-      <Image src={project.image} width={400} height={270} alt="Projeto" />
+      <Image src={project.src} width={400} height={270} alt="Projeto" />
     </Link>
   )
 }

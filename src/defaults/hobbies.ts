@@ -4,11 +4,11 @@ type HobbyDefault = Omit<HobbyDTO, "id">
 
 const hobbiesDefault: HobbyDefault[] = [
   {
-    image: "/hobbies/basquete.png",
+    src: "/hobbies/basquete.png",
     title: "Basquete",
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s...",
-    link: "/",
+    href: "/",
   },
 ]
 

@@ -7,21 +7,25 @@ const certificatesDefault: CertificateDefault[] = [
     name: "Figma for Devs",
     company: "Rocketseat",
     src: "/certificates/figma.png",
+    href: "/",
   },
   {
     name: "Acessibilidade com ReactJS",
     company: "Rocketseat",
     src: "/certificates/figma.png",
+    href: "/",
   },
   {
     name: "Apps Desktop com ElectronJS",
     company: "Rocketseat",
     src: "/certificates/figma.png",
+    href: "/",
   },
   {
     name: "Ignite ReactJS",
     company: "Rocketseat",
     src: "/certificates/figma.png",
+    href: "/",
   },
 ]
 

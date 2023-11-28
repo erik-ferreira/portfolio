@@ -7,7 +7,8 @@ const projectsDefault: ProjectDefault[] = [
     title: "Estagiário",
     description:
       " Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-    image: "/projects/spider.png",
+    src: "/projects/spider.png",
+    href: "/",
     skills: [
       {
         id: 1,
