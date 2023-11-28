@@ -1,17 +1,43 @@
 import { icons, LucideProps } from "lucide-react"
+import { tv, VariantProps } from "tailwind-variants"
 
-import { twMerge } from "@/utils/twMerge"
+const icon = tv({
+  base: "transition-colors hover:text-blue-600",
 
-export interface IconProps extends LucideProps {
-  name?: keyof typeof icons
-  isSelected?: boolean
-  disabledHover?: boolean
-}
+  variants: {
+    size: {
+      small: "w-5 h-5",
+      default: "w-6 h-6",
+      large: "w-8 h-8",
+    },
+
+    isSelected: {
+      true: "text-blue-600",
+    },
+
+    disabledHover: {
+      true: "hover:text-slate-200",
+    },
+  },
+
+  defaultVariants: {
+    size: "default",
+    isSelected: false,
+    disabledHover: false,
+  },
+})
+
+export type IconProps = LucideProps &
+  VariantProps<typeof icon> & {
+    name?: keyof typeof icons
+    disabledHover?: boolean
+  }
 
 export function Icon({
   name = "Send",
-  isSelected = false,
-  disabledHover = false,
+  size,
+  isSelected,
+  disabledHover,
   className,
   ...rest
 }: IconProps) {
@@ -19,10 +45,7 @@ export function Icon({
 
   return (
     <LucideIcon
-      className={twMerge("w-6 h-6 transition-colors", className, {
-        "text-blue-600": isSelected,
-        "hover:text-blue-600": !disabledHover,
-      })}
+      className={icon({ size, isSelected, disabledHover, className })}
       {...rest}
     />
   )

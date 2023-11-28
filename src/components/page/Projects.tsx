@@ -1,5 +1,6 @@
 import { ComponentProps } from "react"
 
+import { Icon } from "@/components/Icon"
 import { Title } from "@/components/Title"
 import { Button } from "@/components/Button"
 import { Project } from "@/components/Project"
@@ -26,11 +27,10 @@ export function Projects({ className, ...rest }: ProjectsProps) {
         ))}
       </div>
 
-      <Button
-        label="Todos os Projetos"
-        variant="outline-gradient"
-        size="large"
-      />
+      <Button variant="outline-gradient" size="large">
+        Todos os Projetos
+        <Icon size="large" disabledHover />
+      </Button>
     </div>
   )
 }

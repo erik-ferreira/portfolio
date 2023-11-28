@@ -1,10 +1,11 @@
 import Image from "next/image"
 import { ComponentProps } from "react"
 
-import talkingSVG from "@/assets/talking.svg"
+import { Icon } from "@/components/Icon"
+import { Button } from "@/components/Button"
 
 import { twMerge } from "@/utils/twMerge"
-import { Button } from "../Button"
+import talkingSVG from "@/assets/talking.svg"
 
 interface LetsTalkProps extends ComponentProps<"div"> {}
 
@@ -31,11 +32,10 @@ export function LetsTalk({ className, ...rest }: LetsTalkProps) {
         <Image src={talkingSVG} width={380} height={340} alt="Talking" />
       </div>
 
-      <Button
-        variant="outline-gradient"
-        size="large"
-        label="Entre em contato"
-      />
+      <Button variant="outline-gradient" size="large">
+        Entre em contato
+        <Icon size="large" disabledHover />
+      </Button>
     </div>
   )
 }
