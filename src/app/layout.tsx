@@ -40,15 +40,15 @@ export default function RootLayout({
       className={`${nunitoSans.variable} ${orbitron.variable} ${permanentMarker.variable}`}
     >
       <body className="bg-page text-slate-200 relative">
-        <SocialIcons variant="fixed" />
-
-        <ButtonGoToTop />
-
         <Header />
 
         {children}
 
         <Footer />
+
+        <SocialIcons variant="fixed" />
+
+        <ButtonGoToTop />
       </body>
     </html>
   )

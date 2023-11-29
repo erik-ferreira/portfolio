@@ -11,7 +11,7 @@ import erikPNG from "@/assets/erik.png"
 
 export default function About() {
   return (
-    <main className="relative max-w-content w-content mx-auto p-8 flex flex-col gap-16">
+    <main className="max-w-content w-content mx-auto p-8 flex flex-col gap-16">
       <section>
         <Title label="Sobre" labelBackground="About" />
         <DescriptionPage description="Uma breve descrição aqui" />

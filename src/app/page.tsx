@@ -8,7 +8,7 @@ import { Certifications } from "@/components/page/Certifications"
 
 export default function Home() {
   return (
-    <main className="relative max-w-content w-content mx-auto p-8 flex flex-col gap-16">
+    <main className="max-w-content w-content mx-auto p-8 flex flex-col gap-16">
       <Resume />
 
       <Skills />
