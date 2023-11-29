@@ -1,6 +1,11 @@
 import type { Metadata } from "next"
 import { Nunito_Sans, Orbitron, Permanent_Marker } from "next/font/google"
 
+import { Header } from "@/components/page/Header"
+import { Footer } from "@/components/page/Footer"
+import { SocialIcons } from "@/components/SocialIcons"
+import { ButtonGoToTop } from "@/components/ButtonGoToTop"
+
 import "./globals.css"
 
 const nunitoSans = Nunito_Sans({
@@ -34,7 +39,17 @@ export default function RootLayout({
       lang="pt-BR"
       className={`${nunitoSans.variable} ${orbitron.variable} ${permanentMarker.variable}`}
     >
-      <body className="bg-page text-slate-200">{children}</body>
+      <body className="bg-page text-slate-200 relative">
+        <SocialIcons variant="fixed" />
+
+        <ButtonGoToTop />
+
+        <Header />
+
+        {children}
+
+        <Footer />
+      </body>
     </html>
   )
 }

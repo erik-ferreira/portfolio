@@ -13,7 +13,10 @@ interface HeaderProps extends ComponentProps<"header"> {}
 export function Header({ className, ...rest }: HeaderProps) {
   return (
     <header
-      className={twMerge("flex items-center justify-between py-4", className)}
+      className={twMerge(
+        "max-w-content w-content mx-auto px-8 flex items-center justify-between py-4",
+        className
+      )}
       {...rest}
     >
       <Image src={logo} alt="Erik Ferreira" width={150} height={40} />
