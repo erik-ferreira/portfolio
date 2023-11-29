@@ -8,11 +8,11 @@ import { twMerge } from "@/utils/twMerge"
 import preview from "@/assets/preview.png"
 import websiteSVG from "@/assets/website.svg"
 
-interface ResumeProps extends ComponentProps<"div"> {}
+interface ResumeProps extends ComponentProps<"section"> {}
 
 export function Resume({ className, ...rest }: ResumeProps) {
   return (
-    <div
+    <section
       className={twMerge("flex flex-col items-center gap-16", className)}
       {...rest}
     >
@@ -70,6 +70,6 @@ export function Resume({ className, ...rest }: ResumeProps) {
 
         <Image src={preview} alt="Erik Ferreira" width={350} height={233} />
       </div>
-    </div>
+    </section>
   )
 }

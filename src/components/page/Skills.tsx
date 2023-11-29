@@ -6,11 +6,11 @@ import { SkillIcon } from "@/components/SkillIcon"
 import { twMerge } from "@/utils/twMerge"
 import { skills } from "@/defaults/skills"
 
-interface SkillsProps extends ComponentProps<"div"> {}
+interface SkillsProps extends ComponentProps<"section"> {}
 
 export function Skills({ className, ...rest }: SkillsProps) {
   return (
-    <div
+    <section
       className={twMerge(
         "flex flex-col items-center justify-center gap-4",
         className
@@ -40,6 +40,6 @@ export function Skills({ className, ...rest }: SkillsProps) {
           ))}
         </div>
       </div>
-    </div>
+    </section>
   )
 }

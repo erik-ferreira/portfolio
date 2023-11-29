@@ -8,11 +8,11 @@ import { Button } from "@/components/Button"
 import { twMerge } from "@/utils/twMerge"
 import talkingSVG from "@/assets/talking.svg"
 
-interface LetsTalkProps extends ComponentProps<"div"> {}
+interface LetsTalkProps extends ComponentProps<"section"> {}
 
 export function LetsTalk({ className, ...rest }: LetsTalkProps) {
   return (
-    <div
+    <section
       className={twMerge("flex flex-col items-center gap-6", className)}
       {...rest}
     >
@@ -36,6 +36,6 @@ export function LetsTalk({ className, ...rest }: LetsTalkProps) {
           <Icon size="large" disabledHover />
         </Link>
       </Button>
-    </div>
+    </section>
   )
 }

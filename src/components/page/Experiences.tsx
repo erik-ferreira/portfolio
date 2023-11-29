@@ -6,11 +6,11 @@ import { Experience } from "@/components/Experience"
 import { twMerge } from "@/utils/twMerge"
 import { experiences } from "@/defaults/experiences"
 
-interface ExperiencesProps extends ComponentProps<"div"> {}
+interface ExperiencesProps extends ComponentProps<"section"> {}
 
 export function Experiences({ className, ...rest }: ExperiencesProps) {
   return (
-    <div
+    <section
       className={twMerge("flex flex-col items-center gap-6", className)}
       {...rest}
     >
@@ -27,6 +27,6 @@ export function Experiences({ className, ...rest }: ExperiencesProps) {
           <Experience key={experience.id} experience={experience} />
         ))}
       </div>
-    </div>
+    </section>
   )
 }

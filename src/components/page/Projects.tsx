@@ -9,11 +9,11 @@ import { Project } from "@/components/Project"
 import { twMerge } from "@/utils/twMerge"
 import { projects } from "@/defaults/projects"
 
-interface ProjectsProps extends ComponentProps<"div"> {}
+interface ProjectsProps extends ComponentProps<"section"> {}
 
 export function Projects({ className, ...rest }: ProjectsProps) {
   return (
-    <div
+    <section
       className={twMerge("flex flex-col items-center gap-6", className)}
       {...rest}
     >
@@ -31,6 +31,6 @@ export function Projects({ className, ...rest }: ProjectsProps) {
           <Icon size="large" disabledHover />
         </Link>
       </Button>
-    </div>
+    </section>
   )
 }

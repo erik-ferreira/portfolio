@@ -9,11 +9,11 @@ import { CertificateShort } from "@/components/CertificateShort"
 import { twMerge } from "@/utils/twMerge"
 import { certificates } from "@/defaults/certificates"
 
-interface CertificationsProps extends ComponentProps<"div"> {}
+interface CertificationsProps extends ComponentProps<"section"> {}
 
 export function Certifications({ className, ...rest }: CertificationsProps) {
   return (
-    <div
+    <section
       className={twMerge("flex flex-col items-center gap-6", className)}
       {...rest}
     >
@@ -35,6 +35,6 @@ export function Certifications({ className, ...rest }: CertificationsProps) {
           <Icon size="large" disabledHover />
         </Link>
       </Button>
-    </div>
+    </section>
   )
 }
