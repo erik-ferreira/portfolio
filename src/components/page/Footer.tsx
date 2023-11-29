@@ -1,17 +1,27 @@
+import { ComponentProps } from "react"
+
 import { Icon } from "@/components/Icon"
-import { SocialIcons } from "../SocialIcons"
+import { SocialIcons } from "@/components/SocialIcons"
 
-interface FooterProps {}
+import { twMerge } from "@/utils/twMerge"
 
-export function Footer({ ...rest }: FooterProps) {
+interface FooterProps extends ComponentProps<"footer"> {}
+
+export function Footer({ className, ...rest }: FooterProps) {
   return (
-    <footer className="border-t border-slate-500 grid grid-cols-3 items-center justify-center px-8 py-4">
-      <span className="mx-auto text-lg font-semibold">
+    <footer
+      className={twMerge(
+        "border-t border-slate-500 flex items-center justify-between py-4",
+        className
+      )}
+      {...rest}
+    >
+      <span className="text-lg font-semibold">
         Projeto e Desenvolvido
         <br /> por Erik Ferreira
       </span>
 
-      <span className="mx-auto flex gap-2">
+      <span className="flex gap-2">
         Copyright <Icon name="Copyright" disabledHover /> 2023
       </span>
 

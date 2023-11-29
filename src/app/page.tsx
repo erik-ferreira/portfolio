@@ -13,7 +13,7 @@ import { ButtonGoToTop } from "@/components/ButtonGoToTop"
 
 export default function Home() {
   return (
-    <main className="relative">
+    <main className="relative max-w-content w-content mx-auto p-8 flex flex-col gap-16">
       <SocialIcons variant="fixed" />
 
       <ButtonGoToTop />

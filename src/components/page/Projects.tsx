@@ -14,10 +14,7 @@ interface ProjectsProps extends ComponentProps<"div"> {}
 export function Projects({ className, ...rest }: ProjectsProps) {
   return (
     <div
-      className={twMerge(
-        "max-w-content w-content mx-auto flex flex-col items-center gap-6 p-8",
-        className
-      )}
+      className={twMerge("flex flex-col items-center gap-6", className)}
       {...rest}
     >
       <Title label="Projetos" labelBackground="Projects" />

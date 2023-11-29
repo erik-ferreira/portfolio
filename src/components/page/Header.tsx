@@ -4,20 +4,23 @@ import { ComponentProps } from "react"
 import { Navbar } from "@/components/Navbar"
 import { SwitchTheme } from "@/components/SwitchTheme"
 
+import { twMerge } from "@/utils/twMerge"
+
 import logo from "@/assets/logo.svg"
 
 interface HeaderProps extends ComponentProps<"header"> {}
 
-export function Header({ ...rest }: HeaderProps) {
+export function Header({ className, ...rest }: HeaderProps) {
   return (
-    <header {...rest}>
-      <div className="max-w-content w-content mx-auto flex items-center justify-between py-4">
-        <Image src={logo} alt="Erik Ferreira" width={150} height={40} />
+    <header
+      className={twMerge("flex items-center justify-between py-4", className)}
+      {...rest}
+    >
+      <Image src={logo} alt="Erik Ferreira" width={150} height={40} />
 
-        <div className="flex items-center gap-8">
-          <Navbar />
-          <SwitchTheme />
-        </div>
+      <div className="flex items-center gap-8">
+        <Navbar />
+        <SwitchTheme />
       </div>
     </header>
   )

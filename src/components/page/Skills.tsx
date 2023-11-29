@@ -3,8 +3,8 @@ import { ComponentProps } from "react"
 import { Title } from "@/components/Title"
 import { SkillIcon } from "@/components/SkillIcon"
 
-import { skills } from "@/defaults/skills"
 import { twMerge } from "@/utils/twMerge"
+import { skills } from "@/defaults/skills"
 
 interface SkillsProps extends ComponentProps<"div"> {}
 
@@ -12,7 +12,7 @@ export function Skills({ className, ...rest }: SkillsProps) {
   return (
     <div
       className={twMerge(
-        "max-w-content w-content mx-auto flex flex-col items-center justify-center gap-4 pt-8",
+        "flex flex-col items-center justify-center gap-4",
         className
       )}
       {...rest}

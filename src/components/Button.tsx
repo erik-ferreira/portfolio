@@ -3,7 +3,7 @@ import { HtmlHTMLAttributes, Fragment } from "react"
 import { tv, VariantProps } from "tailwind-variants"
 
 const button = tv({
-  base: "flex items-center justify-center gap-2 px-4 py-3 rounded transition-colors duration-400  font-bold disabled:opacity-60",
+  base: "w-fit flex items-center justify-center gap-2 px-4 py-3 rounded transition-colors duration-400  font-bold disabled:opacity-60",
 
   variants: {
     variant: {
@@ -41,7 +41,7 @@ export function Button({
   const Component = asChild ? Slot : "button"
 
   return (
-    <Gradient className="p-0.5 rounded bg-gradient-to-r from-blue-500 to-violet-600 to-80%">
+    <Gradient className="w-fit p-0.5 rounded bg-gradient-to-r from-blue-500 to-violet-600 to-80%">
       <Component className={button({ variant, size, className })} {...rest} />
     </Gradient>
   )

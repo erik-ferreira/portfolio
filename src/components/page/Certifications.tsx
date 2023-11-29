@@ -1,14 +1,22 @@
-import { Link } from "@/components/Link"
+import Link from "next/link"
+import { ComponentProps } from "react"
+
+import { Icon } from "@/components/Icon"
 import { Title } from "@/components/Title"
+import { Button } from "@/components/Button"
 import { CertificateShort } from "@/components/CertificateShort"
 
+import { twMerge } from "@/utils/twMerge"
 import { certificates } from "@/defaults/certificates"
 
-interface CertificationsProps {}
+interface CertificationsProps extends ComponentProps<"div"> {}
 
-export function Certifications({ ...rest }: CertificationsProps) {
+export function Certifications({ className, ...rest }: CertificationsProps) {
   return (
-    <div className="max-w-content w-content mx-auto flex flex-col items-center gap-6 p-8">
+    <div
+      className={twMerge("flex flex-col items-center gap-6", className)}
+      {...rest}
+    >
       <Title label="Certificados" labelBackground="Certificates" />
 
       <div className="flex items-center justify-center gap-12">
@@ -19,13 +27,14 @@ export function Certifications({ ...rest }: CertificationsProps) {
             certificate={certificate}
           />
         ))}
-
-        <Link
-          href="/"
-          label="Mais detalhes"
-          className="text-slate-600 whitespace-nowrap"
-        />
       </div>
+
+      <Button variant="outline-gradient" size="large" asChild>
+        <Link href="/">
+          Todos os Certificados
+          <Icon size="large" disabledHover />
+        </Link>
+      </Button>
     </div>
   )
 }

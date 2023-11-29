@@ -13,10 +13,7 @@ interface LetsTalkProps extends ComponentProps<"div"> {}
 export function LetsTalk({ className, ...rest }: LetsTalkProps) {
   return (
     <div
-      className={twMerge(
-        "max-w-content w-content mx-auto flex flex-col items-center gap-6 p-8 mt-[140px]",
-        className
-      )}
+      className={twMerge("flex flex-col items-center gap-6", className)}
       {...rest}
     >
       <div className="flex items-center justify-center gap-16">

@@ -12,7 +12,7 @@ export function Hobbies({ className, ...rest }: HobbiesProps) {
   return (
     <div
       className={twMerge(
-        "max-w-content w-content mx-auto flex flex-col items-center gap-6 p-8",
+        "flex flex-col items-center gap-6 pb-[140px]",
         className
       )}
       {...rest}

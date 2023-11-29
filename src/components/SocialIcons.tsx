@@ -6,7 +6,7 @@ import { Icon } from "@/components/Icon"
 import { IconSvgExternal } from "@/components/IconSvgExternal"
 
 const socialIcons = tv({
-  base: "mx-auto flex items-center gap-6",
+  base: "flex items-center gap-6",
 
   variants: {
     variant: {

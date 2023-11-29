@@ -13,10 +13,7 @@ interface ResumeProps extends ComponentProps<"div"> {}
 export function Resume({ className, ...rest }: ResumeProps) {
   return (
     <div
-      className={twMerge(
-        "max-w-content w-content mx-auto flex flex-col items-center gap-16 p-8",
-        className
-      )}
+      className={twMerge("flex flex-col items-center gap-16", className)}
       {...rest}
     >
       <div className="w-full flex items-center justify-evenly">
@@ -55,7 +52,7 @@ export function Resume({ className, ...rest }: ResumeProps) {
         </div>
       </div>
 
-      <div className="bg-section flex gap-4 items-center justify-center p-8 rounded-xl">
+      <div className="w-fit bg-section flex gap-4 items-center justify-center p-8 rounded-xl">
         <div className="w-[500px] flex flex-col gap-2 items-start">
           <h2 className="text-3.5xl font-bold text-blue-500">
             Um pouco sobre mim
