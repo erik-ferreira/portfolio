@@ -21,7 +21,10 @@ export function IconSvgExternal({
       viewBox="0 0 24 24"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      className={twMerge("w-6 h-6 icon-svg-external", className)}
+      className={twMerge(
+        "w-6 h-6 fill-slate-200 hover:fill-blue-600 transition-colors",
+        className
+      )}
       {...rest}
     >
       {Component}

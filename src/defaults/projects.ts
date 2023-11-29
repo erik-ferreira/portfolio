@@ -1,8 +1,8 @@
 import { ProjectDTO } from "@/dtos/ProjectDTO"
 
-type ProjectDefault = Omit<ProjectDTO, "id">
+type ProjectsDefault = Omit<ProjectDTO, "id">
 
-const projectsDefault: ProjectDefault[] = [
+const projectsDefault: ProjectsDefault[] = [
   {
     title: "Estagiário",
     description:
