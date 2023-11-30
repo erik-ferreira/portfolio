@@ -1,7 +1,7 @@
 import { Icon } from "@/components/Icon"
 import { Title } from "@/components/Title"
 import { Button } from "@/components/Button"
-import { DescriptionPage } from "@/components/DescriptionPage"
+import { Description } from "@/components/Description"
 import { Curriculum } from "@/components/Curriculum"
 
 export default function About() {
@@ -9,7 +9,7 @@ export default function About() {
     <main className="max-w-content w-content mx-auto p-8 flex flex-col gap-16">
       <section>
         <Title label="Resumo" labelBackground="Summary" />
-        <DescriptionPage description="Abaixo você poderá ver o meu currículo e baixar o arquivo" />
+        <Description label="Abaixo você poderá ver o meu currículo e baixar o arquivo" />
 
         <Curriculum />
 

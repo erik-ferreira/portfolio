@@ -5,7 +5,7 @@ import { Icon } from "@/components/Icon"
 import { Title } from "@/components/Title"
 import { Button } from "@/components/Button"
 import { SocialIcons } from "@/components/SocialIcons"
-import { DescriptionPage } from "@/components/DescriptionPage"
+import { Description } from "@/components/Description"
 
 import erikPNG from "@/assets/erik.png"
 
@@ -14,7 +14,7 @@ export default function About() {
     <main className="max-w-content w-content mx-auto p-8 flex flex-col gap-16">
       <section>
         <Title label="Sobre" labelBackground="About" />
-        <DescriptionPage description="Uma breve descrição aqui" />
+        <Description label="Uma breve descrição aqui" />
 
         <article className="max-w-[932px] mx-auto flex gap-8">
           <div className="max-w-[350px] w-full flex flex-col items-center gap-4">
