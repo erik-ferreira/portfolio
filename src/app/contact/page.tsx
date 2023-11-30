@@ -1,10 +1,6 @@
-import Link from "next/link"
-import Image from "next/image"
-
-import { Icon } from "@/components/Icon"
 import { Title } from "@/components/Title"
+import { SocialCard } from "@/components/SocialCard"
 import { Description } from "@/components/Description"
-import { IconSvgExternal } from "@/components/IconSvgExternal"
 
 export default function Contact() {
   return (
@@ -14,7 +10,12 @@ export default function Contact() {
         <Description label="Uma breve descrição bem aqui Uma breve descrição bem aqui a breve descrição bem aqui Uma breve descrição bem aqui Uma ve descrição bem aqui Uma breve descrição bem aqui Uma dale a a bem aqui" />
       </section>
 
-      <article></article>
+      <article>
+        <div className="flex gap-8">
+          <SocialCard />
+          <SocialCard variant="mail" />
+        </div>
+      </article>
     </main>
   )
 }

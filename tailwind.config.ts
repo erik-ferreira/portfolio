@@ -26,6 +26,9 @@ const config: Config = {
         page: "#090B0E",
         section: "#0F172A",
 
+        "green-whatsapp": "#128C7E",
+        "red-mail": "#DB4437",
+
         dark: {
           50: "#e6e6e6",
           100: "#dadada",
