@@ -28,7 +28,7 @@ export function Projects({ className, ...rest }: ProjectsProps) {
       <Button variant="outline-gradient" size="large" asChild>
         <Link href="/">
           Todos os Projetos
-          <Icon size="large" disabledHover />
+          <Icon size="large" />
         </Link>
       </Button>
     </section>

@@ -32,7 +32,7 @@ export function Certifications({ className, ...rest }: CertificationsProps) {
       <Button variant="outline-gradient" size="large" asChild>
         <Link href="/">
           Todos os Certificados
-          <Icon size="large" disabledHover />
+          <Icon size="large" />
         </Link>
       </Button>
     </section>

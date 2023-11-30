@@ -29,14 +29,12 @@ export function SwitchTheme({ className, ...rest }: SwitchThemeProps) {
     >
       <Icon
         name="MoonStar"
-        disabledHover
         isSelected
         className="w-5 h-5 absolute left-1 top-1/2 -translate-y-1/2"
       />
 
       <Icon
         name="Sun"
-        disabledHover
         isSelected
         className="w-5 h-5 absolute right-1 top-1/2 -translate-y-1/2"
       />

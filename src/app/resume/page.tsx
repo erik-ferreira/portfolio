@@ -16,8 +16,7 @@ export default function About() {
 
         <Button variant="outline" className="mx-auto mt-6 duration-300">
           Baixar CV
-          <Icon disabledHover className="" />
-          {/* <Send className="" /> */}
+          <Icon className="" />
         </Button>
       </section>
     </main>

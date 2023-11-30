@@ -2,7 +2,8 @@ import { icons, LucideProps } from "lucide-react"
 import { tv, VariantProps } from "tailwind-variants"
 
 const icon = tv({
-  base: "transition-colors hover:text-blue-600",
+  // base: "transition-colors hover:text-blue-600",
+  base: "",
 
   variants: {
     size: {
@@ -15,29 +16,29 @@ const icon = tv({
       true: "text-blue-600",
     },
 
-    disabledHover: {
-      true: "hover:text-slate-200",
+    enabledHover: {
+      true: "transition-colors hover:text-blue-600",
     },
   },
 
   defaultVariants: {
     size: "default",
     isSelected: false,
-    disabledHover: false,
+    enabledHover: false,
   },
 })
 
 export type IconProps = LucideProps &
   VariantProps<typeof icon> & {
     name?: keyof typeof icons
-    disabledHover?: boolean
+    enabledHover?: boolean
   }
 
 export function Icon({
   name = "Send",
   size,
   isSelected,
-  disabledHover,
+  enabledHover,
   className,
   ...rest
 }: IconProps) {
@@ -45,7 +46,7 @@ export function Icon({
 
   return (
     <LucideIcon
-      className={icon({ size, isSelected, disabledHover, className })}
+      className={icon({ size, isSelected, enabledHover, className })}
       {...rest}
     />
   )

@@ -35,7 +35,7 @@ export default function About() {
             <Button variant="outline-gradient" asChild>
               <Link href="/">
                 Entre em contato
-                <Icon size="small" disabledHover />
+                <Icon size="small" />
               </Link>
             </Button>
           </div>

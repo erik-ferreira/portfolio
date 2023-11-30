@@ -20,7 +20,7 @@ export function Footer({ className, ...rest }: FooterProps) {
         </span>
 
         <span className="flex gap-2">
-          Copyright <Icon name="Copyright" disabledHover /> 2023
+          Copyright <Icon name="Copyright" /> 2023
         </span>
 
         <SocialIcons />

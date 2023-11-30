@@ -33,7 +33,7 @@ export function LetsTalk({ className, ...rest }: LetsTalkProps) {
       <Button variant="outline-gradient" size="large" asChild>
         <Link href="/">
           Entre em contato
-          <Icon size="large" disabledHover />
+          <Icon size="large" />
         </Link>
       </Button>
     </section>

@@ -54,7 +54,7 @@ export function SocialIcons({ variant, className, ...rest }: SocialIconsProps) {
             className={link()}
           >
             {socialIcon.type === "default" ? (
-              <Icon name={socialIcon.name} className={icon()} />
+              <Icon name={socialIcon.name} className={icon()} enabledHover />
             ) : (
               <IconSvgExternal
                 type={socialIcon.externalIcon}
