@@ -1,4 +1,3 @@
-import { Send } from "lucide-react"
 import { Icon } from "@/components/Icon"
 import { Title } from "@/components/Title"
 import { Button } from "@/components/Button"

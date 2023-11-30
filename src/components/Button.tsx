@@ -1,5 +1,5 @@
+import { HtmlHTMLAttributes } from "react"
 import { Slot } from "@radix-ui/react-slot"
-import { HtmlHTMLAttributes, Fragment } from "react"
 import { tv, VariantProps } from "tailwind-variants"
 
 const button = tv({
@@ -37,12 +37,13 @@ export function Button({
   asChild = false,
   ...rest
 }: ButtonProps) {
-  const Gradient = variant === "outline-gradient" ? "div" : Fragment
   const Component = asChild ? Slot : "button"
 
-  return (
-    <Gradient className="w-fit p-0.5 rounded bg-gradient-to-r from-blue-500 to-violet-600 to-80%">
+  return variant === "outline-gradient" ? (
+    <div className="w-fit p-0.5 rounded bg-gradient-to-r from-blue-500 to-violet-600 to-80%">
       <Component className={button({ variant, size, className })} {...rest} />
-    </Gradient>
+    </div>
+  ) : (
+    <Component className={button({ variant, size, className })} {...rest} />
   )
 }
