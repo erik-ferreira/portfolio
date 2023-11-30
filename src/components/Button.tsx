@@ -3,7 +3,7 @@ import { HtmlHTMLAttributes, Fragment } from "react"
 import { tv, VariantProps } from "tailwind-variants"
 
 const button = tv({
-  base: "w-fit flex items-center justify-center gap-2 px-4 py-3 rounded transition-colors duration-400  font-bold disabled:opacity-60",
+  base: "w-fit flex items-center justify-center gap-2 px-4 py-3 rounded transition-colors duration-400 font-bold disabled:opacity-60",
 
   variants: {
     variant: {
