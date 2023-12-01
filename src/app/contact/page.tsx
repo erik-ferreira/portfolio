@@ -19,8 +19,12 @@ export default function Contact() {
 
         <form className="space-y-5">
           <Input placeholder="Nome" />
-          <Input placeholder="Email" error="Invalid email" />
-          <Input placeholder="Pesquise aqui" variant="search" />
+          <Input placeholder="Email" nameIcon="Mail" error="Invalid email" />
+          <Input
+            placeholder="Pesquise aqui"
+            variant="search"
+            nameIcon="Search"
+          />
         </form>
       </article>
     </main>

@@ -2,7 +2,6 @@ import { icons, LucideProps } from "lucide-react"
 import { tv, VariantProps } from "tailwind-variants"
 
 const icon = tv({
-  // base: "transition-colors hover:text-blue-600",
   base: "",
 
   variants: {

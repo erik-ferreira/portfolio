@@ -1,3 +1,4 @@
+import { icons } from "lucide-react"
 import { ComponentProps } from "react"
 import { tv, VariantProps } from "tailwind-variants"
 
@@ -53,9 +54,16 @@ const input = tv({
 type InputProps = ComponentProps<"input"> &
   VariantProps<typeof input> & {
     error?: string
+    nameIcon?: keyof typeof icons
   }
 
-export function Input({ error, variant, className, ...rest }: InputProps) {
+export function Input({
+  error,
+  nameIcon = "User",
+  variant,
+  className,
+  ...rest
+}: InputProps) {
   const hasError = !!error
   const { container, base, icon, errorContainer, errorIcon, errorMessage } =
     input({ className, hasError, variant })
@@ -65,7 +73,7 @@ export function Input({ error, variant, className, ...rest }: InputProps) {
       <label>
         <input className={base()} {...rest} />
 
-        <Icon name="User" className={icon()} />
+        <Icon name={nameIcon} className={icon()} />
 
         {hasError && (
           <div className={errorContainer()}>
