@@ -188,6 +188,10 @@ const config: Config = {
       transitionDuration: {
         400: "400ms",
       },
+
+      padding: {
+        "10.5": "2.625rem",
+      },
     },
   },
   plugins: [],

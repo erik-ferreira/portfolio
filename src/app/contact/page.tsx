@@ -1,3 +1,4 @@
+import { Input } from "@/components/Input"
 import { Title } from "@/components/Title"
 import { SocialCard } from "@/components/SocialCard"
 import { Description } from "@/components/Description"
@@ -11,10 +12,16 @@ export default function Contact() {
       </section>
 
       <article>
-        <div className="flex gap-8">
+        <div className="flex gap-8 mb-10">
           <SocialCard />
           <SocialCard variant="mail" />
         </div>
+
+        <form className="space-y-5">
+          <Input placeholder="Nome" />
+          <Input placeholder="Email" error="Invalid email" />
+          <Input placeholder="Pesquise aqui" variant="search" />
+        </form>
       </article>
     </main>
   )
