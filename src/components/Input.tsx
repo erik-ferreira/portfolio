@@ -1,5 +1,6 @@
 import { icons } from "lucide-react"
 import { ComponentProps } from "react"
+import { ClassNameValue } from "tailwind-merge"
 import { tv, VariantProps } from "tailwind-variants"
 
 import { Icon } from "@/components/Icon"
@@ -59,6 +60,7 @@ type InputProps = ComponentProps<"input"> &
   VariantProps<typeof input> & {
     error?: string
     nameIcon?: keyof typeof icons
+    classNameContainer?: ClassNameValue
   }
 
 export function Input({
@@ -66,6 +68,7 @@ export function Input({
   nameIcon = "User",
   variant,
   className,
+  classNameContainer,
   ...rest
 }: InputProps) {
   const hasError = !!error
@@ -73,7 +76,7 @@ export function Input({
     input({ className, hasError, variant })
 
   return (
-    <div className={container()}>
+    <div className={container({ className: classNameContainer })}>
       <label>
         <input className={base()} {...rest} />
 

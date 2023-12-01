@@ -1,12 +1,13 @@
 import { icons } from "lucide-react"
 import { ComponentProps } from "react"
+import { ClassNameValue } from "tailwind-merge"
 import { tv, VariantProps } from "tailwind-variants"
 
 import { Icon } from "@/components/Icon"
 
 const textarea = tv({
   slots: {
-    container: "max-w-[46.75rem] h-32 relative group",
+    container: "max-w-[45rem] h-32 relative group",
     base: [
       "peer w-full h-full bg-section py-3 pl-10.5 pr-4 outline-none rounded resize-none",
       "text-lg placeholder:text-slate-500",
@@ -46,12 +47,14 @@ type TextareaProps = ComponentProps<"textarea"> &
   VariantProps<typeof textarea> & {
     error?: string
     nameIcon?: keyof typeof icons
+    classNameContainer?: ClassNameValue
   }
 
 export function Textarea({
   error,
   nameIcon = "MessageSquare",
   className,
+  classNameContainer,
   ...rest
 }: TextareaProps) {
   const hasError = !!error
@@ -59,7 +62,7 @@ export function Textarea({
     textarea({ className, hasError })
 
   return (
-    <div className={container()}>
+    <div className={container({ className: classNameContainer })}>
       <label>
         <textarea className={base()} {...rest} />
 

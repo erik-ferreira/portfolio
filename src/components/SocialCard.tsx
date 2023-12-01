@@ -38,7 +38,7 @@ export function SocialCard({
   const { base, link } = socialCard({ className, variant })
 
   return (
-    <div className={base()} {...rest}>
+    <div className={base({ className })} {...rest}>
       <div className="flex items-center gap-2 text-3xl font-bold">
         {card.Icon}
         {card.label}

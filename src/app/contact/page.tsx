@@ -12,16 +12,19 @@ export default function Contact() {
         <Description label="Uma breve descrição bem aqui Uma breve descrição bem aqui a breve descrição bem aqui Uma breve descrição bem aqui Uma ve descrição bem aqui Uma breve descrição bem aqui Uma dale a a bem aqui" />
       </section>
 
-      <article>
-        <div className="flex gap-8 mb-10">
-          <SocialCard />
+      <article className="border flex flex-col items-center">
+        <form className="w-[45rem] grid grid-cols-2 gap-8 border">
+          <SocialCard className="ml-auto" />
           <SocialCard variant="mail" />
-        </div>
 
-        <form className="space-y-5">
-          <Input placeholder="Nome" />
-          <Input placeholder="Email" nameIcon="Mail" error="Invalid email" />
-          <Textarea placeholder="Mensagem" />
+          <Input placeholder="Nome" classNameContainer="col-span-1" />
+          <Input
+            placeholder="Email"
+            nameIcon="Mail"
+            classNameContainer="col-span-1"
+          />
+
+          <Textarea placeholder="Mensagem" classNameContainer="col-span-2" />
         </form>
       </article>
     </main>
