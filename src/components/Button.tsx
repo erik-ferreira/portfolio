@@ -9,7 +9,7 @@ const button = tv({
     variant: {
       default: "bg-blue-600 enabled:hover:bg-blue-700",
       outline:
-        "bg-transparent border-2 border-blue-500 text-blue-500 shadow-button hover:bg-blue-500 hover:text-page",
+        "bg-transparent border-2 border-blue-500 text-blue-500 shadow-blue hover:bg-blue-500 hover:text-page",
       "outline-gradient": "bg-page hover:bg-transparent",
     },
 

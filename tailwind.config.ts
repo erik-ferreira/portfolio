@@ -182,7 +182,7 @@ const config: Config = {
       },
 
       boxShadow: {
-        button: "0px 0px 24px 0px #2563EB",
+        blue: "0px 0px 24px 0px #2563EB",
       },
 
       transitionDuration: {
