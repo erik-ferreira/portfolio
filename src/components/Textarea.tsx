@@ -4,11 +4,11 @@ import { tv, VariantProps } from "tailwind-variants"
 
 import { Icon } from "@/components/Icon"
 
-const input = tv({
+const textarea = tv({
   slots: {
-    container: "relative group",
+    container: "max-w-[46.75rem] h-32 relative group",
     base: [
-      "peer w-full bg-section py-3 outline-none rounded",
+      "peer w-full h-full bg-section py-3 pl-10.5 pr-4 outline-none rounded resize-none",
       "text-lg placeholder:text-slate-500",
       "transition-colors border-[1.5px] enabled:group-hover:border-blue-600",
       "focus:border-blue-600",
@@ -16,7 +16,7 @@ const input = tv({
       "[&:not(:placeholder-shown)]:border-blue-600",
     ],
     icon: [
-      "absolute top-[18px] w-4.5 h-4.5",
+      "absolute left-4 top-[18px] w-4.5 h-4.5",
       "group-focus-within:text-blue-600 peer-[&:not(:placeholder-shown)]:text-blue-600",
     ],
     errorContainer: "flex items-center gap-2 mt-2",
@@ -25,18 +25,6 @@ const input = tv({
   },
 
   variants: {
-    variant: {
-      default: {
-        container: "max-w-[25rem]",
-        base: "pl-10.5 pr-4",
-        icon: "left-4",
-      },
-      search: {
-        container: "max-w-[37.5rem]",
-        base: "pr-10.5 pl-4",
-        icon: "right-4",
-      },
-    },
     hasError: {
       false: {
         base: "border-transparent",
@@ -50,32 +38,30 @@ const input = tv({
   },
 
   defaultVariants: {
-    variant: "default",
     hasError: false,
   },
 })
 
-type InputProps = ComponentProps<"input"> &
-  VariantProps<typeof input> & {
+type TextareaProps = ComponentProps<"textarea"> &
+  VariantProps<typeof textarea> & {
     error?: string
     nameIcon?: keyof typeof icons
   }
 
-export function Input({
+export function Textarea({
   error,
-  nameIcon = "User",
-  variant,
+  nameIcon = "MessageSquare",
   className,
   ...rest
-}: InputProps) {
+}: TextareaProps) {
   const hasError = !!error
   const { container, base, icon, errorContainer, errorIcon, errorMessage } =
-    input({ className, hasError, variant })
+    textarea({ className, hasError })
 
   return (
     <div className={container()}>
       <label>
-        <input className={base()} {...rest} />
+        <textarea className={base()} {...rest} />
 
         <Icon name={nameIcon} className={icon()} />
 

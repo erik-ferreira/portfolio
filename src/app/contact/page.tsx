@@ -2,6 +2,7 @@ import { Input } from "@/components/Input"
 import { Title } from "@/components/Title"
 import { SocialCard } from "@/components/SocialCard"
 import { Description } from "@/components/Description"
+import { Textarea } from "@/components/Textarea"
 
 export default function Contact() {
   return (
@@ -20,11 +21,7 @@ export default function Contact() {
         <form className="space-y-5">
           <Input placeholder="Nome" />
           <Input placeholder="Email" nameIcon="Mail" error="Invalid email" />
-          <Input
-            placeholder="Pesquise aqui"
-            variant="search"
-            nameIcon="Search"
-          />
+          <Textarea placeholder="Mensagem" />
         </form>
       </article>
     </main>
