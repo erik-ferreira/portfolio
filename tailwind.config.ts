@@ -171,10 +171,22 @@ const config: Config = {
           "0%": { transform: "translateX(0%)" },
           "100%": { transform: "translateX(-65%)" },
         },
+
+        showDialog: {
+          "0%": { opacity: "0" },
+          "100%": { opacity: "1" },
+        },
+
+        hideDialog: {
+          "0%": { opacity: "1" },
+          "100%": { opacity: "0" },
+        },
       },
 
       animation: {
         slider: "scroll 40s linear infinite",
+        "show-dialog": "showDialog 0.5s",
+        "hide-dialog": "hideDialog 0.5s",
       },
 
       gap: {
