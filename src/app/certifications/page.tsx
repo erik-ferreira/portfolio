@@ -1,6 +1,6 @@
 import { Title } from "@/components/Title"
 import { Description } from "@/components/Description"
-import { Certificate } from "@/components/Certificate"
+
 import { SwiperCertification } from "@/components/SwiperCertification"
 
 export default function Certifications() {
@@ -10,10 +10,7 @@ export default function Certifications() {
         <Title label="Certificados" labelBackground="Certifications" />
         <Description label="Uma breve descrição bem aqui" />
 
-        <article className="">
-          <SwiperCertification />
-          <Certificate />
-        </article>
+        <SwiperCertification />
       </section>
     </main>
   )

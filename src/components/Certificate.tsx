@@ -11,7 +11,7 @@ export function Certificate({ className, ...rest }: CertificateProps) {
   return (
     <div
       className={twMerge(
-        "max-w-[695px] flex gap-6 p-8 border border-slate-500 rounded",
+        "max-w-[695px] h-fit flex gap-6 p-8 border border-slate-500 rounded",
         className
       )}
       {...rest}
