@@ -4,11 +4,11 @@ import Link, { LinkProps } from "next/link"
 import { twMerge } from "@/utils/twMerge"
 import { ProjectDTO } from "@/dtos/ProjectDTO"
 
-interface ProjectProps extends LinkProps {
+interface ProjectShortProps extends LinkProps {
   project: ProjectDTO
 }
 
-export function Project({ project, ...rest }: ProjectProps) {
+export function ProjectShort({ project, ...rest }: ProjectShortProps) {
   return (
     <Link
       className="border-2 border-transparent rounded-lg overflow-auto relative transition-colors duration-300 hover:border-sky-600 hover:cursor-pointer group"

@@ -4,7 +4,7 @@ import { ComponentProps } from "react"
 import { Icon } from "@/components/Icon"
 import { Title } from "@/components/Title"
 import { Button } from "@/components/Button"
-import { Project } from "@/components/Project"
+import { ProjectShort } from "@/components/ProjectShort"
 
 import { twMerge } from "@/utils/twMerge"
 import { projects } from "@/defaults/projects"
@@ -21,7 +21,11 @@ export function Projects({ className, ...rest }: ProjectsProps) {
 
       <div className="grid grid-cols-3 gap-8">
         {projects.map((project) => (
-          <Project key={project.id} href={project.href} project={project} />
+          <ProjectShort
+            key={project.id}
+            href={project.href}
+            project={project}
+          />
         ))}
       </div>
 
