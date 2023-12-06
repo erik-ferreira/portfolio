@@ -5,18 +5,36 @@ import { Link } from "@/components/Link"
 
 import { twMerge } from "@/utils/twMerge"
 
-interface CertificateProps extends ComponentProps<"div"> {}
+interface CertificateProps extends ComponentProps<"div"> {
+  isPrev?: boolean
+  isNext?: boolean
+}
 
-export function Certificate({ className, ...rest }: CertificateProps) {
+export function Certificate({
+  className,
+  isPrev = false,
+  isNext = false,
+  ...rest
+}: CertificateProps) {
+  console.log(isNext)
   return (
     <div
       className={twMerge(
         "max-w-[695px] h-fit flex gap-6 p-8 border border-slate-500 rounded",
+        {
+          "relative after:absolute after:top-0 after:left-0 after:right-0 after:h-full after:rounded after:from-black after:to-[rgba(8, 2, 5, 0.00)]":
+            isPrev || isNext,
+        },
+        {
+          "after:bg-gradient-to-b": isPrev,
+        },
+        {
+          "after:bg-gradient-to-t": isNext,
+        },
         className
       )}
       {...rest}
     >
-      {/* Left */}
       <div>
         <Image
           src="/certificates/rocketseat.svg"
@@ -36,7 +54,6 @@ export function Certificate({ className, ...rest }: CertificateProps) {
         />
       </div>
 
-      {/* Right */}
       <div>
         <h3 className="text-3.5xl font-bold text-sky-500">Figma for devs</h3>
         <p className="text-2xl font-bold text-violet-300">Rocketseat</p>

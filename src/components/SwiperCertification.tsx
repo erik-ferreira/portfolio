@@ -3,7 +3,7 @@
 import Image from "next/image"
 import { useState } from "react"
 import { Navigation, Controller } from "swiper/modules"
-import { Swiper, SwiperProps, SwiperSlide, SwiperClass } from "swiper/react"
+import { Swiper, SwiperSlide, SwiperClass } from "swiper/react"
 
 import { Certificate } from "@/components/Certificate"
 import { SwiperNavButtons } from "@/components/SwiperNavButtons"
@@ -53,8 +53,12 @@ export function SwiperCertification({ ...rest }: SwiperCertificationProps) {
       >
         {list.map((item) => (
           <SwiperSlide key={item}>
-            {({ isActive }) => (
-              <Certificate className={isActive ? "border-sky-400" : ""} />
+            {({ isActive, isPrev, isNext }) => (
+              <Certificate
+                className={isActive ? "border-sky-400" : ""}
+                isPrev={isPrev}
+                isNext={isNext}
+              />
             )}
           </SwiperSlide>
         ))}
