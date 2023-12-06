@@ -4,6 +4,7 @@ import Image from "next/image"
 import { Icon } from "@/components/Icon"
 import { Title } from "@/components/Title"
 import { Button } from "@/components/Button"
+import { Divider } from "@/components/Divider"
 import { SocialIcons } from "@/components/SocialIcons"
 import { Description } from "@/components/Description"
 
@@ -26,11 +27,11 @@ export default function About() {
               className="rounded-lg"
             />
 
-            <div className="w-full h-0.5 bg-sky-600" />
+            <Divider />
 
             <SocialIcons variant="completed" />
 
-            <div className="w-full h-0.5 bg-sky-600" />
+            <Divider />
 
             <Button variant="outline-gradient" asChild>
               <Link href="/">

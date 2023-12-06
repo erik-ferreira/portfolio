@@ -4,23 +4,44 @@ import { tv, VariantProps } from "tailwind-variants"
 import LinkPrimitive, { LinkProps as LinkPrimitiveProps } from "next/link"
 
 const link = tv({
-  base: [
-    "text-lg leading-base font-semibold flex items-center w-fit gap-1 relative transition-colors",
-    "hover:text-blue-500",
-    "before:w-0 before:h-[3px] rounded-sm before:bg-blue-500 before:absolute before:-bottom-0.5 before:left-0 before:duration-[250ms]",
-    "hover:before:w-full",
-  ],
+  slots: {
+    base: [
+      "leading-base font-semibold flex items-center w-fit gap-1 relative transition-colors",
+      "hover:text-blue-500",
+      "before:w-0 before:h-[3px] rounded-sm before:bg-blue-500 before:absolute before:-bottom-0.5 before:left-0 before:duration-[250ms]",
+      "hover:before:w-full",
+    ],
+    icon: "",
+  },
 
   variants: {
     variant: {
-      default: "text-slate-200",
-      selected: "text-blue-500",
-      secondary: "text-violet-500 hover:text-violet-400 before:bg-violet-500",
+      default: {
+        base: "text-slate-200",
+      },
+      selected: {
+        base: "text-blue-500",
+      },
+      secondary: {
+        base: "text-violet-500 hover:text-violet-400 before:bg-violet-500",
+      },
+    },
+
+    size: {
+      default: {
+        base: "text-lg",
+        icon: "w-4.5 h-4.5",
+      },
+      large: {
+        base: "text-2xl",
+        icon: "w-6 h-6",
+      },
     },
   },
 
   defaultVariants: {
     variant: "default",
+    size: "default",
   },
 })
 
@@ -35,17 +56,16 @@ export function Link({
   label,
   className,
   variant,
+  size,
   hideIcon = false,
   ...rest
 }: LinkProps) {
+  const { base, icon } = link({ variant, size })
+
   return (
-    <LinkPrimitive
-      prefetch={false}
-      className={link({ variant, className })}
-      {...rest}
-    >
+    <LinkPrimitive prefetch={false} className={base({ className })} {...rest}>
       {label}
-      {!hideIcon && <ArrowRight className="w-4.5 h-4.5" />}
+      {!hideIcon && <ArrowRight className={icon()} />}
     </LinkPrimitive>
   )
 }

@@ -37,3 +37,56 @@ export const projects: ProjectDTO[] = [
   id: index + 1,
   ...project,
 }))
+
+export const listAllProjects = [
+  {
+    id: 1,
+    src: "/projects/1.png",
+    title: "Github Blog",
+    description:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book...",
+    techs: [
+      "React Native",
+      "Typescript",
+      "Javascript",
+      "React",
+      "Styled-Components",
+      "Next",
+      "Tailwind",
+    ],
+  },
+  {
+    id: 2,
+    src: "/projects/2.png",
+    title: "Github Blog",
+    description:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book...",
+    techs: [
+      "React Native",
+      "Typescript",
+      "Javascript",
+      "React",
+      "Styled-Components",
+      "Next",
+      "Tailwind",
+      "Apolo",
+      "SQL",
+    ],
+  },
+  {
+    id: 3,
+    src: "/projects/3.png",
+    title: "Github Blog",
+    description:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book...",
+    techs: [
+      "React Native",
+      "Typescript",
+      "Javascript",
+      "React",
+      "Styled-Components",
+      "Next",
+      "Tailwind",
+    ],
+  },
+]
