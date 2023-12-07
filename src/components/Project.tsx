@@ -4,7 +4,7 @@ import { ComponentProps } from "react"
 
 import { Link } from "@/components/Link"
 import { Icon } from "@/components/Icon"
-import { TechName } from "@/components/TechName"
+import { SkillName } from "@/components/SkillName"
 
 import { twMerge } from "@/utils/twMerge"
 
@@ -45,7 +45,7 @@ export function Project({ project, className, ...rest }: ProjectProps) {
 
         <ul className="flex items-center gap-2 flex-wrap">
           {project.techs.map((tech) => (
-            <TechName key={tech} name={tech} />
+            <SkillName key={tech} name={tech} />
           ))}
         </ul>
 
