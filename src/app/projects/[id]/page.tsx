@@ -2,8 +2,10 @@ import Link from "next/link"
 
 import { Icon } from "@/components/Icon"
 import { Title } from "@/components/Title"
+import { Skill } from "@/components/Skill"
 import { Button } from "@/components/Button"
 import { Description } from "@/components/Description"
+import { Gallery } from "@/components/Gallery"
 
 export default function Project() {
   return (
@@ -34,6 +36,30 @@ export default function Project() {
           labelBackground="Technologies"
           variant="subtitle"
         />
+
+        <div className="w-fit mx-auto grid grid-cols-5 gap-8">
+          <Skill />
+          <Skill />
+          <Skill />
+          <Skill />
+          <Skill />
+        </div>
+
+        <Title
+          label="Capturas de tela"
+          labelBackground="Screenshot"
+          variant="subtitle"
+        />
+
+        <div className="w-fit mx-auto grid grid-cols-3 gap-8">
+          <Gallery src="/projects/1.png" />
+          <Gallery src="/projects/1.png" />
+          <Gallery src="/projects/1.png" />
+          <Gallery src="/projects/1.png" />
+          <Gallery src="/projects/1.png" />
+        </div>
+
+        <Title label="Video" labelBackground="Video" variant="subtitle" />
       </section>
     </main>
   )
