@@ -1,6 +1,7 @@
 import { Title } from "@/components/Title"
 import { Input } from "@/components/Input"
 import { Project } from "@/components/Project"
+import { Pagination } from "@/components/Pagination"
 import { Description } from "@/components/Description"
 
 import { listAllProjects } from "@/defaults/projects"
@@ -23,6 +24,8 @@ export default function Projects() {
             <Project key={project.id} project={project} />
           ))}
         </article>
+
+        <Pagination />
       </section>
     </main>
   )
