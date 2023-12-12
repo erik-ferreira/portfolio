@@ -1,8 +1,8 @@
-import { labelColorVariants } from "@/components/SkillIcon"
+import { variantsColorSkills } from "@/defaults/skills"
 
 export interface SkillDTO {
   id: number
   label: string
   src: string
-  typed: keyof typeof labelColorVariants
+  typed: keyof typeof variantsColorSkills
 }

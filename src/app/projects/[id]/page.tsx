@@ -8,6 +8,8 @@ import { Button } from "@/components/Button"
 import { Gallery } from "@/components/Gallery"
 import { Description } from "@/components/Description"
 
+import { skillProject } from "@/defaults/skills"
+
 export default function Project() {
   return (
     <main className="max-w-content w-content mx-auto flex flex-col">
@@ -39,11 +41,9 @@ export default function Project() {
         />
 
         <div className="w-fit mx-auto grid grid-cols-5 gap-8">
-          <Skill />
-          <Skill />
-          <Skill />
-          <Skill />
-          <Skill />
+          {skillProject.map((skill) => (
+            <Skill key={skill.id} skill={skill} />
+          ))}
         </div>
 
         <Title
