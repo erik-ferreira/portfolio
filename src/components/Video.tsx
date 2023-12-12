@@ -2,10 +2,19 @@
 
 import Image from "next/image"
 import ReactPlayer from "react-player"
+import { useEffect, useState } from "react"
 
 interface VideoProps {}
 
 export function Video({ ...rest }: VideoProps) {
+  const [hasWindow, setHasWindow] = useState(false)
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      setHasWindow(true)
+    }
+  }, [])
+
   return (
     <div className="relative ">
       <Image
@@ -17,12 +26,14 @@ export function Video({ ...rest }: VideoProps) {
       />
 
       <div className="aspect-video w-[900px] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-        <ReactPlayer
-          url="/basquete/video1.mp4"
-          width="100%"
-          height="100%"
-          controls
-        />
+        {hasWindow && (
+          <ReactPlayer
+            url="/basquete/video1.mp4"
+            width="100%"
+            height="100%"
+            controls
+          />
+        )}
       </div>
     </div>
   )

@@ -5,8 +5,8 @@ import { Title } from "@/components/Title"
 import { Skill } from "@/components/Skill"
 import { Video } from "@/components/Video"
 import { Button } from "@/components/Button"
-import { Description } from "@/components/Description"
 import { Gallery } from "@/components/Gallery"
+import { Description } from "@/components/Description"
 
 export default function Project() {
   return (
