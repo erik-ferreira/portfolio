@@ -51,12 +51,13 @@ export default function Project() {
           variant="subtitle"
         />
 
-        <div className="w-fit mx-auto grid grid-cols-3 gap-8">
-          <Gallery src="/projects/1.png" />
-          <Gallery src="/projects/1.png" />
-          <Gallery src="/projects/1.png" />
-          <Gallery src="/projects/1.png" />
-          <Gallery src="/projects/1.png" />
+        <div className="w-fit mx-auto grid grid-cols-4 gap-8">
+          <Gallery src="/projects/1.png" variant="image" isScreenshot />
+          <Gallery src="/projects/1.png" variant="image" isScreenshot />
+          <Gallery src="/projects/1.png" variant="image" isScreenshot />
+          <Gallery src="/projects/1.png" variant="image" isScreenshot />
+          <Gallery src="/projects/1.png" variant="image" isScreenshot />
+          <Gallery src="/projects/1.png" variant="image" isScreenshot />
         </div>
 
         <Title label="Video" labelBackground="Video" variant="subtitle" />
