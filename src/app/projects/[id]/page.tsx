@@ -3,14 +3,15 @@ import Link from "next/link"
 import { Icon } from "@/components/Icon"
 import { Title } from "@/components/Title"
 import { Skill } from "@/components/Skill"
+import { Video } from "@/components/Video"
 import { Button } from "@/components/Button"
 import { Description } from "@/components/Description"
 import { Gallery } from "@/components/Gallery"
 
 export default function Project() {
   return (
-    <main className="max-w-content w-content mx-auto p-8 flex flex-col gap-16">
-      <section>
+    <main className="max-w-content w-content mx-auto flex flex-col">
+      <section className="p-8 pb-0">
         <Title label="Github Blog" labelBackground="Github Blog" />
 
         <div className="w-fit mx-auto flex gap-6">
@@ -62,6 +63,8 @@ export default function Project() {
 
         <Title label="Video" labelBackground="Video" variant="subtitle" />
       </section>
+
+      <Video />
     </main>
   )
 }
