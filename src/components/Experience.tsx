@@ -13,6 +13,18 @@ export function Experience({
   className,
   ...rest
 }: ExperienceProps) {
+  let start_month = experience.start_date.toLocaleString("default", {
+    month: "long",
+  })
+  let start_year = experience.start_date.getFullYear()
+
+  let end_month = experience?.end_date?.toLocaleString("default", {
+    month: "long",
+  })
+  let end_year = experience?.end_date?.getFullYear()
+
+  let date = `${start_month} ${start_year} - ${end_month} ${end_year}`
+
   return (
     <div
       className={twMerge("grid grid-cols-2 gap-42 relative group", className)}
@@ -46,7 +58,7 @@ export function Experience({
           "group-even:order-1 group-even:text-right"
         )}
       >
-        {experience.date}
+        {date}
       </time>
     </div>
   )

@@ -3,6 +3,7 @@ export interface ExperienceDTO {
   office: string
   company: string
   description: string
-  date: string
+  start_date: Date
+  end_date?: Date
   image: string
 }
