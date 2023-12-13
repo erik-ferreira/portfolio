@@ -15,13 +15,13 @@ export const socialCardsDefaults = {
       />
     ),
     label: "Whatsapp",
-    href: "/",
+    href: "https://wa.me/5585986363644",
     value: "+55 11 986363644",
   },
   mail: {
     Icon: <Icon name="Mail" className="w-7 h-7 text-red-mail" />,
     label: "Email",
-    href: "/",
+    href: "mailto:erikdesouzagf@gmail.com",
     value: "erikdesouzagf@gmail.com",
   },
 } as const
@@ -66,7 +66,7 @@ export function SocialCard({
         {card.label}
       </div>
 
-      <Link href={card.href} className={link()}>
+      <Link href={card.href} className={link()} target="_blank">
         {card.value}
       </Link>
     </div>

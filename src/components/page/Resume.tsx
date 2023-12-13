@@ -65,7 +65,7 @@ export function Resume({ className, ...rest }: ResumeProps) {
             five centuries, but also the leap into electronic typesetting,
             remaining essentially unchanged.
           </p>
-          <Link href="/" label="Ler mais" className="text-slate-500" />
+          <Link href="/about" label="Ler mais" className="text-slate-500" />
         </div>
 
         <Image src={preview} alt="Erik Ferreira" width={350} height={233} />

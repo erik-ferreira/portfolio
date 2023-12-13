@@ -59,6 +59,7 @@ export function Certificate({
           label="Acesse o certificado"
           hideIcon
           className="whitespace-nowrap text-slate-600"
+          target="_blank"
         />
       </div>
 

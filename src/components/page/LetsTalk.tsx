@@ -31,7 +31,7 @@ export function LetsTalk({ className, ...rest }: LetsTalkProps) {
       </div>
 
       <Button variant="outline-gradient" size="large" asChild>
-        <Link href="/">
+        <Link href="/contact">
           Entre em contato
           <Icon size="large" />
         </Link>

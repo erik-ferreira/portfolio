@@ -9,14 +9,6 @@ import { SkillName } from "@/components/SkillName"
 import { twMerge } from "@/utils/twMerge"
 import { ProjectDTO } from "@/dtos/ProjectDTO"
 
-// interface ProjectDTO {
-//   id: number
-//   src: string
-//   title: string
-//   description: string
-//   techs: Array<string>
-// }
-
 interface ProjectProps extends ComponentProps<"div"> {
   project: ProjectDTO
 }
@@ -31,10 +23,10 @@ export function Project({ project, className, ...rest }: ProjectProps) {
           <h3 className="text-4.75xl font-bold">{project.title}</h3>
 
           <div className="flex items-center gap-2">
-            <NextLink href={project.github_href}>
+            <NextLink href={project.github_href} target="_blank">
               <Icon name="Github" size="large" />
             </NextLink>
-            <NextLink href={project.demo_href}>
+            <NextLink href={project.demo_href} target="_blank">
               <Icon name="Link" size="large" />
             </NextLink>
           </div>

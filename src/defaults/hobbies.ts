@@ -12,12 +12,10 @@ const hobbiesDefault: HobbyDefault[] = [
   },
 ]
 
-export const hobbies: HobbyDTO[] = [
-  ...hobbiesDefault,
-  ...hobbiesDefault,
-  ...hobbiesDefault,
-  ...hobbiesDefault,
-].map((hobby, index) => ({
-  id: index + 1,
-  ...hobby,
-}))
+export const hobbies: HobbyDTO[] = Array.from({ length: 4 }).map(
+  (_, index) => ({
+    id: index + 1,
+    ...hobbiesDefault[0],
+    href: `/hobbies/${index + 1}`,
+  })
+)

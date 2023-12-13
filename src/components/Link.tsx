@@ -1,4 +1,4 @@
-import { HTMLAttributes } from "react"
+import { HTMLAttributes, HTMLAttributeAnchorTarget } from "react"
 import { ArrowRight } from "lucide-react"
 import { tv, VariantProps } from "tailwind-variants"
 import LinkPrimitive, { LinkProps as LinkPrimitiveProps } from "next/link"
@@ -50,6 +50,7 @@ type LinkProps = LinkPrimitiveProps &
   VariantProps<typeof link> & {
     label: string
     hideIcon?: boolean
+    target?: HTMLAttributeAnchorTarget
   }
 
 export function Link({
@@ -58,12 +59,18 @@ export function Link({
   variant,
   size,
   hideIcon = false,
+  target,
   ...rest
 }: LinkProps) {
   const { base, icon } = link({ variant, size })
 
   return (
-    <LinkPrimitive prefetch={false} className={base({ className })} {...rest}>
+    <LinkPrimitive
+      prefetch={false}
+      className={base({ className })}
+      target={target}
+      {...rest}
+    >
       {label}
       {!hideIcon && <ArrowRight className={icon()} />}
     </LinkPrimitive>

@@ -34,7 +34,7 @@ export default function About() {
             <Divider />
 
             <Button variant="outline-gradient" asChild>
-              <Link href="/">
+              <Link href="/contact">
                 Entre em contato
                 <Icon size="small" />
               </Link>

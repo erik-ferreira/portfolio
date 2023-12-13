@@ -52,6 +52,7 @@ export function SocialIcons({ variant, className, ...rest }: SocialIconsProps) {
             href={socialIcon.href}
             prefetch={false}
             className={link()}
+            target="_blank"
           >
             {socialIcon.type === "default" ? (
               <Icon name={socialIcon.name} className={icon()} enabledHover />

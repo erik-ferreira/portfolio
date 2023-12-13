@@ -30,7 +30,7 @@ export function Projects({ className, ...rest }: ProjectsProps) {
       </div>
 
       <Button variant="outline-gradient" size="large" asChild>
-        <Link href="/">
+        <Link href="/projects">
           Todos os Projetos
           <Icon size="large" />
         </Link>
