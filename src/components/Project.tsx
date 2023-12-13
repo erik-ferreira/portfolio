@@ -7,14 +7,15 @@ import { Icon } from "@/components/Icon"
 import { SkillName } from "@/components/SkillName"
 
 import { twMerge } from "@/utils/twMerge"
+import { ProjectDTO } from "@/dtos/ProjectDTO"
 
-interface ProjectDTO {
-  id: number
-  src: string
-  title: string
-  description: string
-  techs: Array<string>
-}
+// interface ProjectDTO {
+//   id: number
+//   src: string
+//   title: string
+//   description: string
+//   techs: Array<string>
+// }
 
 interface ProjectProps extends ComponentProps<"div"> {
   project: ProjectDTO
@@ -30,10 +31,10 @@ export function Project({ project, className, ...rest }: ProjectProps) {
           <h3 className="text-4.75xl font-bold">{project.title}</h3>
 
           <div className="flex items-center gap-2">
-            <NextLink href="/">
+            <NextLink href={project.github_href}>
               <Icon name="Github" size="large" />
             </NextLink>
-            <NextLink href="/">
+            <NextLink href={project.demo_href}>
               <Icon name="Link" size="large" />
             </NextLink>
           </div>
@@ -44,13 +45,13 @@ export function Project({ project, className, ...rest }: ProjectProps) {
         </p>
 
         <ul className="flex items-center gap-2 flex-wrap">
-          {project.techs.map((tech) => (
-            <SkillName key={tech} name={tech} />
+          {project.skills.map((skill) => (
+            <SkillName key={skill.id} name={skill.label} />
           ))}
         </ul>
 
         <Link
-          href="/"
+          href={project.href}
           label="Ler mais"
           className="text-slate-500"
           size="large"

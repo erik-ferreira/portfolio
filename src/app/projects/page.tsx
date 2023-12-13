@@ -4,7 +4,7 @@ import { Project } from "@/components/Project"
 import { Pagination } from "@/components/Pagination"
 import { Description } from "@/components/Description"
 
-import { listAllProjects } from "@/defaults/projects"
+import { allProjects } from "@/defaults/projects"
 
 export default function Projects() {
   return (
@@ -20,7 +20,7 @@ export default function Projects() {
         />
 
         <article className="flex flex-col mt-8 divide-y-2 divide-sky-600 border-t border-sky-600">
-          {listAllProjects.map((project) => (
+          {allProjects.map((project) => (
             <Project key={project.id} project={project} />
           ))}
         </article>

@@ -79,15 +79,7 @@ const skillsDefault: SkillDefault[] = [
 export const skills: SkillDTO[] = [...skillsDefault, ...skillsDefault].map(
   (skill, index) => ({
     id: index + 1,
-    rgb: convertColorHexToRgb(skill.color),
+    rgb: convertColorHexToRgb(skill.color, 0.1),
     ...skill,
   })
 )
-
-export const skillProject: SkillDTO[] = skillsDefault
-  .slice(0, 5)
-  .map((skill, index) => ({
-    id: index + 1,
-    rgb: convertColorHexToRgb(skill.color, 0.1),
-    ...skill,
-  }))

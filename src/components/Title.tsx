@@ -43,7 +43,7 @@ export function Title({
   const { base, background, text } = title({ variant, className })
 
   return (
-    <div className={base()} {...rest}>
+    <div className={base({ className })} {...rest}>
       <h2 className={background()}>{labelBackground}</h2>
 
       <span className={text()}>{label}</span>

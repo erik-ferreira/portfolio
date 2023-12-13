@@ -2,7 +2,6 @@ import Image from "next/image"
 
 import { twMerge } from "@/utils/twMerge"
 import { SkillDTO } from "@/dtos/SkillDTO"
-// import { variantsColorSkills } from "@/defaults/skills"
 
 interface SkillProps {
   skill: SkillDTO

@@ -2,11 +2,13 @@
 
 import Image from "next/image"
 import ReactPlayer from "react-player"
-import { useEffect, useState } from "react"
+import { ComponentProps, useEffect, useState } from "react"
 
-interface VideoProps {}
+import { twMerge } from "@/utils/twMerge"
 
-export function Video({ ...rest }: VideoProps) {
+interface VideoProps extends ComponentProps<"div"> {}
+
+export function Video({ className, ...rest }: VideoProps) {
   const [hasWindow, setHasWindow] = useState(false)
 
   useEffect(() => {
@@ -16,7 +18,7 @@ export function Video({ ...rest }: VideoProps) {
   }, [])
 
   return (
-    <div className="relative ">
+    <div className={twMerge("relative", className)} {...rest}>
       <Image
         src="/basquete/9.png"
         width={1440}

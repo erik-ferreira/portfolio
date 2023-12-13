@@ -27,7 +27,7 @@ export function ProjectShort({ project, ...rest }: ProjectShortProps) {
         </h3>
 
         <p className="text-sm font-semibold mt-0.5 mb-4">
-          {project.description}
+          {project.description.substring(0, 100)}
         </p>
 
         <div className="flex items-center gap-4 flex-wrap">
