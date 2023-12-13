@@ -1,8 +1,9 @@
-import { variantsColorSkills } from "@/defaults/skills"
+import { type ClassValue } from "clsx"
 
 export interface SkillDTO {
   id: number
   label: string
   src: string
-  typed: keyof typeof variantsColorSkills
+  color: string
+  rgb: string
 }
