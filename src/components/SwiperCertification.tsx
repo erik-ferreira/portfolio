@@ -8,6 +8,8 @@ import { Swiper, SwiperSlide, SwiperClass } from "swiper/react"
 import { Certificate } from "@/components/Certificate"
 import { SwiperNavButtons } from "@/components/SwiperNavButtons"
 
+import { certificates } from "@/defaults/certificates"
+
 import "swiper/css"
 import "swiper/css/navigation"
 
@@ -27,10 +29,10 @@ export function SwiperCertification({ ...rest }: SwiperCertificationProps) {
         controller={{ control: controlledSwiper }}
         initialSlide={1}
       >
-        {list.map((item) => (
-          <SwiperSlide key={item}>
+        {certificates.map((certificate) => (
+          <SwiperSlide key={certificate.id}>
             <Image
-              src="/certificates/figma-controller.png"
+              src={certificate.src}
               width={500}
               height={345}
               alt="Certificate"
@@ -51,13 +53,14 @@ export function SwiperCertification({ ...rest }: SwiperCertificationProps) {
         modules={[Controller]}
         onSwiper={setControlledSwiper}
       >
-        {list.map((item) => (
-          <SwiperSlide key={item}>
+        {certificates.map((certificate) => (
+          <SwiperSlide key={certificate.id}>
             {({ isActive, isPrev, isNext }) => (
               <Certificate
                 className={isActive ? "border-sky-400" : ""}
                 isPrev={isPrev}
                 isNext={isNext}
+                certificate={certificate}
               />
             )}
           </SwiperSlide>

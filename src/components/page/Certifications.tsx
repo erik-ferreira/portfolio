@@ -7,7 +7,7 @@ import { Button } from "@/components/Button"
 import { CertificateShort } from "@/components/CertificateShort"
 
 import { twMerge } from "@/utils/twMerge"
-import { certificates } from "@/defaults/certificates"
+import { someCertificates } from "@/defaults/certificates"
 
 interface CertificationsProps extends ComponentProps<"section"> {}
 
@@ -19,8 +19,8 @@ export function Certifications({ className, ...rest }: CertificationsProps) {
     >
       <Title label="Certificados" labelBackground="Certificates" />
 
-      <div className="flex items-center justify-center gap-12">
-        {certificates.map((certificate) => (
+      <div className="flex items-center justify-center gap-12 flex-wrap">
+        {someCertificates.map((certificate) => (
           <CertificateShort
             key={certificate.id}
             href={certificate.href}

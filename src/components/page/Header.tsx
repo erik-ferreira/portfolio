@@ -1,3 +1,4 @@
+import Link from "next/link"
 import Image from "next/image"
 import { ComponentProps } from "react"
 
@@ -19,7 +20,9 @@ export function Header({ className, ...rest }: HeaderProps) {
       )}
       {...rest}
     >
-      <Image src={logo} alt="Erik Ferreira" width={150} height={40} />
+      <Link href="/" prefetch={false}>
+        <Image src={logo} alt="Erik Ferreira" width={150} height={40} />
+      </Link>
 
       <div className="flex items-center gap-8">
         <Navbar />

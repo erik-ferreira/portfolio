@@ -4,4 +4,8 @@ export interface CertificateDTO {
   company: string
   src: string
   href: string
+
+  description: string
+  date_of_issue: Date
+  src_company: string
 }
