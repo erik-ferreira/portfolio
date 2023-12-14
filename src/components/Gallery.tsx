@@ -30,8 +30,8 @@ export function Gallery({
   return isScreenshot ? (
     <button
       className={twMerge(
-        "rounded-lg overflow-auto transition-shadow duration-300 cursor-auto",
-        "hover:shadow-blue"
+        "rounded-lg overflow-auto transition-all duration-300 cursor-auto",
+        "hover:shadow-blue hover:scale-105"
       )}
       {...rest}
     >
@@ -42,7 +42,8 @@ export function Gallery({
       <Dialog.Trigger asChild>
         <button
           className={twMerge(
-            "relative rounded-lg overflow-auto transition-shadow duration-300 hover:shadow-blue"
+            "relative rounded-lg overflow-auto transition-all duration-300",
+            "hover:shadow-blue hover:scale-105"
           )}
           {...rest}
         >

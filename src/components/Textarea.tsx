@@ -9,7 +9,7 @@ const textarea = tv({
   slots: {
     container: "max-w-[45rem] h-32 relative group",
     base: [
-      "peer w-full h-full bg-section py-3 pl-10.5 pr-4 outline-none rounded resize-none",
+      "peer w-full h-full bg-section py-3 px-4 indent-8 outline-none rounded resize-none",
       "text-lg placeholder:text-slate-500",
       "transition-colors border-[1.5px] enabled:group-hover:border-blue-600",
       "focus:border-blue-600",
