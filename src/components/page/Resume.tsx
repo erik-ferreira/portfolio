@@ -2,6 +2,7 @@ import Image from "next/image"
 import { ComponentProps } from "react"
 
 import { Link } from "@/components/Link"
+import { TypingEffect } from "@/components/TypingEffect"
 
 import { twMerge } from "@/utils/twMerge"
 
@@ -24,7 +25,7 @@ export function Resume({ className, ...rest }: ResumeProps) {
           height={290}
         />
 
-        <div className="flex flex-col gap-1">
+        <div className="min-w-[540px] flex flex-col gap-1">
           <p className="text-2xl leading-base font-semibold text-slate-500">
             Olá 👋🏾, meu nome é
           </p>
@@ -33,8 +34,11 @@ export function Resume({ className, ...rest }: ResumeProps) {
             Erik Ferreira
           </h1>
 
-          <h2 className="text-4.5xl leading-none font-bold">
-            Sou <span className="text-blue-500">Frontend Developer</span>
+          <h2 className="text-4.5xl leading-none font-bold flex gap-2">
+            Sou{" "}
+            <span className="text-blue-500">
+              <TypingEffect />
+            </span>
           </h2>
 
           <p className="text-lg leading-none font-semibold">
