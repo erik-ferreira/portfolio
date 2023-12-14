@@ -14,9 +14,13 @@ export default function Project() {
   const project = projects[0]
 
   return (
-    <main className="max-w-content w-content mx-auto flex flex-col">
+    <main className="max-w-content w-content mx-auto">
       <section className="p-8 pb-0 mb-8">
-        <Title label={project.title} labelBackground={project.title} />
+        <Title
+          label={project.title}
+          labelBackground={project.title}
+          isTitlePage
+        />
 
         <div className="w-fit mx-auto flex gap-6 mt-4">
           <Button variant="outline" asChild>
