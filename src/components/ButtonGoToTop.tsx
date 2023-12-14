@@ -1,3 +1,5 @@
+"use client"
+
 import { Rocket } from "lucide-react"
 import { ComponentProps } from "react"
 
@@ -6,6 +8,10 @@ import { twMerge } from "@/utils/twMerge"
 interface ButtonGoToTopProps extends ComponentProps<"button"> {}
 
 export function ButtonGoToTop({ className, ...rest }: ButtonGoToTopProps) {
+  function handleScrollToTop() {
+    window.scrollTo({ top: 0, behavior: "smooth" })
+  }
+
   return (
     <button
       className={twMerge(
@@ -15,6 +21,7 @@ export function ButtonGoToTop({ className, ...rest }: ButtonGoToTopProps) {
         "fixed bottom-12 right-14 z-10",
         className
       )}
+      onClick={handleScrollToTop}
       {...rest}
     >
       <Rocket className="w-14 h-14 transform -rotate-45" strokeWidth={1} />

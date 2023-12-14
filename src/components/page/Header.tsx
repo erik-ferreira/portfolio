@@ -15,7 +15,8 @@ export function Header({ className, ...rest }: HeaderProps) {
   return (
     <header
       className={twMerge(
-        "max-w-content w-content mx-auto px-8 flex items-center justify-between py-4",
+        "max-w-content w-content mx-auto px-8 py-4 sticky top-0 bg-page z-20",
+        "flex items-center justify-between",
         className
       )}
       {...rest}
