@@ -11,7 +11,7 @@ const input = tv({
     base: [
       "peer w-full bg-section py-3 outline-none rounded",
       "text-lg placeholder:text-slate-500",
-      "transition-colors border-[1.5px] enabled:group-hover:border-blue-600",
+      "transition-colors border-[1.5px]",
       "focus:border-blue-600",
       "disabled:opacity-50",
       "[&:not(:placeholder-shown)]:border-blue-600",
@@ -40,11 +40,11 @@ const input = tv({
     },
     hasError: {
       false: {
-        base: "border-transparent",
-        icon: "text-slate-500",
+        base: "border-transparent enabled:group-hover:border-blue-600",
+        icon: "text-slate-500 ",
       },
       true: {
-        base: "border-red-600",
+        base: "border-red-600 enabled:group-hover:border-red-700",
         icon: "text-red-600",
       },
     },

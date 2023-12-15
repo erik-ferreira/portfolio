@@ -25,7 +25,7 @@ export function Resume({ className, ...rest }: ResumeProps) {
           height={290}
         />
 
-        <div className="min-w-[540px] flex flex-col gap-1">
+        <div className="min-w-[550px] flex flex-col gap-1">
           <p className="text-2xl leading-base font-semibold text-slate-500">
             Olá 👋🏾, meu nome é
           </p>
