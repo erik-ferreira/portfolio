@@ -2,61 +2,55 @@ import { CertificateDTO } from "@/dtos/CertificateDTO"
 
 type CertificateDefault = Omit<CertificateDTO, "id">
 
-const description =
-  "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
 const certificatesDefault: CertificateDefault[] = [
   {
     name: "Figma for Devs",
     company: "Rocketseat",
     src: "/certificates/figma.png",
-    href: "https://www.rocketseat.com.br",
-    description,
-    date_of_issue: new Date(),
+    href: "https://app.rocketseat.com.br/certificates/d88c5acf-9677-4481-8f88-7f714aadd471",
+    description:
+      "Aprendi as funcionalidades do Figma voltadas especificamente para desenvolvedores. Este curso foi além do básico, ensinando como utilizar o Figma de forma eficiente e estratégica no fluxo de trabalho de desenvolvimento de software. Aprendi a criar designs de interfaces, utilização de auto layout, padrão de cores, criação de componentes e etc.",
+    date_of_issue: new Date("2023-07-28"),
     src_company: "/certificates/rocketseat.svg",
   },
   {
     name: "Acessibilidade com ReactJS",
     company: "Rocketseat",
-    src: "/certificates/figma.png",
-    href: "https://www.rocketseat.com.br",
-    description,
-    date_of_issue: new Date(),
+    src: "/certificates/accessibility.png",
+    href: "https://app.rocketseat.com.br/certificates/2dc41da8-5a50-44ad-b518-a98d82a00689",
+    description:
+      "Neste curso, mergulhei profundamente na construção de aplicações web com ReactJS. Aprendi a implementar práticas e técnicas cruciais para tornar minhas interfaces mais inclusivas e acessíveis a todos os usuários. Além disso, explorei a utilização de tags semânticas, estratégias de navegação e otimização de telas.",
+    date_of_issue: new Date("2023-05-03"),
     src_company: "/certificates/rocketseat.svg",
   },
   {
     name: "Apps Desktop com ElectronJS",
     company: "Rocketseat",
-    src: "/certificates/figma.png",
-    href: "https://www.rocketseat.com.br",
-    description,
-    date_of_issue: new Date(),
+    src: "/certificates/electron.png",
+    href: "https://app.rocketseat.com.br/certificates/e566623f-b427-4e82-abe4-f4346386ebc2",
+    description:
+      "Este curso abrangeu desde os fundamentos até técnicas avançadas, possibilitando a construção de aplicativos nativos para Windows, macOS e Linux. O objetivo do projeto construído era criar arquivos para anotações que são salvos localmente na máquina. Através dele, aprendi a trabalhar com as camadas do Electron (Main, Preload e Renderer) e a utilizar algumas funcionalidades nativas, como o menu tray.",
+    date_of_issue: new Date("2023-05-16"),
     src_company: "/certificates/rocketseat.svg",
   },
   {
     name: "Ignite ReactJS",
     company: "Rocketseat",
-    src: "/certificates/figma.png",
-    href: "https://www.rocketseat.com.br",
-    description,
-    date_of_issue: new Date(),
+    src: "/certificates/ignite-react.png",
+    href: "https://app.rocketseat.com.br/certificates/367015e9-a7b1-458c-bf23-ed4d00d8131c",
+    description:
+      "Aprofundei-me no ecossistema ReactJS com o programa Ignite. Este curso foi uma imersão completa em práticas avançadas de desenvolvimento web, abrangendo desde conceitos fundamentais até tópicos mais complexos. Desenvolvi aplicações web escaláveis, explorando temas como gerenciamento de estado avançado, otimização de performance e integração de bibliotecas populares para criar projetos robustos e modernos",
+    date_of_issue: new Date("2023-07-26"),
     src_company: "/certificates/rocketseat.svg",
   },
   {
-    name: "Testes",
+    name: "Java",
     company: "Rocketseat",
-    src: "/certificates/figma.png",
-    href: "https://www.rocketseat.com.br",
-    description,
-    date_of_issue: new Date(),
-    src_company: "/certificates/rocketseat.svg",
-  },
-  {
-    name: "Nodejs",
-    company: "Rocketseat",
-    src: "/certificates/figma.png",
-    href: "https://www.rocketseat.com.br",
-    description,
-    date_of_issue: new Date(),
+    src: "/certificates/java.png",
+    href: "https://app.rocketseat.com.br/certificates/24256402-11a4-44be-933c-c6c8dcf62b8d",
+    description:
+      "Entrei no mundo da programação Java desenvolvendo um aplicativo de lista de tarefas (to do). Este curso ofereceu uma introdução sólida aos princípios essenciais da linguagem Java, abordando desde variáveis e estruturas de controle. Aprendi a construir uma aplicação funcional, aplicando conhecimentos práticos em um projeto real.",
+    date_of_issue: new Date("2023-10-15"),
     src_company: "/certificates/rocketseat.svg",
   },
 ]

@@ -41,14 +41,15 @@ export function Resume({ className, ...rest }: ResumeProps) {
             </span>
           </h2>
 
-          <p className="text-lg leading-none font-semibold">
+          <p className="text-lg leading-tight font-semibold">
             Se você me ver em uma luta com um urso, reze pelo urso
           </p>
 
           <span className="text-lg font-bold text-slate-600 flex gap-1">
             O código deste site está disponível em
             <Link
-              href="https://github.com/erik-ferreira"
+              href="https://github.com/erik-ferreira/portfolio"
+              target="_blank"
               label="Github"
               className="text-slate-400"
             />
@@ -62,12 +63,13 @@ export function Resume({ className, ...rest }: ResumeProps) {
             Um pouco sobre mim
           </h2>
           <p className="text-base">
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry standard dummy text ever
-            since the 1500s, when an unknown printer took a galley of type and
-            scrambled it to make a type specimen book. It has survived not only
-            five centuries, but also the leap into electronic typesetting,
-            remaining essentially unchanged.
+            Olá, sou um desenvolvedor front-end com 2 anos de experiência e moro
+            no Ceará, Brasil. Sou apaixonado pela stack do Javascript e estou me
+            especializando em React e React Native para criação de interfaces
+            totalmente responsivas com a melhor experiência possível para o
+            usuário. Sou dedicado e organizado, também ja trabalhei com outras
+            tecnologias como Next, Typescript, Tailwindcss, Socket.io, Zod e
+            etc. Navegue pelo site para conhecer um pouco mais sobre mim.
           </p>
           <Link href="/about" label="Ler mais" className="text-slate-500" />
         </div>
