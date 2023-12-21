@@ -35,7 +35,7 @@ export function Experience({
         width={70}
         height={70}
         alt="icon experience"
-        className="absolute left-1/2 top-0 -translate-x-1/2"
+        className="absolute left-1/2 top-0 -translate-x-1/2 border-4 border-sky-600 rounded-full"
       />
 
       <div
@@ -47,7 +47,9 @@ export function Experience({
         <h3 className="text-3.5xl leading-snug text-sky-600 font-bold">
           {experience.office}
         </h3>
-        <h4 className="text-2xl text-violet-300 font-bold">Softtek</h4>
+        <h4 className="text-2xl text-violet-300 font-bold">
+          {experience.company}
+        </h4>
 
         <span className="w-full text-slate-300">{experience.description}</span>
       </div>
