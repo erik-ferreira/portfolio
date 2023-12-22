@@ -156,10 +156,14 @@ const config: Config = {
       width: {
         content: "90%",
         "4.5": "1.125rem",
+        "67.5": "16.875rem",
+        100: "25rem",
       },
 
       height: {
         "4.5": "1.125rem",
+        "67.5": "16.875rem",
+        100: "25rem",
       },
 
       lineHeight: {

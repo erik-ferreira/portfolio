@@ -11,7 +11,7 @@ interface ProjectShortProps extends LinkProps {
 export function ProjectShort({ project, ...rest }: ProjectShortProps) {
   return (
     <Link
-      className="border-2 border-transparent rounded-lg overflow-auto relative transition-colors duration-300 hover:border-sky-600 hover:cursor-pointer group"
+      className="w-100 h-67.5 border-2 border-transparent rounded-lg overflow-auto relative transition-colors duration-300 hover:border-sky-600 hover:cursor-pointer group"
       prefetch={false}
       {...rest}
     >
@@ -43,7 +43,13 @@ export function ProjectShort({ project, ...rest }: ProjectShortProps) {
         </div>
       </div>
 
-      <Image src={project.src} width={400} height={270} alt="Projeto" />
+      <Image
+        src={project.src}
+        width={400}
+        height={270}
+        alt="Projeto"
+        className="w-full h-full object-cover"
+      />
     </Link>
   )
 }
