@@ -1,5 +1,3 @@
-import { type ClassValue } from "clsx"
-
 export interface SkillDTO {
   id: number
   label: string
