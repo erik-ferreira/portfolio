@@ -1,7 +1,5 @@
-import { SkillDTO } from "@/dtos/SkillDTO"
+import { SkillDTO, SkillDefault } from "@/dtos/SkillDTO"
 import { convertColorHexToRgb } from "@/utils/convertColorHexToRgb"
-
-type SkillDefault = Omit<SkillDTO, "id" | "rgb">
 
 const skillsDefault: SkillDefault[] = [
   {

@@ -5,3 +5,5 @@ export interface SkillDTO {
   color: string
   rgb: string
 }
+
+export type SkillDefault = Omit<SkillDTO, "id" | "rgb">
