@@ -52,7 +52,7 @@ export function ProjectShort({ project, ...rest }: ProjectShortProps) {
         width={400}
         height={270}
         alt="Projeto"
-        className="w-full h-full object-cover"
+        className="w-full h-full object-contain"
       />
     </Link>
   )

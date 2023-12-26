@@ -27,7 +27,7 @@ export function Project({ project, className, ...rest }: ProjectProps) {
         alt="Project"
         width={500}
         height={333}
-        className="w-[500px] h-[333px] my-auto"
+        className="w-[500px] h-[333px] my-auto object-contain"
       />
 
       <div className="flex flex-col justify-between">
@@ -38,9 +38,18 @@ export function Project({ project, className, ...rest }: ProjectProps) {
             <NextLink href={project.github_href} target="_blank">
               <Icon name="Github" size="large" />
             </NextLink>
-            <NextLink href={project.demo_href || ""} target="_blank">
-              <Icon name="Link" size="large" />
-            </NextLink>
+
+            {project.demo_href ? (
+              <NextLink href={project.demo_href} target="_blank">
+                <Icon name="Link" size="large" />
+              </NextLink>
+            ) : (
+              <Icon
+                name="Link"
+                size="large"
+                className="opacity-50 cursor-not-allowed"
+              />
+            )}
           </div>
         </div>
 
