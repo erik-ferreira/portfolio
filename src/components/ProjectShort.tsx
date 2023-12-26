@@ -48,7 +48,7 @@ export function ProjectShort({ project, ...rest }: ProjectShortProps) {
       </div>
 
       <Image
-        src={project.src}
+        src={project.src.short}
         width={400}
         height={270}
         alt="Projeto"

@@ -4,7 +4,10 @@ export interface ProjectDTO {
   id: number
   title: string
   description: string
-  src: string
+  src: {
+    short: string
+    normal: string
+  }
   href: string
   skills: Array<SkillDTO>
   github_href: string

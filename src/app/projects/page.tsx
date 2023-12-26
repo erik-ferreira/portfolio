@@ -1,7 +1,10 @@
+import Link from "next/link"
+
+import { Icon } from "@/components/Icon"
 import { Title } from "@/components/Title"
 import { Input } from "@/components/Input"
+import { Button } from "@/components/Button"
 import { Project } from "@/components/Project"
-import { Pagination } from "@/components/Pagination"
 import { Description } from "@/components/Description"
 
 import { allProjects } from "@/defaults/projects"
@@ -24,7 +27,15 @@ export default function Projects() {
         ))}
       </article>
 
-      <Pagination />
+      <Button variant="outline" className="mx-auto" asChild>
+        <Link
+          href="https://github.com/erik-ferreira?tab=repositories"
+          target="_blank"
+        >
+          Visualizar todos os projetos no github
+          <Icon size="large" />
+        </Link>
+      </Button>
     </main>
   )
 }
