@@ -26,7 +26,7 @@ export function Project({ project, className, ...rest }: ProjectProps) {
             <NextLink href={project.github_href} target="_blank">
               <Icon name="Github" size="large" />
             </NextLink>
-            <NextLink href={project.demo_href} target="_blank">
+            <NextLink href={project.demo_href || ""} target="_blank">
               <Icon name="Link" size="large" />
             </NextLink>
           </div>

@@ -8,5 +8,5 @@ export interface ProjectDTO {
   href: string
   skills: Array<SkillDTO>
   github_href: string
-  demo_href: string
+  demo_href: string | null
 }

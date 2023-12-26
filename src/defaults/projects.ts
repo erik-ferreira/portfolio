@@ -56,8 +56,9 @@ const projectsDefault: ProjectsDefault[] = [
         color: "#0D8FF7",
       },
     ]),
-    github_href: "https://github.com/erik-ferreira",
-    demo_href: "https://github.com/erik-ferreira",
+    github_href: "https://github.com/erik-ferreira/05-design-system",
+    demo_href:
+      "https://erik-ferreira.github.io/05-design-system/?path=/story/home--page",
   },
   {
     title: "Ignite Shop",
@@ -86,8 +87,8 @@ const projectsDefault: ProjectsDefault[] = [
         color: "#635BFF",
       },
     ]),
-    github_href: "https://github.com/erik-ferreira",
-    demo_href: "https://github.com/erik-ferreira",
+    github_href: "https://github.com/erik-ferreira/04-ignite-shop",
+    demo_href: null,
   },
   {
     title: "Coffee Delivery",
@@ -126,8 +127,9 @@ const projectsDefault: ProjectsDefault[] = [
         color: "#00E7C3",
       },
     ]),
-    github_href: "https://github.com/erik-ferreira",
-    demo_href: "https://github.com/erik-ferreira",
+    github_href:
+      "https://github.com/erik-ferreira/challenge-02-coffee-delivery",
+    demo_href: null,
   },
   {
     title: "Ig.news",
@@ -166,8 +168,8 @@ const projectsDefault: ProjectsDefault[] = [
         color: "#3713B7",
       },
     ]),
-    github_href: "https://github.com/erik-ferreira",
-    demo_href: "https://github.com/erik-ferreira",
+    github_href: "https://github.com/erik-ferreira/ignews",
+    demo_href: null,
   },
   {
     title: "Book Wise",
@@ -221,8 +223,8 @@ const projectsDefault: ProjectsDefault[] = [
         color: "#587dbd",
       },
     ]),
-    github_href: "https://github.com/erik-ferreira",
-    demo_href: "https://github.com/erik-ferreira",
+    github_href: "https://github.com/erik-ferreira/book-wise",
+    demo_href: null,
   },
   {
     title: "Dt Money",
@@ -251,8 +253,8 @@ const projectsDefault: ProjectsDefault[] = [
         color: "#05C77E",
       },
     ]),
-    github_href: "https://github.com/erik-ferreira",
-    demo_href: "https://github.com/erik-ferreira",
+    github_href: "https://github.com/erik-ferreira/dtmoney",
+    demo_href: null,
   },
   {
     title: "Rocket Shoes",
@@ -281,8 +283,9 @@ const projectsDefault: ProjectsDefault[] = [
         color: "#99425B",
       },
     ]),
-    github_href: "https://github.com/erik-ferreira",
-    demo_href: "https://github.com/erik-ferreira",
+    github_href:
+      "https://github.com/erik-ferreira/ignite-reactjs-criando-um-hook-de-carrinho-de-compras",
+    demo_href: null,
   },
   {
     title: "Ignite Timer",
@@ -321,8 +324,8 @@ const projectsDefault: ProjectsDefault[] = [
         color: "#00E7C3",
       },
     ]),
-    github_href: "https://github.com/erik-ferreira",
-    demo_href: "https://github.com/erik-ferreira",
+    github_href: "https://github.com/erik-ferreira/02-ignite-timer",
+    demo_href: null,
   },
   {
     title: "Redux + Zustand",
@@ -361,8 +364,8 @@ const projectsDefault: ProjectsDefault[] = [
         color: "#F46D2D",
       },
     ]),
-    github_href: "https://github.com/erik-ferreira",
-    demo_href: "https://github.com/erik-ferreira",
+    github_href: "https://github.com/erik-ferreira/07-redux-zustand",
+    demo_href: null,
   },
   {
     title: "Github Blog",
@@ -396,8 +399,8 @@ const projectsDefault: ProjectsDefault[] = [
         color: "#142641",
       },
     ]),
-    github_href: "https://github.com/erik-ferreira",
-    demo_href: "https://github.com/erik-ferreira",
+    github_href: "https://github.com/erik-ferreira/challenge-03-github-blog",
+    demo_href: null,
   },
   {
     title: "Mastering Tailwind",
@@ -421,8 +424,8 @@ const projectsDefault: ProjectsDefault[] = [
         color: "#38B2AC",
       },
     ]),
-    github_href: "https://github.com/erik-ferreira",
-    demo_href: "https://github.com/erik-ferreira",
+    github_href: "https://github.com/erik-ferreira/mastering-tailwind",
+    demo_href: null,
   },
 ]
 
