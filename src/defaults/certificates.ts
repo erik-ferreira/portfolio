@@ -1,6 +1,4 @@
-import { CertificateDTO } from "@/dtos/CertificateDTO"
-
-type CertificateDefault = Omit<CertificateDTO, "id">
+import { CertificateDTO, CertificateDefault } from "@/dtos/CertificateDTO"
 
 const certificatesDefault: CertificateDefault[] = [
   {

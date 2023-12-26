@@ -9,6 +9,12 @@ interface ProjectShortProps extends LinkProps {
 }
 
 export function ProjectShort({ project, ...rest }: ProjectShortProps) {
+  const formatDescription = project.description
+    .split(" ")
+    .splice(0, 20)
+    .join(" ")
+    .concat("...")
+
   return (
     <Link
       className="w-100 h-67.5 border-2 border-transparent rounded-lg overflow-auto relative transition-colors duration-300 hover:border-sky-600 hover:cursor-pointer group"
@@ -26,9 +32,7 @@ export function ProjectShort({ project, ...rest }: ProjectShortProps) {
           {project.title}
         </h3>
 
-        <p className="text-sm font-semibold mt-0.5 mb-4">
-          {project.description.substring(0, 100)}
-        </p>
+        <p className="text-sm font-semibold mt-0.5 mb-4">{formatDescription}</p>
 
         <div className="flex items-center gap-4 flex-wrap">
           {project.skills.map((skill) => (

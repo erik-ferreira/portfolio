@@ -1,6 +1,4 @@
-import { HobbyDTO } from "@/dtos/HobbyDTO"
-
-type HobbyDefault = Omit<HobbyDTO, "id">
+import { HobbyDTO, HobbyDefault } from "@/dtos/HobbyDTO"
 
 const hobbiesDefault: HobbyDefault[] = [
   {

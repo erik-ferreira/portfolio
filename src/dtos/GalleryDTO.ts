@@ -3,3 +3,5 @@ export interface GalleryDTO {
   src: string
   variant: "image" | "video"
 }
+
+export type GalleryDefault = Omit<GalleryDTO, "id">

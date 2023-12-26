@@ -1,6 +1,4 @@
-import { GalleryDTO } from "@/dtos/GalleryDTO"
-
-type GalleryDefault = Omit<GalleryDTO, "id">
+import { GalleryDTO, GalleryDefault } from "@/dtos/GalleryDTO"
 
 const galleryDefault: GalleryDefault[] = [
   {

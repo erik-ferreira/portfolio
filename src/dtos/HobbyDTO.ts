@@ -5,3 +5,5 @@ export interface HobbyDTO {
   src: string
   href: string
 }
+
+export type HobbyDefault = Omit<HobbyDTO, "id">

@@ -9,3 +9,5 @@ export interface CertificateDTO {
   date_of_issue: Date
   src_company: string
 }
+
+export type CertificateDefault = Omit<CertificateDTO, "id">

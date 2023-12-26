@@ -14,9 +14,21 @@ interface ProjectProps extends ComponentProps<"div"> {
 }
 
 export function Project({ project, className, ...rest }: ProjectProps) {
+  const formatDescription = project.description
+    .split(" ")
+    .splice(0, 50)
+    .join(" ")
+    .concat("...")
+
   return (
     <div className={twMerge("flex gap-12 py-8", className)} {...rest}>
-      <Image src={project.src} alt="Project" width={500} height={333} />
+      <Image
+        src={project.src}
+        alt="Project"
+        width={500}
+        height={333}
+        className="w-[500px] h-[333px] my-auto"
+      />
 
       <div className="flex flex-col justify-between">
         <div className="flex items-center justify-between">
@@ -33,7 +45,7 @@ export function Project({ project, className, ...rest }: ProjectProps) {
         </div>
 
         <p className="text-lg font-semibold text-slate-500">
-          {project.description}
+          {formatDescription}
         </p>
 
         <ul className="flex items-center gap-2 flex-wrap">

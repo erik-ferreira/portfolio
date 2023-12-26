@@ -10,3 +10,5 @@ export interface ProjectDTO {
   github_href: string
   demo_href: string | null
 }
+
+export type ProjectsDefault = Omit<ProjectDTO, "id" | "href">
