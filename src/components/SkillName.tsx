@@ -1,4 +1,4 @@
-import { ComponentProps } from "react"
+import { HTMLAttributes } from "react"
 import { tv, VariantProps } from "tailwind-variants"
 
 const skillName = tv({
@@ -18,20 +18,24 @@ const skillName = tv({
   },
 })
 
-type SkillNameProps = ComponentProps<"li"> &
+type SkillNameProps = HTMLAttributes<HTMLElement> &
   VariantProps<typeof skillName> & {
     name: string
+    isButton?: boolean
   }
 
 export function SkillName({
   name,
   className,
   variant,
+  isButton = false,
   ...rest
 }: SkillNameProps) {
+  const Component = isButton ? "button" : "li"
+
   return (
-    <li className={skillName({ className, variant })} {...rest}>
+    <Component className={skillName({ className, variant })} {...rest}>
       {name}
-    </li>
+    </Component>
   )
 }
