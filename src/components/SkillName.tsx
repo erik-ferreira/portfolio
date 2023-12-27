@@ -9,7 +9,7 @@ const skillName = tv({
       default: "",
       outline:
         "bg-transparent text-sky-900 border-[1.5px] border-sky-900 hover:bg-sky-950 hover:text-slate-200",
-      selected: "border-2 border-transparent hover:border-sky-900",
+      selected: "border-[1.5px] border-transparent hover:border-sky-900",
     },
   },
 

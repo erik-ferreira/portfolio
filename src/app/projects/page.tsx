@@ -4,7 +4,7 @@ import { Icon } from "@/components/Icon"
 import { Title } from "@/components/Title"
 import { Input } from "@/components/Input"
 import { Button } from "@/components/Button"
-import { Filter } from "@/components/Filter"
+import { FilterSkills } from "@/components/FilterSkills"
 import { Project } from "@/components/Project"
 import { Description } from "@/components/Description"
 
@@ -22,7 +22,7 @@ export default function Projects() {
         classNameContainer="mx-auto"
       />
 
-      <Filter />
+      <FilterSkills />
 
       <article className="flex flex-col mt-8 divide-y-2 divide-sky-600 border-t border-sky-600">
         {allProjects.map((project) => (

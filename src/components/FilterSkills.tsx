@@ -6,20 +6,22 @@ import * as ToggleGroup from "@radix-ui/react-toggle-group"
 
 import { SkillName } from "@/components/SkillName"
 
-interface FilterProps {}
+import { filterSkills } from "@/defaults/skills"
 
-export function Filter({ ...rest }: FilterProps) {
-  const [skillSelected, setSkillSelected] = useState("1")
+interface FilterSkillsProps {}
+
+export function FilterSkills({ ...rest }: FilterSkillsProps) {
+  const [skillSelected, setSkillSelected] = useState("")
 
   return (
     <ToggleGroup.Root type="single" onValueChange={setSkillSelected}>
       <ScrollContainer className="flex gap-2 mt-4 cursor-grab">
-        {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15].map((skill) => (
-          <ToggleGroup.Item key={skill} value={skill.toString()} asChild>
+        {filterSkills.map((skill) => (
+          <ToggleGroup.Item key={skill} value={skill} asChild>
             <SkillName
-              name="React Native"
+              name={skill}
               isButton
-              variant={Number(skillSelected) === skill ? "selected" : "outline"}
+              variant={skillSelected === skill ? "selected" : "outline"}
             />
           </ToggleGroup.Item>
         ))}
