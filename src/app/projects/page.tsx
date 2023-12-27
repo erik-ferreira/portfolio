@@ -4,6 +4,7 @@ import { Icon } from "@/components/Icon"
 import { Title } from "@/components/Title"
 import { Input } from "@/components/Input"
 import { Button } from "@/components/Button"
+import { Filter } from "@/components/Filter"
 import { Project } from "@/components/Project"
 import { Description } from "@/components/Description"
 
@@ -20,6 +21,8 @@ export default function Projects() {
         placeholder="Pesquisar..."
         classNameContainer="mx-auto"
       />
+
+      <Filter />
 
       <article className="flex flex-col mt-8 divide-y-2 divide-sky-600 border-t border-sky-600">
         {allProjects.map((project) => (
