@@ -1,17 +1,7 @@
-import { SkillDTO, SkillDefault } from "@/dtos/SkillDTO"
 import { ProjectDTO, ProjectsDefault } from "@/dtos/ProjectDTO"
 
-import { convertColorHexToRgb } from "@/utils/convertColorHexToRgb"
-
-function formatSkillsProject(skillsDefault: SkillDefault[]): SkillDTO[] {
-  const skills = skillsDefault.map((skill, index) => ({
-    id: index + 1,
-    rgb: convertColorHexToRgb(skill.color),
-    ...skill,
-  }))
-
-  return skills
-}
+import { formatSkillsProject } from "@/utils/formatSkillsProject"
+import { generateSlug } from "@/utils/generateSlug"
 
 const projectsDefault: ProjectsDefault[] = [
   {
@@ -462,13 +452,13 @@ export const projects: ProjectDTO[] = projectsDefault
   .map((project, index) => ({
     id: index + 1,
     ...project,
-    href: `/projects/short/${index + 1}`,
+    href: `/projects/${generateSlug(project.title)}`,
   }))
 
 export const allProjects: ProjectDTO[] = projectsDefault.map(
   (project, index) => ({
     id: index + 1,
     ...project,
-    href: `/projects/short/${index + 1}`,
+    href: `/projects/${generateSlug(project.title)}`,
   })
 )
