@@ -31,7 +31,7 @@ export default function Project() {
           isTitlePage
         />
 
-        <div className="w-fit mx-auto flex gap-6 mt-4">
+        <div className="w-fit mx-auto flex gap-6 my-4">
           {projectHasDemo ? (
             <Button variant="outline" asChild>
               <Link href={project.demo_href || ""}>
@@ -63,7 +63,7 @@ export default function Project() {
           className="mt-8"
         />
 
-        <div className="max-w-[630px] w-fit mx-auto flex flex-wrap items-center justify-center gap-8">
+        <div className="max-w-[704px] w-full mx-auto flex flex-wrap items-center justify-center gap-6 py-4">
           {project.skills.map((skill) => (
             <Skill key={skill.id} skill={skill} />
           ))}

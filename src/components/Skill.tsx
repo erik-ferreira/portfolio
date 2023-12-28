@@ -9,7 +9,7 @@ interface SkillProps {
 
 export function Skill({ skill, ...rest }: SkillProps) {
   return (
-    <div className="w-fit flex flex-col items-center gap-4">
+    <div className="max-w-[144px] w-full flex flex-col items-center gap-4">
       <div
         style={{
           backgroundColor: skill.rgb,
@@ -21,16 +21,20 @@ export function Skill({ skill, ...rest }: SkillProps) {
       >
         <Image
           src={skill.src}
-          alt="Typescript"
+          alt={skill.label}
           width={60}
           height={60}
-          className="rounded-lg"
+          className={
+            skill.src === "/skills/styled-components.svg"
+              ? "rounded-none"
+              : "rounded-lg"
+          }
         />
       </div>
 
       <span
         style={{ color: skill.color }}
-        className={twMerge("text-2xl font-bold")}
+        className="text-2xl font-bold text-center"
       >
         {skill.label}
       </span>

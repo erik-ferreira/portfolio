@@ -1,7 +1,7 @@
 import { ProjectDTO, ProjectsDefault } from "@/dtos/ProjectDTO"
 
-import { formatSkillsProject } from "@/utils/formatSkillsProject"
 import { generateSlug } from "@/utils/generateSlug"
+import { formatSkillsProject } from "@/utils/formatSkillsProject"
 
 const projectsDefault: ProjectsDefault[] = [
   {
@@ -452,15 +452,15 @@ export const projects: ProjectDTO[] = projectsDefault
   .map((project, index) => ({
     id: index + 1,
     slug: generateSlug(project.title),
-    ...project,
     href: `/projects/${generateSlug(project.title)}`,
+    ...project,
   }))
 
 export const allProjects: ProjectDTO[] = projectsDefault.map(
   (project, index) => ({
     id: index + 1,
     slug: generateSlug(project.title),
-    ...project,
     href: `/projects/${generateSlug(project.title)}`,
+    ...project,
   })
 )
