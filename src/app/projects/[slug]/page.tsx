@@ -32,12 +32,19 @@ export default function Project() {
         />
 
         <div className="w-fit mx-auto flex gap-6 mt-4">
-          <Button variant="outline" asChild>
-            <Link href={project.demo_href || ""}>
+          {projectHasDemo ? (
+            <Button variant="outline" asChild>
+              <Link href={project.demo_href || ""}>
+                Online
+                <Icon name="Link" size="small" />
+              </Link>
+            </Button>
+          ) : (
+            <Button variant="outline" disabled>
               Online
               <Icon name="Link" size="small" />
-            </Link>
-          </Button>
+            </Button>
+          )}
 
           <Button variant="outline" asChild>
             <Link href={project.github_href}>

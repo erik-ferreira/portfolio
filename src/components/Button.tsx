@@ -1,9 +1,9 @@
-import { HtmlHTMLAttributes } from "react"
 import { Slot } from "@radix-ui/react-slot"
+import { ButtonHTMLAttributes } from "react"
 import { tv, VariantProps } from "tailwind-variants"
 
 const button = tv({
-  base: "w-fit flex items-center justify-center gap-2 px-4 py-3 rounded transition-colors duration-400 font-bold disabled:opacity-60",
+  base: "w-fit flex items-center justify-center gap-2 px-4 py-3 rounded transition-colors duration-400 font-bold disabled:opacity-60 disabled:pointer-events-none",
 
   variants: {
     variant: {
@@ -26,7 +26,7 @@ const button = tv({
 })
 
 type ButtonProps = VariantProps<typeof button> &
-  HtmlHTMLAttributes<HTMLElement> & {
+  ButtonHTMLAttributes<HTMLButtonElement> & {
     asChild?: boolean
   }
 
@@ -35,15 +35,17 @@ export function Button({
   size,
   className,
   asChild = false,
+
   ...rest
 }: ButtonProps) {
   const Component = asChild ? Slot : "button"
+  const classNameComponent = button({ variant, size, className })
 
   return variant === "outline-gradient" ? (
     <div className="w-fit p-0.5 rounded bg-gradient-to-r from-blue-500 to-violet-600 to-80%">
-      <Component className={button({ variant, size, className })} {...rest} />
+      <Component className={classNameComponent} {...rest} />
     </div>
   ) : (
-    <Component className={button({ variant, size, className })} {...rest} />
+    <Component className={classNameComponent} {...rest} />
   )
 }
