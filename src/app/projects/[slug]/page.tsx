@@ -1,4 +1,7 @@
+"use client"
+
 import Link from "next/link"
+import { useParams } from "next/navigation"
 
 import { Icon } from "@/components/Icon"
 import { Title } from "@/components/Title"
@@ -10,8 +13,14 @@ import { Description } from "@/components/Description"
 
 import { projects } from "@/defaults/projects"
 
+type ParamsProps = {
+  slug: string
+}
+
 export default function Project() {
-  const project = projects[0]
+  const { slug } = useParams<ParamsProps>()
+  const project = projects.filter((item) => item.slug === slug)[0]
+  const projectHasDemo = !!project.demo_href
 
   return (
     <main className="max-w-content w-content mx-auto">
@@ -24,7 +33,7 @@ export default function Project() {
 
         <div className="w-fit mx-auto flex gap-6 mt-4">
           <Button variant="outline" asChild>
-            <Link href={project.demo_href}>
+            <Link href={project.demo_href || ""}>
               Online
               <Icon name="Link" size="small" />
             </Link>

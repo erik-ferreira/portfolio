@@ -451,6 +451,7 @@ export const projects: ProjectDTO[] = projectsDefault
   .slice(0, 6)
   .map((project, index) => ({
     id: index + 1,
+    slug: generateSlug(project.title),
     ...project,
     href: `/projects/${generateSlug(project.title)}`,
   }))
@@ -458,6 +459,7 @@ export const projects: ProjectDTO[] = projectsDefault
 export const allProjects: ProjectDTO[] = projectsDefault.map(
   (project, index) => ({
     id: index + 1,
+    slug: generateSlug(project.title),
     ...project,
     href: `/projects/${generateSlug(project.title)}`,
   })

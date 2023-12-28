@@ -12,6 +12,7 @@ export interface ProjectDTO {
   skills: Array<SkillDTO>
   github_href: string
   demo_href: string | null
+  slug: string
 }
 
-export type ProjectsDefault = Omit<ProjectDTO, "id" | "href">
+export type ProjectsDefault = Omit<ProjectDTO, "id" | "href" | "slug">
