@@ -1,5 +1,7 @@
 import { HobbyDTO, HobbyDefault } from "@/dtos/HobbyDTO"
 
+import { generateSlug } from "@/utils/generateSlug"
+
 const hobbiesDefault: HobbyDefault[] = [
   {
     title: "Amigos 🫱🏻‍🫲🏾",
@@ -30,5 +32,6 @@ const hobbiesDefault: HobbyDefault[] = [
 export const hobbies: HobbyDTO[] = hobbiesDefault.map((hobby, index) => ({
   id: index + 1,
   href: `/hobbies/${index + 1}`,
+  slug: generateSlug(hobby.title.split(" ")[0].trim()),
   ...hobby,
 }))
