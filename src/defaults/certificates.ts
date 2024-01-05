@@ -51,6 +51,16 @@ const certificatesDefault: CertificateDefault[] = [
     date_of_issue: new Date("2023-10-15"),
     src_company: "/certificates/rocketseat.svg",
   },
+  {
+    name: "Discover",
+    company: "Rocketseat",
+    src: "/certificates/discover.png",
+    href: "https://app.rocketseat.com.br/certificates/495eb0cf-97af-47f7-865e-af427396c4cd",
+    description:
+      "Este curso é um introdução ao mundo da web, onde desenvolvi um projeto de centralizador de links. Nele foi possível aprender os fundamentos da programação web, como HTML, CSS e JavaScript. Além disso, aprendi a utilizar o Git e GitHub para versionamento de código e hospedagem de projetos no Github Pages.",
+    date_of_issue: new Date("2024-01-04"),
+    src_company: "/certificates/rocketseat.svg",
+  },
 ]
 
 export const someCertificates: CertificateDTO[] = certificatesDefault
