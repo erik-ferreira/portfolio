@@ -11,6 +11,12 @@ interface HobbyProps extends ComponentProps<"article"> {
 }
 
 export function Hobby({ hobby, className, ...rest }: HobbyProps) {
+  const formatDescription = hobby.description
+    .split(" ")
+    .splice(0, 25)
+    .join(" ")
+    .concat("...")
+
   return (
     <article
       className={twMerge(
@@ -34,7 +40,7 @@ export function Hobby({ hobby, className, ...rest }: HobbyProps) {
         </h1>
 
         <p className="text-lg font-semibold text-slate-600">
-          {hobby.description}
+          {formatDescription}
         </p>
 
         <Link href={hobby.href} label="Ler mais" variant="secondary" />

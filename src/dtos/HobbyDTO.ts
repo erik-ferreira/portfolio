@@ -6,4 +6,4 @@ export interface HobbyDTO {
   href: string
 }
 
-export type HobbyDefault = Omit<HobbyDTO, "id">
+export type HobbyDefault = Omit<HobbyDTO, "id" | "href">
