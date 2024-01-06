@@ -1,19 +1,31 @@
+"use client"
+
+import { useParams } from "next/navigation"
+
 import { Title } from "@/components/Title"
 import { Gallery } from "@/components/Gallery"
 import { Description } from "@/components/Description"
 
 import { gallery } from "@/defaults/gallery"
+import { hobbies } from "@/defaults/hobbies"
 
-export default function Contact() {
+type ParamsHobbyProps = {
+  slug: string
+}
+
+export default function Hobby() {
+  const { slug } = useParams<ParamsHobbyProps>()
+  const hobby = hobbies.filter((item) => item.slug === slug)[0]
+
   return (
     <main className="max-w-content w-content mx-auto p-8">
       <Title label="Contato" labelBackground="Contact" isTitlePage />
 
       <h2 className="text-4xl font-bold text-blue-500 text-center mt-6">
-        Basquete 🏀
+        {hobby.title}
       </h2>
 
-      <Description label="Uma breve descrição bem aqui Uma breve descrição bem aqui a breve descrição bem aqui Uma breve descrição bem aqui Uma ve descrição bem aqui Uma breve descrição bem aqui Uma dale a a bem aqui Uma breve descrição bem aqui Uma breve descrição bem aqui Uma breve descrição bem aqui Uma breve descrição bem aqui Uma breve descrição bem aqui" />
+      <Description label={hobby.description} />
 
       <article className="grid grid-cols-4 gap-8">
         {gallery.map((item) => (
