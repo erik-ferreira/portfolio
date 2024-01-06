@@ -28,7 +28,7 @@ export default function Hobby() {
       <Description label={hobby.description} />
 
       <article className="grid grid-cols-4 gap-8">
-        {gallery.map((item) => (
+        {hobby.gallery.map((item) => (
           <Gallery key={item.id} src={item.src} variant={item.variant} />
         ))}
       </article>

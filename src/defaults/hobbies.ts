@@ -29,13 +29,22 @@ const hobbiesDefault: HobbyDefault[] = [
     src: "/hobbies/assistir.png",
     description:
       "Sempre tive o hábito de assistir filmes com meus pais em casa, principalmente durante as refeições. Quando criança, nós não tínhamos acesso as plataformas de filmes e series, então nossa opção eram os DVDs, mas com a modernização, nós nos desfizemos dos DVDs e começamos a assistir pelas plataformas e internet mesmo. Por esse costume, eu sou o tipo de pessoa que senta para almoçar e fica 30 minutos procurando algo para assistir, comendo apenas depois de achar kkkk. Gosto de vários gêneros de filmes, desde super-heróis e ação até comédia, mas também sou apaixonado por animes como One Piece, Dragon Ball, Naruto, Jujutsu Kaisen, Boku no Hero, entre outros. Abaixo, compartilho alguns dos filmes, séries e animes que já assisti.",
-    gallery: [
-      {
-        id: 1,
-        src: "",
+    gallery: Array.from({ length: 31 }, (_, index) => {
+      const imageIndex = (index + 1).toString().padStart(2, "0")
+
+      return {
+        id: index + 1,
+        src: `/hobbies/assistir/${imageIndex}.png`,
         variant: "image",
-      },
-    ],
+      }
+    }),
+    // gallery: [
+    //   {
+    //     id: 1,
+    //     src: "",
+    //     variant: "image",
+    //   },
+    // ],
   },
 ]
 
@@ -49,3 +58,33 @@ export const hobbies: HobbyDTO[] = hobbiesDefault.map((hobby, index) => {
     ...hobby,
   }
 })
+
+/*
+Series
+ - Vikings OK
+ - Alice in borderland OK
+ - All Of Us Are Dead OK
+ - The Walking Dead OK
+
+Filmes
+ - Avatar: O Caminho da Água OK
+ - Vingadores: Ultimato OK
+ - Homem Aranha: Sem volta para casa OK
+ - Black Adam OK
+
+Animes
+ - One Piece
+ - Dragon Ball OK
+ - Naruto OK
+ - Hunter x Hunter OK
+ - Demon Slayer OK
+ - Boku no Hero OK
+ - Jujutsu Kaisen  OK
+
+
+ [27, 14, 5, 31, 18, 3, 10, 24, 11, 29,
+   7, 20, 8, 2, 19, 26, 1, 28, 4, 21,
+    23, 15, 9, 17, 6, 12, 22, 30, 25, 13, 
+    16]
+
+ */
