@@ -21,8 +21,18 @@ const hobbiesDefault: HobbyDefault[] = [
     title: "Gameplays 🎮",
     src: "/hobbies/gameplay.png",
     description:
-      "Jogo videogames há bastante tempo, desde os tempos do PlayStation 1. Meus pais compraram um PlayStation 2 para mim e depois passei a montar meu próprio PC para jogar, buscando uma maior variedade de jogos. Considero os videogames como uma forma de diversão, relaxamento, competição com amigos e, às vezes, acontece os estresses que quem joga sabe como é kkkk. Meu estilo de jogo preferido são os FPS e jogos com uma história/campanha a seguir. Durante a adolescência, passei muito tempo jogando Combat Arms, que por mais que não seja um jogo muito conhecido, eu me divertia muito jogando. Em relação aos jogos com história, tenho uma lista extensa de títulos que ainda pretendo jogar, como Dying Light, Mad Max, entre outros. Abaixo, compartilho algumas fotos de jogos que finalizei e momentos marcantes.",
-    gallery: [],
+      "Jogo videogames há bastante tempo, desde os tempos do PlayStation 1. Meus pais compraram um PlayStation 2 para mim e depois passei a montar meu próprio PC para jogar, buscando uma maior variedade de jogos. Considero os videogames como uma forma de diversão, relaxamento, competição com amigos e, às vezes, acontece os estresses que quem joga sabe como é kkkk. Meu estilo de jogo preferido são os FPS e jogos com uma história/campanha a seguir. Durante a adolescência, passei muito tempo jogando Combat Arms, que por mais que não seja um jogo muito conhecido, eu me divertia muito jogando. Em relação aos jogos com história, tenho uma lista extensa de títulos que ainda pretendo jogar, como Dying Light, Mad Max, entre outros. Abaixo, compartilho algumas fotos de jogos que finalizei, momentos marcantes e alguns jogos que ainda quero jogar.",
+    gallery: Array.from({ length: 32 }, (_, index) => {
+      const imageIndex = (index + 1).toString().padStart(2, "0")
+      const variant = Number(imageIndex) === 18 ? "video" : "image"
+      const extension = variant === "image" ? ".png" : ".mp4"
+
+      return {
+        id: index + 1,
+        src: `/hobbies/gameplay/${imageIndex}${extension}`,
+        variant,
+      }
+    }),
   },
   {
     title: "Assistir 📺",
@@ -38,13 +48,6 @@ const hobbiesDefault: HobbyDefault[] = [
         variant: "image",
       }
     }),
-    // gallery: [
-    //   {
-    //     id: 1,
-    //     src: "",
-    //     variant: "image",
-    //   },
-    // ],
   },
 ]
 

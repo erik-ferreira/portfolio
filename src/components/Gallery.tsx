@@ -47,7 +47,13 @@ export function Gallery({
           )}
           {...rest}
         >
-          <Image src={src} width={350} height={230} alt="NBA" />
+          <Image
+            src={src}
+            width={350}
+            height={230}
+            alt="NBA"
+            className="w-[350px] h-[230px] object-cover"
+          />
 
           <Icon
             name={icons[variant]}
@@ -71,14 +77,15 @@ export function Gallery({
           )}
         >
           {variant === "image" ? (
-            <Image src="/basquete/9.png" alt="NBA" width={900} height={500} />
+            <Image src={src} alt="NBA" width={900} height={500} />
           ) : (
             <ReactPlayer
-              url="/basquete/video1.mp4"
+              url={src}
               width="100%"
               height="100%"
               controls
               playing
+              alt="Teste"
             />
           )}
         </Dialog.Content>
