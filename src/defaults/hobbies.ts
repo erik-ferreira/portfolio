@@ -39,7 +39,7 @@ const hobbiesDefault: HobbyDefault[] = [
     src: "/hobbies/assistir.png",
     description:
       "Sempre tive o hábito de assistir filmes com meus pais em casa, principalmente durante as refeições. Quando criança, nós não tínhamos acesso as plataformas de filmes e series, então nossa opção eram os DVDs, mas com a modernização, nós nos desfizemos dos DVDs e começamos a assistir pelas plataformas e internet mesmo. Por esse costume, eu sou o tipo de pessoa que senta para almoçar e fica 30 minutos procurando algo para assistir, comendo apenas depois de achar kkkk. Gosto de vários gêneros de filmes, desde super-heróis e ação até comédia, mas também sou apaixonado por animes como One Piece, Dragon Ball, Naruto, Jujutsu Kaisen, Boku no Hero, entre outros. Abaixo, compartilho alguns dos filmes, séries e animes que já assisti.",
-    gallery: Array.from({ length: 31 }, (_, index) => {
+    gallery: Array.from({ length: 48 }, (_, index) => {
       const imageIndex = (index + 1).toString().padStart(2, "0")
 
       return {

@@ -77,7 +77,7 @@ export function Gallery({
           )}
         >
           {variant === "image" ? (
-            <Image src={src} alt="NBA" width={900} height={500} />
+            <Image src={src} alt="NBA" width={900} height={600} />
           ) : (
             <ReactPlayer
               url={src}
