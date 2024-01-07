@@ -47,17 +47,22 @@ export function Gallery({
           )}
           {...rest}
         >
-          <Image
-            src={
-              gallery.variant === "image"
-                ? gallery.src
-                : gallery.videoPreview || ""
-            }
-            width={350}
-            height={230}
-            alt="NBA"
-            className="w-[350px] h-[230px] object-cover"
-          />
+          {gallery.variant === "image" ? (
+            <Image
+              src={gallery.src}
+              width={350}
+              height={230}
+              alt="NBA"
+              className="w-[350px] h-[230px] object-cover"
+            />
+          ) : (
+            <ReactPlayer
+              url={gallery.src}
+              width="100%"
+              height="100%"
+              alt="Teste"
+            />
+          )}
 
           <Icon
             name={icons[gallery.variant]}
@@ -76,8 +81,12 @@ export function Gallery({
 
         <Dialog.Content
           className={twMerge(
-            "aspect-video w-fit fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2",
-            "data-[state=open]:animate-show-dialog data-[state=closed]:animate-hide-dialog"
+            "aspect-video fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2",
+            "data-[state=open]:animate-show-dialog data-[state=closed]:animate-hide-dialog",
+            {
+              "w-fit": gallery.variant === "image",
+              "w-[900px]": gallery.variant === "video",
+            }
           )}
         >
           {gallery.variant === "image" ? (
