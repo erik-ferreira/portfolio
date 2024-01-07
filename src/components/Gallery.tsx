@@ -48,7 +48,11 @@ export function Gallery({
           {...rest}
         >
           <Image
-            src={gallery.src}
+            src={
+              gallery.variant === "image"
+                ? gallery.src
+                : gallery.videoPreview || ""
+            }
             width={350}
             height={230}
             alt="NBA"

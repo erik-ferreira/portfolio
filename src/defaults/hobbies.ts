@@ -35,6 +35,10 @@ const hobbiesDefault: HobbyDefault[] = [
         src: `/hobbies/gameplay/${imageIndex}${extension}`,
         variant,
         direction,
+        videoPreview:
+          variant === "video"
+            ? `/hobbies/gameplay/${imageIndex}-preview.png`
+            : null,
       }
     }),
   },
@@ -51,6 +55,7 @@ const hobbiesDefault: HobbyDefault[] = [
         src: `/hobbies/assistir/${imageIndex}.png`,
         variant: "image",
         direction: "horizontal",
+        videoPreview: null,
       }
     }),
   },
