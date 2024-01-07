@@ -9,21 +9,21 @@ import { Icon } from "@/components/Icon"
 
 import { twMerge } from "@/utils/twMerge"
 
+import { GalleryDTO } from "@/dtos/GalleryDTO"
+
 const icons = {
   image: "Image",
   video: "Play",
 } as const
 
 interface GalleryProps extends ComponentProps<"button"> {
-  variant?: keyof typeof icons
-  src: string
+  gallery: GalleryDTO
   isScreenshot?: boolean
 }
 
 export function Gallery({
   className,
-  variant = "video",
-  src,
+  gallery,
   isScreenshot = false,
   ...rest
 }: GalleryProps) {
@@ -35,7 +35,7 @@ export function Gallery({
       )}
       {...rest}
     >
-      <Image src={src} width={350} height={230} alt="NBA" />
+      <Image src={gallery.src} width={350} height={230} alt="NBA" />
     </button>
   ) : (
     <Dialog.Root>
@@ -48,7 +48,7 @@ export function Gallery({
           {...rest}
         >
           <Image
-            src={src}
+            src={gallery.src}
             width={350}
             height={230}
             alt="NBA"
@@ -56,7 +56,7 @@ export function Gallery({
           />
 
           <Icon
-            name={icons[variant]}
+            name={icons[gallery.variant]}
             className="absolute top-3 right-3 text-sky-500"
           />
         </button>
@@ -72,15 +72,20 @@ export function Gallery({
 
         <Dialog.Content
           className={twMerge(
-            "aspect-video w-[900px] fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2",
+            "aspect-video w-fit fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2",
             "data-[state=open]:animate-show-dialog data-[state=closed]:animate-hide-dialog"
           )}
         >
-          {variant === "image" ? (
-            <Image src={src} alt="NBA" width={900} height={600} />
+          {gallery.variant === "image" ? (
+            <Image
+              src={gallery.src}
+              alt="NBA"
+              width={gallery.direction === "horizontal" ? 900 : 400}
+              height={600}
+            />
           ) : (
             <ReactPlayer
-              url={src}
+              url={gallery.src}
               width="100%"
               height="100%"
               controls

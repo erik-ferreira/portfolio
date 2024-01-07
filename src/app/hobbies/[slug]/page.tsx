@@ -6,7 +6,6 @@ import { Title } from "@/components/Title"
 import { Gallery } from "@/components/Gallery"
 import { Description } from "@/components/Description"
 
-import { gallery } from "@/defaults/gallery"
 import { hobbies } from "@/defaults/hobbies"
 
 type ParamsHobbyProps = {
@@ -28,8 +27,8 @@ export default function Hobby() {
       <Description label={hobby.description} />
 
       <article className="grid grid-cols-4 gap-8">
-        {hobby.gallery.map((item) => (
-          <Gallery key={item.id} src={item.src} variant={item.variant} />
+        {hobby.gallery.map((gallery) => (
+          <Gallery key={gallery.id} gallery={gallery} />
         ))}
       </article>
     </main>

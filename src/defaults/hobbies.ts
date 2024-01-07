@@ -26,11 +26,15 @@ const hobbiesDefault: HobbyDefault[] = [
       const imageIndex = (index + 1).toString().padStart(2, "0")
       const variant = Number(imageIndex) === 18 ? "video" : "image"
       const extension = variant === "image" ? ".png" : ".mp4"
+      const direction = [21, 24, 31].includes(Number(imageIndex))
+        ? "vertical"
+        : "horizontal"
 
       return {
         id: index + 1,
         src: `/hobbies/gameplay/${imageIndex}${extension}`,
         variant,
+        direction,
       }
     }),
   },
@@ -46,6 +50,7 @@ const hobbiesDefault: HobbyDefault[] = [
         id: index + 1,
         src: `/hobbies/assistir/${imageIndex}.png`,
         variant: "image",
+        direction: "horizontal",
       }
     }),
   },
@@ -61,33 +66,3 @@ export const hobbies: HobbyDTO[] = hobbiesDefault.map((hobby, index) => {
     ...hobby,
   }
 })
-
-/*
-Series
- - Vikings OK
- - Alice in borderland OK
- - All Of Us Are Dead OK
- - The Walking Dead OK
-
-Filmes
- - Avatar: O Caminho da Água OK
- - Vingadores: Ultimato OK
- - Homem Aranha: Sem volta para casa OK
- - Black Adam OK
-
-Animes
- - One Piece
- - Dragon Ball OK
- - Naruto OK
- - Hunter x Hunter OK
- - Demon Slayer OK
- - Boku no Hero OK
- - Jujutsu Kaisen  OK
-
-
- [27, 14, 5, 31, 18, 3, 10, 24, 11, 29,
-   7, 20, 8, 2, 19, 26, 1, 28, 4, 21,
-    23, 15, 9, 17, 6, 12, 22, 30, 25, 13, 
-    16]
-
- */

@@ -2,6 +2,7 @@ export interface GalleryDTO {
   id: number
   src: string
   variant: "image" | "video"
+  direction: "horizontal" | "vertical"
 }
 
-export type GalleryDefault = Omit<GalleryDTO, "id">
+export type GalleryDefault = Omit<GalleryDTO, "id" | "direction">

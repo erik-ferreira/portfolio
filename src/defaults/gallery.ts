@@ -38,4 +38,5 @@ const galleryDefault: GalleryDefault[] = [
 export const gallery: GalleryDTO[] = galleryDefault.map((item, index) => ({
   ...item,
   id: index + 1,
+  direction: "horizontal",
 }))
