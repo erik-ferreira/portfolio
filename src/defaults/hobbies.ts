@@ -23,15 +23,17 @@ const hobbiesDefault: HobbyDefault[] = [
         ? "video"
         : "image"
       const extension = variant === "image" ? ".png" : ".mp4"
-      // const direction = [21, 24, 31].includes(Number(imageIndex))
-      //   ? "vertical"
-      //   : "horizontal"
+      const direction = ["04", "06", "11", "13", "19", "24", "26"].includes(
+        imageIndex
+      )
+        ? "vertical"
+        : "horizontal"
 
       return {
         id: index + 1,
         src: `/hobbies/basquete/${imageIndex}${extension}`,
         variant,
-        direction: "horizontal",
+        direction,
       }
     }),
   },

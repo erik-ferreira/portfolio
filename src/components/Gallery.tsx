@@ -61,6 +61,9 @@ export function Gallery({
               width="100%"
               height="100%"
               alt="Teste"
+              style={{
+                aspectRatio: 16 / 9,
+              }}
             />
           )}
 
@@ -85,7 +88,11 @@ export function Gallery({
             "data-[state=open]:animate-show-dialog data-[state=closed]:animate-hide-dialog",
             {
               "w-fit": gallery.variant === "image",
-              "w-[900px]": gallery.variant === "video",
+              "w-[900px]":
+                gallery.variant === "video" &&
+                gallery.direction === "horizontal",
+              "w-[1200px]":
+                gallery.variant === "video" && gallery.direction === "vertical",
             }
           )}
         >
