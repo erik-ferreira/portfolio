@@ -15,7 +15,25 @@ const hobbiesDefault: HobbyDefault[] = [
     src: "/hobbies/basquete.png",
     description:
       "Comecei a jogar basquete em 2018, durante o segundo ano do ensino médio. Inicialmente, era apenas um hobby, algo novo que eu estava aprendendo e gostando muito. Após o fim da pandemia, quando as restrições diminuíram, voltei a jogar de forma mais séria, comecei a treinar diariamente, sempre buscando aprender coisas novas. Comecei a frequentar a praça aqui perto de casa, e jogando com uma galera top pude aprender e passar algumas coisas que sabia para uma galera mais nova, e hoje em dia alguns deles são monstros demais jogando. Outra praça que eu comecei a frequentar com mais frequência foi a do Garden, e la eu pude aprender demais, demais mesmo com toda a galera, consegui desenvolver melhor meu arremesso, controle de bola e confiança. Aprendi muito escutando o que eles tinham a dizer e assistindo eles jogando mesmo. Hoje em dia o basquete é uma terapia para mim, eu literalmente esqueço qualquer problema quando estou em quadra, é algo que eu amo fazer e não consigo me ver sem isso. Abaixo tem algumas fotos de momentos marcantes, algumas jogadas e fotos de jogadores da NBA.",
-    gallery: [],
+    gallery: Array.from({ length: 31 }, (_, index) => {
+      const imageIndex = (index + 1).toString().padStart(2, "0")
+      const variant = ["04", "06", "11", "13", "19", "24", "26"].includes(
+        imageIndex
+      )
+        ? "video"
+        : "image"
+      const extension = variant === "image" ? ".png" : ".mp4"
+      // const direction = [21, 24, 31].includes(Number(imageIndex))
+      //   ? "vertical"
+      //   : "horizontal"
+
+      return {
+        id: index + 1,
+        src: `/hobbies/basquete/${imageIndex}${extension}`,
+        variant,
+        direction: "horizontal",
+      }
+    }),
   },
   {
     title: "Gameplays 🎮",
