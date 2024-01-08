@@ -20,7 +20,7 @@ export function Video({ className, ...rest }: VideoProps) {
   return (
     <div className={twMerge("relative", className)} {...rest}>
       <Image
-        src="/basquete/9.png"
+        src="/hobbies/basquete/09.png"
         width={1440}
         height={960}
         alt="NBA"
@@ -30,7 +30,7 @@ export function Video({ className, ...rest }: VideoProps) {
       <div className="aspect-video w-[900px] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
         {hasWindow && (
           <ReactPlayer
-            url="/basquete/video1.mp4"
+            url="/hobbies/basquete/06.mp4"
             width="100%"
             height="100%"
             controls

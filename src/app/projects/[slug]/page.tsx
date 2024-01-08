@@ -11,6 +11,7 @@ import { Button } from "@/components/Button"
 import { Gallery } from "@/components/Gallery"
 import { Description } from "@/components/Description"
 
+import { hobbies } from "@/defaults/hobbies"
 import { projects } from "@/defaults/projects"
 
 type ParamsProps = {
@@ -76,12 +77,12 @@ export default function Project() {
           className="mt-8"
         />
         <div className="w-fit mx-auto grid grid-cols-4 gap-8">
-          <Gallery src="/projects/1.png" variant="image" isScreenshot />
-          <Gallery src="/projects/1.png" variant="image" isScreenshot />
-          <Gallery src="/projects/1.png" variant="image" isScreenshot />
-          <Gallery src="/projects/1.png" variant="image" isScreenshot />
-          <Gallery src="/projects/1.png" variant="image" isScreenshot />
-          <Gallery src="/projects/1.png" variant="image" isScreenshot />
+          <Gallery gallery={hobbies[0].gallery[0]} isScreenshot />
+          <Gallery gallery={hobbies[0].gallery[0]} isScreenshot />
+          <Gallery gallery={hobbies[0].gallery[0]} isScreenshot />
+          <Gallery gallery={hobbies[0].gallery[0]} isScreenshot />
+          <Gallery gallery={hobbies[0].gallery[0]} isScreenshot />
+          <Gallery gallery={hobbies[0].gallery[0]} isScreenshot />
         </div>
       </section>
 

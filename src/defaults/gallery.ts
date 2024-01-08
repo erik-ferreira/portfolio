@@ -2,35 +2,35 @@ import { GalleryDTO, GalleryDefault } from "@/dtos/GalleryDTO"
 
 const galleryDefault: GalleryDefault[] = [
   {
-    src: "/basquete/1.png",
+    src: "/hobbies/basquete/01.png",
     variant: "image",
   },
   {
-    src: "/basquete/2.png",
+    src: "/hobbies/basquete/02.png",
     variant: "image",
   },
   {
-    src: "/basquete/3.png",
+    src: "/hobbies/basquete/03.png",
     variant: "video",
   },
   {
-    src: "/basquete/4.png",
+    src: "/hobbies/basquete/04.png",
     variant: "image",
   },
   {
-    src: "/basquete/5.png",
+    src: "/hobbies/basquete/05.png",
     variant: "image",
   },
   {
-    src: "/basquete/6.png",
+    src: "/hobbies/basquete/06.png",
     variant: "video",
   },
   {
-    src: "/basquete/7.png",
+    src: "/hobbies/basquete/07.png",
     variant: "image",
   },
   {
-    src: "/basquete/8.png",
+    src: "/hobbies/basquete/08.png",
     variant: "video",
   },
 ]
