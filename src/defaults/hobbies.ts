@@ -8,7 +8,27 @@ const hobbiesDefault: HobbyDefault[] = [
     src: "/hobbies/amigos.png",
     description:
       "Uma das coisas que mais amo fazer é sair com meus amigos. Sempre que possível, combinamos de assistir a algum filme no cinema, visitar uma hamburgueria nova para comparar quais são as melhores opções ou apenas nos reunir na casa de alguém para jogar videogame e bater papo. Muitos deles conheci durante o ensino fundamental e médio, e valorizo cada momento que compartilhamos. Apesar da rotina nos manter ocupados, cada encontro é especial e eu amei muito viver diariamente com cada um deles na escola. Outros amigos chegaram mais tarde em minha vida, mas são igualmente importantes. Cada um deles tem um lugar especial no meu coração e abaixo compartilho algumas fotos desses momentos memoráveis juntos.",
-    gallery: [],
+    gallery: Array.from({ length: 46 }, (_, index) => {
+      const imageIndex = (index + 1).toString().padStart(2, "0")
+      const variant = ["04", "06", "09", "16", "18", "23", "25"].includes(
+        imageIndex
+      )
+        ? "video"
+        : "image"
+      const extension = variant === "image" ? ".png" : ".mp4"
+      const direction = ["04", "06", "09", "16", "18", "23", "25"].includes(
+        imageIndex
+      )
+        ? "vertical"
+        : "horizontal"
+
+      return {
+        id: index + 1,
+        src: `/hobbies/amigos/${imageIndex}${extension}`,
+        variant,
+        direction,
+      }
+    }),
   },
   {
     title: "Basquete 🏀",
