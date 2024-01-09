@@ -16,9 +16,26 @@ const hobbiesDefault: HobbyDefault[] = [
         ? "video"
         : "image"
       const extension = variant === "image" ? ".png" : ".mp4"
-      const direction = ["04", "06", "09", "16", "18", "23", "25"].includes(
-        imageIndex
-      )
+      const direction = [
+        "01",
+        "04",
+        "06",
+        "07",
+        "09",
+        "13",
+        "16",
+        "17",
+        "19",
+        "18",
+        "23",
+        "25",
+        "29",
+        "35",
+        "36",
+        "37",
+        "41",
+        "42",
+      ].includes(imageIndex)
         ? "vertical"
         : "horizontal"
 
@@ -43,9 +60,17 @@ const hobbiesDefault: HobbyDefault[] = [
         ? "video"
         : "image"
       const extension = variant === "image" ? ".png" : ".mp4"
-      const direction = ["04", "06", "11", "13", "19", "24", "26"].includes(
-        imageIndex
-      )
+      const direction = [
+        "04",
+        "06",
+        "10",
+        "11",
+        "13",
+        "19",
+        "21",
+        "24",
+        "26",
+      ].includes(imageIndex)
         ? "vertical"
         : "horizontal"
 

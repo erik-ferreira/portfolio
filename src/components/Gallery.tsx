@@ -85,7 +85,7 @@ export function Gallery({
         <Dialog.Content
           className={twMerge(
             "aspect-video fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2",
-            "data-[state=open]:animate-show-dialog data-[state=closed]:animate-hide-dialog",
+            "data-[state=open]:animate-show-dialog data-[state=closed]:animate-hide-dialog border",
             {
               "w-fit": gallery.variant === "image",
               "w-[900px]":
@@ -100,7 +100,7 @@ export function Gallery({
             <Image
               src={gallery.src}
               alt="NBA"
-              width={gallery.direction === "horizontal" ? 900 : 400}
+              width={gallery.direction === "horizontal" ? 900 : 550}
               height={600}
             />
           ) : (
