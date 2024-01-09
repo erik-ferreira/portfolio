@@ -53,7 +53,9 @@ export function Gallery({
               width={350}
               height={230}
               alt="NBA"
-              className="w-[350px] h-[230px] object-cover"
+              className={twMerge("w-[350px] h-[230px] object-cover", {
+                "object-[50%_20%]": gallery.direction === "vertical",
+              })}
             />
           ) : (
             <ReactPlayer
@@ -85,7 +87,7 @@ export function Gallery({
         <Dialog.Content
           className={twMerge(
             "aspect-video fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2",
-            "data-[state=open]:animate-show-dialog data-[state=closed]:animate-hide-dialog border",
+            "data-[state=open]:animate-show-dialog data-[state=closed]:animate-hide-dialog",
             {
               "w-fit": gallery.variant === "image",
               "w-[900px]":
