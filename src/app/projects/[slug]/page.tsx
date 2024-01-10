@@ -21,11 +21,10 @@ type ParamsProps = {
 export default function Project() {
   const { slug } = useParams<ParamsProps>()
   const project = projects.filter((item) => item.slug === slug)[0]
-  const projectHasDemo = !!project.demo_href
-
   if (!project) {
     redirect("/404")
   }
+  const projectHasDemo = !!project.demo_href
 
   return (
     <main className="max-w-content w-content mx-auto">
