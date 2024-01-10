@@ -58,14 +58,10 @@ export function Gallery({
               })}
             />
           ) : (
-            <ReactPlayer
-              url={gallery.src}
-              width="100%"
-              height="100%"
-              alt="Teste"
-              style={{
-                aspectRatio: 16 / 9,
-              }}
+            <video
+              src={gallery.src}
+              controls={false}
+              className="w-full h-full pointer-events-none aspect-video"
             />
           )}
 
