@@ -1,6 +1,6 @@
 export interface SkillDTO {
   id: number
-  label: string
+  name: string
   src: string
   color: string
   rgb: string

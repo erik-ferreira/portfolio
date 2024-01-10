@@ -23,7 +23,7 @@ export function SkillIcon({
     >
       <Image
         src={skill.src}
-        alt={`Ícone da tecnologia ${skill.label}`}
+        alt={`Ícone da tecnologia ${skill.name}`}
         width={100}
         height={100}
         className="transition duration-300 grayscale group-hover:grayscale-0 group-hover:transform group-hover:-translate-y-4"
@@ -37,7 +37,7 @@ export function SkillIcon({
           }
         )}
       >
-        {skill.label}
+        {skill.name}
       </p>
     </div>
   )

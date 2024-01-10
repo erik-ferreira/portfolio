@@ -59,7 +59,7 @@ export function Project({ project, className, ...rest }: ProjectProps) {
 
         <ul className="flex items-center gap-2 flex-wrap">
           {project.skills.map((skill) => (
-            <SkillName key={skill.id} name={skill.label} />
+            <SkillName key={skill.id} name={skill.name} />
           ))}
         </ul>
 

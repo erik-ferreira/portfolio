@@ -3,72 +3,72 @@ import { convertColorHexToRgb } from "@/utils/convertColorHexToRgb"
 
 const skillsDefault: SkillDefault[] = [
   {
-    label: "React",
+    name: "React",
     src: "/skills/react.svg",
     color: "#61DAFB",
   },
   {
-    label: "Next",
+    name: "Next",
     src: "/skills/next.svg",
     color: "#F5F5F5",
   },
   {
-    label: "Typescript",
+    name: "Typescript",
     src: "/skills/typescript.svg",
     color: "#007ACC",
   },
   {
-    label: "Javascript",
+    name: "Javascript",
     src: "/skills/javascript.svg",
     color: "#F0DB4F",
   },
   {
-    label: "HTML",
+    name: "HTML",
     src: "/skills/html.svg",
     color: "#E44D26",
   },
   {
-    label: "CSS",
+    name: "CSS",
     src: "/skills/css.svg",
     color: "#1572B6",
   },
   {
-    label: "Figma",
+    name: "Figma",
     src: "/skills/figma.svg",
     color: "#0ACF83",
   },
   {
-    label: "Git",
+    name: "Git",
     src: "/skills/git.svg",
     color: "#F34F29",
   },
   {
-    label: "TaiwindCSS",
+    name: "TaiwindCSS",
     src: "/skills/tailwindcss.svg",
     color: "#38B2AC",
   },
   {
-    label: "Styled Components",
+    name: "Styled Components",
     src: "/skills/styled-components.svg",
     color: "#9F70B8",
   },
   {
-    label: "SQL",
+    name: "SQL",
     src: "/skills/sql.svg",
     color: "#00618A",
   },
   {
-    label: "Redux",
+    name: "Redux",
     src: "/skills/redux.svg",
     color: "#764ABC",
   },
   {
-    label: "Radix",
+    name: "Radix",
     src: "/skills/radix.svg",
     color: "#E2E8F0",
   },
   {
-    label: "API Rest",
+    name: "API Rest",
     src: "/skills/api.svg",
     color: "#72B8CE",
   },

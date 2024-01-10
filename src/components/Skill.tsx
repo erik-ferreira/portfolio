@@ -21,7 +21,7 @@ export function Skill({ skill, ...rest }: SkillProps) {
       >
         <Image
           src={skill.src}
-          alt={skill.label}
+          alt={skill.name}
           width={60}
           height={60}
           className={
@@ -36,7 +36,7 @@ export function Skill({ skill, ...rest }: SkillProps) {
         style={{ color: skill.color }}
         className="text-2xl font-bold text-center"
       >
-        {skill.label}
+        {skill.name}
       </span>
     </div>
   )

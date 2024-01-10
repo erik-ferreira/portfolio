@@ -11,32 +11,32 @@ const projectsDefault: ProjectsDefault[] = [
     src: "/projects/design-system.png",
     skills: formatSkillsProject([
       {
-        label: "React",
+        name: "React",
         src: "/skills/react.svg",
         color: "#61DAFB",
       },
       {
-        label: "Typescript",
+        name: "Typescript",
         src: "/skills/typescript.svg",
         color: "#007ACC",
       },
       {
-        label: "Stitches",
+        name: "Stitches",
         src: "/skills/stitches.svg",
         color: "#ECEDEE",
       },
       {
-        label: "Storybook",
+        name: "Storybook",
         src: "/skills/storybook.svg",
         color: "#FF4785",
       },
       {
-        label: "Radix",
+        name: "Radix",
         src: "/skills/radix.svg",
         color: "#E2E8F0",
       },
       {
-        label: "Turbo",
+        name: "Turbo",
         src: "/skills/turbo.svg",
         color: "#0D8FF7",
       },
@@ -52,22 +52,22 @@ const projectsDefault: ProjectsDefault[] = [
     src: "/projects/ignite-shop.png",
     skills: formatSkillsProject([
       {
-        label: "React",
+        name: "React",
         src: "/skills/react.svg",
         color: "#61DAFB",
       },
       {
-        label: "Typescript",
+        name: "Typescript",
         src: "/skills/typescript.svg",
         color: "#007ACC",
       },
       {
-        label: "Stitches",
+        name: "Stitches",
         src: "/skills/stitches.svg",
         color: "#ECEDEE",
       },
       {
-        label: "Stripe",
+        name: "Stripe",
         src: "/skills/stripe.svg",
         color: "#635BFF",
       },
@@ -82,32 +82,32 @@ const projectsDefault: ProjectsDefault[] = [
     src: "/projects/coffee-delivery.png",
     skills: formatSkillsProject([
       {
-        label: "React",
+        name: "React",
         src: "/skills/react.svg",
         color: "#61DAFB",
       },
       {
-        label: "Typescript",
+        name: "Typescript",
         src: "/skills/typescript.svg",
         color: "#007ACC",
       },
       {
-        label: "TaiwindCSS",
+        name: "TaiwindCSS",
         src: "/skills/tailwindcss.svg",
         color: "#38B2AC",
       },
       {
-        label: "React Hook Form",
+        name: "React Hook Form",
         src: "/skills/hook-form.svg",
         color: "#EC5990",
       },
       {
-        label: "Zod",
+        name: "Zod",
         src: "/skills/zod.svg",
         color: "#142641",
       },
       {
-        label: "Immer js",
+        name: "Immer js",
         src: "/skills/immer.svg",
         color: "#00E7C3",
       },
@@ -123,32 +123,32 @@ const projectsDefault: ProjectsDefault[] = [
     src: "/projects/ignews.png",
     skills: formatSkillsProject([
       {
-        label: "React",
+        name: "React",
         src: "/skills/react.svg",
         color: "#61DAFB",
       },
       {
-        label: "Typescript",
+        name: "Typescript",
         src: "/skills/typescript.svg",
         color: "#007ACC",
       },
       {
-        label: "Next",
+        name: "Next",
         src: "/skills/next.svg",
         color: "#F5F5F5",
       },
       {
-        label: "Sass",
+        name: "Sass",
         src: "/skills/sass.svg",
         color: "#CB6699",
       },
       {
-        label: "Stripe",
+        name: "Stripe",
         src: "/skills/stripe.svg",
         color: "#635BFF",
       },
       {
-        label: "Fauna DB",
+        name: "Fauna DB",
         src: "/skills/fauna.svg",
         color: "#3713B7",
       },
@@ -163,47 +163,47 @@ const projectsDefault: ProjectsDefault[] = [
     src: "/projects/book-wise.png",
     skills: formatSkillsProject([
       {
-        label: "React",
+        name: "React",
         src: "/skills/react.svg",
         color: "#61DAFB",
       },
       {
-        label: "Typescript",
+        name: "Typescript",
         src: "/skills/typescript.svg",
         color: "#007ACC",
       },
       {
-        label: "Next",
+        name: "Next",
         src: "/skills/next.svg",
         color: "#F5F5F5",
       },
       {
-        label: "Radix",
+        name: "Radix",
         src: "/skills/radix.svg",
         color: "#E2E8F0",
       },
       {
-        label: "Prisma",
+        name: "Prisma",
         src: "/skills/prisma.svg",
         color: "#5A67D8",
       },
       {
-        label: "Zod",
+        name: "Zod",
         src: "/skills/zod.svg",
         color: "#142641",
       },
       {
-        label: "React Hook Form",
+        name: "React Hook Form",
         src: "/skills/hook-form.svg",
         color: "#EC5990",
       },
       {
-        label: "React Query",
+        name: "React Query",
         src: "/skills/react-query.svg",
         color: "#FFD94C",
       },
       {
-        label: "Google APIs",
+        name: "Google APIs",
         src: "/skills/google.svg",
         color: "#587dbd",
       },
@@ -218,22 +218,22 @@ const projectsDefault: ProjectsDefault[] = [
     src: "/projects/dtmoney.png",
     skills: formatSkillsProject([
       {
-        label: "React",
+        name: "React",
         src: "/skills/react.svg",
         color: "#61DAFB",
       },
       {
-        label: "Typescript",
+        name: "Typescript",
         src: "/skills/typescript.svg",
         color: "#007ACC",
       },
       {
-        label: "Styled Components",
+        name: "Styled Components",
         src: "/skills/styled-components.svg",
         color: "#9F70B8",
       },
       {
-        label: "Mirage JS",
+        name: "Mirage JS",
         src: "/skills/mirage.svg",
         color: "#05C77E",
       },
@@ -248,22 +248,22 @@ const projectsDefault: ProjectsDefault[] = [
     src: "/projects/rocketshoes.png",
     skills: formatSkillsProject([
       {
-        label: "React",
+        name: "React",
         src: "/skills/react.svg",
         color: "#61DAFB",
       },
       {
-        label: "Typescript",
+        name: "Typescript",
         src: "/skills/typescript.svg",
         color: "#007ACC",
       },
       {
-        label: "Styled Components",
+        name: "Styled Components",
         src: "/skills/styled-components.svg",
         color: "#9F70B8",
       },
       {
-        label: "Jest",
+        name: "Jest",
         src: "/skills/jest.svg",
         color: "#99425B",
       },
@@ -279,32 +279,32 @@ const projectsDefault: ProjectsDefault[] = [
     src: "/projects/ignite-timer.png",
     skills: formatSkillsProject([
       {
-        label: "React",
+        name: "React",
         src: "/skills/react.svg",
         color: "#61DAFB",
       },
       {
-        label: "Typescript",
+        name: "Typescript",
         src: "/skills/typescript.svg",
         color: "#007ACC",
       },
       {
-        label: "Styled Components",
+        name: "Styled Components",
         src: "/skills/styled-components.svg",
         color: "#9F70B8",
       },
       {
-        label: "Zod",
+        name: "Zod",
         src: "/skills/zod.svg",
         color: "#142641",
       },
       {
-        label: "React Hook Form",
+        name: "React Hook Form",
         src: "/skills/hook-form.svg",
         color: "#EC5990",
       },
       {
-        label: "Immer js",
+        name: "Immer js",
         src: "/skills/immer.svg",
         color: "#00E7C3",
       },
@@ -319,32 +319,32 @@ const projectsDefault: ProjectsDefault[] = [
     src: "/projects/react-zustand.png",
     skills: formatSkillsProject([
       {
-        label: "React",
+        name: "React",
         src: "/skills/react.svg",
         color: "#61DAFB",
       },
       {
-        label: "Typescript",
+        name: "Typescript",
         src: "/skills/typescript.svg",
         color: "#007ACC",
       },
       {
-        label: "TaiwindCSS",
+        name: "TaiwindCSS",
         src: "/skills/tailwindcss.svg",
         color: "#38B2AC",
       },
       {
-        label: "Radix",
+        name: "Radix",
         src: "/skills/radix.svg",
         color: "#E2E8F0",
       },
       {
-        label: "Redux Toolkit",
+        name: "Redux Toolkit",
         src: "/skills/redux.svg",
         color: "#764ABC",
       },
       {
-        label: "Zustand",
+        name: "Zustand",
         src: "/skills/zustand.svg",
         color: "#F46D2D",
       },
@@ -359,27 +359,27 @@ const projectsDefault: ProjectsDefault[] = [
     src: "/projects/github-blog.png",
     skills: formatSkillsProject([
       {
-        label: "React",
+        name: "React",
         src: "/skills/react.svg",
         color: "#61DAFB",
       },
       {
-        label: "Typescript",
+        name: "Typescript",
         src: "/skills/typescript.svg",
         color: "#007ACC",
       },
       {
-        label: "Styled Components",
+        name: "Styled Components",
         src: "/skills/styled-components.svg",
         color: "#9F70B8",
       },
       {
-        label: "React Hook Form",
+        name: "React Hook Form",
         src: "/skills/hook-form.svg",
         color: "#EC5990",
       },
       {
-        label: "Zod",
+        name: "Zod",
         src: "/skills/zod.svg",
         color: "#142641",
       },
@@ -394,17 +394,17 @@ const projectsDefault: ProjectsDefault[] = [
     src: "/projects/mastering-tailwind.png",
     skills: formatSkillsProject([
       {
-        label: "React",
+        name: "React",
         src: "/skills/react.svg",
         color: "#61DAFB",
       },
       {
-        label: "Typescript",
+        name: "Typescript",
         src: "/skills/typescript.svg",
         color: "#007ACC",
       },
       {
-        label: "TaiwindCSS",
+        name: "TaiwindCSS",
         src: "/skills/tailwindcss.svg",
         color: "#38B2AC",
       },
@@ -420,7 +420,7 @@ export const someProjects: ProjectDTO[] = projectsDefault
     id: index + 1,
     slug: generateSlug(project.title),
     href: `/projects/${generateSlug(project.title)}`,
-    skills_names: project.skills.map((skill) => skill.label.toLowerCase()),
+    skills_names: project.skills.map((skill) => skill.name.toLowerCase()),
     ...project,
   }))
 
@@ -428,6 +428,6 @@ export const projects: ProjectDTO[] = projectsDefault.map((project, index) => ({
   id: index + 1,
   slug: generateSlug(project.title),
   href: `/projects/${generateSlug(project.title)}`,
-  skills_names: project.skills.map((skill) => skill.label.toLowerCase()),
+  skills_names: project.skills.map((skill) => skill.name.toLowerCase()),
   ...project,
 }))
