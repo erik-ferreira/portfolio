@@ -8,15 +8,23 @@ import { FilterSkills } from "@/components/FilterSkills"
 
 import { projects } from "@/defaults/projects"
 
-interface ProjectContentProps {}
-
-export function ProjectContent({ ...rest }: ProjectContentProps) {
+export function ProjectContent() {
+  const [skillName, setSkillName] = useState("")
   const [skillSelected, setSkillSelected] = useState("")
-  const filterProjects = !!skillSelected
-    ? projects.filter((project) =>
-        project.skills_names.includes(skillSelected.toLowerCase())
-      )
-    : [...projects]
+
+  let filterProjects = [...projects]
+
+  if (!!skillSelected) {
+    filterProjects = projects.filter((project) =>
+      project.skills_names.includes(skillSelected.toLowerCase())
+    )
+  }
+
+  if (!!skillName) {
+    filterProjects = filterProjects.filter((project) =>
+      project.title.toLowerCase().includes(skillName.toLowerCase())
+    )
+  }
 
   return (
     <>
@@ -24,6 +32,8 @@ export function ProjectContent({ ...rest }: ProjectContentProps) {
         variant="search"
         placeholder="Pesquisar..."
         classNameContainer="mx-auto"
+        value={skillName}
+        onChange={(event) => setSkillName(event.target.value)}
       />
 
       <FilterSkills
