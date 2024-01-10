@@ -19,6 +19,7 @@ export function Curriculum({ className, ...rest }: CurriculumProps) {
     <Document
       file="/erik.pdf"
       className={twMerge("flex flex-col items-center gap-6", className)}
+      loading="Carregando..."
       {...rest}
     >
       <Page pageNumber={1} scale={1.6} />

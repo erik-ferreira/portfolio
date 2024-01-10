@@ -7,7 +7,7 @@ import { Button } from "@/components/Button"
 import { ProjectShort } from "@/components/ProjectShort"
 
 import { twMerge } from "@/utils/twMerge"
-import { projects } from "@/defaults/projects"
+import { someProjects } from "@/defaults/projects"
 
 interface ProjectsProps extends ComponentProps<"section"> {}
 
@@ -20,7 +20,7 @@ export function Projects({ className, ...rest }: ProjectsProps) {
       <Title label="Projetos" labelBackground="Projects" />
 
       <div className="grid grid-cols-3 gap-8">
-        {projects.map((project) => (
+        {someProjects.map((project) => (
           <ProjectShort
             key={project.id}
             href={project.href}

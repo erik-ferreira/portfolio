@@ -8,7 +8,7 @@ import { FilterSkills } from "@/components/FilterSkills"
 import { Project } from "@/components/Project"
 import { Description } from "@/components/Description"
 
-import { allProjects } from "@/defaults/projects"
+import { projects } from "@/defaults/projects"
 
 export default function Projects() {
   return (
@@ -25,7 +25,7 @@ export default function Projects() {
       <FilterSkills />
 
       <article className="flex flex-col mt-8 divide-y-2 divide-sky-600 border-t border-sky-600">
-        {allProjects.map((project) => (
+        {projects.map((project) => (
           <Project key={project.id} project={project} />
         ))}
       </article>

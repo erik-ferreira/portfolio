@@ -48,11 +48,11 @@ export function ProjectShort({ project, ...rest }: ProjectShortProps) {
       </div>
 
       <Image
-        src={project.src.short}
+        src={project.src}
         width={400}
         height={270}
         alt="Projeto"
-        className="w-full h-full object-contain"
+        className="w-full h-full object-cover"
       />
     </Link>
   )

@@ -23,7 +23,7 @@ export function Project({ project, className, ...rest }: ProjectProps) {
   return (
     <div className={twMerge("flex gap-12 py-8", className)} {...rest}>
       <Image
-        src={project.src.normal}
+        src={project.src}
         alt="Project"
         width={500}
         height={333}
