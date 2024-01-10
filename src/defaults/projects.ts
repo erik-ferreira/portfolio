@@ -420,6 +420,7 @@ export const someProjects: ProjectDTO[] = projectsDefault
     id: index + 1,
     slug: generateSlug(project.title),
     href: `/projects/${generateSlug(project.title)}`,
+    skills_names: project.skills.map((skill) => skill.label.toLowerCase()),
     ...project,
   }))
 
@@ -427,5 +428,6 @@ export const projects: ProjectDTO[] = projectsDefault.map((project, index) => ({
   id: index + 1,
   slug: generateSlug(project.title),
   href: `/projects/${generateSlug(project.title)}`,
+  skills_names: project.skills.map((skill) => skill.label.toLowerCase()),
   ...project,
 }))
