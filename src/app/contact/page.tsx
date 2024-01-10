@@ -10,7 +10,10 @@ export default function Contact() {
   return (
     <main className="max-w-content w-content mx-auto p-8">
       <Title label="Contato" labelBackground="Contact" isTitlePage />
-      <Description label="Uma breve descrição bem aqui Uma breve descrição bem aqui a breve descrição bem aqui Uma breve descrição bem aqui Uma ve descrição bem aqui Uma breve descrição bem aqui Uma dale a a bem aqui Uma breve descrição bem aqui Uma breve descrição bem aqui Uma breve descrição bem aqui Uma breve descrição bem aqui Uma breve descrição bem aqui" />
+      <Description
+        label="Estou sempre pronto para novas oportunidades e colaborações. Se você deseja discutir projetos inovadores, soluções criativas ou simplesmente trocar ideias sobre desenvolvimento web e mobile, fique à vontade para entrar em contato. Estou aberto a novas conexões e ansioso para fazer parte de projetos desafiadores e inspiradores."
+        className="mt-6"
+      />
 
       <article className="flex flex-col items-center">
         <form className="w-[45rem] grid grid-cols-2 gap-8">
