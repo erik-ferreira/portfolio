@@ -1,6 +1,6 @@
 "use client"
 
-import { useParams } from "next/navigation"
+import { useParams, redirect } from "next/navigation"
 
 import { Title } from "@/components/Title"
 import { Gallery } from "@/components/Gallery"
@@ -15,6 +15,10 @@ type ParamsHobbyProps = {
 export default function Hobby() {
   const { slug } = useParams<ParamsHobbyProps>()
   const hobby = hobbies.filter((item) => item.slug === slug)[0]
+
+  if (!hobby) {
+    redirect("/404")
+  }
 
   return (
     <main className="max-w-content w-content mx-auto p-8">
