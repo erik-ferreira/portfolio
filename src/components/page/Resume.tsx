@@ -74,7 +74,13 @@ export function Resume({ className, ...rest }: ResumeProps) {
           <Link href="/about" label="Ler mais" className="text-slate-500" />
         </div>
 
-        <Image src={preview} alt="Erik Ferreira" width={350} height={233} />
+        <Image
+          src={preview}
+          alt="Erik Ferreira"
+          width={350}
+          height={233}
+          className="rounded-lg"
+        />
       </div>
     </section>
   )

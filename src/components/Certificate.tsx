@@ -45,7 +45,7 @@ export function Certificate({
     >
       <div>
         <Image
-          src="/certificates/rocketseat.svg"
+          src={certificate.src_company}
           width={180}
           height={34}
           alt="Company"
