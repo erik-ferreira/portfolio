@@ -1,7 +1,7 @@
 "use client"
 
 import Link from "next/link"
-import { useParams } from "next/navigation"
+import { useParams, redirect } from "next/navigation"
 
 import { Icon } from "@/components/Icon"
 import { Title } from "@/components/Title"
@@ -22,6 +22,10 @@ export default function Project() {
   const { slug } = useParams<ParamsProps>()
   const project = projects.filter((item) => item.slug === slug)[0]
   const projectHasDemo = !!project.demo_href
+
+  if (!project) {
+    redirect("/404")
+  }
 
   return (
     <main className="max-w-content w-content mx-auto">
