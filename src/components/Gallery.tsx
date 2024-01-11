@@ -18,26 +18,16 @@ const icons = {
 
 interface GalleryProps extends ComponentProps<"button"> {
   gallery: GalleryDTO
-  isScreenshot?: boolean
+  hideIconType?: boolean
 }
 
 export function Gallery({
   className,
   gallery,
-  isScreenshot = false,
+  hideIconType = false,
   ...rest
 }: GalleryProps) {
-  return isScreenshot ? (
-    <button
-      className={twMerge(
-        "rounded-lg overflow-auto transition-all duration-300 cursor-auto",
-        "hover:shadow-blue hover:scale-105"
-      )}
-      {...rest}
-    >
-      <Image src={gallery.src} width={350} height={230} alt="NBA" />
-    </button>
-  ) : (
+  return (
     <Dialog.Root>
       <Dialog.Trigger asChild>
         <button
@@ -65,10 +55,12 @@ export function Gallery({
             />
           )}
 
-          <Icon
-            name={icons[gallery.variant]}
-            className="absolute top-3 right-3 text-sky-500"
-          />
+          {!hideIconType && (
+            <Icon
+              name={icons[gallery.variant]}
+              className="absolute top-3 right-3 text-sky-500"
+            />
+          )}
         </button>
       </Dialog.Trigger>
 

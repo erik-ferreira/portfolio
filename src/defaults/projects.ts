@@ -8,7 +8,7 @@ const projectsDefault: ProjectsDefault[] = [
     title: "Design System",
     description:
       "Este projeto foi concluído durante minha jornada na Rocketseat. Durante o Projeto 05 do Ignite, aprendi muita coisa com o Diego Fernandes e desenvolvi um design system abrangente, repleto de diversos componentes e estados distintos. Utilizei o poderoso React para a construção dos componentes, combinando-o com ferramentas como Storybook para a documentação, e me aprofundei em tecnologias como Stitches, Radix, TurboRepo e Tsup para aprimorar ainda mais o projeto. A documentação completa está disponível no Github Pages, onde você pode conferir o resultado final e explorar a variedade de componentes criados. Além disso, fiz a publicação dos pacotes no npm para facilitar o uso desses componentes em outros projetos.",
-    src: "/projects/design-system.png",
+    src: "/projects/design-system/default.png",
     skills: formatSkillsProject([
       {
         name: "React",
@@ -44,7 +44,18 @@ const projectsDefault: ProjectsDefault[] = [
     github_href: "https://github.com/erik-ferreira/05-design-system",
     demo_href:
       "https://erik-ferreira.github.io/05-design-system/?path=/story/home--page",
-    screenshots: [],
+    screenshots: Array.from({ length: 8 }, (_, index) => {
+      const imageIndex = String(index + 1).padStart(2, "0")
+
+      return {
+        id: index + 1,
+        src: `/projects/design-system/${imageIndex}.png`,
+        variant: "image",
+        direction: "horizontal",
+      }
+    }),
+    srcBackground: "/projects/design-system/background.png",
+    srcVideo: "",
   },
   {
     title: "Ignite Shop",
@@ -76,6 +87,8 @@ const projectsDefault: ProjectsDefault[] = [
     github_href: "https://github.com/erik-ferreira/04-ignite-shop",
     demo_href: null,
     screenshots: [],
+    srcBackground: "",
+    srcVideo: "",
   },
   {
     title: "Coffee Delivery",
@@ -118,6 +131,8 @@ const projectsDefault: ProjectsDefault[] = [
       "https://github.com/erik-ferreira/challenge-02-coffee-delivery",
     demo_href: null,
     screenshots: [],
+    srcBackground: "",
+    srcVideo: "",
   },
   {
     title: "Ig.news",
@@ -159,6 +174,8 @@ const projectsDefault: ProjectsDefault[] = [
     github_href: "https://github.com/erik-ferreira/ignews",
     demo_href: null,
     screenshots: [],
+    srcBackground: "",
+    srcVideo: "",
   },
   {
     title: "Book Wise",
@@ -215,6 +232,8 @@ const projectsDefault: ProjectsDefault[] = [
     github_href: "https://github.com/erik-ferreira/book-wise",
     demo_href: null,
     screenshots: [],
+    srcBackground: "",
+    srcVideo: "",
   },
   {
     title: "Dt Money",
@@ -246,6 +265,8 @@ const projectsDefault: ProjectsDefault[] = [
     github_href: "https://github.com/erik-ferreira/dtmoney",
     demo_href: null,
     screenshots: [],
+    srcBackground: "",
+    srcVideo: "",
   },
   {
     title: "Rocket Shoes",
@@ -278,6 +299,8 @@ const projectsDefault: ProjectsDefault[] = [
       "https://github.com/erik-ferreira/ignite-reactjs-criando-um-hook-de-carrinho-de-compras",
     demo_href: null,
     screenshots: [],
+    srcBackground: "",
+    srcVideo: "",
   },
   {
     title: "Ignite Timer",
@@ -319,6 +342,8 @@ const projectsDefault: ProjectsDefault[] = [
     github_href: "https://github.com/erik-ferreira/02-ignite-timer",
     demo_href: null,
     screenshots: [],
+    srcBackground: "",
+    srcVideo: "",
   },
   {
     title: "Redux + Zustand",
@@ -360,6 +385,8 @@ const projectsDefault: ProjectsDefault[] = [
     github_href: "https://github.com/erik-ferreira/07-redux-zustand",
     demo_href: null,
     screenshots: [],
+    srcBackground: "",
+    srcVideo: "",
   },
   {
     title: "Github Blog",
@@ -396,6 +423,8 @@ const projectsDefault: ProjectsDefault[] = [
     github_href: "https://github.com/erik-ferreira/challenge-03-github-blog",
     demo_href: null,
     screenshots: [],
+    srcBackground: "",
+    srcVideo: "",
   },
   {
     title: "Mastering Tailwind",
@@ -422,6 +451,8 @@ const projectsDefault: ProjectsDefault[] = [
     github_href: "https://github.com/erik-ferreira/mastering-tailwind",
     demo_href: null,
     screenshots: [],
+    srcBackground: "",
+    srcVideo: "",
   },
 ]
 

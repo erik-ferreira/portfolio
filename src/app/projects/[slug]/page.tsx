@@ -80,12 +80,9 @@ export default function Project() {
           className="mt-8"
         />
         <div className="w-fit mx-auto grid grid-cols-4 gap-8">
-          <Gallery gallery={hobbies[0].gallery[0]} isScreenshot />
-          <Gallery gallery={hobbies[0].gallery[0]} isScreenshot />
-          <Gallery gallery={hobbies[0].gallery[0]} isScreenshot />
-          <Gallery gallery={hobbies[0].gallery[0]} isScreenshot />
-          <Gallery gallery={hobbies[0].gallery[0]} isScreenshot />
-          <Gallery gallery={hobbies[0].gallery[0]} isScreenshot />
+          {project.screenshots.map((screenshot) => (
+            <Gallery key={screenshot.id} gallery={screenshot} hideIconType />
+          ))}
         </div>
       </section>
 
@@ -95,7 +92,10 @@ export default function Project() {
         variant="subtitle"
         className="px-8"
       />
-      <Video />
+      <Video
+        srcBackground={project.srcBackground}
+        srcVideo={"/hobbies/basquete/06.mp4"}
+      />
     </main>
   )
 }

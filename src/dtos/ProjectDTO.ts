@@ -1,5 +1,5 @@
 import { SkillDTO } from "@/dtos/SkillDTO"
-import { ScreenshotDTO } from "@/dtos/ScreenshotDTO"
+import { GalleryDTO } from "@/dtos/GalleryDTO"
 
 export interface ProjectDTO {
   id: number
@@ -12,7 +12,9 @@ export interface ProjectDTO {
   github_href: string
   demo_href: string | null
   slug: string
-  screenshots: Array<ScreenshotDTO>
+  screenshots: Array<GalleryDTO>
+  srcBackground: string
+  srcVideo: string
 }
 
 export type ProjectsDefault = Omit<
