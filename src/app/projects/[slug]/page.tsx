@@ -94,7 +94,7 @@ export default function Project() {
       />
       <Video
         srcBackground={project.srcBackground}
-        srcVideo={"/hobbies/basquete/06.mp4"}
+        srcVideo={project.srcVideo}
       />
     </main>
   )

@@ -55,7 +55,7 @@ const projectsDefault: ProjectsDefault[] = [
       }
     }),
     srcBackground: "/projects/design-system/background.png",
-    srcVideo: "",
+    srcVideo: "/projects/design-system/video.mp4",
   },
   {
     title: "Ignite Shop",
