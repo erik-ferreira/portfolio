@@ -1,8 +1,8 @@
 import type { Metadata } from "next"
 import { Nunito_Sans, Orbitron, Permanent_Marker } from "next/font/google"
 
-import { Header } from "@/components/page/Header"
-import { Footer } from "@/components/page/Footer"
+import { Header } from "@/components/Header"
+import { Footer } from "@/components/Footer"
 import { SocialIcons } from "@/components/SocialIcons"
 import { ButtonGoToTop } from "@/components/ButtonGoToTop"
 
