@@ -28,7 +28,7 @@ export default function Project() {
 
   return (
     <main>
-      <section className="max-w-content w-content mx-auto">
+      <section className="max-w-content w-content mx-auto p-8">
         <Title
           label={project.title}
           labelBackground={project.title}
