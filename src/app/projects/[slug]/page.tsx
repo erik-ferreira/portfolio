@@ -27,8 +27,8 @@ export default function Project() {
   const projectHasDemo = !!project.demo_href
 
   return (
-    <main className="max-w-content w-content mx-auto">
-      <section className="p-8 pb-0 mb-8">
+    <main>
+      <section className="max-w-content w-content mx-auto">
         <Title
           label={project.title}
           labelBackground={project.title}
