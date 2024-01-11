@@ -44,6 +44,7 @@ const projectsDefault: ProjectsDefault[] = [
     github_href: "https://github.com/erik-ferreira/05-design-system",
     demo_href:
       "https://erik-ferreira.github.io/05-design-system/?path=/story/home--page",
+    screenshots: [],
   },
   {
     title: "Ignite Shop",
@@ -74,6 +75,7 @@ const projectsDefault: ProjectsDefault[] = [
     ]),
     github_href: "https://github.com/erik-ferreira/04-ignite-shop",
     demo_href: null,
+    screenshots: [],
   },
   {
     title: "Coffee Delivery",
@@ -115,6 +117,7 @@ const projectsDefault: ProjectsDefault[] = [
     github_href:
       "https://github.com/erik-ferreira/challenge-02-coffee-delivery",
     demo_href: null,
+    screenshots: [],
   },
   {
     title: "Ig.news",
@@ -155,6 +158,7 @@ const projectsDefault: ProjectsDefault[] = [
     ]),
     github_href: "https://github.com/erik-ferreira/ignews",
     demo_href: null,
+    screenshots: [],
   },
   {
     title: "Book Wise",
@@ -210,6 +214,7 @@ const projectsDefault: ProjectsDefault[] = [
     ]),
     github_href: "https://github.com/erik-ferreira/book-wise",
     demo_href: null,
+    screenshots: [],
   },
   {
     title: "Dt Money",
@@ -240,6 +245,7 @@ const projectsDefault: ProjectsDefault[] = [
     ]),
     github_href: "https://github.com/erik-ferreira/dtmoney",
     demo_href: null,
+    screenshots: [],
   },
   {
     title: "Rocket Shoes",
@@ -271,6 +277,7 @@ const projectsDefault: ProjectsDefault[] = [
     github_href:
       "https://github.com/erik-ferreira/ignite-reactjs-criando-um-hook-de-carrinho-de-compras",
     demo_href: null,
+    screenshots: [],
   },
   {
     title: "Ignite Timer",
@@ -311,6 +318,7 @@ const projectsDefault: ProjectsDefault[] = [
     ]),
     github_href: "https://github.com/erik-ferreira/02-ignite-timer",
     demo_href: null,
+    screenshots: [],
   },
   {
     title: "Redux + Zustand",
@@ -351,6 +359,7 @@ const projectsDefault: ProjectsDefault[] = [
     ]),
     github_href: "https://github.com/erik-ferreira/07-redux-zustand",
     demo_href: null,
+    screenshots: [],
   },
   {
     title: "Github Blog",
@@ -386,6 +395,7 @@ const projectsDefault: ProjectsDefault[] = [
     ]),
     github_href: "https://github.com/erik-ferreira/challenge-03-github-blog",
     demo_href: null,
+    screenshots: [],
   },
   {
     title: "Mastering Tailwind",
@@ -411,6 +421,7 @@ const projectsDefault: ProjectsDefault[] = [
     ]),
     github_href: "https://github.com/erik-ferreira/mastering-tailwind",
     demo_href: null,
+    screenshots: [],
   },
 ]
 
