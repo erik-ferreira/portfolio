@@ -1,3 +1,5 @@
+import Link from "next/link"
+
 import { Icon } from "@/components/Icon"
 import { Title } from "@/components/Title"
 import { Button } from "@/components/Button"
@@ -12,9 +14,11 @@ export default function About() {
 
       <Curriculum />
 
-      <Button variant="outline" className="mx-auto mt-6 duration-300">
-        Baixar CV
-        <Icon className="" />
+      <Button variant="outline" className="mx-auto mt-6 duration-300" asChild>
+        <Link href="/erik.pdf" target="_blank" download="erik">
+          Baixar CV
+          <Icon />
+        </Link>
       </Button>
     </main>
   )
