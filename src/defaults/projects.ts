@@ -86,8 +86,17 @@ const projectsDefault: ProjectsDefault[] = [
     ]),
     github_href: "https://github.com/erik-ferreira/04-ignite-shop",
     demo_href: null,
-    screenshots: [],
-    srcBackground: "",
+    screenshots: Array.from({ length: 6 }, (_, index) => {
+      const imageIndex = String(index + 1).padStart(2, "0")
+
+      return {
+        id: index + 1,
+        src: `/projects/ignite-shop/${imageIndex}.png`,
+        variant: "image",
+        direction: "horizontal",
+      }
+    }),
+    srcBackground: "/projects/ignite-shop/background.png",
     srcVideo: "",
   },
   {
@@ -130,8 +139,17 @@ const projectsDefault: ProjectsDefault[] = [
     github_href:
       "https://github.com/erik-ferreira/challenge-02-coffee-delivery",
     demo_href: null,
-    screenshots: [],
-    srcBackground: "",
+    screenshots: Array.from({ length: 2 }, (_, index) => {
+      const imageIndex = String(index + 1).padStart(2, "0")
+
+      return {
+        id: index + 1,
+        src: `/projects/coffee-delivery/${imageIndex}.png`,
+        variant: "image",
+        direction: "horizontal",
+      }
+    }),
+    srcBackground: "/projects/coffee-delivery/background.png",
     srcVideo: "",
   },
   {
@@ -173,8 +191,17 @@ const projectsDefault: ProjectsDefault[] = [
     ]),
     github_href: "https://github.com/erik-ferreira/ignews",
     demo_href: null,
-    screenshots: [],
-    srcBackground: "",
+    screenshots: Array.from({ length: 3 }, (_, index) => {
+      const imageIndex = String(index + 1).padStart(2, "0")
+
+      return {
+        id: index + 1,
+        src: `/projects/ignews/${imageIndex}.png`,
+        variant: "image",
+        direction: "horizontal",
+      }
+    }),
+    srcBackground: "/projects/ignews/background.png",
     srcVideo: "",
   },
   {
@@ -231,8 +258,17 @@ const projectsDefault: ProjectsDefault[] = [
     ]),
     github_href: "https://github.com/erik-ferreira/book-wise",
     demo_href: null,
-    screenshots: [],
-    srcBackground: "",
+    screenshots: Array.from({ length: 6 }, (_, index) => {
+      const imageIndex = String(index + 1).padStart(2, "0")
+
+      return {
+        id: index + 1,
+        src: `/projects/book-wise/${imageIndex}.png`,
+        variant: "image",
+        direction: "horizontal",
+      }
+    }),
+    srcBackground: "/projects/book-wise/background.png",
     srcVideo: "",
   },
   {
@@ -264,8 +300,17 @@ const projectsDefault: ProjectsDefault[] = [
     ]),
     github_href: "https://github.com/erik-ferreira/dtmoney",
     demo_href: null,
-    screenshots: [],
-    srcBackground: "",
+    screenshots: Array.from({ length: 2 }, (_, index) => {
+      const imageIndex = String(index + 1).padStart(2, "0")
+
+      return {
+        id: index + 1,
+        src: `/projects/dt-money/${imageIndex}.png`,
+        variant: "image",
+        direction: "horizontal",
+      }
+    }),
+    srcBackground: "/projects/dt-money/background.png",
     srcVideo: "",
   },
   {
@@ -298,8 +343,17 @@ const projectsDefault: ProjectsDefault[] = [
     github_href:
       "https://github.com/erik-ferreira/ignite-reactjs-criando-um-hook-de-carrinho-de-compras",
     demo_href: null,
-    screenshots: [],
-    srcBackground: "",
+    screenshots: Array.from({ length: 2 }, (_, index) => {
+      const imageIndex = String(index + 1).padStart(2, "0")
+
+      return {
+        id: index + 1,
+        src: `/projects/rocketshoes/${imageIndex}.png`,
+        variant: "image",
+        direction: "horizontal",
+      }
+    }),
+    srcBackground: "/projects/rocketshoes/background.png",
     srcVideo: "",
   },
   {
@@ -341,8 +395,17 @@ const projectsDefault: ProjectsDefault[] = [
     ]),
     github_href: "https://github.com/erik-ferreira/02-ignite-timer",
     demo_href: null,
-    screenshots: [],
-    srcBackground: "",
+    screenshots: Array.from({ length: 3 }, (_, index) => {
+      const imageIndex = String(index + 1).padStart(2, "0")
+
+      return {
+        id: index + 1,
+        src: `/projects/ignite-timer/${imageIndex}.png`,
+        variant: "image",
+        direction: "horizontal",
+      }
+    }),
+    srcBackground: "/projects/ignite-timer/background.png",
     srcVideo: "",
   },
   {
@@ -384,8 +447,17 @@ const projectsDefault: ProjectsDefault[] = [
     ]),
     github_href: "https://github.com/erik-ferreira/07-redux-zustand",
     demo_href: null,
-    screenshots: [],
-    srcBackground: "",
+    screenshots: Array.from({ length: 3 }, (_, index) => {
+      const imageIndex = String(index + 1).padStart(2, "0")
+
+      return {
+        id: index + 1,
+        src: `/projects/redux-zustand/${imageIndex}.png`,
+        variant: "image",
+        direction: "horizontal",
+      }
+    }),
+    srcBackground: "/projects/redux-zustand/background.png",
     srcVideo: "",
   },
   {
@@ -422,8 +494,17 @@ const projectsDefault: ProjectsDefault[] = [
     ]),
     github_href: "https://github.com/erik-ferreira/challenge-03-github-blog",
     demo_href: null,
-    screenshots: [],
-    srcBackground: "",
+    screenshots: Array.from({ length: 3 }, (_, index) => {
+      const imageIndex = String(index + 1).padStart(2, "0")
+
+      return {
+        id: index + 1,
+        src: `/projects/github-blog/${imageIndex}.png`,
+        variant: "image",
+        direction: "horizontal",
+      }
+    }),
+    srcBackground: "/projects/github-blog/background.png",
     srcVideo: "",
   },
   {
@@ -450,8 +531,17 @@ const projectsDefault: ProjectsDefault[] = [
     ]),
     github_href: "https://github.com/erik-ferreira/mastering-tailwind",
     demo_href: null,
-    screenshots: [],
-    srcBackground: "",
+    screenshots: Array.from({ length: 2 }, (_, index) => {
+      const imageIndex = String(index + 1).padStart(2, "0")
+
+      return {
+        id: index + 1,
+        src: `/projects/mastering-tailwind/${imageIndex}.png`,
+        variant: "image",
+        direction: "horizontal",
+      }
+    }),
+    srcBackground: "/projects/mastering-tailwind/background.png",
     srcVideo: "",
   },
 ]
