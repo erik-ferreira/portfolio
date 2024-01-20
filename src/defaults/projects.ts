@@ -97,7 +97,7 @@ const projectsDefault: ProjectsDefault[] = [
       }
     }),
     srcBackground: "/projects/ignite-shop/background.png",
-    srcVideo: "",
+    srcVideo: "/projects/ignite-shop/video.mp4",
   },
   {
     title: "Coffee Delivery",
@@ -150,7 +150,7 @@ const projectsDefault: ProjectsDefault[] = [
       }
     }),
     srcBackground: "/projects/coffee-delivery/background.png",
-    srcVideo: "",
+    srcVideo: "/projects/coffee-delivery/video.mp4",
   },
   {
     title: "Ig.news",
@@ -202,7 +202,7 @@ const projectsDefault: ProjectsDefault[] = [
       }
     }),
     srcBackground: "/projects/ignews/background.png",
-    srcVideo: "",
+    srcVideo: "/projects/ignews/video.mp4",
   },
   {
     title: "Book Wise",
@@ -269,7 +269,7 @@ const projectsDefault: ProjectsDefault[] = [
       }
     }),
     srcBackground: "/projects/book-wise/background.png",
-    srcVideo: "",
+    srcVideo: "/projects/book-wise/video.mp4",
   },
   {
     title: "Dt Money",
@@ -311,7 +311,7 @@ const projectsDefault: ProjectsDefault[] = [
       }
     }),
     srcBackground: "/projects/dt-money/background.png",
-    srcVideo: "",
+    srcVideo: "/projects/dt-money/video.mp4",
   },
   {
     title: "Rocket Shoes",
@@ -354,7 +354,7 @@ const projectsDefault: ProjectsDefault[] = [
       }
     }),
     srcBackground: "/projects/rocketshoes/background.png",
-    srcVideo: "",
+    srcVideo: "/projects/rocketshoes/video.mp4",
   },
   {
     title: "Ignite Timer",
@@ -406,7 +406,7 @@ const projectsDefault: ProjectsDefault[] = [
       }
     }),
     srcBackground: "/projects/ignite-timer/background.png",
-    srcVideo: "",
+    srcVideo: "/projects/ignite-timer/video.mp4",
   },
   {
     title: "Redux + Zustand",
@@ -458,7 +458,7 @@ const projectsDefault: ProjectsDefault[] = [
       }
     }),
     srcBackground: "/projects/redux-zustand/background.png",
-    srcVideo: "",
+    srcVideo: "/projects/redux-zustand/video.mp4",
   },
   {
     title: "Github Blog",
@@ -505,7 +505,7 @@ const projectsDefault: ProjectsDefault[] = [
       }
     }),
     srcBackground: "/projects/github-blog/background.png",
-    srcVideo: "",
+    srcVideo: "/projects/github-blog/video.mp4",
   },
   {
     title: "Mastering Tailwind",
@@ -542,7 +542,7 @@ const projectsDefault: ProjectsDefault[] = [
       }
     }),
     srcBackground: "/projects/mastering-tailwind/background.png",
-    srcVideo: "",
+    srcVideo: "/projects/mastering-tailwind/video.mp4",
   },
 ]
 
