@@ -544,6 +544,42 @@ const projectsDefault: ProjectsDefault[] = [
     srcBackground: "/projects/mastering-tailwind/background.png",
     srcVideo: "/projects/mastering-tailwind/video.mp4",
   },
+  {
+    title: "Reminder Calendar",
+    description: "",
+    src: "/projects/reminder-calendar/default.png",
+    skills: formatSkillsProject([
+      {
+        name: "React",
+        src: "/skills/react.svg",
+        color: "#61DAFB",
+      },
+      {
+        name: "Typescript",
+        src: "/skills/typescript.svg",
+        color: "#007ACC",
+      },
+      {
+        name: "TaiwindCSS",
+        src: "/skills/tailwindcss.svg",
+        color: "#38B2AC",
+      },
+    ]),
+    github_href: "https://github.com/erik-ferreira/reminder-calendar",
+    demo_href: null,
+    screenshots: Array.from({ length: 3 }, (_, index) => {
+      const imageIndex = String(index + 1).padStart(2, "0")
+
+      return {
+        id: index + 1,
+        src: `/projects/reminder-calendar/${imageIndex}.png`,
+        variant: "image",
+        direction: "horizontal",
+      }
+    }),
+    srcBackground: "/projects/reminder-calendar/background.png",
+    srcVideo: "/projects/reminder-calendar/video.mp4",
+  },
 ]
 
 export const someProjects: ProjectDTO[] = projectsDefault
