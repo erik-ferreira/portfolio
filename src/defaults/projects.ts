@@ -153,56 +153,41 @@ const projectsDefault: ProjectsDefault[] = [
     srcVideo: "/projects/coffee-delivery/video.mp4",
   },
   {
-    title: "Ig.news",
+    title: "Reminder Calendar",
     description:
-      "Este é um projeto desenvolvido durante o Chapter III da trilha de React JS no Ignite e é uma plataforma de posts que oferece aos usuários acesso a conteúdos diários sobre React, disponíveis por meio de uma assinatura mensal. Ao longo do desenvolvimento, utilizei uma gama de tecnologias para garantir uma experiência sólida e envolvente: Next.JS: A escolha ideal para este tipo de aplicação, permitindo a geração estática dos posts para uma performance otimizada. Next Auth: Utilizado para autenticação com o GitHub e oferecendo suporte a diversos outros provedores de autenticação, como Facebook, Instagram, entre outros. Sass: Utilizado para a estilização do projeto, garantindo uma apresentação visual atraente e consistente. Stripe: Integrado para a funcionalidade de pagamento, proporcionando aos usuários uma maneira conveniente de assinar o serviço. Fauna: Utilizado como banco de dados para armazenamento e gerenciamento de dados. Prismic: Implementado como um CMS (Content Management System) para fornecer os dados dos posts de maneira eficiente.",
-    src: "/projects/ignews/default.png",
+      "O reminder calendar foi um dos meus primeiros projetos no mundo da programação e basicamente a minha ideia era fazer um calendário que fosse capaz de fazer anotações em cada dia. Esse projeto é um dos que mais tenho orgulho porque eu construí todo do zero, sem me basear em nenhum tutorial. Ele calcula os dias do mês perfeitamente, é possível criar uma nota no dia desejado e os dados são salvos no local storage do navegador. O projeto foi feito todo com html, css e javascript puro, manipulando a DOM. Eu poderia melhorar muito ele hoje, mas resolvi deixar da forma que estava pelo fato de ser um dos meus primeiros projetos.",
+    src: "/projects/reminder-calendar/default.png",
     skills: formatSkillsProject([
       {
-        name: "React",
-        src: "/skills/react.svg",
-        color: "#61DAFB",
+        name: "HTML",
+        src: "/skills/html.svg",
+        color: "#E44D26",
       },
       {
-        name: "Typescript",
-        src: "/skills/typescript.svg",
-        color: "#007ACC",
+        name: "CSS",
+        src: "/skills/css.svg",
+        color: "#1572B6",
       },
       {
-        name: "Next",
-        src: "/skills/next.svg",
-        color: "#F5F5F5",
-      },
-      {
-        name: "Sass",
-        src: "/skills/sass.svg",
-        color: "#CB6699",
-      },
-      {
-        name: "Stripe",
-        src: "/skills/stripe.svg",
-        color: "#635BFF",
-      },
-      {
-        name: "Fauna DB",
-        src: "/skills/fauna.svg",
-        color: "#3713B7",
+        name: "Javascript",
+        src: "/skills/javascript.svg",
+        color: "#F0DB4F",
       },
     ]),
-    github_href: "https://github.com/erik-ferreira/ignews",
+    github_href: "https://github.com/erik-ferreira/reminder-calendar",
     demo_href: null,
     screenshots: Array.from({ length: 3 }, (_, index) => {
       const imageIndex = String(index + 1).padStart(2, "0")
 
       return {
         id: index + 1,
-        src: `/projects/ignews/${imageIndex}.png`,
+        src: `/projects/reminder-calendar/${imageIndex}.png`,
         variant: "image",
         direction: "horizontal",
       }
     }),
-    srcBackground: "/projects/ignews/background.png",
-    srcVideo: "/projects/ignews/video.mp4",
+    srcBackground: "/projects/reminder-calendar/background.png",
+    srcVideo: "/projects/reminder-calendar/video.mp4",
   },
   {
     title: "Book Wise",
@@ -312,6 +297,58 @@ const projectsDefault: ProjectsDefault[] = [
     }),
     srcBackground: "/projects/dt-money/background.png",
     srcVideo: "/projects/dt-money/video.mp4",
+  },
+  {
+    title: "Ig.news",
+    description:
+      "Este é um projeto desenvolvido durante o Chapter III da trilha de React JS no Ignite e é uma plataforma de posts que oferece aos usuários acesso a conteúdos diários sobre React, disponíveis por meio de uma assinatura mensal. Ao longo do desenvolvimento, utilizei uma gama de tecnologias para garantir uma experiência sólida e envolvente: Next.JS: A escolha ideal para este tipo de aplicação, permitindo a geração estática dos posts para uma performance otimizada. Next Auth: Utilizado para autenticação com o GitHub e oferecendo suporte a diversos outros provedores de autenticação, como Facebook, Instagram, entre outros. Sass: Utilizado para a estilização do projeto, garantindo uma apresentação visual atraente e consistente. Stripe: Integrado para a funcionalidade de pagamento, proporcionando aos usuários uma maneira conveniente de assinar o serviço. Fauna: Utilizado como banco de dados para armazenamento e gerenciamento de dados. Prismic: Implementado como um CMS (Content Management System) para fornecer os dados dos posts de maneira eficiente.",
+    src: "/projects/ignews/default.png",
+    skills: formatSkillsProject([
+      {
+        name: "React",
+        src: "/skills/react.svg",
+        color: "#61DAFB",
+      },
+      {
+        name: "Typescript",
+        src: "/skills/typescript.svg",
+        color: "#007ACC",
+      },
+      {
+        name: "Next",
+        src: "/skills/next.svg",
+        color: "#F5F5F5",
+      },
+      {
+        name: "Sass",
+        src: "/skills/sass.svg",
+        color: "#CB6699",
+      },
+      {
+        name: "Stripe",
+        src: "/skills/stripe.svg",
+        color: "#635BFF",
+      },
+      {
+        name: "Fauna DB",
+        src: "/skills/fauna.svg",
+        color: "#3713B7",
+      },
+    ]),
+    github_href: "https://github.com/erik-ferreira/ignews",
+    demo_href: null,
+    screenshots: Array.from({ length: 3 }, (_, index) => {
+      const imageIndex = String(index + 1).padStart(2, "0")
+
+      return {
+        id: index + 1,
+        src: `/projects/ignews/${imageIndex}.png`,
+        variant: "image",
+        direction: "horizontal",
+      }
+    }),
+    srcBackground: "/projects/ignews/background.png",
+    srcVideo: "/projects/ignews/video.mp4",
   },
   {
     title: "Rocket Shoes",
@@ -543,42 +580,6 @@ const projectsDefault: ProjectsDefault[] = [
     }),
     srcBackground: "/projects/mastering-tailwind/background.png",
     srcVideo: "/projects/mastering-tailwind/video.mp4",
-  },
-  {
-    title: "Reminder Calendar",
-    description: "",
-    src: "/projects/reminder-calendar/default.png",
-    skills: formatSkillsProject([
-      {
-        name: "React",
-        src: "/skills/react.svg",
-        color: "#61DAFB",
-      },
-      {
-        name: "Typescript",
-        src: "/skills/typescript.svg",
-        color: "#007ACC",
-      },
-      {
-        name: "TaiwindCSS",
-        src: "/skills/tailwindcss.svg",
-        color: "#38B2AC",
-      },
-    ]),
-    github_href: "https://github.com/erik-ferreira/reminder-calendar",
-    demo_href: null,
-    screenshots: Array.from({ length: 3 }, (_, index) => {
-      const imageIndex = String(index + 1).padStart(2, "0")
-
-      return {
-        id: index + 1,
-        src: `/projects/reminder-calendar/${imageIndex}.png`,
-        variant: "image",
-        direction: "horizontal",
-      }
-    }),
-    srcBackground: "/projects/reminder-calendar/background.png",
-    srcVideo: "/projects/reminder-calendar/video.mp4",
   },
 ]
 
