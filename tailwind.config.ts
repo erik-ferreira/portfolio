@@ -150,7 +150,7 @@ const config: Config = {
       },
 
       maxWidth: {
-        content: "1440px",
+        content: "1600px",
       },
 
       width: {

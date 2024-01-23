@@ -79,7 +79,7 @@ export default function Project() {
           variant="subtitle"
           className="mt-8"
         />
-        <div className="w-fit mx-auto grid grid-cols-4 gap-8">
+        <div className="w-fit mx-auto flex flex-wrap items-center justify-center gap-8">
           {project.screenshots.map((screenshot) => (
             <Gallery key={screenshot.id} gallery={screenshot} hideIconType />
           ))}

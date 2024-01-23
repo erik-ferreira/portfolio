@@ -51,7 +51,7 @@ export function SwiperCertification({
       </Swiper>
 
       <Swiper
-        className="h-[1006px] border"
+        className="h-[1006px]"
         direction="vertical"
         spaceBetween={32}
         slidesPerView={3}
