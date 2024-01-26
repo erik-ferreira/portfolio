@@ -1,3 +1,5 @@
+"use client"
+
 import { Icon } from "@/components/Icon"
 import { Input } from "@/components/Input"
 import { Title } from "@/components/Title"
@@ -6,7 +8,16 @@ import { Textarea } from "@/components/Textarea"
 import { SocialCard } from "@/components/SocialCard"
 import { Description } from "@/components/Description"
 
+import { EmailTemplate } from "@/components/EmailTemplate"
+
 export default function Contact() {
+  async function handleFetch() {
+    await fetch("/api/send", {
+      method: "POST",
+    })
+    console.log("complete")
+  }
+
   return (
     <main className="max-w-content w-content mx-auto p-8">
       <Title label="Contato" labelBackground="Contact" isTitlePage />
@@ -29,12 +40,20 @@ export default function Contact() {
 
           <Textarea placeholder="Mensagem" classNameContainer="col-span-2" />
 
-          <Button variant="outline" className="col-span-2 mx-auto">
+          <Button
+            variant="outline"
+            className="col-span-2 mx-auto"
+            onClick={(event) => {
+              event.preventDefault()
+              handleFetch()
+            }}
+          >
             Enviar
             <Icon name="Send" />
           </Button>
         </form>
       </article>
+      <EmailTemplate firstName="Rafael" />
     </main>
   )
 }
