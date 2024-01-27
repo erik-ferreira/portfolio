@@ -46,21 +46,18 @@ export const styles = {
 } as StylesProps
 
 interface EmailTemplateProps {
-  firstName: string
+  contactName: string
+  message: string
 }
 
-export function EmailTemplate({ firstName }: EmailTemplateProps) {
+export function EmailTemplate({ contactName, message }: EmailTemplateProps) {
   return (
     <div style={styles.container}>
       <h1 style={styles.title}>Portfólio</h1>
 
-      <h2 style={styles.subtitle}>Olá Erik, me chamo Rafael!</h2>
+      <h2 style={styles.subtitle}>Olá Erik, me chamo {contactName}!</h2>
 
-      <p style={styles.description}>
-        Uma breve descrição bem aqui Uma breve descrição bem aqui a breve
-        descrição bem aqui Uma breve descrição bem aqui Uma ve descrição bem
-        aqui Uma breve descrição bem aqui Uma dale a a bem aqui
-      </p>
+      <p style={styles.description}>{message}</p>
     </div>
   )
 }

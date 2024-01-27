@@ -3,13 +3,6 @@ import { Description } from "@/components/Description"
 import { ContactForm } from "@/components/ContactForm"
 
 export default function Contact() {
-  // async function handleFetch() {
-  //   await fetch("/api/send", {
-  //     method: "POST",
-  //   })
-  //   console.log("complete")
-  // }
-
   return (
     <main className="max-w-content w-content mx-auto p-8">
       <Title label="Contato" labelBackground="Contact" isTitlePage />

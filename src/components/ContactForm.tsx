@@ -1,9 +1,9 @@
 "use client"
 
-import { z } from "zod"
-import { useEffect } from "react"
 import { useForm } from "react-hook-form"
 import { zodResolver } from "@hookform/resolvers/zod"
+
+import { api } from "@/services/api"
 
 import { Icon } from "@/components/Icon"
 import { Input } from "@/components/Input"
@@ -11,30 +11,25 @@ import { Button } from "@/components/Button"
 import { Textarea } from "@/components/Textarea"
 import { SocialCard } from "@/components/SocialCard"
 
-const contactFormSchema = z.object({
-  name: z.string().min(1, "Nome obrigatório"),
-  email: z.string().min(1, "Email obrigatório").email("Email inválido"),
-  message: z.string().min(1, "Mensagem obrigatória"),
-})
-
-type ContactFormSchema = z.infer<typeof contactFormSchema>
+import { contactFormSchema, ContactFormData } from "@/schemas/contactSchema"
 
 export function ContactForm() {
   const {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm<ContactFormSchema>({
+  } = useForm<ContactFormData>({
     resolver: zodResolver(contactFormSchema),
   })
 
-  function handleContact(data: ContactFormSchema) {
-    console.log("data", data)
-  }
+  async function handleContact(data: ContactFormData) {
+    const response = await api("/send", {
+      method: "POST",
+      body: JSON.stringify(data),
+    })
 
-  useEffect(() => {
-    console.log("errors", errors)
-  }, [errors])
+    alert(response.message)
+  }
 
   return (
     <form
