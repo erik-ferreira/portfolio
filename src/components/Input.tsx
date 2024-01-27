@@ -1,5 +1,5 @@
 import { icons } from "lucide-react"
-import { ComponentProps } from "react"
+import { ComponentProps, forwardRef } from "react"
 import { ClassNameValue } from "tailwind-merge"
 import { tv, VariantProps } from "tailwind-variants"
 
@@ -63,32 +63,39 @@ type InputProps = ComponentProps<"input"> &
     classNameContainer?: ClassNameValue
   }
 
-export function Input({
-  error,
-  nameIcon = "User",
-  variant,
-  className,
-  classNameContainer,
-  ...rest
-}: InputProps) {
-  const hasError = !!error
-  const { container, base, icon, errorContainer, errorIcon, errorMessage } =
-    input({ className, hasError, variant })
+export const Input = forwardRef<HTMLInputElement, InputProps>(
+  (
+    {
+      error,
+      nameIcon = "User",
+      variant,
+      className,
+      classNameContainer,
+      ...rest
+    },
+    ref
+  ) => {
+    const hasError = !!error
+    const { container, base, icon, errorContainer, errorIcon, errorMessage } =
+      input({ className, hasError, variant })
 
-  return (
-    <div className={container({ className: classNameContainer })}>
-      <label>
-        <input className={base()} {...rest} />
+    return (
+      <div className={container({ className: classNameContainer })}>
+        <label>
+          <input className={base()} ref={ref} {...rest} />
 
-        <Icon name={nameIcon} className={icon()} />
+          <Icon name={nameIcon} className={icon()} />
 
-        {hasError && (
-          <div className={errorContainer()}>
-            <Icon name="AlertCircle" className={errorIcon()} />
-            <span className={errorMessage()}>{error}</span>
-          </div>
-        )}
-      </label>
-    </div>
-  )
-}
+          {hasError && (
+            <div className={errorContainer()}>
+              <Icon name="AlertCircle" className={errorIcon()} />
+              <span className={errorMessage()}>{error}</span>
+            </div>
+          )}
+        </label>
+      </div>
+    )
+  }
+)
+
+Input.displayName = "Input"

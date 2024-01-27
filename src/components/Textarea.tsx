@@ -1,6 +1,6 @@
 import { icons } from "lucide-react"
-import { ComponentProps } from "react"
 import { ClassNameValue } from "tailwind-merge"
+import { ComponentProps, forwardRef } from "react"
 import { tv, VariantProps } from "tailwind-variants"
 
 import { Icon } from "@/components/Icon"
@@ -50,31 +50,38 @@ type TextareaProps = ComponentProps<"textarea"> &
     classNameContainer?: ClassNameValue
   }
 
-export function Textarea({
-  error,
-  nameIcon = "MessageSquare",
-  className,
-  classNameContainer,
-  ...rest
-}: TextareaProps) {
-  const hasError = !!error
-  const { container, base, icon, errorContainer, errorIcon, errorMessage } =
-    textarea({ className, hasError })
+export const Textarea = forwardRef<HTMLTextAreaElement, TextareaProps>(
+  (
+    {
+      error,
+      nameIcon = "MessageSquare",
+      className,
+      classNameContainer,
+      ...rest
+    },
+    ref
+  ) => {
+    const hasError = !!error
+    const { container, base, icon, errorContainer, errorIcon, errorMessage } =
+      textarea({ className, hasError })
 
-  return (
-    <div className={container({ className: classNameContainer })}>
-      <label>
-        <textarea className={base()} {...rest} />
+    return (
+      <div className={container({ className: classNameContainer })}>
+        <label>
+          <textarea className={base()} ref={ref} {...rest} />
 
-        <Icon name={nameIcon} className={icon()} />
+          <Icon name={nameIcon} className={icon()} />
 
-        {hasError && (
-          <div className={errorContainer()}>
-            <Icon name="AlertCircle" className={errorIcon()} />
-            <span className={errorMessage()}>{error}</span>
-          </div>
-        )}
-      </label>
-    </div>
-  )
-}
+          {hasError && (
+            <div className={errorContainer()}>
+              <Icon name="AlertCircle" className={errorIcon()} />
+              <span className={errorMessage()}>{error}</span>
+            </div>
+          )}
+        </label>
+      </div>
+    )
+  }
+)
+
+Textarea.displayName = "Textarea"
