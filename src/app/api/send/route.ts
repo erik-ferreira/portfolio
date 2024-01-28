@@ -31,10 +31,10 @@ export async function POST(req: NextRequest) {
   }
 
   const { error } = await resend.emails.send({
-    from: body?.email,
+    from: "onboarding@resend.dev",
     to: ["erikdesouzagf@gmail.com"],
-    subject: "Nova mensagem de contato do portfólio",
-    react: EmailTemplate({ contactName: body?.name, message: body?.message }),
+    subject: `Nova mensagem de ${body?.name} do portfólio`,
+    react: EmailTemplate(body),
   })
 
   if (error) {

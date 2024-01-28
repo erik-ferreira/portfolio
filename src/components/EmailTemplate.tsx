@@ -1,5 +1,7 @@
 import { CSSProperties } from "react"
 
+import { ContactFormData } from "@/schemas/contactSchema"
+
 interface StylesProps {
   container: CSSProperties
   title: CSSProperties
@@ -14,9 +16,9 @@ export const styles = {
     paddingBottom: 32,
   },
   title: {
-    color: "#1e293b",
+    color: "#2563eb",
 
-    fontSize: "6rem",
+    fontSize: "4rem",
     fontWeight: 600,
     textTransform: "uppercase",
 
@@ -25,8 +27,8 @@ export const styles = {
     margin: 0,
   },
   subtitle: {
-    color: "#843CE5", // bg-violet-400
-    fontSize: "2rem",
+    color: "#E2E8F0", // bg-slate-200
+    fontSize: "1.5rem",
     fontWeight: 700,
 
     textAlign: "center",
@@ -45,17 +47,16 @@ export const styles = {
   },
 } as StylesProps
 
-interface EmailTemplateProps {
-  contactName: string
-  message: string
-}
+interface EmailTemplateProps extends ContactFormData {}
 
-export function EmailTemplate({ contactName, message }: EmailTemplateProps) {
+export function EmailTemplate({ name, email, message }: EmailTemplateProps) {
   return (
     <div style={styles.container}>
       <h1 style={styles.title}>Portfólio</h1>
 
-      <h2 style={styles.subtitle}>Olá Erik, me chamo {contactName}!</h2>
+      <h2 style={styles.subtitle}>
+        Olá Erik, me chamo {name} e este é meu email: {email}!
+      </h2>
 
       <p style={styles.description}>{message}</p>
     </div>
