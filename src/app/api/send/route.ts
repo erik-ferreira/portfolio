@@ -38,7 +38,10 @@ export async function POST(req: NextRequest) {
   })
 
   if (error) {
-    return Response.json({ message: "Não foi possível enviar o email" })
+    return Response.json(
+      { message: "Não foi possível enviar o email" },
+      { status: 400 }
+    )
   }
 
   return Response.json({ message: "Email enviado com sucesso" })

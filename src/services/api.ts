@@ -6,7 +6,6 @@ export async function api<T = any>(
     `${process.env.NEXT_PUBLIC_APP_URL}/api${input}`,
     init
   )
-  const data = await response.json()
 
-  return data as T
+  return response as T
 }
