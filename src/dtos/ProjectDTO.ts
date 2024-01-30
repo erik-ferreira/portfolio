@@ -6,6 +6,7 @@ export interface ProjectDTO {
   title: string
   description: string
   src: string
+  atlSrc: string
   href: string
   skills: Array<SkillDTO>
   skills_names: Array<string>

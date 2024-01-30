@@ -5,5 +5,6 @@ export interface ExperienceDTO {
   description: string
   start_date: Date
   end_date?: Date
-  image: string
+  src: string
+  altSrc: string
 }

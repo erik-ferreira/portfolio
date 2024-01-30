@@ -31,10 +31,10 @@ export function Experience({
       {...rest}
     >
       <Image
-        src={experience.image}
+        src={experience.src}
         width={70}
         height={70}
-        alt="icon experience"
+        alt={experience.altSrc}
         className="absolute left-1/2 top-0 -translate-x-1/2 border-4 border-sky-600 rounded-full"
       />
 

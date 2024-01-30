@@ -76,7 +76,7 @@ export function Resume({ className, ...rest }: ResumeProps) {
 
         <Image
           src={preview}
-          alt="Erik Ferreira"
+          alt="Uma imagem minha trabalhando em alguns projetos em casa"
           width={350}
           height={233}
           className="rounded-lg"

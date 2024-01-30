@@ -21,7 +21,7 @@ export function CertificateShort({
 
         <Image
           src={certificate.src}
-          alt={`Certificado de ${certificate.name}`}
+          alt={`Certificado do curso de ${certificate.name}. Na imagem contém algumas informações do certificado, como nome, descrição, data de conclusão e empresa.`}
           width={300}
           height={208}
           className="rounded border border-sky-600"
