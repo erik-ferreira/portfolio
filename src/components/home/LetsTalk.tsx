@@ -27,7 +27,12 @@ export function LetsTalk({ className, ...rest }: LetsTalkProps) {
           </p>
         </article>
 
-        <Image src={talkingSVG} width={380} height={340} alt="Talking" />
+        <Image
+          src={talkingSVG}
+          width={380}
+          height={340}
+          alt="Ilustração de pessoas conversando em quanto tomam um café."
+        />
       </div>
 
       <Button variant="outline-gradient" size="large" asChild>

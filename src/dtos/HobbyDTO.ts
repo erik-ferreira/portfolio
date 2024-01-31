@@ -5,6 +5,7 @@ export interface HobbyDTO {
   title: string
   description: string
   src: string
+  altSrc: string
   href: string
   slug: string
   gallery: GalleryDTO[]

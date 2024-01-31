@@ -54,6 +54,7 @@ const projectsDefault: ProjectsDefault[] = [
         src: `/projects/design-system/${imageIndex}.png`,
         variant: "image",
         direction: "horizontal",
+        altSrc: "",
       }
     }),
     srcBackground: "/projects/design-system/background.png",
@@ -98,6 +99,7 @@ const projectsDefault: ProjectsDefault[] = [
         src: `/projects/ignite-shop/${imageIndex}.png`,
         variant: "image",
         direction: "horizontal",
+        altSrc: "",
       }
     }),
     srcBackground: "/projects/ignite-shop/background.png",
@@ -153,6 +155,7 @@ const projectsDefault: ProjectsDefault[] = [
         src: `/projects/coffee-delivery/${imageIndex}.png`,
         variant: "image",
         direction: "horizontal",
+        altSrc: "",
       }
     }),
     srcBackground: "/projects/coffee-delivery/background.png",
@@ -192,6 +195,7 @@ const projectsDefault: ProjectsDefault[] = [
         src: `/projects/reminder-calendar/${imageIndex}.png`,
         variant: "image",
         direction: "horizontal",
+        altSrc: "",
       }
     }),
     srcBackground: "/projects/reminder-calendar/background.png",
@@ -261,6 +265,7 @@ const projectsDefault: ProjectsDefault[] = [
         src: `/projects/book-wise/${imageIndex}.png`,
         variant: "image",
         direction: "horizontal",
+        altSrc: "",
       }
     }),
     srcBackground: "/projects/book-wise/background.png",
@@ -305,6 +310,7 @@ const projectsDefault: ProjectsDefault[] = [
         src: `/projects/dt-money/${imageIndex}.png`,
         variant: "image",
         direction: "horizontal",
+        altSrc: "",
       }
     }),
     srcBackground: "/projects/dt-money/background.png",
@@ -359,6 +365,7 @@ const projectsDefault: ProjectsDefault[] = [
         src: `/projects/ignews/${imageIndex}.png`,
         variant: "image",
         direction: "horizontal",
+        altSrc: "",
       }
     }),
     srcBackground: "/projects/ignews/background.png",
@@ -404,6 +411,7 @@ const projectsDefault: ProjectsDefault[] = [
         src: `/projects/rocketshoes/${imageIndex}.png`,
         variant: "image",
         direction: "horizontal",
+        altSrc: "",
       }
     }),
     srcBackground: "/projects/rocketshoes/background.png",
@@ -414,7 +422,8 @@ const projectsDefault: ProjectsDefault[] = [
     description:
       "Este é um projeto para se aplicar a técnica de Pomodoro, que consiste em deixar o dia da pessoa mais produtivo em qualquer coisa que precise se concentrar. Basicamente consiste em trabalhar em algo por determinado tempo e dando pausas, mas nesse tempo em que estiver trabalhando, tem de se manter 100% focado, e o tempo de pausa deve ser usado para descanso. Uma novidade nesse projeto foi o Immer JS, feito para trabalhar com dados imutáveis de uma forma mais simples com javascript e o useReducer que acaba se tornando uma forma mais simples de se trabalhar com informações que são mais complexas e quando as alterações de um estado são mais custosas.",
     src: "/projects/ignite-timer/default.png",
-    atlSrc: "",
+    atlSrc:
+      "Tela com um contador de tempo para executar uma atividade. Uma navegação o canto superior direito para listar as atividades já executadas.",
     skills: formatSkillsProject([
       {
         name: "React",
@@ -457,6 +466,7 @@ const projectsDefault: ProjectsDefault[] = [
         src: `/projects/ignite-timer/${imageIndex}.png`,
         variant: "image",
         direction: "horizontal",
+        altSrc: "",
       }
     }),
     srcBackground: "/projects/ignite-timer/background.png",
@@ -467,7 +477,8 @@ const projectsDefault: ProjectsDefault[] = [
     description:
       "Este projeto foi construído com o objetivo de entender como trabalhar com Redux e Zustand para controle de estado. A aplicação é um video player com módulos de aulas, onde é possível selecionar a aula e o módulo que deseja assistir. Também foi aplicado testes unitários com o vitest.",
     src: "/projects/redux-zustand/default.png",
-    atlSrc: "",
+    atlSrc:
+      "Tela com um player de video e uma lista de módulos e aulas. Botão superior para alterar entre autoplay e um botão para enviar o feedback.",
     skills: formatSkillsProject([
       {
         name: "React",
@@ -510,6 +521,7 @@ const projectsDefault: ProjectsDefault[] = [
         src: `/projects/redux-zustand/${imageIndex}.png`,
         variant: "image",
         direction: "horizontal",
+        altSrc: "",
       }
     }),
     srcBackground: "/projects/redux-zustand/background.png",
@@ -520,7 +532,8 @@ const projectsDefault: ProjectsDefault[] = [
     description:
       "Neste projeto as issues de um repositório do github são apresentadas como posts. Também é possível visualizar o post completo e realizar uma busca por um post específico. O projeto foi desenvolvido com React e Typescript, e para estilização foi utilizado o Styled Components. Um dos meus repositórios esta definido como padrão, mas você pode informar a url de um repositório de sua preferência para visualizar as issues dele.",
     src: "/projects/github-blog/default.png",
-    atlSrc: "",
+    atlSrc:
+      "Tela principal do Github Blog, contando com a logo, um sessão de perfil com a foto, nome e bio. Mais abaixo um campo de pesquisa para filtrar a lista de issues de um repositório.",
     skills: formatSkillsProject([
       {
         name: "React",
@@ -558,6 +571,7 @@ const projectsDefault: ProjectsDefault[] = [
         src: `/projects/github-blog/${imageIndex}.png`,
         variant: "image",
         direction: "horizontal",
+        altSrc: "",
       }
     }),
     srcBackground: "/projects/github-blog/background.png",
@@ -568,7 +582,8 @@ const projectsDefault: ProjectsDefault[] = [
     description:
       "Este projeto tem como objetivo construir uma aplicação completa e responsiva com Tailwindcss. A aplicação não tem um objetivo comercial em si, mas possui vários componentes que são usados no dia a dia de várias aplicações e é incrível poder construir todos eles com muita facilidade e rapidez, já que o Tailwind consegue proporcionar isso. Alguns dos componentes da aplicação são: Preview de foto de perfil, navbar, select, input e etc",
     src: "/projects/mastering-tailwind/default.png",
-    atlSrc: "",
+    atlSrc:
+      "Única tela do projeto Mastering Tailwind, contendo um várias informações, como inputs, drawer menu, navegação em tab e etc.",
     skills: formatSkillsProject([
       {
         name: "React",
@@ -596,6 +611,7 @@ const projectsDefault: ProjectsDefault[] = [
         src: `/projects/mastering-tailwind/${imageIndex}.png`,
         variant: "image",
         direction: "horizontal",
+        altSrc: "",
       }
     }),
     srcBackground: "/projects/mastering-tailwind/background.png",

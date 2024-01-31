@@ -1,5 +1,8 @@
 import { CertificateDTO, CertificateDefault } from "@/dtos/CertificateDTO"
 
+const alt_src_company =
+  "Logo da Rocketseat,  na imagem o nome Rocketseat esta em branco, com um ícone de foguete ao lado e um fundo azul escuro."
+
 const certificatesDefault: CertificateDefault[] = [
   {
     name: "Figma for Devs",
@@ -10,6 +13,7 @@ const certificatesDefault: CertificateDefault[] = [
       "Aprendi as funcionalidades do Figma voltadas especificamente para desenvolvedores. Este curso foi além do básico, ensinando como utilizar o Figma de forma eficiente no fluxo de construção de um software. Aprendi a criar designs de interfaces, utilização de auto layout, padrão de cores, criação de componentes e etc. Hoje sempre que vou trabalhar com algum protótipo, utilizo de algum conhecimento adquirido no curso.",
     date_of_issue: new Date("2023-07-28"),
     src_company: "/certificates/rocketseat.svg",
+    alt_src_company,
   },
   {
     name: "Acessibilidade com ReactJS",
@@ -20,6 +24,7 @@ const certificatesDefault: CertificateDefault[] = [
       "Neste curso, mergulhei profundamente na construção de uma aplicação web com ReactJS lidando com as melhores práticas de acessibilidade. Aprendi a implementar práticas e técnicas cruciais para tornar minhas interfaces mais inclusivas e acessíveis a todos os usuários. Além disso, explorei a utilização do WCAG, tags semânticas, estratégias de navegação e otimização de telas.",
     date_of_issue: new Date("2023-05-03"),
     src_company: "/certificates/rocketseat.svg",
+    alt_src_company,
   },
   {
     name: "Apps Desktop com ElectronJS",
@@ -30,6 +35,7 @@ const certificatesDefault: CertificateDefault[] = [
       "Este curso abrangeu desde os fundamentos até técnicas avançadas, possibilitando a construção de aplicativos nativos para Windows, macOS e Linux. O objetivo do projeto construído era criar arquivos para anotações que são salvos localmente na máquina. Através dele, aprendi a trabalhar com as camadas do Electron (Main, Preload e Renderer) e a utilizar algumas funcionalidades nativas, como o menu tray.",
     date_of_issue: new Date("2023-05-16"),
     src_company: "/certificates/rocketseat.svg",
+    alt_src_company,
   },
   {
     name: "Ignite ReactJS",
@@ -40,6 +46,7 @@ const certificatesDefault: CertificateDefault[] = [
       "Aprofundei-me no ecossistema ReactJS com o programa Ignite. Este curso foi uma imersão completa em práticas avançadas de desenvolvimento web, abrangendo desde os fundamentos até tópicos mais complexos. Desenvolvi projetos web escaláveis, explorando temas como gerenciamento de estado avançado, otimização de performance e integração de bibliotecas populares para criar projetos robustos e modernos.",
     date_of_issue: new Date("2023-07-26"),
     src_company: "/certificates/rocketseat.svg",
+    alt_src_company,
   },
   {
     name: "Java",
@@ -50,6 +57,7 @@ const certificatesDefault: CertificateDefault[] = [
       "Entrei no mundo da programação Java desenvolvendo um aplicativo de lista de tarefas (to do). Este curso ofereceu uma introdução sólida aos princípios essenciais da linguagem Java, abordando desde variáveis, estruturas de controle, utilização do Lombok e propriedades privadas e públicas. Aprendi a construir uma aplicação funcional, aplicando conhecimentos práticos em um projeto real.",
     date_of_issue: new Date("2023-10-15"),
     src_company: "/certificates/rocketseat.svg",
+    alt_src_company: "",
   },
   {
     name: "Discover",
@@ -60,6 +68,7 @@ const certificatesDefault: CertificateDefault[] = [
       "Este curso é um introdução ao mundo da web, onde desenvolvi um projeto de centralizador de links. Nele foi possível aprender os fundamentos da programação web, como HTML, CSS e JavaScript. Várias dicas foram apresentadas sobre as propriedades das tags HTML. Além disso, aprendi a utilizar o Git e GitHub para versionamento de código e hospedagem de projetos no Github Pages.",
     date_of_issue: new Date("2024-01-04"),
     src_company: "/certificates/rocketseat.svg",
+    alt_src_company: "",
   },
 ]
 

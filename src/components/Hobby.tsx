@@ -30,7 +30,7 @@ export function Hobby({ hobby, className, ...rest }: HobbyProps) {
         src={hobby.src}
         width={500}
         height={333}
-        alt="Hobby"
+        alt={hobby.altSrc}
         className="rounded-lg"
       />
 

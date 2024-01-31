@@ -41,7 +41,7 @@ export function SwiperCertification({
               src={certificate.src}
               width={500}
               height={345}
-              alt="Certificate"
+              alt={`Certificado do curso de ${certificate.name}. Na imagem contém algumas informações do certificado, como nome, descrição, data de conclusão e empresa.`}
               className="w-[500px] h-[345px]"
             />
           </SwiperSlide>

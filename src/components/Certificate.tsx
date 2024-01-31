@@ -48,7 +48,7 @@ export function Certificate({
           src={certificate.src_company}
           width={180}
           height={34}
-          alt="Company"
+          alt={certificate.alt_src_company}
           className="bg-section px-3 py-4 rounded mb-4"
         />
 

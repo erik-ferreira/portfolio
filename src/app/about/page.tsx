@@ -22,7 +22,7 @@ export default function About() {
             src={erikPNG}
             width={350}
             height={350}
-            alt="Erik Ferreira"
+            alt="Imagem de perfil minha, Erik de Souza, na festa de formatura do ensino médio, sorrindo e com um blazer preto."
             className="rounded-lg"
           />
 

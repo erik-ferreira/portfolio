@@ -42,7 +42,7 @@ export function Gallery({
               src={gallery.src}
               width={350}
               height={230}
-              alt="NBA"
+              alt={gallery?.altSrc}
               className={twMerge("w-[350px] h-[230px] object-cover", {
                 "object-[50%_20%]": gallery.direction === "vertical",
               })}
@@ -89,7 +89,7 @@ export function Gallery({
           {gallery.variant === "image" ? (
             <Image
               src={gallery.src}
-              alt="NBA"
+              alt={gallery?.altSrc}
               width={gallery.direction === "horizontal" ? 900 : 550}
               height={600}
             />

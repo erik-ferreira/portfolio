@@ -37,6 +37,9 @@ export function formatGalleryByHobby({
       src,
       variant,
       direction,
+      altSrc: `${
+        variant === "image" ? "Imagem" : "Vídeo"
+      } com alguns dos meus amigos.`,
     }
   })
 
