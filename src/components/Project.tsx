@@ -24,7 +24,7 @@ export function Project({ project, className, ...rest }: ProjectProps) {
     <div className={twMerge("flex gap-12 py-8", className)} {...rest}>
       <Image
         src={project.src}
-        alt="Project"
+        alt={project.atlSrc}
         width={500}
         height={333}
         className="w-[500px] h-[333px] my-auto object-contain"

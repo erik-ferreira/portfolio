@@ -11,7 +11,6 @@ import { Button } from "@/components/Button"
 import { Gallery } from "@/components/Gallery"
 import { Description } from "@/components/Description"
 
-import { hobbies } from "@/defaults/hobbies"
 import { projects } from "@/defaults/projects"
 
 type ParamsProps = {
