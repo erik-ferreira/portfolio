@@ -16,7 +16,7 @@ export function ProjectContent() {
 
   if (!!skillSelected) {
     filterProjects = projects.filter((project) =>
-      project.skills_names.includes(skillSelected.toLowerCase())
+      project.skillsNames.includes(skillSelected.toLowerCase())
     )
   }
 
