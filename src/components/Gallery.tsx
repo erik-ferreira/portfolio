@@ -43,7 +43,7 @@ export function Gallery({
               width={350}
               height={230}
               alt={gallery?.altSrc}
-              className={twMerge("w-[350px] h-[230px] object-cover", {
+              className={twMerge("w-[360px] h-[230px] object-cover", {
                 "object-[50%_20%]": gallery.direction === "vertical",
               })}
             />

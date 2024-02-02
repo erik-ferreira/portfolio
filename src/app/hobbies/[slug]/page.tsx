@@ -22,7 +22,7 @@ export default function Hobby() {
 
   return (
     <main className="max-w-content w-content mx-auto p-8">
-      <Title label="Contato" labelBackground="Contact" isTitlePage />
+      <Title label="Hobby" labelBackground="Hobby" isTitlePage />
 
       <h2 className="text-4xl font-bold text-blue-500 text-center mt-6">
         {hobby.title}
