@@ -24,7 +24,7 @@ export function Project({ project, className, ...rest }: ProjectProps) {
     <div className={twMerge("flex gap-12 py-8", className)} {...rest}>
       <Image
         src={project.src}
-        alt={project.atlSrc}
+        alt={project.altSrc}
         width={500}
         height={333}
         className="w-[500px] h-[333px] my-auto object-contain"
@@ -35,12 +35,12 @@ export function Project({ project, className, ...rest }: ProjectProps) {
           <h3 className="text-4.75xl font-bold">{project.title}</h3>
 
           <div className="flex items-center gap-2">
-            <NextLink href={project.github_href} target="_blank">
+            <NextLink href={project.githubHref} target="_blank">
               <Icon name="Github" size="large" />
             </NextLink>
 
-            {project.demo_href ? (
-              <NextLink href={project.demo_href} target="_blank">
+            {project.demoHref ? (
+              <NextLink href={project.demoHref} target="_blank">
                 <Icon name="Link" size="large" />
               </NextLink>
             ) : (

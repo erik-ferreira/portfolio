@@ -23,7 +23,7 @@ export default function Project() {
   if (!project) {
     redirect("/404")
   }
-  const projectHasDemo = !!project.demo_href
+  const projectHasDemo = !!project.demoHref
 
   return (
     <main>
@@ -37,7 +37,7 @@ export default function Project() {
         <div className="w-fit mx-auto flex gap-6 my-4">
           {projectHasDemo ? (
             <Button variant="outline" asChild>
-              <Link href={project.demo_href || ""}>
+              <Link href={project.demoHref || ""}>
                 Online
                 <Icon name="Link" size="small" />
               </Link>
@@ -50,7 +50,7 @@ export default function Project() {
           )}
 
           <Button variant="outline" asChild>
-            <Link href={project.github_href}>
+            <Link href={project.githubHref}>
               Repositório
               <Icon name="Github" size="small" />
             </Link>

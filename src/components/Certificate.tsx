@@ -19,9 +19,9 @@ export function Certificate({
   certificate,
   ...rest
 }: CertificateProps) {
-  const day = certificate.date_of_issue.getDate()
-  const month = certificate.date_of_issue.getMonth()
-  const year = certificate.date_of_issue.getFullYear()
+  const day = certificate.dateOfIssue.getDate()
+  const month = certificate.dateOfIssue.getMonth()
+  const year = certificate.dateOfIssue.getFullYear()
 
   const date = `${day}/${month}/${year}`
 
@@ -45,10 +45,10 @@ export function Certificate({
     >
       <div>
         <Image
-          src={certificate.src_company}
+          src={certificate.srcCompany}
           width={180}
           height={34}
-          alt={certificate.alt_src_company}
+          alt={certificate.altSrcCompany}
           className="bg-section px-3 py-4 rounded mb-4"
         />
 

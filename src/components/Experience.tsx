@@ -13,15 +13,15 @@ export function Experience({
   className,
   ...rest
 }: ExperienceProps) {
-  let start_month = experience.start_date.toLocaleString("default", {
+  let start_month = experience.startDate.toLocaleString("default", {
     month: "long",
   })
-  let start_year = experience.start_date.getFullYear()
+  let start_year = experience.startDate.getFullYear()
 
-  let end_month = experience?.end_date?.toLocaleString("default", {
+  let end_month = experience?.endDate?.toLocaleString("default", {
     month: "long",
   })
-  let end_year = experience?.end_date?.getFullYear()
+  let end_year = experience?.endDate?.getFullYear()
 
   let date = `${start_month} ${start_year} - ${end_month} ${end_year}`
 

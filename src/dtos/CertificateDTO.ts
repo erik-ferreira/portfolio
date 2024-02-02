@@ -6,9 +6,9 @@ export interface CertificateDTO {
   href: string
 
   description: string
-  date_of_issue: Date
-  src_company: string
-  alt_src_company: string
+  dateOfIssue: Date
+  srcCompany: string
+  altSrcCompany: string
 }
 
 export type CertificateDefault = Omit<CertificateDTO, "id">

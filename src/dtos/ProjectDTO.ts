@@ -6,12 +6,12 @@ export interface ProjectDTO {
   title: string
   description: string
   src: string
-  atlSrc: string
+  altSrc: string
   href: string
   skills: Array<SkillDTO>
-  skills_names: Array<string>
-  github_href: string
-  demo_href: string | null
+  skillsNames: Array<string>
+  githubHref: string
+  demoHref: string | null
   slug: string
   screenshots: Array<GalleryDTO>
   srcBackground: string
@@ -20,5 +20,5 @@ export interface ProjectDTO {
 
 export type ProjectsDefault = Omit<
   ProjectDTO,
-  "id" | "href" | "slug" | "skills_names"
+  "id" | "href" | "slug" | "skillsNames"
 >
