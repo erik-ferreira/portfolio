@@ -27,7 +27,7 @@ export function Project({ project, className, ...rest }: ProjectProps) {
         alt={project.altSrc}
         width={500}
         height={333}
-        className="w-[500px] h-[333px] my-auto object-contain"
+        className="min-w-[500px] h-[333px] my-auto object-contain"
       />
 
       <div className="flex flex-col justify-between">

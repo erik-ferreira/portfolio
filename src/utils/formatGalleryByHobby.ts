@@ -32,14 +32,22 @@ export function formatGalleryByHobby({
         ? "vertical"
         : "horizontal"
 
+    // function getAltSrcByVariant() {}
+    const typeLabel = variant === "image" ? "Imagem" : "Vídeo"
+
+    const altsSources = {
+      amigos: `${typeLabel} com alguns dos meus amigos.`,
+      basquete: `${typeLabel} com alguns amigos jogando basquete.`,
+      gameplay: `${typeLabel} de alguns jogos que eu gosto muito, nem todos eu tiver a oportunidade de jogar, mas são jogos que eu gostaria .`,
+      assistir: `${typeLabel} de alguns animes, filmes e series que ja assisti e gostei muito.`,
+    }
+
     return {
       id: index + 1,
       src,
       variant,
       direction,
-      altSrc: `${
-        variant === "image" ? "Imagem" : "Vídeo"
-      } com alguns dos meus amigos.`,
+      altSrc: altsSources[type],
     }
   })
 
