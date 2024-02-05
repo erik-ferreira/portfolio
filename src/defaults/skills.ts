@@ -1,7 +1,9 @@
-import { SkillDTO, SkillDefault } from "@/dtos/SkillDTO"
-import { convertColorHexToRgb } from "@/utils/convertColorHexToRgb"
+import { SkillDTO, SkillDefault, SkillName } from "@/dtos/SkillDTO"
 
-const skillsDefault: SkillDefault[] = [
+import { convertColorHexToRgb } from "@/utils/convertColorHexToRgb"
+import { getSkillsFromTheAllSkillsList } from "@/utils/getSkillsFromTheAllSkillsList"
+
+export const allSkills: SkillDefault[] = [
   {
     name: "React",
     src: "/skills/react.svg",
@@ -72,9 +74,109 @@ const skillsDefault: SkillDefault[] = [
     src: "/skills/api.svg",
     color: "#72B8CE",
   },
+  // here
+  {
+    name: "Stitches",
+    src: "/skills/stitches.svg",
+    color: "#ECEDEE",
+  },
+  {
+    name: "Storybook",
+    src: "/skills/storybook.svg",
+    color: "#FF4785",
+  },
+  {
+    name: "Stripe",
+    src: "/skills/stripe.svg",
+    color: "#635BFF",
+  },
+  {
+    name: "React Hook Form",
+    src: "/skills/hook-form.svg",
+    color: "#EC5990",
+  },
+  {
+    name: "Turbo Repo",
+    src: "/skills/turbo.svg",
+    color: "#0D8FF7",
+  },
+  {
+    name: "Zod",
+    src: "/skills/zod.svg",
+    color: "#142641",
+  },
+  {
+    name: "Immer js",
+    src: "/skills/immer.svg",
+    color: "#00E7C3",
+  },
+  {
+    name: "Prisma",
+    src: "/skills/prisma.svg",
+    color: "#5A67D8",
+  },
+  {
+    name: "React Query",
+    src: "/skills/react-query.svg",
+    color: "#FFD94C",
+  },
+  {
+    name: "Google APIs",
+    src: "/skills/google.svg",
+    color: "#587dbd",
+  },
+  {
+    name: "Mirage JS",
+    src: "/skills/mirage.svg",
+    color: "#05C77E",
+  },
+  {
+    name: "Sass",
+    src: "/skills/sass.svg",
+    color: "#CB6699",
+  },
+  {
+    name: "Fauna DB",
+    src: "/skills/fauna.svg",
+    color: "#3713B7",
+  },
+  {
+    name: "Jest",
+    src: "/skills/jest.svg",
+    color: "#99425B",
+  },
+  {
+    name: "Redux Toolkit",
+    src: "/skills/redux.svg",
+    color: "#764ABC",
+  },
+  {
+    name: "Zustand",
+    src: "/skills/zustand.svg",
+    color: "#F46D2D",
+  },
 ]
 
-export const skills: SkillDTO[] = [...skillsDefault, ...skillsDefault].map(
+const skillsDefault = getSkillsFromTheAllSkillsList([
+  "React",
+  "Next",
+  "Typescript",
+  "Javascript",
+  "HTML",
+  "CSS",
+  "Figma",
+  "Git",
+  "TaiwindCSS",
+  "Styled Components",
+  "SQL",
+  "Redux",
+  "Radix",
+  "API Rest",
+  "React Hook Form",
+  "Zod",
+])
+
+export const mySkills: SkillDTO[] = [...skillsDefault, ...skillsDefault].map(
   (skill, index) => ({
     id: index + 1,
     rgb: convertColorHexToRgb(skill.color, 0.1),
@@ -82,7 +184,7 @@ export const skills: SkillDTO[] = [...skillsDefault, ...skillsDefault].map(
   })
 )
 
-export const filterSkills = [
+export const skillsUsedInProjectsToFilter: SkillName[] = [
   "React",
   "React Native",
   "Next",
@@ -91,7 +193,7 @@ export const filterSkills = [
   "HTML",
   "CSS",
   "Figma",
-  "Tailwindcss",
+  "TaiwindCSS",
   "Styled Components",
   "SQL",
   "Redux",
@@ -112,4 +214,5 @@ export const filterSkills = [
   "Jest",
   "Redux Toolkit",
   "Zustand",
+  "Prisma",
 ]

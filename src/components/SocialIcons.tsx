@@ -5,7 +5,7 @@ import { tv, VariantProps } from "tailwind-variants"
 import { Icon } from "@/components/Icon"
 import { IconSvgExternal } from "@/components/IconSvgExternal"
 
-import { socialIconsList } from "@/defaults/socialIcons"
+import { socialIconsList } from "@/defaults/icons"
 
 const socialIcons = tv({
   slots: {

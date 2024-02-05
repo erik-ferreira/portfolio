@@ -72,16 +72,11 @@ const certificatesDefault: CertificateDefault[] = [
   },
 ]
 
-export const someCertificates: CertificateDTO[] = certificatesDefault
-  .slice(0, 4)
-  .map((certificate, index) => ({
-    id: index + 1,
-    ...certificate,
-  }))
-
 export const certificates: CertificateDTO[] = certificatesDefault.map(
   (certificate, index) => ({
     id: index + 1,
     ...certificate,
   })
 )
+
+export const someCertificates: CertificateDTO[] = certificates.slice(0, 4)

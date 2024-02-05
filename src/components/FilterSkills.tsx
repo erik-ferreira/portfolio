@@ -6,7 +6,7 @@ import * as ToggleGroup from "@radix-ui/react-toggle-group"
 
 import { SkillName } from "@/components/SkillName"
 
-import { filterSkills } from "@/defaults/skills"
+import { skillsUsedInProjectsToFilter } from "@/defaults/skills"
 
 interface FilterSkillsProps {
   skillSelected: string
@@ -21,7 +21,7 @@ export function FilterSkills({
   return (
     <ToggleGroup.Root type="single" onValueChange={onValueChange}>
       <ScrollContainer className="flex gap-2 mt-4 cursor-grab">
-        {filterSkills.map((skill) => (
+        {skillsUsedInProjectsToFilter.map((skill) => (
           <ToggleGroup.Item key={skill} value={skill} asChild>
             <SkillName
               name={skill}

@@ -2,6 +2,7 @@ import { ProjectDTO, ProjectsDefault } from "@/dtos/ProjectDTO"
 
 import { generateSlug } from "@/utils/generateSlug"
 import { formatSkillsProject } from "@/utils/formatSkillsProject"
+import { getSkillsFromTheAllSkillsList } from "@/utils/getSkillsFromTheAllSkillsList"
 
 const altsByProjects = {
   "design-system": [
@@ -110,7 +111,7 @@ const projectsDefault: ProjectsDefault[] = [
         color: "#E2E8F0",
       },
       {
-        name: "Turbo",
+        name: "Turbo Repo",
         src: "/skills/turbo.svg",
         color: "#0D8FF7",
       },
@@ -690,16 +691,6 @@ const projectsDefault: ProjectsDefault[] = [
   },
 ]
 
-export const someProjects: ProjectDTO[] = projectsDefault
-  .slice(0, 6)
-  .map((project, index) => ({
-    id: index + 1,
-    slug: generateSlug(project.title),
-    href: `/projects/${generateSlug(project.title)}`,
-    skillsNames: project.skills.map((skill) => skill.name.toLowerCase()),
-    ...project,
-  }))
-
 export const projects: ProjectDTO[] = projectsDefault.map((project, index) => ({
   id: index + 1,
   slug: generateSlug(project.title),
@@ -707,3 +698,5 @@ export const projects: ProjectDTO[] = projectsDefault.map((project, index) => ({
   skillsNames: project.skills.map((skill) => skill.name.toLowerCase()),
   ...project,
 }))
+
+export const someProjects: ProjectDTO[] = projects.slice(0, 6)

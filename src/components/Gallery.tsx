@@ -40,7 +40,6 @@ export function Gallery({
           {gallery.variant === "image" ? (
             <Image
               src={gallery.src}
-              // src="/"
               width={350}
               height={230}
               alt={gallery?.altSrc}

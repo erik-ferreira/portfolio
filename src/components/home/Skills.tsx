@@ -4,7 +4,7 @@ import { Title } from "@/components/Title"
 import { SkillIcon } from "@/components/SkillIcon"
 
 import { twMerge } from "@/utils/twMerge"
-import { skills } from "@/defaults/skills"
+import { mySkills } from "@/defaults/skills"
 
 interface SkillsProps extends ComponentProps<"section"> {}
 
@@ -35,7 +35,7 @@ export function Skills({ className, ...rest }: SkillsProps) {
         )}
       >
         <div className="flex gap-10 animate-slider py-12 overflow-visible">
-          {skills.map((skill) => (
+          {mySkills.map((skill) => (
             <SkillIcon key={skill.id} skill={skill} />
           ))}
         </div>

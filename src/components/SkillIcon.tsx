@@ -14,7 +14,7 @@ export function SkillIcon({
   className,
   ...rest
 }: SkillIconComponentProps) {
-  const idsSkillsStyledComponents = [10, 24]
+  const idsSkillsToAddMoreNegativeBottom = [10, 15, 24, 30]
 
   return (
     <div
@@ -33,7 +33,7 @@ export function SkillIcon({
         className={twMerge(
           "w-full text-center font-semibold opacity-0 transition duration-300 absolute -bottom-5 group-hover:opacity-100",
           {
-            "-bottom-10": idsSkillsStyledComponents.includes(skill.id),
+            "-bottom-10": idsSkillsToAddMoreNegativeBottom.includes(skill.id),
           }
         )}
       >

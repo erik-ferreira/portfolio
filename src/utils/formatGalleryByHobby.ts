@@ -32,14 +32,13 @@ export function formatGalleryByHobby({
         ? "vertical"
         : "horizontal"
 
-    // function getAltSrcByVariant() {}
     const typeLabel = variant === "image" ? "Imagem" : "Vídeo"
 
     const altsSources = {
       amigos: `${typeLabel} com alguns dos meus amigos.`,
       basquete: `${typeLabel} com alguns amigos jogando basquete.`,
       gameplay: `${typeLabel} de alguns jogos que eu gosto muito, nem todos eu tiver a oportunidade de jogar, mas são jogos que eu gostaria .`,
-      assistir: `${typeLabel} de alguns animes, filmes e series que ja assisti e gostei muito.`,
+      assistir: `Imagens de alguns animes, filmes e series que ja assisti e gostei muito.`,
     }
 
     return {
