@@ -84,37 +84,13 @@ const projectsDefault: ProjectsDefault[] = [
     src: "/projects/design-system/default.png",
     altSrc:
       "Imagem de uma das telas do projeto Design System. Na imagem consta a lista dos tokens de cores do projeto",
-    skills: formatSkillsProject([
-      {
-        name: "React",
-        src: "/skills/react.svg",
-        color: "#61DAFB",
-      },
-      {
-        name: "Typescript",
-        src: "/skills/typescript.svg",
-        color: "#007ACC",
-      },
-      {
-        name: "Stitches",
-        src: "/skills/stitches.svg",
-        color: "#ECEDEE",
-      },
-      {
-        name: "Storybook",
-        src: "/skills/storybook.svg",
-        color: "#FF4785",
-      },
-      {
-        name: "Radix",
-        src: "/skills/radix.svg",
-        color: "#E2E8F0",
-      },
-      {
-        name: "Turbo Repo",
-        src: "/skills/turbo.svg",
-        color: "#0D8FF7",
-      },
+    skills: getSkillsFromTheAllSkillsList([
+      "React",
+      "Typescript",
+      "Stitches",
+      "Storybook",
+      "Radix",
+      "Turbo Repo",
     ]),
     githubHref: "https://github.com/erik-ferreira/05-design-system",
     demoHref:
@@ -140,27 +116,11 @@ const projectsDefault: ProjectsDefault[] = [
     src: "/projects/ignite-shop/default.png",
     altSrc:
       "Tela principal do projeto Ignite Shop com um carousel de imagens das camisetas que estão sendo vendidas; O modal do carrinho para finalizar a compra esta aberto.",
-    skills: formatSkillsProject([
-      {
-        name: "React",
-        src: "/skills/react.svg",
-        color: "#61DAFB",
-      },
-      {
-        name: "Typescript",
-        src: "/skills/typescript.svg",
-        color: "#007ACC",
-      },
-      {
-        name: "Stitches",
-        src: "/skills/stitches.svg",
-        color: "#ECEDEE",
-      },
-      {
-        name: "Stripe",
-        src: "/skills/stripe.svg",
-        color: "#635BFF",
-      },
+    skills: getSkillsFromTheAllSkillsList([
+      "React",
+      "Typescript",
+      "Stitches",
+      "Stripe",
     ]),
     githubHref: "https://github.com/erik-ferreira/04-ignite-shop",
     demoHref: null,
@@ -185,37 +145,13 @@ const projectsDefault: ProjectsDefault[] = [
     src: "/projects/coffee-delivery/default.png",
     altSrc:
       "Tela de home do Coffee Delivery com alguns de seus produtos, um título contendo 'Encontre o café perfeito para qualquer hora do dia', com uma imagem do copo com alguns grãos de café.",
-    skills: formatSkillsProject([
-      {
-        name: "React",
-        src: "/skills/react.svg",
-        color: "#61DAFB",
-      },
-      {
-        name: "Typescript",
-        src: "/skills/typescript.svg",
-        color: "#007ACC",
-      },
-      {
-        name: "TaiwindCSS",
-        src: "/skills/tailwindcss.svg",
-        color: "#38B2AC",
-      },
-      {
-        name: "React Hook Form",
-        src: "/skills/hook-form.svg",
-        color: "#EC5990",
-      },
-      {
-        name: "Zod",
-        src: "/skills/zod.svg",
-        color: "#142641",
-      },
-      {
-        name: "Immer js",
-        src: "/skills/immer.svg",
-        color: "#00E7C3",
-      },
+    skills: getSkillsFromTheAllSkillsList([
+      "React",
+      "Typescript",
+      "TailwindCSS",
+      "React Hook Form",
+      "Zod",
+      "Immer js",
     ]),
     githubHref: "https://github.com/erik-ferreira/challenge-02-coffee-delivery",
     demoHref: null,
@@ -240,23 +176,7 @@ const projectsDefault: ProjectsDefault[] = [
     src: "/projects/reminder-calendar/default.png",
     altSrc:
       "Tela principal do Reminder Calendar, contendo um título escrito 'Janeiro de 2024' e um calendário com os dias do mês.",
-    skills: formatSkillsProject([
-      {
-        name: "HTML",
-        src: "/skills/html.svg",
-        color: "#E44D26",
-      },
-      {
-        name: "CSS",
-        src: "/skills/css.svg",
-        color: "#1572B6",
-      },
-      {
-        name: "Javascript",
-        src: "/skills/javascript.svg",
-        color: "#F0DB4F",
-      },
-    ]),
+    skills: getSkillsFromTheAllSkillsList(["HTML", "CSS", "Javascript"]),
     githubHref: "https://github.com/erik-ferreira/reminder-calendar",
     demoHref: "https://reminder-calendar-virid.vercel.app",
     screenshots: Array.from({ length: 3 }, (_, index) => {
@@ -280,52 +200,16 @@ const projectsDefault: ProjectsDefault[] = [
     src: "/projects/book-wise/default.png",
     altSrc:
       "Tela de início do projeto Book Wise, contendo um menu lateral na esquerda para navegação entre as páginas, uma lista de avaliações mais recentes no meio da tela e uma lista de livros populares na direita.",
-    skills: formatSkillsProject([
-      {
-        name: "React",
-        src: "/skills/react.svg",
-        color: "#61DAFB",
-      },
-      {
-        name: "Typescript",
-        src: "/skills/typescript.svg",
-        color: "#007ACC",
-      },
-      {
-        name: "Next",
-        src: "/skills/next.svg",
-        color: "#F5F5F5",
-      },
-      {
-        name: "Radix",
-        src: "/skills/radix.svg",
-        color: "#E2E8F0",
-      },
-      {
-        name: "Prisma",
-        src: "/skills/prisma.svg",
-        color: "#5A67D8",
-      },
-      {
-        name: "Zod",
-        src: "/skills/zod.svg",
-        color: "#142641",
-      },
-      {
-        name: "React Hook Form",
-        src: "/skills/hook-form.svg",
-        color: "#EC5990",
-      },
-      {
-        name: "React Query",
-        src: "/skills/react-query.svg",
-        color: "#FFD94C",
-      },
-      {
-        name: "Google APIs",
-        src: "/skills/google.svg",
-        color: "#587dbd",
-      },
+    skills: getSkillsFromTheAllSkillsList([
+      "React",
+      "Typescript",
+      "Next",
+      "Radix",
+      "Prisma",
+      "Zod",
+      "React Hook Form",
+      "React Query",
+      "Google APIs",
     ]),
     githubHref: "https://github.com/erik-ferreira/book-wise",
     demoHref: null,
@@ -350,27 +234,11 @@ const projectsDefault: ProjectsDefault[] = [
     src: "/projects/dt-money/default.png",
     altSrc:
       "Imagem de início do DT Money, contendo 2 botões, um para cadastrar uma nova transação e outro de configurações; Mais abaixo 3 cards com os valores de entradas, saídas e total respectivamente.",
-    skills: formatSkillsProject([
-      {
-        name: "React",
-        src: "/skills/react.svg",
-        color: "#61DAFB",
-      },
-      {
-        name: "Typescript",
-        src: "/skills/typescript.svg",
-        color: "#007ACC",
-      },
-      {
-        name: "Styled Components",
-        src: "/skills/styled-components.svg",
-        color: "#9F70B8",
-      },
-      {
-        name: "Mirage JS",
-        src: "/skills/mirage.svg",
-        color: "#05C77E",
-      },
+    skills: getSkillsFromTheAllSkillsList([
+      "React",
+      "Typescript",
+      "Styled Components",
+      "Mirage JS",
     ]),
     githubHref: "https://github.com/erik-ferreira/dtmoney",
     demoHref: null,
@@ -395,37 +263,13 @@ const projectsDefault: ProjectsDefault[] = [
     src: "/projects/ignews/default.png",
     altSrc:
       "Tela de início do Ig.news, na esquerda tem um título, subtítulo, descrição e botão para assinar o serviço; Na direita uma imagem de uma mulher de camisa amarela, óculos e cabelo liso preto amarrado, com um café do lado da mesa, lendo alguns posts na plataforma.",
-    skills: formatSkillsProject([
-      {
-        name: "React",
-        src: "/skills/react.svg",
-        color: "#61DAFB",
-      },
-      {
-        name: "Typescript",
-        src: "/skills/typescript.svg",
-        color: "#007ACC",
-      },
-      {
-        name: "Next",
-        src: "/skills/next.svg",
-        color: "#F5F5F5",
-      },
-      {
-        name: "Sass",
-        src: "/skills/sass.svg",
-        color: "#CB6699",
-      },
-      {
-        name: "Stripe",
-        src: "/skills/stripe.svg",
-        color: "#635BFF",
-      },
-      {
-        name: "Fauna DB",
-        src: "/skills/fauna.svg",
-        color: "#3713B7",
-      },
+    skills: getSkillsFromTheAllSkillsList([
+      "React",
+      "Typescript",
+      "Next",
+      "Sass",
+      "Stripe",
+      "Fauna DB",
     ]),
     githubHref: "https://github.com/erik-ferreira/ignews",
     demoHref: null,
@@ -450,27 +294,11 @@ const projectsDefault: ProjectsDefault[] = [
     src: "/projects/rocketshoes/default.png",
     altSrc:
       "Rocket Shoes, um site incrível para comprar seus tênis. Na imagem tem alguns cards de cada tênis, de cores branco e preto, com o botão para adicionar o produto ao carrinho.",
-    skills: formatSkillsProject([
-      {
-        name: "React",
-        src: "/skills/react.svg",
-        color: "#61DAFB",
-      },
-      {
-        name: "Typescript",
-        src: "/skills/typescript.svg",
-        color: "#007ACC",
-      },
-      {
-        name: "Styled Components",
-        src: "/skills/styled-components.svg",
-        color: "#9F70B8",
-      },
-      {
-        name: "Jest",
-        src: "/skills/jest.svg",
-        color: "#99425B",
-      },
+    skills: getSkillsFromTheAllSkillsList([
+      "React",
+      "Typescript",
+      "Styled Components",
+      "Jest",
     ]),
     githubHref:
       "https://github.com/erik-ferreira/ignite-reactjs-criando-um-hook-de-carrinho-de-compras",
@@ -496,37 +324,13 @@ const projectsDefault: ProjectsDefault[] = [
     src: "/projects/ignite-timer/default.png",
     altSrc:
       "Tela com um contador de tempo para executar uma atividade. Uma navegação o canto superior direito para listar as atividades já executadas.",
-    skills: formatSkillsProject([
-      {
-        name: "React",
-        src: "/skills/react.svg",
-        color: "#61DAFB",
-      },
-      {
-        name: "Typescript",
-        src: "/skills/typescript.svg",
-        color: "#007ACC",
-      },
-      {
-        name: "Styled Components",
-        src: "/skills/styled-components.svg",
-        color: "#9F70B8",
-      },
-      {
-        name: "Zod",
-        src: "/skills/zod.svg",
-        color: "#142641",
-      },
-      {
-        name: "React Hook Form",
-        src: "/skills/hook-form.svg",
-        color: "#EC5990",
-      },
-      {
-        name: "Immer js",
-        src: "/skills/immer.svg",
-        color: "#00E7C3",
-      },
+    skills: getSkillsFromTheAllSkillsList([
+      "React",
+      "Typescript",
+      "Styled Components",
+      "Zod",
+      "React Hook Form",
+      "Immer js",
     ]),
     githubHref: "https://github.com/erik-ferreira/02-ignite-timer",
     demoHref: null,
@@ -551,37 +355,13 @@ const projectsDefault: ProjectsDefault[] = [
     src: "/projects/redux-zustand/default.png",
     altSrc:
       "Tela com um player de video e uma lista de módulos e aulas. Botão superior para alterar entre autoplay e um botão para enviar o feedback.",
-    skills: formatSkillsProject([
-      {
-        name: "React",
-        src: "/skills/react.svg",
-        color: "#61DAFB",
-      },
-      {
-        name: "Typescript",
-        src: "/skills/typescript.svg",
-        color: "#007ACC",
-      },
-      {
-        name: "TaiwindCSS",
-        src: "/skills/tailwindcss.svg",
-        color: "#38B2AC",
-      },
-      {
-        name: "Radix",
-        src: "/skills/radix.svg",
-        color: "#E2E8F0",
-      },
-      {
-        name: "Redux Toolkit",
-        src: "/skills/redux.svg",
-        color: "#764ABC",
-      },
-      {
-        name: "Zustand",
-        src: "/skills/zustand.svg",
-        color: "#F46D2D",
-      },
+    skills: getSkillsFromTheAllSkillsList([
+      "React",
+      "Typescript",
+      "TailwindCSS",
+      "Radix",
+      "Redux Toolkit",
+      "Zustand",
     ]),
     githubHref: "https://github.com/erik-ferreira/07-redux-zustand",
     demoHref: null,
@@ -606,32 +386,12 @@ const projectsDefault: ProjectsDefault[] = [
     src: "/projects/github-blog/default.png",
     altSrc:
       "Tela principal do Github Blog, contando com a logo, um sessão de perfil com a foto, nome e bio. Mais abaixo um campo de pesquisa para filtrar a lista de issues de um repositório.",
-    skills: formatSkillsProject([
-      {
-        name: "React",
-        src: "/skills/react.svg",
-        color: "#61DAFB",
-      },
-      {
-        name: "Typescript",
-        src: "/skills/typescript.svg",
-        color: "#007ACC",
-      },
-      {
-        name: "Styled Components",
-        src: "/skills/styled-components.svg",
-        color: "#9F70B8",
-      },
-      {
-        name: "React Hook Form",
-        src: "/skills/hook-form.svg",
-        color: "#EC5990",
-      },
-      {
-        name: "Zod",
-        src: "/skills/zod.svg",
-        color: "#142641",
-      },
+    skills: getSkillsFromTheAllSkillsList([
+      "React",
+      "Typescript",
+      "Styled Components",
+      "React Hook Form",
+      "Zod",
     ]),
     githubHref: "https://github.com/erik-ferreira/challenge-03-github-blog",
     demoHref: "https://challenge-03-github-blog.vercel.app",
@@ -656,22 +416,10 @@ const projectsDefault: ProjectsDefault[] = [
     src: "/projects/mastering-tailwind/default.png",
     altSrc:
       "Única tela do projeto Mastering Tailwind, contendo um várias informações, como inputs, drawer menu, navegação em tab e etc.",
-    skills: formatSkillsProject([
-      {
-        name: "React",
-        src: "/skills/react.svg",
-        color: "#61DAFB",
-      },
-      {
-        name: "Typescript",
-        src: "/skills/typescript.svg",
-        color: "#007ACC",
-      },
-      {
-        name: "TaiwindCSS",
-        src: "/skills/tailwindcss.svg",
-        color: "#38B2AC",
-      },
+    skills: getSkillsFromTheAllSkillsList([
+      "React",
+      "Typescript",
+      "TailwindCSS",
     ]),
     githubHref: "https://github.com/erik-ferreira/mastering-tailwind",
     demoHref: null,

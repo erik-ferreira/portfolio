@@ -7,7 +7,7 @@ export const allSkillNames = [
   "HTML",
   "CSS",
   "Figma",
-  "TaiwindCSS",
+  "TailwindCSS",
   "Styled Components",
   "SQL",
   "Redux",

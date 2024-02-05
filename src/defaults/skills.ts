@@ -45,7 +45,7 @@ export const allSkills: SkillDefault[] = [
     color: "#F34F29",
   },
   {
-    name: "TaiwindCSS",
+    name: "TailwindCSS",
     src: "/skills/tailwindcss.svg",
     color: "#38B2AC",
   },
@@ -166,7 +166,7 @@ const skillsDefault = getSkillsFromTheAllSkillsList([
   "CSS",
   "Figma",
   "Git",
-  "TaiwindCSS",
+  "TailwindCSS",
   "Styled Components",
   "SQL",
   "Redux",
@@ -176,13 +176,7 @@ const skillsDefault = getSkillsFromTheAllSkillsList([
   "Zod",
 ])
 
-export const mySkills: SkillDTO[] = [...skillsDefault, ...skillsDefault].map(
-  (skill, index) => ({
-    id: index + 1,
-    rgb: convertColorHexToRgb(skill.color, 0.1),
-    ...skill,
-  })
-)
+export const mySkills: SkillDTO[] = [...skillsDefault, ...skillsDefault]
 
 export const skillsUsedInProjectsToFilter: SkillName[] = [
   "React",
@@ -193,7 +187,7 @@ export const skillsUsedInProjectsToFilter: SkillName[] = [
   "HTML",
   "CSS",
   "Figma",
-  "TaiwindCSS",
+  "TailwindCSS",
   "Styled Components",
   "SQL",
   "Redux",
