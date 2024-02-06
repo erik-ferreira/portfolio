@@ -1,4 +1,5 @@
 import Image from "next/image"
+import { format } from "date-fns"
 import { ComponentProps } from "react"
 
 import { Link } from "@/components/Link"
@@ -19,11 +20,7 @@ export function Certificate({
   certificate,
   ...rest
 }: CertificateProps) {
-  const day = certificate.dateOfIssue.getDate()
-  const month = certificate.dateOfIssue.getMonth()
-  const year = certificate.dateOfIssue.getFullYear()
-
-  const date = `${day}/${month}/${year}`
+  const formattedDate = format(certificate.dateOfIssue, "dd/MM/yyyy")
 
   return (
     <div
@@ -52,7 +49,9 @@ export function Certificate({
           className="bg-section px-3 py-4 rounded mb-4"
         />
 
-        <time className="text-lg font-semibold text-slate-600">{date}</time>
+        <time className="text-lg font-semibold text-slate-600">
+          {formattedDate}
+        </time>
 
         <Link
           href={certificate.href}

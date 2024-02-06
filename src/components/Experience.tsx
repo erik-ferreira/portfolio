@@ -2,6 +2,8 @@ import Image from "next/image"
 import { ComponentProps } from "react"
 
 import { twMerge } from "@/utils/twMerge"
+import { formatDateExperience } from "@/utils/formatDateExperience"
+
 import { ExperienceDTO } from "@/dtos/ExperienceDTO"
 
 interface ExperienceProps extends ComponentProps<"div"> {
@@ -13,17 +15,10 @@ export function Experience({
   className,
   ...rest
 }: ExperienceProps) {
-  let start_month = experience.startDate.toLocaleString("default", {
-    month: "long",
-  })
-  let start_year = experience.startDate.getFullYear()
-
-  let end_month = experience?.endDate?.toLocaleString("default", {
-    month: "long",
-  })
-  let end_year = experience?.endDate?.getFullYear()
-
-  let date = `${start_month} ${start_year} - ${end_month} ${end_year}`
+  const dateExperience = formatDateExperience(
+    experience.startDate,
+    experience.endDate
+  )
 
   return (
     <div
@@ -60,7 +55,7 @@ export function Experience({
           "group-even:order-1 group-even:text-right"
         )}
       >
-        {date}
+        {dateExperience}
       </time>
     </div>
   )
