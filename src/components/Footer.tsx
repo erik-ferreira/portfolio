@@ -15,7 +15,7 @@ export function Footer({ className, ...rest }: FooterProps) {
     >
       <div className="max-w-content w-content mx-auto flex items-center justify-between py-4 px-8">
         <span className="text-lg font-semibold">
-          Projeto e Desenvolvido
+          Projetado e Desenvolvido
           <br /> por Erik Ferreira
         </span>
 

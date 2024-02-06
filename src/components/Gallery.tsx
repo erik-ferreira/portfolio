@@ -99,8 +99,8 @@ export function Gallery({
               width="100%"
               height="100%"
               controls
-              playing
-              alt="Teste"
+              volume={0.2}
+              alt={gallery.altSrc || "Vídeo"}
             />
           )}
         </Dialog.Content>
