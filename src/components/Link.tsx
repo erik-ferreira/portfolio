@@ -65,12 +65,7 @@ export function Link({
   const { base, icon } = link({ variant, size })
 
   return (
-    <LinkPrimitive
-      prefetch={false}
-      className={base({ className })}
-      target={target}
-      {...rest}
-    >
+    <LinkPrimitive className={base({ className })} target={target} {...rest}>
       {label}
       {!hideIcon && <ArrowRight className={icon()} />}
     </LinkPrimitive>

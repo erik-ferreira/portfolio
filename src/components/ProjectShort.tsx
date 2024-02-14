@@ -18,7 +18,6 @@ export function ProjectShort({ project, ...rest }: ProjectShortProps) {
   return (
     <Link
       className="w-100 h-67.5 border-2 border-transparent rounded-lg overflow-auto relative transition-colors duration-300 hover:border-sky-600 hover:cursor-pointer group"
-      prefetch={false}
       {...rest}
     >
       <div

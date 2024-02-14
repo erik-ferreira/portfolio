@@ -23,7 +23,7 @@ export function Header({ className, ...rest }: HeaderProps) {
           "flex items-center justify-between"
         )}
       >
-        <Link href="/" prefetch={false}>
+        <Link href="/">
           <Image src={logo} alt="Erik Ferreira" width={150} height={40} />
         </Link>
 

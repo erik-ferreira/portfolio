@@ -12,7 +12,7 @@ export function CertificateShort({
   ...rest
 }: CertificateShortProps) {
   return (
-    <Link {...rest} prefetch={false} target="_blank">
+    <Link {...rest} target="_blank">
       <article className="flex flex-col gap-1 transition duration-300 hover:scale-105 hover:cursor-pointer">
         <h3 className="font-bold text-2xl w-[300px] overflow-hidden text-ellipsis whitespace-nowrap">
           {certificate.name}

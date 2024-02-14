@@ -50,7 +50,6 @@ export function SocialIcons({ variant, className, ...rest }: SocialIconsProps) {
           <Link
             key={socialIcon.id}
             href={socialIcon.href}
-            prefetch={false}
             className={link()}
             target="_blank"
           >
