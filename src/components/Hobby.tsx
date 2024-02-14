@@ -3,6 +3,7 @@ import { ComponentProps } from "react"
 
 import { Link } from "@/components/Link"
 
+import { cutText } from "@/utils/cutText"
 import { twMerge } from "@/utils/twMerge"
 import { HobbyDTO } from "@/dtos/HobbyDTO"
 
@@ -11,11 +12,7 @@ interface HobbyProps extends ComponentProps<"article"> {
 }
 
 export function Hobby({ hobby, className, ...rest }: HobbyProps) {
-  const formatDescription = hobby.description
-    .split(" ")
-    .splice(0, 25)
-    .join(" ")
-    .concat("...")
+  const formatDescription = cutText(hobby.description, 25)
 
   return (
     <article

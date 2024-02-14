@@ -1,6 +1,5 @@
 import { SkillDTO, SkillDefault, SkillName } from "@/dtos/SkillDTO"
 
-import { convertColorHexToRgb } from "@/utils/convertColorHexToRgb"
 import { getSkillsFromTheAllSkillsList } from "@/utils/getSkillsFromTheAllSkillsList"
 
 export const allSkills: SkillDefault[] = [

@@ -1,6 +1,7 @@
 import Image from "next/image"
 import Link, { LinkProps } from "next/link"
 
+import { cutText } from "@/utils/cutText"
 import { twMerge } from "@/utils/twMerge"
 import { ProjectDTO } from "@/dtos/ProjectDTO"
 
@@ -9,11 +10,7 @@ interface ProjectShortProps extends LinkProps {
 }
 
 export function ProjectShort({ project, ...rest }: ProjectShortProps) {
-  const formatDescription = project.description
-    .split(" ")
-    .splice(0, 20)
-    .join(" ")
-    .concat("...")
+  const formatDescription = cutText(project.description, 20)
 
   return (
     <Link

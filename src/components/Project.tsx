@@ -6,6 +6,7 @@ import { Link } from "@/components/Link"
 import { Icon } from "@/components/Icon"
 import { SkillName } from "@/components/SkillName"
 
+import { cutText } from "@/utils/cutText"
 import { twMerge } from "@/utils/twMerge"
 import { ProjectDTO } from "@/dtos/ProjectDTO"
 
@@ -14,11 +15,7 @@ interface ProjectProps extends ComponentProps<"div"> {
 }
 
 export function Project({ project, className, ...rest }: ProjectProps) {
-  const formatDescription = project.description
-    .split(" ")
-    .splice(0, 50)
-    .join(" ")
-    .concat("...")
+  const formatDescription = cutText(project.description, 50)
 
   return (
     <div className={twMerge("flex gap-12 py-8", className)} {...rest}>
