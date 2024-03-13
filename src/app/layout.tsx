@@ -39,16 +39,16 @@ export default function RootLayout({
       lang="pt-BR"
       className={`${nunitoSans.variable} ${orbitron.variable} ${permanentMarker.variable}`}
     >
-      <body className="bg-page text-slate-200 relative">
+      <body className="bg-page text-slate-200 relative border border-red-500">
         <Header />
 
-        {children}
+        {/* {children}
 
         <Footer />
 
         <SocialIcons variant="fixed" />
 
-        <ButtonGoToTop />
+        <ButtonGoToTop /> */}
       </body>
     </html>
   )
