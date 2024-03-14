@@ -149,6 +149,10 @@ const config: Config = {
         },
       },
 
+      screens: {
+        xs: "425px",
+      },
+
       maxWidth: {
         content: "1600px",
       },

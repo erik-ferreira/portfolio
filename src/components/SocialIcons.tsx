@@ -41,10 +41,10 @@ type SocialIconsProps = VariantProps<typeof socialIcons> &
   ComponentProps<"div"> & {}
 
 export function SocialIcons({ variant, className, ...rest }: SocialIconsProps) {
-  const { base, link, icon, iconExternal } = socialIcons({ variant, className })
+  const { base, link, icon, iconExternal } = socialIcons({ variant })
 
   return (
-    <div className={base()} {...rest}>
+    <div className={base({ className })} {...rest}>
       {socialIconsList.map((socialIcon) => {
         return (
           <Link
