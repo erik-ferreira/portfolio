@@ -42,13 +42,13 @@ export default function RootLayout({
       <body className="bg-page text-slate-200 relative border border-red-500">
         <Header />
 
+        {/* {children} */}
+
         <Footer />
-        {/* {children}
 
+        <SocialIcons variant="fixed" className="max-xs:hidden" />
 
-        <SocialIcons variant="fixed" />
-
-        <ButtonGoToTop /> */}
+        <ButtonGoToTop />
       </body>
     </html>
   )
