@@ -18,13 +18,18 @@ export function HeaderSectionRight() {
 
   return (
     <>
-      <button
-        type="button"
-        className={twMerge("hidden", "max-[900px]:block max-[900px]:z-20")}
-        onClick={handleToggleNavbar}
+      <div
+        className={twMerge(
+          "hidden",
+          "max-[900px]:z-20 max-[900px]:flex max-[900px]:gap-4"
+        )}
       >
-        <Icon name={showNavbar ? "X" : "Menu"} className="w-7 h-7" />
-      </button>
+        <SwitchTheme />
+
+        <button type="button" onClick={handleToggleNavbar}>
+          <Icon name={showNavbar ? "X" : "Menu"} className="w-7 h-7" />
+        </button>
+      </div>
 
       <div
         className={twMerge(
@@ -42,7 +47,7 @@ export function HeaderSectionRight() {
       >
         <Navbar classNameContent="max-[900px]:flex-col" />
 
-        <SwitchTheme />
+        <SwitchTheme className="max-[900px]:hidden" />
 
         <SocialIcons className="hidden max-[900px]:flex" />
       </div>
