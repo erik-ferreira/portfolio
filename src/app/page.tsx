@@ -8,9 +8,10 @@ import { Certifications } from "@/components/home/Certifications"
 
 export default function Home() {
   return (
-    <main className="max-w-content w-content mx-auto p-8 flex flex-col gap-16">
+    <main className="max-w-content w-content mx-auto p-8 flex flex-col gap-16 border border-white">
       <Resume />
 
+      {/*
       <Skills />
 
       <Certifications />
@@ -22,6 +23,7 @@ export default function Home() {
       <Hobbies />
 
       <LetsTalk />
+       */}
     </main>
   )
 }
