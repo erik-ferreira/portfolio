@@ -26,7 +26,9 @@ export function Resume({ className, ...rest }: ResumeProps) {
           className={twMerge(
             "border border-red-500",
             "w-[23.125rem] h-[18.125rem]",
-            "max-[1180px]:w-64"
+            "max-[1180px]:w-64 max-[1180px]:h-64",
+            "max-lg:w-56 max-lg:h-fit"
+            // "max-md:hidden"
           )}
         >
           <Image
@@ -38,11 +40,20 @@ export function Resume({ className, ...rest }: ResumeProps) {
           />
         </div>
 
-        <div className="min-w-[550px] flex flex-col gap-1 border border-red-500">
+        <div
+          className={twMerge(
+            "min-w-[550px] flex flex-col gap-1 border border-red-500",
+            "max-[1180px]:min-w-[490px]",
+            "max-lg:min-w-[400px]",
+            "max-md:min-w-0 max-md:w-fit",
+            "max-sm:gap-0.5"
+          )}
+        >
           <p
             className={twMerge(
               "text-2xl leading-base font-semibold text-slate-500",
-              "max-[1180px]:text-xl"
+              "max-[1180px]:text-xl",
+              "max-lg:text-lg"
             )}
           >
             Olá 👋🏾, meu nome é
@@ -53,7 +64,9 @@ export function Resume({ className, ...rest }: ResumeProps) {
               "w-fit text-transparent bg-clip-text",
               "text-6.5xl leading-none font-bold",
               "bg-gradient-to-r from-blue-500 to-violet-600 to-80%",
-              "max-[1180px]:text-6xl"
+              "max-[1180px]:text-6xl",
+              "max-lg:text-5xl",
+              "max-sm:text-4xl"
             )}
           >
             Erik Ferreira
@@ -62,7 +75,9 @@ export function Resume({ className, ...rest }: ResumeProps) {
           <h2
             className={twMerge(
               "text-4.5xl leading-none font-bold flex gap-2",
-              "max-[1180px]:text-4xl"
+              "max-[1180px]:text-4xl",
+              "max-lg:text-3xl",
+              "max-sm:text-2l"
             )}
           >
             Sou{" "}
@@ -91,7 +106,7 @@ export function Resume({ className, ...rest }: ResumeProps) {
               href="https://github.com/erik-ferreira/portfolio"
               target="_blank"
               label="Github"
-              className="text-slate-400"
+              className={twMerge("text-slate-400", "max-[1180px]:text-base")}
             />
           </span>
         </div>

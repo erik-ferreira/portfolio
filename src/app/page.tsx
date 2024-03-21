@@ -6,9 +6,16 @@ import { LetsTalk } from "@/components/home/LetsTalk"
 import { Experiences } from "@/components/home/Experiences"
 import { Certifications } from "@/components/home/Certifications"
 
+import { twMerge } from "@/utils/twMerge"
+
 export default function Home() {
   return (
-    <main className="max-w-content w-content mx-auto p-8 flex flex-col gap-16 border border-white">
+    <main
+      className={twMerge(
+        "max-w-content w-content mx-auto p-8 flex flex-col gap-16 border border-white",
+        "max-lg:px-0"
+      )}
+    >
       <Resume />
 
       {/*
