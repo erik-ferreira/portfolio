@@ -14,21 +14,17 @@ interface ResumeProps extends ComponentProps<"section"> {}
 export function Resume({ className, ...rest }: ResumeProps) {
   return (
     <section
-      className={twMerge(
-        "flex flex-col items-center gap-16",
-        "border border-red-500",
-        className
-      )}
+      className={twMerge("flex flex-col items-center gap-16", className)}
       {...rest}
     >
-      <div className="w-full flex items-center justify-evenly border border-blue-500">
+      <div className="w-full flex items-center justify-evenly ">
         <div
           className={twMerge(
-            "border border-red-500",
+            "border border-blue-500",
             "w-[23.125rem] h-[18.125rem]",
             "max-[1180px]:w-64 max-[1180px]:h-64",
-            "max-lg:w-56 max-lg:h-fit"
-            // "max-md:hidden"
+            "max-[1024px]:w-56 max-[1024px]:h-fit",
+            "max-[768px]:hidden"
           )}
         >
           <Image
@@ -42,18 +38,18 @@ export function Resume({ className, ...rest }: ResumeProps) {
 
         <div
           className={twMerge(
-            "min-w-[550px] flex flex-col gap-1 border border-red-500",
+            "min-w-[550px] flex flex-col gap-1",
             "max-[1180px]:min-w-[490px]",
-            "max-lg:min-w-[400px]",
-            "max-md:min-w-0 max-md:w-fit",
-            "max-sm:gap-0.5"
+            "max-[1024px]:min-w-[450px]",
+            "max-[768px]:min-w-0 max-[768px]:w-fit",
+            "max-[640px]:gap-0.5"
           )}
         >
           <p
             className={twMerge(
               "text-2xl leading-base font-semibold text-slate-500",
               "max-[1180px]:text-xl",
-              "max-lg:text-lg"
+              "max-[1024px]:text-lg"
             )}
           >
             Olá 👋🏾, meu nome é
@@ -65,8 +61,8 @@ export function Resume({ className, ...rest }: ResumeProps) {
               "text-6.5xl leading-none font-bold",
               "bg-gradient-to-r from-blue-500 to-violet-600 to-80%",
               "max-[1180px]:text-6xl",
-              "max-lg:text-5xl",
-              "max-sm:text-4xl"
+              "max-[1024px]:text-5xl",
+              "max-[640px]:text-4xl"
             )}
           >
             Erik Ferreira
@@ -76,8 +72,8 @@ export function Resume({ className, ...rest }: ResumeProps) {
             className={twMerge(
               "text-4.5xl leading-none font-bold flex gap-2",
               "max-[1180px]:text-4xl",
-              "max-lg:text-3xl",
-              "max-sm:text-2l"
+              "max-[1024px]:text-3xl",
+              "max-[640px]:text-2xl"
             )}
           >
             Sou{" "}
@@ -89,7 +85,7 @@ export function Resume({ className, ...rest }: ResumeProps) {
           <p
             className={twMerge(
               "text-lg leading-tight font-semibold",
-              "max-[1180px]:text-base"
+              "max-[768px]:leading-5"
             )}
           >
             Se você me ver em uma luta com um urso, reze pelo urso
@@ -98,15 +94,19 @@ export function Resume({ className, ...rest }: ResumeProps) {
           <span
             className={twMerge(
               "text-lg font-bold text-slate-600 flex gap-1",
-              "max-[1180px]:text-base"
+              "max-[390px]:flex-col max-[390px]:gap-0"
             )}
           >
-            O código deste site está disponível em
+            O código deste site está disponível no
             <Link
               href="https://github.com/erik-ferreira/portfolio"
               target="_blank"
               label="Github"
-              className={twMerge("text-slate-400", "max-[1180px]:text-base")}
+              className={twMerge(
+                "text-slate-400",
+                "max-[1180px]:text-base"
+                // "max-[390px]:leading-4"
+              )}
             />
           </span>
         </div>

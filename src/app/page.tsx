@@ -12,8 +12,9 @@ export default function Home() {
   return (
     <main
       className={twMerge(
-        "max-w-content w-content mx-auto p-8 flex flex-col gap-16 border border-white",
-        "max-lg:px-0"
+        "max-w-content w-content mx-auto p-8 flex flex-col gap-16",
+        "max-[1024px]:p-4",
+        "max-[768px]:px-0 max-[768px]:py-2"
       )}
     >
       <Resume />
