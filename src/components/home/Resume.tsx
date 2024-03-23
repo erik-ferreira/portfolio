@@ -123,7 +123,7 @@ export function Resume({ className, ...rest }: ResumeProps) {
         )}
       >
         <div className="min-[520px]:w-[400px] min-[820px]:w-[500px] flex flex-col gap-2 items-start">
-          <h2 className="text-3.5xl font-bold text-blue-500">
+          <h2 className="text-3xl leading-tight font-bold text-blue-500 xs:text-3.5xl">
             Um pouco sobre mim
           </h2>
           <p className="text-base">
