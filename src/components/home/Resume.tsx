@@ -14,14 +14,19 @@ interface ResumeProps extends ComponentProps<"section"> {}
 export function Resume({ className, ...rest }: ResumeProps) {
   return (
     <section
-      className={twMerge("flex flex-col items-center gap-16", className)}
+      className={twMerge(
+        "flex flex-col items-center gap-6",
+        "lg:gap-12",
+        "xl:gap-16",
+        className
+      )}
       {...rest}
     >
-      <div className="w-full flex items-center justify-evenly">
+      <div className="w-full flex items-center justify-evenly ">
         <div
           className={twMerge(
             "hidden",
-            "md:block md:w-56 md:h-fit",
+            "min-[820px]:block md:w-56 md:h-fit",
             "lg:w-64 lg:h-64",
             "min-[1180px]:w-[23.125rem] min-[1180px]:h-[18.125rem]"
           )}
@@ -42,8 +47,6 @@ export function Resume({ className, ...rest }: ResumeProps) {
             "md:min-w-[450px]",
             "lg:min-w-[490px]",
             "min-[1180px]:min-w-[550px]"
-            // "xs:bg-red-500", // mínimo
-            // "md:max-xl:bg-blue-500" // intervalo
           )}
         >
           <p
@@ -110,8 +113,16 @@ export function Resume({ className, ...rest }: ResumeProps) {
         </div>
       </div>
 
-      {/* <div className="w-fit bg-section flex gap-4 items-center justify-center p-8 rounded-xl border border-red-500">
-        <div className="w-[500px] flex flex-col gap-2 items-start">
+      <div
+        className={twMerge(
+          "w-full bg-section py-4 px-8 rounded-xl ",
+          "flex flex-col-reverse gap-1 items-center justify-center",
+          "min-[520px]:w-fit",
+          "min-[820px]:flex-row min-[820px]:w-full min-[820px]:gap-4",
+          "min-[1150px]:w-fit"
+        )}
+      >
+        <div className="min-[520px]:w-[400px] min-[820px]:w-[500px] flex flex-col gap-2 items-start">
           <h2 className="text-3.5xl font-bold text-blue-500">
             Um pouco sobre mim
           </h2>
@@ -127,14 +138,16 @@ export function Resume({ className, ...rest }: ResumeProps) {
           <Link href="/about" label="Ler mais" className="text-slate-500" />
         </div>
 
-        <Image
-          src={preview}
-          alt="Uma imagem minha trabalhando em alguns projetos em casa"
-          width={350}
-          height={233}
-          className="rounded-lg"
-        />
-      </div> */}
+        <div className="w-[18.75rem] min-[820px]:w-[21.875rem]">
+          <Image
+            src={preview}
+            alt="Uma imagem minha trabalhando em alguns projetos em casa"
+            width={350}
+            height={233}
+            className="rounded-lg w-full h-full object-contain"
+          />
+        </div>
+      </div>
     </section>
   )
 }
