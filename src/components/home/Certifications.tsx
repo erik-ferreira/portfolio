@@ -14,12 +14,25 @@ interface CertificationsProps extends ComponentProps<"section"> {}
 export function Certifications({ className, ...rest }: CertificationsProps) {
   return (
     <section
-      className={twMerge("flex flex-col items-center gap-6", className)}
+      className={twMerge(
+        "flex flex-col items-center gap-6",
+        "border border-red-500",
+        className
+      )}
       {...rest}
     >
-      <Title label="Certificados" labelBackground="Certificates" />
+      <Title
+        label="Certificados"
+        labelBackground="Certificates"
+        className="border border-blue-500"
+      />
 
-      <div className="flex items-center justify-center gap-12 flex-wrap">
+      <div
+        className={twMerge(
+          "flex items-center justify-center gap-6 flex-wrap border border-blue-500",
+          "md:gap-12"
+        )}
+      >
         {someCertificates.map((certificate) => (
           <CertificateShort
             key={certificate.id}

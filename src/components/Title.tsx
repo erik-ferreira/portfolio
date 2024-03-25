@@ -4,16 +4,18 @@ import { tv, VariantProps } from "tailwind-variants"
 const title = tv({
   slots: {
     base: "relative",
-    background:
-      "block font-orbi font-semibold text-slate-800 uppercase blur-[2px] text-center",
+    background: [
+      "block font-orbi font-semibold text-slate-800 uppercase blur-[1.5px] text-center mb-10",
+      "md:blur-[2px] md:mb-0",
+    ],
     text: "font-marker text-transparent bg-clip-text bg-gradient-to-b from-blue-500 to-violet-600 absolute top-2/4 left-2/4 -translate-x-2/4 -translate-y-2/4",
   },
 
   variants: {
     variant: {
       default: {
-        background: ["text-7.5xl leading-none", "md:leading-snug md:text-8xl"],
-        text: "text-5xl md:text-5.5xl",
+        background: ["text-5.75xl leading-none", "md:text-8xl md:leading-snug"],
+        text: "text-4.5xl md:text-5.5xl",
       },
       subtitle: {
         background: "text-6.5xl",
