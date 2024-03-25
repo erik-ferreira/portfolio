@@ -20,6 +20,7 @@ const config: Config = {
         "4.75xl": "2.625rem",
         "5.5xl": "3.5rem",
         "6.5xl": "4rem",
+        "7.5xl": "5.25rem",
       },
 
       colors: {
@@ -177,6 +178,11 @@ const config: Config = {
       keyframes: {
         scroll: {
           "0%": { transform: "translateX(0%)" },
+          "100%": { transform: "translateX(-76%)" },
+        },
+
+        "scroll-md": {
+          "0%": { transform: "translateX(0%)" },
           "100%": { transform: "translateX(-65%)" },
         },
 
@@ -192,7 +198,8 @@ const config: Config = {
       },
 
       animation: {
-        slider: "scroll 40s linear infinite",
+        slider: "scroll 30s linear infinite",
+        "slider-md": "scroll-md 30s linear infinite",
         "show-dialog": "showDialog 0.5s",
         "hide-dialog": "hideDialog 0.5s",
       },

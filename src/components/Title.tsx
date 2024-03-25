@@ -12,8 +12,8 @@ const title = tv({
   variants: {
     variant: {
       default: {
-        background: "text-8xl",
-        text: "text-5.5xl",
+        background: ["text-7.5xl leading-none", "md:leading-snug md:text-8xl"],
+        text: "text-5xl md:text-5.5xl",
       },
       subtitle: {
         background: "text-6.5xl",

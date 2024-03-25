@@ -18,7 +18,8 @@ body {
 
 /* Skills */
 
-.animate-slider:hover {
+.animate-slider:hover,
+.animate-slider-md:hover {
   animation-play-state: paused;
 }
 

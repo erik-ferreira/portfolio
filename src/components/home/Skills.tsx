@@ -12,7 +12,8 @@ export function Skills({ className, ...rest }: SkillsProps) {
   return (
     <section
       className={twMerge(
-        "flex flex-col items-center justify-center gap-4",
+        "flex flex-col items-center justify-center gap-2",
+        "md:gap-4",
         className
       )}
       {...rest}
@@ -24,7 +25,7 @@ export function Skills({ className, ...rest }: SkillsProps) {
           "w-full flex overflow-hidden relative",
 
           // before styles
-          "before:content-normal before:w-[100px] before:h-full before:absolute before:top-0 before:left-0 before:z-[2] ",
+          "before:content-normal before:w-[100px] before:h-full before:absolute before:top-0 before:left-0 before:z-[2]",
 
           "before:bg-gradient-to-r before:from-page before:from-0% before:to-transparent before:to-100%",
 
@@ -34,7 +35,12 @@ export function Skills({ className, ...rest }: SkillsProps) {
           "after:bg-gradient-to-r after:from-page after:from-0% after:to-transparent after:to-100%"
         )}
       >
-        <div className="flex gap-10 animate-slider py-12 overflow-visible">
+        <div
+          className={twMerge(
+            "flex gap-5 animate-slider py-6 overflow-visible",
+            "md:animate-slider-md md:gap-10 md:py-12"
+          )}
+        >
           {mySkills.map((skill) => (
             <SkillIcon key={skill.id} skill={skill} />
           ))}

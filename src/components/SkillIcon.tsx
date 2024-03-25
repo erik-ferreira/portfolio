@@ -18,7 +18,11 @@ export function SkillIcon({
 
   return (
     <div
-      className={twMerge("w-[100px] h-fit relative group", className)}
+      className={twMerge(
+        "w-20 h-fit relative group",
+        "md:w-[100px]",
+        className
+      )}
       {...rest}
     >
       <Image
