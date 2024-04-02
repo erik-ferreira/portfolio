@@ -8,7 +8,7 @@ const icon = tv({
     size: {
       small: "w-5 h-5",
       default: "w-6 h-6",
-      large: "w-8 h-8",
+      large: ["w-6 h-6", "xs:w-7 xs:h-7", "sm:w-8 sm:h-8"],
     },
 
     isSelected: {
