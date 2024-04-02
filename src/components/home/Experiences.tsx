@@ -18,9 +18,6 @@ export function Experiences({ className, ...rest }: ExperiencesProps) {
 
       <div
         className={twMerge(
-          // "w-[90%] py-10 space-y-6 relative",
-          // "before:w-1 before:h-full before:content-normal before:bg-sky-600",
-          // "before:absolute before:left-1/2 before:top-0 before:-translate-x-1/2",
           "w-[90%] py-10 space-y-6 relative",
           "before:w-1 before:h-full before:content-normal before:bg-sky-600",
           "before:absolute before:left-1 before:top-0 before:-translate-x-1/2",

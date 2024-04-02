@@ -51,9 +51,8 @@ export function Experience({
       <div
         className={twMerge(
           "flex flex-col gap-1 p-6 bg-section rounded border border-sky-600",
-          "order-2"
-          // "lg:order-0",
-          // "lg:group-even:order-1"
+          "max-lg:order-2",
+          "lg:group-even:order-2"
         )}
       >
         <h3
@@ -79,9 +78,8 @@ export function Experience({
       <time
         className={twMerge(
           "h-fit text-slate-300 text-left",
-          "order-1"
-          // "lg:order-0",
-          // "lg:group-even:order-2 lg:group-even:text-right"
+          "max-lg:order-1",
+          "lg:group-even:order-1 lg:group-even:text-right"
         )}
       >
         {dateExperience}
