@@ -22,9 +22,10 @@ export default function Home() {
       <Skills />
 
       <Certifications />
-      {/* 
 
       <Experiences />
+      {/* 
+
 
       <Projects />
 
