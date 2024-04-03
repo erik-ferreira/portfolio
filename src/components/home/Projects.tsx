@@ -19,7 +19,13 @@ export function Projects({ className, ...rest }: ProjectsProps) {
     >
       <Title label="Projetos" labelBackground="Projects" />
 
-      <div className="grid grid-cols-3 gap-8">
+      <div
+        className={twMerge(
+          "w-[90%] grid grid-cols-1 gap-4",
+          "md:grid-cols-2",
+          "xl:grid-cols-3 xl:gap-8"
+        )}
+      >
         {someProjects.map((project) => (
           <ProjectShort
             key={project.id}

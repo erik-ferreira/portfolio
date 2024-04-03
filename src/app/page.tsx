@@ -24,10 +24,9 @@ export default function Home() {
       <Certifications />
 
       <Experiences />
-      {/* 
-
 
       <Projects />
+      {/* 
 
       <Hobbies />
 
