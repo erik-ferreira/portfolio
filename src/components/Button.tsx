@@ -21,10 +21,11 @@ const button = tv({
 
     size: {
       default: "text-lg",
+
       large: [
         "text-2xl gap-2 py-2",
         "xs:text-3xl xs:gap-3",
-        "sm:text-3.5xl sm:gap-4",
+        "sm:text-3.5xl xs:leading-normal sm:gap-4",
       ],
     },
   },

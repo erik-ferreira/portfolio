@@ -26,10 +26,9 @@ export default function Home() {
       <Experiences />
 
       <Projects />
-      {/* 
 
       <Hobbies />
-
+      {/* 
       <LetsTalk />
        */}
     </main>
