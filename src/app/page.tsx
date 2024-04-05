@@ -28,9 +28,8 @@ export default function Home() {
       <Projects />
 
       <Hobbies />
-      {/* 
+
       <LetsTalk />
-       */}
     </main>
   )
 }
