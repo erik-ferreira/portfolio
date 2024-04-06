@@ -16,6 +16,12 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+/* to not scroll when open drawer menu */
+body.stop-scroll,
+body.stop-scroll main {
+  overflow: hidden;
+}
+
 /* Skills */
 
 .animate-slider:hover,

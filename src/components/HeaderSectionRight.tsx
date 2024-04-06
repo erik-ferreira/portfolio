@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useEffect, useState } from "react"
 
 import { Icon } from "@/components/Icon"
 import { Navbar } from "@/components/Navbar"
@@ -13,6 +13,8 @@ export function HeaderSectionRight() {
   const [showNavbar, setShowNavbar] = useState(false)
 
   function handleToggleNavbar() {
+    document.body.classList.toggle("stop-scroll", !showNavbar)
+
     setShowNavbar((prevState) => !prevState)
   }
 

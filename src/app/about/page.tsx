@@ -10,14 +10,32 @@ import { Description } from "@/components/Description"
 
 import erikPNG from "@/assets/erik.png"
 
+import { twMerge } from "@/utils/twMerge"
+
 export default function About() {
   return (
-    <main className="max-w-content w-content mx-auto p-8">
+    <main
+      className={twMerge(
+        "max-w-content w-content mx-auto px-0 py-2",
+        "md:p-4",
+        "lg:p-8"
+      )}
+    >
       <Title label="Sobre" labelBackground="About" isTitlePage />
       <Description label="Um pouco sobre mim" />
 
-      <article className="max-w-[932px] mx-auto flex gap-8">
-        <div className="max-w-[350px] w-full flex flex-col items-center gap-4">
+      <article
+        className={twMerge(
+          "max-w-[932px] mx-auto flex flex-col gap-4 items-center",
+          "xl:flex-row xl:gap-8 xl:items-start"
+        )}
+      >
+        <div
+          className={twMerge(
+            "w-full flex flex-col items-center gap-4 border border-red-500",
+            "sm:flex-row"
+          )}
+        >
           <Image
             src={erikPNG}
             width={350}
@@ -26,11 +44,11 @@ export default function About() {
             className="rounded-lg"
           />
 
-          <Divider />
+          {/* <Divider /> */}
 
           <SocialIcons variant="completed" />
 
-          <Divider />
+          {/* <Divider /> */}
 
           <Button variant="outline-gradient" asChild>
             <Link href="/contact">
@@ -40,7 +58,7 @@ export default function About() {
           </Button>
         </div>
 
-        <div className="space-y-5">
+        <div className="space-y-5 border">
           <p className="flex-1">
             Meu nome é Erik de Souza, sou Desenvolvedor Frontend e moro no
             Brasil. Sou fascinado pela stack do Javascript e estou sempre
@@ -49,7 +67,6 @@ export default function About() {
             desenvolvimento web e mobile.
           </p>
 
-          {/*  */}
           <p className="flex-1">
             Minha jornada no desenvolvimento começou enquanto cursava o técnico
             em Informática na EEEP Jaime Alencar de Oliveira, onde tive a
@@ -57,7 +74,7 @@ export default function About() {
             aprimorando habilidades em HTML, CSS e JavaScript, além de trabalhar
             na geração de relatórios dos chamados atendidos pela equipe.
           </p>
-          {/*  */}
+
           <p className="flex-1">
             Após o estagio, trabalhei como Desenvolvedor Frontend na Tecla T,
             onde pude participar de projetos como e-commerce, apps mobile e
@@ -65,7 +82,7 @@ export default function About() {
             APIs, fluxos de carrinho de compra e layout fluido para oferecer uma
             boa experiência para os usuários.
           </p>
-          {/*  */}
+
           <p className="flex-1">
             Participei do programa Ignite pela Rocketseat, onde pude concluir a
             trilha de ReactJS. Ao longo do curso, criei projetos desafiadores
@@ -76,7 +93,7 @@ export default function About() {
             pude ir além da competência técnica, mostrando capacidade de
             enfrentar desafios complexos de forma criativa.
           </p>
-          {/*  */}
+
           <p className="flex-1">
             Meus conhecimentos não se limitam apenas às tecnologias mais
             recentes, como React, Next.js, TailwindCSS e Stitches. Também sou
@@ -84,14 +101,14 @@ export default function About() {
             versionamento de código usando GitFlow, garantindo a qualidade e a
             colaboração eficiente em cada projeto.
           </p>
-          {/*  */}
+
           <p className="flex-1">
             Estou constantemente em busca de novos desafios que me permitam
             continuar aprendendo e crescendo como desenvolvedor. Seja para criar
             interfaces intuitivas ou desenvolver soluções inovadoras, estou
             comprometido em impulsionar a excelência por meio do código.
           </p>
-          {/*  */}
+
           <p className="flex-1">
             Se você está em busca de um desenvolvedor comprometido, apaixonado
             por solucionar problemas e apaixonado por tecnologia, estou pronto
