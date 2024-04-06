@@ -44,11 +44,11 @@ export default function RootLayout({
 
         {children}
 
-        {/* <Footer />
+        <Footer />
 
-        <SocialIcons variant="fixed" className="max-xs:hidden" />
+        <SocialIcons variant="fixed" className="hidden md:flex" />
 
-        <ButtonGoToTop /> */}
+        <ButtonGoToTop />
       </body>
     </html>
   )

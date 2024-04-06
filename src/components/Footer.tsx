@@ -15,8 +15,9 @@ export function Footer({ className, ...rest }: FooterProps) {
     >
       <div
         className={twMerge(
-          "max-w-content w-content mx-auto flex items-center justify-between gap-6 py-4 px-8",
-          "max-[650px]:flex-col max-[650px]:text-center"
+          "max-w-content w-content mx-auto py-4 px-8 text-center",
+          "flex flex-col items-center justify-between gap-6",
+          "min-[700px]:flex-row min-[700px]:text-start"
         )}
       >
         <span className="text-lg font-semibold">
