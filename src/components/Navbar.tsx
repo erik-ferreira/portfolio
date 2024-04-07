@@ -12,9 +12,14 @@ import { twMerge } from "@/utils/twMerge"
 
 interface NavbarProps extends NavigationMenu.NavigationMenuProps {
   classNameContent?: string
+  onCloseNavBar?: () => void
 }
 
-export function Navbar({ classNameContent, ...rest }: NavbarProps) {
+export function Navbar({
+  classNameContent,
+  onCloseNavBar,
+  ...rest
+}: NavbarProps) {
   const pathname = usePathname()
 
   return (
@@ -33,6 +38,7 @@ export function Navbar({ classNameContent, ...rest }: NavbarProps) {
                   hideIcon
                   variant={isLinkSelected ? "selected" : "default"}
                   className="max-[900px]:text-2xl"
+                  onClick={onCloseNavBar}
                 />
               </NavigationMenu.Link>
             </NavigationMenu.Item>

@@ -47,7 +47,10 @@ export function HeaderSectionRight() {
           }
         )}
       >
-        <Navbar classNameContent="max-[900px]:flex-col" />
+        <Navbar
+          classNameContent="max-[900px]:flex-col"
+          onCloseNavBar={handleToggleNavbar}
+        />
 
         <SwitchTheme className="max-[900px]:hidden" />
 
