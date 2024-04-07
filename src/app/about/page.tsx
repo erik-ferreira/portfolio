@@ -32,25 +32,32 @@ export default function About() {
       >
         <div
           className={twMerge(
-            "w-full flex flex-col items-center gap-4 border border-red-500",
-            "sm:flex-row"
+            "max-w-[350px] w-full flex flex-col items-center gap-4",
+            "sm:justify-evenly",
+            "sm:max-xl:max-w-full sm:max-xl:h-72 sm:max-xl:flex-row"
           )}
         >
-          <Image
-            src={erikPNG}
-            width={350}
-            height={350}
-            alt="Imagem de perfil minha, Erik de Souza, na festa de formatura do ensino médio, sorrindo e com um blazer preto."
-            className="rounded-lg"
-          />
+          <div className="max-w-[21.875rem] max-h-[21.875rem] w-full h-full sm:w-72 sm:h-full">
+            <Image
+              src={erikPNG}
+              width={350}
+              height={350}
+              alt="Imagem de perfil minha, Erik de Souza, na festa de formatura do ensino médio, sorrindo e com um blazer preto."
+              className="w-full h-full rounded-lg"
+            />
+          </div>
 
-          {/* <Divider /> */}
+          <Divider className="sm:max-xl:w-0.5 sm:max-xl:h-full" />
 
           <SocialIcons variant="completed" />
 
-          {/* <Divider /> */}
+          <Divider className="sm:max-xl:hidden" />
 
-          <Button variant="outline-gradient" asChild>
+          <Button
+            variant="outline-gradient"
+            asChild
+            classNameContainer="sm:max-xl:hidden"
+          >
             <Link href="/contact">
               Entre em contato
               <Icon size="small" />
@@ -58,7 +65,18 @@ export default function About() {
           </Button>
         </div>
 
-        <div className="space-y-5 border">
+        <Button
+          variant="outline-gradient"
+          asChild
+          classNameContainer="hidden sm:max-xl:block"
+        >
+          <Link href="/contact">
+            Entre em contato
+            <Icon size="small" />
+          </Link>
+        </Button>
+
+        <div className="space-y-5">
           <p className="flex-1">
             Meu nome é Erik de Souza, sou Desenvolvedor Frontend e moro no
             Brasil. Sou fascinado pela stack do Javascript e estou sempre

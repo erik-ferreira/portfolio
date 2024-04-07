@@ -1,8 +1,10 @@
 import { Slot } from "@radix-ui/react-slot"
 import { ButtonHTMLAttributes } from "react"
+import { ClassNameValue } from "tailwind-merge"
 import { tv, VariantProps } from "tailwind-variants"
 
 import { LoadingSpinner } from "@/components/LoadingSpinner"
+import { twMerge } from "@/utils/twMerge"
 
 const button = tv({
   base: "w-fit flex items-center justify-center gap-2 px-4 py-3 rounded transition-colors duration-400 font-bold disabled:opacity-60 disabled:pointer-events-none",
@@ -40,6 +42,7 @@ type ButtonProps = VariantProps<typeof button> &
   ButtonHTMLAttributes<HTMLButtonElement> & {
     asChild?: boolean
     loading?: boolean
+    classNameContainer?: ClassNameValue
   }
 
 export function Button({
@@ -48,6 +51,7 @@ export function Button({
   className,
   asChild = false,
   loading = false,
+  classNameContainer,
   ...rest
 }: ButtonProps) {
   const Component = asChild ? Slot : "button"
@@ -60,7 +64,13 @@ export function Button({
   )
 
   return variant === "outline-gradient" ? (
-    <div className="w-fit p-0.5 rounded bg-gradient-to-r from-blue-500 to-violet-600 to-80%">
+    <div
+      className={twMerge(
+        "w-fit p-0.5 rounded",
+        "bg-gradient-to-r from-blue-500 to-violet-600 to-80%",
+        classNameContainer
+      )}
+    >
       {componentButton}
     </div>
   ) : (
