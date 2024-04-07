@@ -1,12 +1,13 @@
 "use client"
 
-import { useState } from "react"
 import ScrollContainer from "react-indiana-drag-scroll"
 import * as ToggleGroup from "@radix-ui/react-toggle-group"
 
 import { SkillName } from "@/components/SkillName"
 
 import { skillsUsedInProjectsToFilter } from "@/defaults/skills"
+
+import { twMerge } from "@/utils/twMerge"
 
 interface FilterSkillsProps {
   skillSelected: string
@@ -16,11 +17,21 @@ interface FilterSkillsProps {
 export function FilterSkills({
   skillSelected,
   onValueChange,
-  ...rest
 }: FilterSkillsProps) {
   return (
-    <ToggleGroup.Root type="single" onValueChange={onValueChange}>
-      <ScrollContainer className="flex gap-2 mt-4 cursor-grab">
+    <ToggleGroup.Root
+      type="single"
+      onValueChange={onValueChange}
+      className="border"
+    >
+      <ScrollContainer
+        className={twMerge(
+          "h-fit flex flex-wrap gap-2 mt-4 cursor-grab",
+          "border border-red-500"
+          // "sm:flex-nowrap"
+          // sm:h-auto
+        )}
+      >
         {skillsUsedInProjectsToFilter.map((skill) => (
           <ToggleGroup.Item key={skill} value={skill} asChild>
             <SkillName
