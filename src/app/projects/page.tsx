@@ -21,15 +21,15 @@ export default function Projects() {
 
       <ProjectContent />
 
-      {/* <Button variant="outline" className="mx-auto" asChild>
+      <Button variant="outline" className="mx-auto" asChild>
         <Link
           href="https://github.com/erik-ferreira?tab=repositories"
           target="_blank"
         >
-          Visualizar todos os projetos no github
+          Visualizar todos os projetos
           <Icon size="large" />
         </Link>
-      </Button> */}
+      </Button>
     </main>
   )
 }

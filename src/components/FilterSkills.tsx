@@ -22,16 +22,9 @@ export function FilterSkills({
     <ToggleGroup.Root
       type="single"
       onValueChange={onValueChange}
-      className="border"
+      className="mt-4"
     >
-      <ScrollContainer
-        className={twMerge(
-          "h-fit flex flex-wrap gap-2 mt-4 cursor-grab",
-          "border border-red-500"
-          // "sm:flex-nowrap"
-          // sm:h-auto
-        )}
-      >
+      <ScrollContainer className="flex gap-2 cursor-grab">
         {skillsUsedInProjectsToFilter.map((skill) => (
           <ToggleGroup.Item key={skill} value={skill} asChild>
             <SkillName

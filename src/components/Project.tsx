@@ -18,18 +18,44 @@ export function Project({ project, className, ...rest }: ProjectProps) {
   const formatDescription = cutText(project.description, 50)
 
   return (
-    <div className={twMerge("flex gap-12 py-8", className)} {...rest}>
-      <Image
-        src={project.src}
-        alt={project.altSrc}
-        width={500}
-        height={333}
-        className="min-w-[500px] h-[333px] my-auto object-contain"
-      />
+    <div
+      className={twMerge(
+        "flex flex-col gap-8 py-8",
+        "lg:flex-row",
+        "xl:gap-12",
+        className
+      )}
+      {...rest}
+    >
+      <div
+        className={twMerge(
+          "w-full",
+          "lg:my-auto lg:min-w-[350px]",
+          "xl:min-w-max  xl:max-w-[500px]"
+        )}
+      >
+        <Image
+          src={project.src}
+          alt={project.altSrc}
+          width={1000}
+          height={666}
+          className="w-full h-full object-contain"
+        />
+      </div>
 
-      <div className="flex flex-col justify-between">
+      <div
+        className={twMerge("flex flex-col gap-4 justify-between", "lg:gap-0")}
+      >
         <div className="flex items-center justify-between">
-          <h3 className="text-4.75xl font-bold">{project.title}</h3>
+          <h3
+            className={twMerge(
+              "text-3xl font-bold",
+              "md:text-4xl",
+              "lg:text-4.75xl"
+            )}
+          >
+            {project.title}
+          </h3>
 
           <div className="flex items-center gap-2">
             <NextLink href={project.githubHref} target="_blank">
