@@ -15,6 +15,7 @@ import { Textarea } from "@/components/Textarea"
 import { SocialCard } from "@/components/SocialCard"
 
 import { contactFormSchema, ContactFormData } from "@/schemas/contactSchema"
+
 import { twMerge } from "@/utils/twMerge"
 
 export function ContactForm() {
@@ -47,17 +48,26 @@ export function ContactForm() {
   return (
     <ToastPrimitive.Provider swipeDirection="right">
       <form
-        // className="w-[45rem] grid grid-cols-2 gap-8"
-        className={twMerge("w-full grid grid-cols-1 gap-4", "md:grid-cols-2")}
+        className={twMerge(
+          "w-full grid grid-cols-1 gap-4",
+          "md:w-[45rem] md:grid-cols-2 md:gap-6"
+        )}
         onSubmit={handleSubmit(handleContact)}
       >
-        {/* <SocialCard className="ml-auto" />
-        <SocialCard variant="mail" /> */}
+        <div
+          className={twMerge(
+            "flex flex-col gap-4",
+            "sm:flex-row sm:justify-center",
+            "md:col-span-2 md:gap-6"
+          )}
+        >
+          <SocialCard className="" />
+          <SocialCard variant="mail" />
+        </div>
 
         <Input
           placeholder="Nome"
           classNameContainer="max-md:max-w-full md:col-span-1"
-          // classNameContainer="col-span-1"
           {...register("name")}
           error={errors?.name?.message}
         />
@@ -65,7 +75,6 @@ export function ContactForm() {
           placeholder="Email"
           nameIcon="Mail"
           classNameContainer="max-md:max-w-full md:col-span-1"
-          // classNameContainer="col-span-1"
           {...register("email")}
           error={errors?.email?.message}
         />
@@ -73,21 +82,20 @@ export function ContactForm() {
         <Textarea
           placeholder="Mensagem"
           classNameContainer="max-w-full md:col-span-2"
-          // classNameContainer="col-span-2"
           {...register("message")}
           error={errors?.message?.message}
         />
 
-        {/* <Button
+        <Button
           type="submit"
           variant="outline"
-          className="col-span-2 mx-auto"
+          className="mx-auto md:col-span-2"
           disabled={loadingContact}
           loading={loadingContact}
         >
           Enviar
           <Icon name="Send" />
-        </Button> */}
+        </Button>
       </form>
 
       <Toast

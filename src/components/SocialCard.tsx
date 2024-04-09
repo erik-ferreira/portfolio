@@ -5,6 +5,8 @@ import { tv, VariantProps } from "tailwind-variants"
 import { Icon } from "@/components/Icon"
 import { IconSvgExternal } from "@/components/IconSvgExternal"
 
+import { twMerge } from "@/utils/twMerge"
+
 export const socialCardsDefaults = {
   whatsapp: {
     Icon: (
@@ -28,7 +30,11 @@ export const socialCardsDefaults = {
 
 const socialCard = tv({
   slots: {
-    base: "bg-section px-6 py-3 flex flex-col gap-2 w-fit rounded-lg",
+    base: twMerge(
+      "w-full bg-section px-6 py-3 rounded-lg",
+      "flex flex-col gap-2",
+      "sm:w-72"
+    ),
     link: "text-slate-500 text-xl transition-colors",
   },
 
@@ -61,7 +67,7 @@ export function SocialCard({
 
   return (
     <div className={base({ className })} {...rest}>
-      <div className="flex items-center gap-2 text-3xl font-bold">
+      <div className="flex items-center gap-2 text-2xl font-bold md:text-3xl">
         {card.Icon}
         {card.label}
       </div>

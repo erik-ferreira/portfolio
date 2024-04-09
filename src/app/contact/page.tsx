@@ -9,7 +9,6 @@ export default function Contact() {
     <main
       className={twMerge(
         "max-w-content w-content mx-auto px-0 py-2",
-        "border border-blue-500",
         "md:p-4",
         "lg:p-8"
       )}
@@ -20,8 +19,7 @@ export default function Contact() {
         className="mt-6"
       />
 
-      {/* <article className="flex flex-col items-center"> */}
-      <article className="flex flex-col items-center border border-blue-500">
+      <article className="flex flex-col items-center">
         <ContactForm />
       </article>
     </main>
