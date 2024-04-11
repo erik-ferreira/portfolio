@@ -2,8 +2,6 @@
 
 import { pdfjs, Document, Page, DocumentProps } from "react-pdf"
 
-import { twMerge } from "@/utils/twMerge"
-
 pdfjs.GlobalWorkerOptions.workerSrc = new URL(
   "pdfjs-dist/build/pdf.worker.min.js",
   import.meta.url
@@ -18,12 +16,12 @@ export function Curriculum({ className, ...rest }: CurriculumProps) {
   return (
     <Document
       file="/erik.pdf"
-      className={twMerge("flex flex-col items-center gap-6", className)}
+      className="flex flex-col items-center gap-6"
       loading="Carregando..."
       {...rest}
     >
-      <Page pageNumber={1} scale={1.6} />
-      <Page pageNumber={2} scale={1.6} />
+      <Page pageNumber={1} scale={1.6} className="page-curriculum" />
+      <Page pageNumber={2} scale={1.6} className="page-curriculum" />
     </Document>
   )
 }
