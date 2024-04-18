@@ -15,7 +15,7 @@ export function SwiperNavButtons({ ...rest }: SwiperNavButtonsProps) {
       >
         <IconSvgExternal
           type="CaretLeft"
-          className="fill-slate-700"
+          className="fill-slate-400"
           enabledHover={false}
         />
       </button>
@@ -25,7 +25,7 @@ export function SwiperNavButtons({ ...rest }: SwiperNavButtonsProps) {
       >
         <IconSvgExternal
           type="CaretRight"
-          className="fill-slate-700"
+          className="fill-slate-400"
           enabledHover={false}
         />
       </button>
