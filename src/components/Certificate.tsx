@@ -25,8 +25,10 @@ export function Certificate({
   return (
     <div
       className={twMerge(
-        // "max-w-[720px] h-fit flex gap-6 p-8 border border-slate-500 rounded",
         "max-w-[580px] mx-auto h-full flex flex-col gap-2 p-2 border border-slate-500 rounded",
+        "lg:p-4",
+        "xl:max-w-[520px] xl:p-8 xl:gap-6",
+        "2xl:max-w-[720px] 2xl:flex-row",
         {
           "relative after:absolute after:top-0 after:left-0 after:right-0 after:h-full after:rounded after:from-black after:to-[rgba(8, 2, 5, 0.00)]":
             isPrev || isNext,
@@ -42,18 +44,12 @@ export function Certificate({
       {...rest}
     >
       <div>
-        <div
-          className={twMerge(
-            "bg-section px-3 py-4 rounded mb-4"
-            // "xs:w-[270px] xs:mx-auto"
-          )}
-        >
+        <div className={twMerge("bg-section px-3 py-4 rounded mb-4")}>
           <Image
             src={certificate.srcCompany}
             width={180}
             height={34}
             alt={certificate.altSrcCompany}
-            // className="bg-section px-3 py-4 rounded mb-4"
             className={twMerge(
               "w-4/5 h-full object-contain mx-auto",
               "xs:max-w-[16.625rem] xs:w-full"
@@ -61,7 +57,13 @@ export function Certificate({
           />
         </div>
 
-        <div className={twMerge("flex justify-evenly", "md:flex-col")}>
+        <div
+          className={twMerge(
+            "flex justify-evenly",
+            "md:flex-col md:items-center",
+            "lg:items-start"
+          )}
+        >
           <time className="text-lg font-semibold text-slate-600">
             {formattedDate}
           </time>
@@ -77,15 +79,23 @@ export function Certificate({
       </div>
 
       <div>
-        {/* <h3 className="text-3.5xl font-bold text-sky-500"> */}
-        <h3 className="text-3xl font-bold text-sky-500 text-center">
+        <h3
+          className={twMerge(
+            "text-3xl font-bold text-sky-500 text-center",
+            "lg:text-start"
+          )}
+        >
           {certificate.name}
         </h3>
-        {/* <p className="text-2xl font-bold text-violet-300"> */}
-        <p className="text-2xl font-bold text-violet-300 text-center">
+        <p
+          className={twMerge(
+            "text-2xl font-bold text-violet-300 text-center",
+            "lg:text-start"
+          )}
+        >
           {certificate.company}
         </p>
-        <span className="font-semibold text-slate-300 text-justify">
+        <span className="font-semibold text-slate-300">
           {certificate.description}
         </span>
       </div>

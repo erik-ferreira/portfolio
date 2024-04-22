@@ -8,8 +8,10 @@ import { Swiper, SwiperSlide, SwiperClass } from "swiper/react"
 import { Certificate } from "@/components/Certificate"
 import { SwiperNavButtons } from "@/components/SwiperNavButtons"
 
-import { twMerge } from "@/utils/twMerge"
+import { breakpoints } from "@/defaults/swiper"
 import { certificates } from "@/defaults/certificates"
+
+import { twMerge } from "@/utils/twMerge"
 
 import "swiper/css"
 import "swiper/css/navigation"
@@ -26,21 +28,17 @@ export function SwiperCertification({
 
   return (
     <article
-      // className={twMerge("flex items-center gap-8", className)}
       className={twMerge(
         "flex flex-col items-center gap-8",
-        "lg:flex-row",
-        // "border border-red-500",
+        "xl:flex-row",
         className
       )}
       {...rest}
     >
       <Swiper
-        // className="w-[500px] h-[345px]"
         className={twMerge(
           "w-full",
           "min-[500px]:w-[31.25rem] min-[500px]:h-[21.5rem]"
-          // "border border-red-500"
         )}
         modules={[Navigation, Controller]}
         controller={{ control: controlledSwiper }}
@@ -62,20 +60,13 @@ export function SwiperCertification({
       </Swiper>
 
       <Swiper
-        // className="h-[1006px] border border-red-500"
-        className={twMerge(
-          "w-full"
-          // "border border-red-500"
-        )}
-        // direction="vertical"
-        direction="horizontal"
+        className={twMerge("w-full", "xl:w-fit xl:h-[500px]", "2xl:h-[1006px]")}
         spaceBetween={32}
-        // slidesPerView={3}
-        slidesPerView={1}
         centeredSlides
         enabled={false}
         modules={[Controller]}
         onSwiper={setControlledSwiper}
+        breakpoints={breakpoints}
       >
         {certificates.map((certificate) => (
           <SwiperSlide key={certificate.id}>
