@@ -31,7 +31,7 @@ export function Project({ project, className, ...rest }: ProjectProps) {
         className={twMerge(
           "w-full",
           "lg:my-auto lg:min-w-[350px]",
-          "xl:min-w-max  xl:max-w-[500px]"
+          "xl:max-w-[500px] xl:max-h-[333px] xl:h-full"
         )}
       >
         <Image
