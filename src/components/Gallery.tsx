@@ -87,12 +87,15 @@ export function Gallery({
           )}
         >
           {gallery.variant === "image" ? (
-            <Image
-              src={gallery.src}
-              alt={gallery?.altSrc}
-              width={gallery.direction === "horizontal" ? 900 : 550}
-              height={600}
-            />
+            <div className="w-full border border-red-500">
+              <Image
+                src={gallery.src}
+                alt={gallery?.altSrc}
+                width={gallery.direction === "horizontal" ? 900 : 550}
+                height={600}
+                className="w-full h-full object-contain"
+              />
+            </div>
           ) : (
             <ReactPlayer
               url={gallery.src}

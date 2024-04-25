@@ -13,6 +13,8 @@ import { Description } from "@/components/Description"
 
 import { projects } from "@/defaults/projects"
 
+import { twMerge } from "@/utils/twMerge"
+
 type ParamsProps = {
   slug: string
 }
@@ -27,14 +29,26 @@ export default function Project() {
 
   return (
     <main>
-      <section className="max-w-content w-content mx-auto p-8">
+      <section
+        className={twMerge(
+          "max-w-content w-content mx-auto px-0 py-2",
+          "border border-red-500",
+          "md:p-4",
+          "lg:p-8"
+        )}
+      >
         <Title
           label={project.title}
           labelBackground={project.title}
           isTitlePage
         />
 
-        <div className="w-fit mx-auto flex gap-6 my-4">
+        <div
+          className={twMerge(
+            "w-fit mx-auto flex gap-6 my-4",
+            "border border-red-500"
+          )}
+        >
           {projectHasDemo ? (
             <Button variant="outline" asChild>
               <Link href={project.demoHref || ""}>
@@ -85,7 +99,7 @@ export default function Project() {
         </div>
       </section>
 
-      <Title
+      {/* <Title
         label="Video"
         labelBackground="Video"
         variant="subtitle"
@@ -94,7 +108,7 @@ export default function Project() {
       <Video
         srcBackground={project.srcBackground}
         srcVideo={project.srcVideo}
-      />
+      /> */}
     </main>
   )
 }
