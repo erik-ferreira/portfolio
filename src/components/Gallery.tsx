@@ -38,15 +38,17 @@ export function Gallery({
           {...rest}
         >
           {gallery.variant === "image" ? (
-            <Image
-              src={gallery.src}
-              width={350}
-              height={230}
-              alt={gallery?.altSrc}
-              className={twMerge("w-[360px] h-[230px] object-cover", {
-                "object-[50%_20%]": gallery.direction === "vertical",
-              })}
-            />
+            <div className="max-w-[360px] w-full aspect-video 2xl:h-[230px]">
+              <Image
+                src={gallery.src}
+                width={350}
+                height={230}
+                alt={gallery?.altSrc}
+                className={twMerge("w-full h-full object-cover", {
+                  "object-[50%_20%]": gallery.direction === "vertical",
+                })}
+              />
+            </div>
           ) : (
             <video
               src={gallery.src}
