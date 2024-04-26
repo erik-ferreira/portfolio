@@ -75,7 +75,7 @@ export default function Project() {
 
         <Title
           label="Tecnologias"
-          labelBackground="Technologies"
+          labelBackground="Techs"
           variant="subtitle"
           className="mt-8"
         />
@@ -99,16 +99,17 @@ export default function Project() {
         </div>
       </section>
 
-      {/* <Title
+      <Title
         label="Video"
         labelBackground="Video"
         variant="subtitle"
         className="px-8"
       />
+
       <Video
         srcBackground={project.srcBackground}
         srcVideo={project.srcVideo}
-      /> */}
+      />
     </main>
   )
 }

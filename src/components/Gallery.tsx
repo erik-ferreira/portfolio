@@ -77,7 +77,9 @@ export function Gallery({
             "aspect-video fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2",
             "data-[state=open]:animate-show-dialog data-[state=closed]:animate-hide-dialog",
             {
-              "w-fit": gallery.variant === "image",
+              "w-[95%] xs:w-4/5 lg:w-[56.25rem] lg:h-[37.5rem]":
+                gallery.variant === "image",
+
               "w-[900px]":
                 gallery.variant === "video" &&
                 gallery.direction === "horizontal",
@@ -87,15 +89,13 @@ export function Gallery({
           )}
         >
           {gallery.variant === "image" ? (
-            <div className="w-full border border-red-500">
-              <Image
-                src={gallery.src}
-                alt={gallery?.altSrc}
-                width={gallery.direction === "horizontal" ? 900 : 550}
-                height={600}
-                className="w-full h-full object-contain"
-              />
-            </div>
+            <Image
+              src={gallery.src}
+              alt={gallery?.altSrc}
+              width={gallery.direction === "horizontal" ? 900 : 550}
+              height={600}
+              className="w-full h-full object-cover"
+            />
           ) : (
             <ReactPlayer
               url={gallery.src}
