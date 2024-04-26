@@ -91,7 +91,8 @@ export function Gallery({
               "w-[900px]":
                 gallery.variant === "video" &&
                 gallery.direction === "horizontal",
-              "w-[1200px]":
+
+              "w-[92%] sm:w-[90%] xl:w-[1100px]":
                 gallery.variant === "video" && gallery.direction === "vertical",
             }
           )}
