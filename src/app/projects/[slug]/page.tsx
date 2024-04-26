@@ -32,7 +32,6 @@ export default function Project() {
       <section
         className={twMerge(
           "max-w-content w-content mx-auto px-0 py-2",
-          "border border-red-500",
           "md:p-4",
           "lg:p-8"
         )}
@@ -43,12 +42,7 @@ export default function Project() {
           isTitlePage
         />
 
-        <div
-          className={twMerge(
-            "w-fit mx-auto flex gap-6 my-4",
-            "border border-red-500"
-          )}
-        >
+        <div className={twMerge("w-fit mx-auto flex gap-6 my-4")}>
           {projectHasDemo ? (
             <Button variant="outline" asChild>
               <Link href={project.demoHref || ""}>

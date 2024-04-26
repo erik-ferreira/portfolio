@@ -32,10 +32,17 @@ export function Video({
         width={1870}
         height={962}
         alt="NBA"
-        className="max-w-[1870px] mx-auto aspect-video opacity-60"
+        className="max-w-[1870px] w-full mx-auto aspect-video opacity-60"
       />
 
-      <div className="aspect-video w-[1200px] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+      <div
+        className={twMerge(
+          "aspect-video max-w-[1200px] w-4/5",
+          "absolute top-1/2 left-1/2",
+          "-translate-x-1/2 -translate-y-1/2",
+          "xl:w-full"
+        )}
+      >
         {hasWindow && (
           <ReactPlayer url={srcVideo} width="100%" height="100%" controls />
         )}
