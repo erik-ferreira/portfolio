@@ -43,8 +43,7 @@ export default function Hobby() {
           "grid grid-cols-1 gap-4",
           "sm:grid-cols-2",
           "lg:grid-cols-3",
-          "xl:grid-cols-4 xl:gap-8",
-          "border border-red-500"
+          "xl:grid-cols-4 xl:gap-8"
         )}
       >
         {hobby.gallery.map((gallery) => (

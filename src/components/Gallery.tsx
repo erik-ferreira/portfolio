@@ -32,23 +32,25 @@ export function Gallery({
       <Dialog.Trigger asChild>
         <button
           className={twMerge(
+            "w-full aspect-video",
             "relative rounded-lg overflow-auto transition-all duration-300",
-            "hover:shadow-blue hover:scale-105"
+            "hover:shadow-blue hover:scale-105",
+
+            "md:max-w-[360px]",
+            "2xl:h-[230px]"
           )}
           {...rest}
         >
           {gallery.variant === "image" ? (
-            <div className="max-w-[360px] w-full aspect-video 2xl:h-[230px]">
-              <Image
-                src={gallery.src}
-                width={350}
-                height={230}
-                alt={gallery?.altSrc}
-                className={twMerge("w-full h-full object-cover", {
-                  "object-[50%_20%]": gallery.direction === "vertical",
-                })}
-              />
-            </div>
+            <Image
+              src={gallery.src}
+              width={350}
+              height={230}
+              alt={gallery?.altSrc}
+              className={twMerge("w-full h-full object-cover", {
+                "object-[50%_20%]": gallery.direction === "vertical",
+              })}
+            />
           ) : (
             <video
               src={gallery.src}
@@ -79,8 +81,12 @@ export function Gallery({
             "aspect-video fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2",
             "data-[state=open]:animate-show-dialog data-[state=closed]:animate-hide-dialog",
             {
-              "w-[95%] xs:w-4/5 lg:w-[56.25rem] lg:h-[37.5rem]":
-                gallery.variant === "image",
+              "w-[92%] xs:w-4/5 lg:w-[56.25rem] lg:h-[37.5rem]":
+                gallery.variant === "image" &&
+                gallery.direction === "horizontal",
+
+              "w-[92%] h-[500px] sm:max-w-[550px] sm:w-full sm:max-h-[600px] sm:h-full":
+                gallery.variant === "image" && gallery.direction === "vertical",
 
               "w-[900px]":
                 gallery.variant === "video" &&
