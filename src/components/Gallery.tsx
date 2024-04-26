@@ -81,7 +81,7 @@ export function Gallery({
             "aspect-video fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2",
             "data-[state=open]:animate-show-dialog data-[state=closed]:animate-hide-dialog",
             {
-              "w-[92%] xs:w-4/5 lg:w-[56.25rem] lg:h-[37.5rem]":
+              "w-[92%] border xs:w-4/5 lg:w-[56.25rem] lg:h-[37.5rem]":
                 gallery.variant === "image" &&
                 gallery.direction === "horizontal",
 
@@ -102,7 +102,10 @@ export function Gallery({
               alt={gallery?.altSrc}
               width={gallery.direction === "horizontal" ? 900 : 550}
               height={600}
-              className="w-full h-full object-cover"
+              className={twMerge("w-full h-full object-contain", {
+                "object-cover": gallery.direction === "horizontal",
+                "object-contain": gallery.direction === "vertical",
+              })}
             />
           ) : (
             <ReactPlayer
