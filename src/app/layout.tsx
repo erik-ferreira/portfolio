@@ -39,7 +39,7 @@ export default function RootLayout({
       lang="pt-BR"
       className={`${nunitoSans.variable} ${orbitron.variable} ${permanentMarker.variable}`}
     >
-      <body className="bg-page text-slate-200 relative border border-red-500">
+      <body className="bg-page text-slate-200 relative">
         <Header />
 
         {children}

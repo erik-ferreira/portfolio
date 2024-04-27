@@ -13,6 +13,9 @@ export function HeaderSectionRight() {
   const [showNavbar, setShowNavbar] = useState(false)
 
   function handleToggleNavbar() {
+    const screenWidth = window.innerWidth
+    if (screenWidth > 900) return
+
     document.body.classList.toggle("stop-scroll", !showNavbar)
 
     setShowNavbar((prevState) => !prevState)
