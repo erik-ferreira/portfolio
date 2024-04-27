@@ -1,4 +1,5 @@
 import type { Metadata } from "next"
+import NextTopLoader from "nextjs-toploader"
 import { Nunito_Sans, Orbitron, Permanent_Marker } from "next/font/google"
 
 import { Header } from "@/components/Header"
@@ -40,6 +41,14 @@ export default function RootLayout({
       className={`${nunitoSans.variable} ${orbitron.variable} ${permanentMarker.variable}`}
     >
       <body className="bg-page text-slate-200 relative">
+        <NextTopLoader
+          color="#3b82f6"
+          showSpinner={false}
+          height={3}
+          initialPosition={0.3}
+          speed={300}
+        />
+
         <Header />
 
         {children}
