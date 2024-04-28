@@ -1,7 +1,8 @@
 "use client"
 
-import { useState } from "react"
+import { useEffect, useMemo, useState } from "react"
 import * as Switch from "@radix-ui/react-switch"
+import { useTheme } from "next-themes"
 
 import { Icon } from "@/components/Icon"
 
@@ -10,12 +11,22 @@ import { twMerge } from "@/utils/twMerge"
 interface SwitchThemeProps extends Switch.SwitchProps {}
 
 export function SwitchTheme({ className, ...rest }: SwitchThemeProps) {
-  const [theme, setTheme] = useState<"dark" | "light">("dark")
-  const checked = theme === "light"
+  const { theme, setTheme } = useTheme()
+
+  const [checked, setChecked] = useState(false)
 
   function handleCheckedChange() {
-    setTheme((prevState) => (prevState === "dark" ? "light" : "dark"))
+    setTheme(theme === "dark" ? "light" : "dark")
   }
+
+  useEffect(() => {
+    const isSameValueChecked = (theme === "light") === checked
+
+    if (isSameValueChecked) return
+
+    setChecked(theme === "light")
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [theme])
 
   return (
     <Switch.Root
