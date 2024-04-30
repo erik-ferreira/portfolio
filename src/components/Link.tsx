@@ -17,7 +17,7 @@ const link = tv({
   variants: {
     variant: {
       default: {
-        base: "text-slate-200",
+        base: "text-slate-900 dark:text-slate-200",
       },
       selected: {
         base: "text-blue-500",

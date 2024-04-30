@@ -13,7 +13,11 @@ interface HeaderProps extends ComponentProps<"header"> {}
 export function Header({ className, ...rest }: HeaderProps) {
   return (
     <header
-      className={twMerge("sticky top-0 bg-page z-20", className)}
+      className={twMerge(
+        "sticky top-0 z-20 border-b border-b-slate-400",
+        "dark:border-b-0",
+        className
+      )}
       {...rest}
     >
       <div

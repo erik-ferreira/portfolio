@@ -9,6 +9,8 @@ import { ButtonGoToTop } from "@/components/ButtonGoToTop"
 
 import { ThemeProvider } from "@/providers/ThemeProvider"
 
+import { twMerge } from "@/utils/twMerge"
+
 import "./globals.css"
 
 const nunitoSans = Nunito_Sans({
@@ -42,7 +44,12 @@ export default function RootLayout({
       lang="pt-BR"
       className={`${nunitoSans.variable} ${orbitron.variable} ${permanentMarker.variable}`}
     >
-      <body className="bg-page text-slate-200 relative">
+      <body
+        className={twMerge(
+          "bg-slate-100 text-slate-200 relative",
+          "dark:bg-page"
+        )}
+      >
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <NextTopLoader
             color="#3b82f6"
