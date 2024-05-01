@@ -12,7 +12,7 @@ const icon = tv({
     },
 
     isSelected: {
-      true: "text-blue-600",
+      true: "text-slate-300 dark:text-blue-600",
     },
 
     enabledHover: {

@@ -31,7 +31,7 @@ export function SwitchTheme({ className, ...rest }: SwitchThemeProps) {
   return (
     <Switch.Root
       className={twMerge(
-        "w-16 h-7 bg-section rounded-full relative",
+        "w-16 h-7 bg-slate-400 dark:bg-section rounded-full relative",
         className
       )}
       checked={checked}
@@ -52,7 +52,7 @@ export function SwitchTheme({ className, ...rest }: SwitchThemeProps) {
 
       <Switch.Thumb
         className={twMerge(
-          "block w-6 h-6 rounded-full bg-slate-700",
+          "block w-6 h-6 rounded-full bg-slate-300 dark:bg-slate-700",
           "transition-transform translate-x-1 data-[state=checked]:translate-x-[36px] duration-100"
         )}
       />
