@@ -11,7 +11,7 @@ export const allSkills: SkillDefault[] = [
   {
     name: "Next",
     src: "/skills/next.svg",
-    color: "#F5F5F5",
+    color: "#94a3b8",
   },
   {
     name: "Typescript",
@@ -66,7 +66,7 @@ export const allSkills: SkillDefault[] = [
   {
     name: "Radix",
     src: "/skills/radix.svg",
-    color: "#E2E8F0",
+    color: "#94a3b8",
   },
   {
     name: "API Rest",

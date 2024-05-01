@@ -5,8 +5,9 @@ const title = tv({
   slots: {
     base: "relative",
     background: [
-      "block font-orbi font-semibold text-slate-800 uppercase blur-[1.5px] text-center mb-6",
+      "block font-orbi font-semibold uppercase blur-[1.5px] text-center mb-6",
       "md:blur-[2px] md:mb-0",
+      "text-slate-300 dark:text-slate-800",
     ],
     text: "font-marker w-max text-transparent bg-clip-text bg-gradient-to-b from-blue-500 to-violet-600 absolute top-2/4 left-2/4 -translate-x-2/4 -translate-y-2/4",
   },

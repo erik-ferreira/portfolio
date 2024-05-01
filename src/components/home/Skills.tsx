@@ -27,12 +27,16 @@ export function Skills({ className, ...rest }: SkillsProps) {
           // before styles
           "before:content-normal before:w-[100px] before:h-full before:absolute before:top-0 before:left-0 before:z-[2]",
 
-          "before:bg-gradient-to-r before:from-page before:from-0% before:to-transparent before:to-100%",
+          "before:from-slate-100 dark:before:from-page",
+
+          "before:bg-gradient-to-r before:from-0% before:to-transparent before:to-100%",
 
           // after styles
           "after:content-normal after:w-[100px] after:h-full after:absolute after:top-0 after:right-0 after:rotate-180 after:z-[2]",
 
-          "after:bg-gradient-to-r after:from-page after:from-0% after:to-transparent after:to-100%"
+          "after:from-slate-100 dark:after:from-page",
+
+          "after:bg-gradient-to-r after:from-0% after:to-transparent after:to-100%"
         )}
       >
         <div
