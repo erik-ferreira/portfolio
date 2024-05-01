@@ -14,6 +14,8 @@ export function SwitchTheme({ className, ...rest }: SwitchThemeProps) {
   const { theme, setTheme } = useTheme()
 
   const [checked, setChecked] = useState(false)
+  const isDarkTheme = theme === "dark"
+  const isLightTheme = theme === "light"
 
   function handleCheckedChange() {
     setTheme(theme === "dark" ? "light" : "dark")
@@ -30,7 +32,11 @@ export function SwitchTheme({ className, ...rest }: SwitchThemeProps) {
 
   return (
     <div className="flex items-center gap-1">
-      <Icon name="MoonStar" isSelected={theme === "dark"} className="w-5 h-5" />
+      <Icon
+        name="MoonStar"
+        isSelected={isDarkTheme}
+        className={`w-5 h-5 ${isLightTheme && "text-slate-400"}`}
+      />
 
       <Switch.Root
         className={twMerge(
@@ -50,7 +56,7 @@ export function SwitchTheme({ className, ...rest }: SwitchThemeProps) {
         />
       </Switch.Root>
 
-      <Icon name="Sun" isSelected={theme === "light"} className="w-5 h-5" />
+      <Icon name="Sun" isSelected={isLightTheme} className="w-5 h-5" />
     </div>
   )
 }

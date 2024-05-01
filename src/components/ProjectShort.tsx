@@ -41,7 +41,7 @@ export function ProjectShort({ project, ...rest }: ProjectShortProps) {
 
         <p
           className={twMerge(
-            "text-base font-semibold mt-0.5 mb-4",
+            "text-base text-slate-200 font-semibold mt-0.5 mb-4",
             "md:text-sm"
           )}
         >

@@ -27,7 +27,8 @@ export function LetsTalk({ className, ...rest }: LetsTalkProps) {
         <article className={twMerge("max-w-lg space-y-3", "md:space-y-4")}>
           <h2
             className={twMerge(
-              "text-3xl font-bold text-blue-500",
+              "text-3xl font-bold",
+              "text-blue-600 dark:text-blue-500",
               "md:text-4.5xl"
             )}
           >

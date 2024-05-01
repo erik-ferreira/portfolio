@@ -18,7 +18,11 @@ const button = tv({
         "hover:bg-blue-500 hover:text-page",
         "data-[loading=true]:w-32",
       ],
-      "outline-gradient": "bg-page hover:bg-transparent",
+      "outline-gradient": [
+        "bg-slate-100",
+        "hover:text-slate-200 hover:bg-transparent",
+        "dark:bg-page dark:hover:bg-transparent",
+      ],
     },
 
     size: {

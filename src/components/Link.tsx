@@ -24,7 +24,7 @@ const link = tv({
         base: "text-blue-500",
       },
       secondary: {
-        base: "text-violet-500 hover:text-violet-400 before:bg-violet-500",
+        base: "dark:text-violet-500 dark:hover:text-violet-400 dark:before:bg-violet-500",
       },
     },
 
