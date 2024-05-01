@@ -46,8 +46,8 @@ export default function RootLayout({
     >
       <body
         className={twMerge(
-          "bg-slate-100 text-slate-200 relative",
-          "dark:bg-page"
+          "bg-slate-100 text-slate-900 relative",
+          "dark:bg-page dark:text-slate-200"
         )}
       >
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
