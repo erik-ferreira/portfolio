@@ -1,16 +1,22 @@
 "use client"
 
-import { useEffect, useMemo, useState } from "react"
-import * as Switch from "@radix-ui/react-switch"
 import { useTheme } from "next-themes"
+import * as Switch from "@radix-ui/react-switch"
+import { ComponentProps, useEffect, useState } from "react"
 
 import { Icon } from "@/components/Icon"
 
 import { twMerge } from "@/utils/twMerge"
 
-interface SwitchThemeProps extends Switch.SwitchProps {}
+interface SwitchThemeProps extends ComponentProps<"div"> {
+  switchProps?: Switch.SwitchProps
+}
 
-export function SwitchTheme({ className, ...rest }: SwitchThemeProps) {
+export function SwitchTheme({
+  className,
+  switchProps,
+  ...rest
+}: SwitchThemeProps) {
   const { theme, setTheme } = useTheme()
 
   const [checked, setChecked] = useState(false)
@@ -31,7 +37,7 @@ export function SwitchTheme({ className, ...rest }: SwitchThemeProps) {
   }, [theme])
 
   return (
-    <div className="flex items-center gap-1">
+    <div className={twMerge("flex items-center gap-1", className)} {...rest}>
       <Icon
         name="MoonStar"
         isSelected={isDarkTheme}
@@ -42,11 +48,11 @@ export function SwitchTheme({ className, ...rest }: SwitchThemeProps) {
         className={twMerge(
           "w-16 h-7.5 bg-slate-400 rounded-full relative",
           "dark:bg-section",
-          className
+          switchProps?.className
         )}
         checked={checked}
         onCheckedChange={handleCheckedChange}
-        {...rest}
+        {...switchProps}
       >
         <Switch.Thumb
           className={twMerge(

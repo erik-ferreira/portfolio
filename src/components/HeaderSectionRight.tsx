@@ -32,7 +32,7 @@ export function HeaderSectionRight() {
         <SwitchTheme />
 
         <button type="button" onClick={handleToggleNavbar}>
-          <Icon name={showNavbar ? "X" : "Menu"} className="w-7 h-7" />
+          <Icon name={showNavbar ? "X" : "Menu"} className="w-7 h-7 z-50" />
         </button>
       </div>
 
@@ -40,10 +40,12 @@ export function HeaderSectionRight() {
         className={twMerge(
           "flex items-center gap-8",
           "max-[900px]:w-screen max-[900px]:h-screen max-[900px]:z-10",
-          "max-[900px]:bg-page max-[900px]:opacity-85",
           "max-[900px]:fixed max-[900px]:left-0 max-[900px]:bottom-0",
           "max-[900px]:transition-transform max-[900px]:duration-500 max-[900px]:ease-in-out",
           "max-[900px]:flex-col max-[900px]:justify-center",
+
+          "max-[900px]:bg-slate-100 max-[900px]:opacity-90",
+          "dark:max-[900px]:bg-page dark:max-[900px]:opacity-85",
           {
             "max-[900px]:translate-x-0": showNavbar,
             "max-[900px]:translate-x-full": !showNavbar,
