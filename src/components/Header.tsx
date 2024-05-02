@@ -15,7 +15,7 @@ export function Header({ className, ...rest }: HeaderProps) {
     <header
       className={twMerge(
         "sticky top-0 z-20 border-b border-b-slate-300 bg-slate-100 shadow-lg",
-        "dark:border-b-0 dark:bg-page",
+        "dark:border-b-0 dark:bg-page dark:shadow-none",
         className
       )}
       {...rest}
