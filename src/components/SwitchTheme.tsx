@@ -17,30 +17,23 @@ export function SwitchTheme({
   switchProps,
   ...rest
 }: SwitchThemeProps) {
-  const { theme, setTheme } = useTheme()
+  const { setTheme, resolvedTheme } = useTheme()
 
-  const [checked, setChecked] = useState(false)
-  const isDarkTheme = theme === "dark"
-  const isLightTheme = theme === "light"
+  const [isLightTheme, setIsLightTheme] = useState(false)
 
-  function handleCheckedChange() {
-    setTheme(theme === "dark" ? "light" : "dark")
+  function handleCheckedChange(checked: boolean) {
+    setTheme(checked ? "light" : "dark")
   }
 
   useEffect(() => {
-    const isSameValueChecked = (theme === "light") === checked
-
-    if (isSameValueChecked) return
-
-    setChecked(theme === "light")
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [theme])
+    setIsLightTheme(resolvedTheme === "light")
+  }, [resolvedTheme])
 
   return (
     <div className={twMerge("flex items-center gap-1", className)} {...rest}>
       <Icon
         name="MoonStar"
-        isSelected={isDarkTheme}
+        isSelected={!isLightTheme}
         className={`w-5 h-5 ${isLightTheme && "text-slate-400"}`}
       />
 
@@ -50,7 +43,7 @@ export function SwitchTheme({
           "dark:bg-section",
           switchProps?.className
         )}
-        checked={checked}
+        checked={isLightTheme}
         onCheckedChange={handleCheckedChange}
         {...switchProps}
       >
