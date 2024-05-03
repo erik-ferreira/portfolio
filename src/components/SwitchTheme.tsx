@@ -39,7 +39,7 @@ export function SwitchTheme({
 
       <Switch.Root
         className={twMerge(
-          "w-16 h-7.5 bg-slate-400 rounded-full relative",
+          "w-16 h-8 bg-slate-400 rounded-full relative",
           "dark:bg-section",
           switchProps?.className
         )}
@@ -50,7 +50,8 @@ export function SwitchTheme({
         <Switch.Thumb
           className={twMerge(
             "block w-6 h-6 rounded-full bg-slate-300 dark:bg-slate-700",
-            "transition-transform translate-x-1 data-[state=checked]:translate-x-[36px] duration-100"
+            "transition-transform translate-x-1 duration-100",
+            "data-[state=checked]:translate-x-9"
           )}
         />
       </Switch.Root>

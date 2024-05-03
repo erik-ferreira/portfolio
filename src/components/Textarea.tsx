@@ -9,12 +9,14 @@ const textarea = tv({
   slots: {
     container: "max-w-[45rem] h-32 relative group",
     base: [
-      "peer w-full h-full bg-section py-3 px-4 indent-8 outline-none rounded resize-none",
+      "peer w-full h-full bg-slate-200 py-3 px-4 indent-8 outline-none rounded resize-none",
       "text-lg placeholder:text-slate-500",
-      "transition-colors border-[1.5px] enabled:group-hover:border-blue-600",
+      "transition-colors border-2 enabled:group-hover:border-blue-600",
       "focus:border-blue-600",
       "disabled:opacity-50",
       "[&:not(:placeholder-shown)]:border-blue-600",
+
+      "dark:bg-section dark:border-[1.5px]",
     ],
     icon: [
       "absolute left-4 top-[18px] w-4.5 h-4.5",
@@ -32,7 +34,7 @@ const textarea = tv({
         icon: "text-slate-500",
       },
       true: {
-        base: "border-red-600",
+        base: "border-red-500 dark:border-red-600",
         icon: "text-red-600",
       },
     },
