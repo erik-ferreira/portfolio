@@ -8,15 +8,13 @@ import { twMerge } from "@/utils/twMerge"
 import { CertificateDTO } from "@/dtos/CertificateDTO"
 
 interface CertificateProps extends ComponentProps<"div"> {
-  isPrev?: boolean
-  isNext?: boolean
+  isActive?: boolean
   certificate: CertificateDTO
 }
 
 export function Certificate({
   className,
-  isPrev = false,
-  isNext = false,
+  isActive = false,
   certificate,
   ...rest
 }: CertificateProps) {
@@ -31,18 +29,10 @@ export function Certificate({
         "2xl:max-w-[720px] 2xl:flex-row",
 
         "bg-slate-300 border-2 border-slate-100",
-        "dark:bg-transparent dark:border dark:border-slate-500",
+        "dark:bg-transparent dark:border",
         {
-          "relative after:absolute after:top-0 after:left-0 after:right-0 after:h-full after:rounded":
-            isPrev || isNext,
-          "xl:after:from-slate-100 xl:dark:after:from-black after:to-[rgba(8, 2, 5, 0.00)]":
-            isPrev || isNext,
-        },
-        {
-          "after:bg-gradient-to-b": isPrev,
-        },
-        {
-          "after:bg-gradient-to-t": isNext,
+          "border-sky-400": isActive,
+          "dark:border-slate-500": !isActive,
         },
         className
       )}
