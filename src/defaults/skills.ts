@@ -77,7 +77,7 @@ export const allSkills: SkillDefault[] = [
   {
     name: "Stitches",
     src: "/skills/stitches.svg",
-    color: "#ECEDEE",
+    color: "#94A3B8",
   },
   {
     name: "Storybook",

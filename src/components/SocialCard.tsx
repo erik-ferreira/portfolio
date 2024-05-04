@@ -18,7 +18,7 @@ export const socialCardsDefaults = {
     ),
     label: "Whatsapp",
     href: "https://wa.me/5585986363644",
-    value: "+55 11 986363644",
+    value: "+55 85 986363644",
   },
   mail: {
     Icon: <Icon name="Mail" className="w-7 h-7 text-red-mail" />,

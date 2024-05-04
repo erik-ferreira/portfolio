@@ -51,7 +51,9 @@ export function Project({ project, className, ...rest }: ProjectProps) {
             className={twMerge(
               "text-3xl font-bold",
               "md:text-4xl",
-              "lg:text-4.75xl"
+              "lg:text-4.75xl",
+
+              "text-slate-800 dark:text-slate-200"
             )}
           >
             {project.title}
@@ -70,7 +72,7 @@ export function Project({ project, className, ...rest }: ProjectProps) {
               <Icon
                 name="Link"
                 size="large"
-                className="opacity-50 cursor-not-allowed"
+                className="opacity-20 dark:opacity-50 cursor-not-allowed"
               />
             )}
           </div>
@@ -89,7 +91,7 @@ export function Project({ project, className, ...rest }: ProjectProps) {
         <Link
           href={project.href}
           label="Ler mais"
-          className="text-slate-500"
+          className="text-slate-700 dark:text-slate-500"
           size="large"
         />
       </div>

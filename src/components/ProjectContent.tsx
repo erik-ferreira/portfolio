@@ -30,6 +30,7 @@ export function ProjectContent() {
     <>
       <Input
         variant="search"
+        nameIcon="Search"
         placeholder="Pesquisar..."
         classNameContainer="mx-auto"
         value={skillName}
