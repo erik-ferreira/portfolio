@@ -32,17 +32,23 @@ export function ContactForm() {
   })
 
   async function handleContact(data: ContactFormData) {
-    setLoadingContact(true)
+    try {
+      setLoadingContact(true)
 
-    const response = await api("/send", {
-      method: "POST",
-      body: JSON.stringify(data),
-    })
+      const response = await api("/send", {
+        method: "POST",
+        body: JSON.stringify(data),
+      })
 
-    setTypeToast(response?.status === 200 ? "success" : "error")
-
-    setShowToast(true)
-    setLoadingContact(false)
+      if (response?.status === 200) {
+        setTypeToast("success")
+      }
+    } catch (err) {
+      setTypeToast("error")
+    } finally {
+      setShowToast(true)
+      setLoadingContact(false)
+    }
   }
 
   return (
