@@ -72,6 +72,7 @@ export function ContactForm() {
           error={errors?.name?.message}
         />
         <Input
+          type="email"
           placeholder="Email"
           nameIcon="Mail"
           classNameContainer="max-md:max-w-full md:col-span-1"
