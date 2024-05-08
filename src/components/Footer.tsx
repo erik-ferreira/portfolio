@@ -10,7 +10,11 @@ interface FooterProps extends ComponentProps<"footer"> {}
 export function Footer({ className, ...rest }: FooterProps) {
   return (
     <footer
-      className={twMerge("border-t border-slate-500", className)}
+      className={twMerge(
+        "border-t border-t-slate-300 -shadow-lg",
+        "dark:border-t-slate-500",
+        className
+      )}
       {...rest}
     >
       <div
@@ -25,7 +29,7 @@ export function Footer({ className, ...rest }: FooterProps) {
           <br /> por Erik Ferreira
         </span>
 
-        <span className="flex gap-2">
+        <span className="flex gap-2 font-semibold">
           Copyright <Icon name="Copyright" /> 2023
         </span>
 

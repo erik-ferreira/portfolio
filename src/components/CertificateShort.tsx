@@ -42,7 +42,7 @@ export function CertificateShort({
           alt={`Certificado do curso de ${certificate.name}. Na imagem contém algumas informações do certificado, como nome, descrição, data de conclusão e empresa.`}
           width={300}
           height={208}
-          className="rounded border border-sky-600 w-full h-full object-contain"
+          className="rounded border-2 border-sky-600 w-full h-full object-contain"
         />
       </article>
     </Link>

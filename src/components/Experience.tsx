@@ -50,14 +50,16 @@ export function Experience({
 
       <div
         className={twMerge(
-          "flex flex-col gap-1 p-6 bg-section rounded border border-sky-600",
+          "flex flex-col gap-1 p-6 rounded border border-sky-600",
+          "bg-slate-200 dark:bg-section",
           "max-lg:order-2",
           "lg:group-even:order-2"
         )}
       >
         <h3
           className={twMerge(
-            "text-2xl leading-snug text-sky-600 font-bold",
+            "text-2xl leading-snug font-bold",
+            "text-sky-700 dark:text-sky-600",
             "lg:text-3.5xl"
           )}
         >
@@ -72,12 +74,15 @@ export function Experience({
           {experience.company}
         </h4>
 
-        <span className="w-full text-slate-300">{experience.description}</span>
+        <span className="w-full font-semibold text-slate-900 dark:text-slate-300">
+          {experience.description}
+        </span>
       </div>
 
       <time
         className={twMerge(
-          "h-fit text-slate-300 text-left",
+          "h-fit text-left font-semibold",
+          "text-slate-900 dark:text-slate-300",
           "max-lg:order-1",
           "lg:group-even:order-1 lg:group-even:text-right"
         )}

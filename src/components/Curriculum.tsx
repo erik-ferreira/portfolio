@@ -20,8 +20,16 @@ export function Curriculum({ className, ...rest }: CurriculumProps) {
       loading="Carregando..."
       {...rest}
     >
-      <Page pageNumber={1} scale={1.6} className="page-curriculum" />
-      <Page pageNumber={2} scale={1.6} className="page-curriculum" />
+      <Page
+        pageNumber={1}
+        scale={1.6}
+        className="page-curriculum border border-slate-900 dark:border-none"
+      />
+      <Page
+        pageNumber={2}
+        scale={1.6}
+        className="page-curriculum border border-slate-900 dark:border-none"
+      />
     </Document>
   )
 }

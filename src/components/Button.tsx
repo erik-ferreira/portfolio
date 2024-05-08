@@ -7,7 +7,10 @@ import { LoadingSpinner } from "@/components/LoadingSpinner"
 import { twMerge } from "@/utils/twMerge"
 
 const button = tv({
-  base: "w-fit flex items-center justify-center gap-2 px-4 py-3 rounded transition-colors duration-400 font-bold disabled:opacity-60 disabled:pointer-events-none",
+  base: [
+    "w-fit flex items-center justify-center gap-2 px-4 py-3 rounded transition-colors duration-400 font-bold",
+    "disabled:opacity-40 dark:disabled:opacity-60 disabled:pointer-events-none",
+  ],
 
   variants: {
     variant: {
@@ -18,7 +21,11 @@ const button = tv({
         "hover:bg-blue-500 hover:text-page",
         "data-[loading=true]:w-32",
       ],
-      "outline-gradient": "bg-page hover:bg-transparent",
+      "outline-gradient": [
+        "bg-slate-100",
+        "hover:text-slate-200 hover:bg-transparent",
+        "dark:bg-page dark:hover:bg-transparent",
+      ],
     },
 
     size: {

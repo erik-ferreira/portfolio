@@ -71,14 +71,15 @@ export function Gallery({
       <Dialog.Portal>
         <Dialog.Overlay
           className={twMerge(
-            "fixed inset-0 bg-black/70",
+            "fixed inset-0 bg-slate-100/80 z-20",
+            "dark:bg-black/80",
             "data-[state=open]:animate-show-dialog data-[state=closed]:animate-hide-dialog"
           )}
         />
 
         <Dialog.Content
           className={twMerge(
-            "aspect-video fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2",
+            "aspect-video fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-30",
             "data-[state=open]:animate-show-dialog data-[state=closed]:animate-hide-dialog",
             {
               "w-[92%] xs:w-4/5 lg:w-[56.25rem] lg:h-[37.5rem]":

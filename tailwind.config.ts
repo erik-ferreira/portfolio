@@ -162,12 +162,14 @@ const config: Config = {
       width: {
         content: "90%",
         "4.5": "1.125rem",
+        "7.5": "1.875rem",
         "67.5": "16.875rem",
         100: "25rem",
       },
 
       height: {
         "4.5": "1.125rem",
+        "7.5": "1.875rem",
         "67.5": "16.875rem",
         100: "25rem",
       },
@@ -211,6 +213,8 @@ const config: Config = {
 
       boxShadow: {
         blue: "0px 0px 24px 0px #2563EB",
+        "-lg":
+          "0 -10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1)",
       },
 
       transitionDuration: {
@@ -223,5 +227,6 @@ const config: Config = {
     },
   },
   plugins: [],
+  darkMode: ["class"],
 }
 export default config

@@ -24,7 +24,8 @@ export function IconSvgExternal({
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       className={twMerge(
-        "w-6 h-6 fill-slate-200",
+        "w-6 h-6 fill-slate-900",
+        "dark:fill-slate-200",
         {
           "hover:fill-blue-600 transition-colors": enabledHover,
         },

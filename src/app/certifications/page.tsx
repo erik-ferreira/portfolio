@@ -14,11 +14,11 @@ export default function Certifications() {
         "lg:p-8"
       )}
     >
-      {/* <Title
+      <Title
         label="Certificados"
         labelBackground="Certifications"
         isTitlePage
-      /> */}
+      />
       <Description label="Aqui você vai encontrar os meus certificados" />
 
       <SwiperCertification />

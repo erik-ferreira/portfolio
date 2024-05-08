@@ -8,15 +8,13 @@ import { twMerge } from "@/utils/twMerge"
 import { CertificateDTO } from "@/dtos/CertificateDTO"
 
 interface CertificateProps extends ComponentProps<"div"> {
-  isPrev?: boolean
-  isNext?: boolean
+  isActive?: boolean
   certificate: CertificateDTO
 }
 
 export function Certificate({
   className,
-  isPrev = false,
-  isNext = false,
+  isActive = false,
   certificate,
   ...rest
 }: CertificateProps) {
@@ -25,19 +23,16 @@ export function Certificate({
   return (
     <div
       className={twMerge(
-        "max-w-[580px] mx-auto h-full flex flex-col gap-2 p-2 border border-slate-500 rounded",
+        "max-w-[580px] mx-auto h-full flex flex-col gap-2 p-2 rounded",
         "lg:p-4",
         "xl:max-w-[520px] xl:p-8 xl:gap-6",
         "2xl:max-w-[720px] 2xl:flex-row",
+
+        "bg-slate-300 border-2 border-slate-100",
+        "dark:bg-transparent dark:border",
         {
-          "relative after:absolute after:top-0 after:left-0 after:right-0 after:h-full after:rounded after:from-black after:to-[rgba(8, 2, 5, 0.00)]":
-            isPrev || isNext,
-        },
-        {
-          "after:bg-gradient-to-b": isPrev,
-        },
-        {
-          "after:bg-gradient-to-t": isNext,
+          "border-sky-400": isActive,
+          "dark:border-slate-500": !isActive,
         },
         className
       )}
@@ -81,21 +76,25 @@ export function Certificate({
       <div>
         <h3
           className={twMerge(
-            "text-3xl font-bold text-sky-500 text-center",
-            "lg:text-start"
+            "text-3xl font-bold text-sky-700 text-center",
+            "lg:text-start",
+
+            "dark:text-sky-500"
           )}
         >
           {certificate.name}
         </h3>
         <p
           className={twMerge(
-            "text-2xl font-bold text-violet-300 text-center",
-            "lg:text-start"
+            "text-2xl font-bold text-violet-400 text-center",
+            "lg:text-start",
+
+            "dark:text-violet-300"
           )}
         >
           {certificate.company}
         </p>
-        <span className="font-semibold text-slate-300">
+        <span className="font-semibold text-slate-900 dark:text-slate-300">
           {certificate.description}
         </span>
       </div>

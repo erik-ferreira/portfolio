@@ -76,11 +76,11 @@ export default function About() {
           </Link>
         </Button>
 
-        <div className="space-y-5">
+        <div className="space-y-5 font-semibold">
           <p className="flex-1">
             Meu nome é Erik de Souza, sou Desenvolvedor Frontend e moro no
             Brasil. Sou fascinado pela stack do Javascript e estou sempre
-            buscando evoluir diariamente. Atualmente estou no 5º semestre de
+            buscando evoluir diariamente. Atualmente estou no 8º semestre de
             Sistemas da Informação e já trabalhei por quase dois anos no
             desenvolvimento web e mobile.
           </p>

@@ -9,12 +9,14 @@ const input = tv({
   slots: {
     container: "relative group",
     base: [
-      "peer w-full bg-section py-3 outline-none rounded",
+      "peer w-full bg-slate-200 py-3 outline-none rounded",
       "text-lg placeholder:text-slate-500",
-      "transition-colors border-[1.5px]",
+      "transition-colors border-2",
       "focus:border-blue-600",
       "disabled:opacity-50",
       "[&:not(:placeholder-shown)]:border-blue-600",
+
+      "dark:bg-section dark:border-[1.5px]",
     ],
     icon: [
       "absolute top-[18px] w-4.5 h-4.5",
@@ -41,10 +43,13 @@ const input = tv({
     hasError: {
       false: {
         base: "border-transparent enabled:group-hover:border-blue-600",
-        icon: "text-slate-500 ",
+        icon: "text-slate-500",
       },
       true: {
-        base: "border-red-600 enabled:group-hover:border-red-700",
+        base: [
+          "border-red-500 enabled:group-hover:border-red-600",
+          "dark:border-red-600 enabled:group-hover:border-red-700",
+        ],
         icon: "text-red-600",
       },
     },

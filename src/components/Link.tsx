@@ -7,7 +7,8 @@ const link = tv({
   slots: {
     base: [
       "leading-base font-semibold flex items-center w-fit gap-1 relative transition-colors",
-      "hover:text-blue-500",
+      "hover:text-blue-500 dark:hover:text-blue-500",
+
       "before:w-0 before:h-[3px] rounded-sm before:bg-blue-500 before:absolute before:-bottom-0.5 before:left-0 before:duration-[250ms]",
       "hover:before:w-full",
     ],
@@ -17,13 +18,13 @@ const link = tv({
   variants: {
     variant: {
       default: {
-        base: "text-slate-200",
+        base: "",
       },
       selected: {
         base: "text-blue-500",
       },
       secondary: {
-        base: "text-violet-500 hover:text-violet-400 before:bg-violet-500",
+        base: "dark:text-violet-500 dark:hover:text-violet-400 dark:before:bg-violet-500",
       },
     },
 

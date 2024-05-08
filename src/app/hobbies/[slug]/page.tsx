@@ -32,7 +32,7 @@ export default function Hobby() {
     >
       <Title label="Hobby" labelBackground="Hobby" isTitlePage />
 
-      <h2 className="text-4xl font-bold text-blue-500 text-center mt-6">
+      <h2 className="text-4xl font-bold text-blue-600 dark:text-blue-500 text-center mt-6">
         {hobby.title}
       </h2>
 

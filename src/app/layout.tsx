@@ -7,6 +7,10 @@ import { Footer } from "@/components/Footer"
 import { SocialIcons } from "@/components/SocialIcons"
 import { ButtonGoToTop } from "@/components/ButtonGoToTop"
 
+import { ThemeProvider } from "@/providers/ThemeProvider"
+
+import { twMerge } from "@/utils/twMerge"
+
 import "./globals.css"
 
 const nunitoSans = Nunito_Sans({
@@ -40,24 +44,31 @@ export default function RootLayout({
       lang="pt-BR"
       className={`${nunitoSans.variable} ${orbitron.variable} ${permanentMarker.variable}`}
     >
-      <body className="bg-page text-slate-200 relative">
-        <NextTopLoader
-          color="#3b82f6"
-          showSpinner={false}
-          height={3}
-          initialPosition={0.3}
-          speed={300}
-        />
+      <body
+        className={twMerge(
+          "bg-slate-100 text-slate-900 relative",
+          "dark:bg-page dark:text-slate-200"
+        )}
+      >
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          <NextTopLoader
+            color="#3b82f6"
+            showSpinner={false}
+            height={3}
+            initialPosition={0.3}
+            speed={300}
+          />
 
-        <Header />
+          <Header />
 
-        {children}
+          {children}
 
-        <Footer />
+          <Footer />
 
-        <SocialIcons variant="fixed" className="hidden md:flex" />
+          <SocialIcons variant="fixed" className="hidden md:flex" />
 
-        <ButtonGoToTop />
+          <ButtonGoToTop />
+        </ThemeProvider>
       </body>
     </html>
   )
