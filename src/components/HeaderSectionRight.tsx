@@ -1,6 +1,7 @@
 "use client"
 
-import { useEffect, useState } from "react"
+import Image from "next/image"
+import { useState } from "react"
 
 import { Icon } from "@/components/Icon"
 import { Navbar } from "@/components/Navbar"
@@ -58,6 +59,16 @@ export function HeaderSectionRight() {
         />
 
         <SwitchTheme className="max-[900px]:hidden" />
+
+        <button className="bg-section w-7 h-7 border rounded-full">
+          <Image
+            src="/countries/brazil.svg"
+            alt="Brazil"
+            width={50}
+            height={35}
+            className="w-full h-full object-contain rounded-full"
+          />
+        </button>
 
         <SocialIcons className="hidden max-[900px]:flex" />
       </div>
