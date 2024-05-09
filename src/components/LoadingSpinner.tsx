@@ -8,6 +8,7 @@ const loadingSpinner = tv({
     size: {
       default: "w-6 h-6",
       large: "w-10 h-10",
+      "extra-large": "w-20 h-20 border-4",
     },
   },
 
