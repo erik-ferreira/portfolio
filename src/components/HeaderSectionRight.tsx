@@ -15,7 +15,7 @@ export function HeaderSectionRight() {
 
   function handleToggleNavbar() {
     const screenWidth = window.innerWidth
-    if (screenWidth > 900) return
+    if (screenWidth > 1000) return
 
     document.body.classList.toggle("stop-scroll", !showNavbar)
 
@@ -27,7 +27,7 @@ export function HeaderSectionRight() {
       <div
         className={twMerge(
           "hidden",
-          "max-[900px]:z-20 max-[900px]:flex max-[900px]:gap-4"
+          "max-[1000px]:z-20 max-[1000px]:flex max-[1000px]:gap-4"
         )}
       >
         <SwitchTheme />
@@ -40,29 +40,29 @@ export function HeaderSectionRight() {
       <div
         className={twMerge(
           "flex items-center gap-8",
-          "max-[900px]:w-screen max-[900px]:h-screen max-[900px]:z-10",
-          "max-[900px]:fixed max-[900px]:left-0 max-[900px]:bottom-0",
-          "max-[900px]:transition-transform max-[900px]:duration-500 max-[900px]:ease-in-out",
-          "max-[900px]:flex-col max-[900px]:justify-center",
+          "max-[1000px]:w-screen max-[1000px]:h-screen max-[1000px]:z-10",
+          "max-[1000px]:fixed max-[1000px]:left-0 max-[1000px]:bottom-0",
+          "max-[1000px]:transition-transform max-[1000px]:duration-500 max-[1000px]:ease-in-out",
+          "max-[1000px]:flex-col max-[1000px]:justify-center",
 
-          "max-[900px]:bg-slate-100 max-[900px]:opacity-90",
-          "dark:max-[900px]:bg-page dark:max-[900px]:opacity-85",
+          "max-[1000px]:bg-slate-100 max-[1000px]:opacity-90",
+          "dark:max-[1000px]:bg-page dark:max-[1000px]:opacity-85",
           {
-            "max-[900px]:translate-x-0": showNavbar,
-            "max-[900px]:translate-x-full": !showNavbar,
+            "max-[1000px]:translate-x-0": showNavbar,
+            "max-[1000px]:translate-x-full": !showNavbar,
           }
         )}
       >
         <Navbar
-          classNameContent="max-[900px]:flex-col"
+          classNameContent="max-[1000px]:flex-col"
           onCloseNavBar={handleToggleNavbar}
         />
 
-        <SwitchTheme className="max-[900px]:hidden" />
+        <SwitchTheme className="max-[1000px]:hidden" />
 
         <ToggleLanguage />
 
-        <SocialIcons className="hidden max-[900px]:flex" />
+        <SocialIcons className="hidden max-[1000px]:flex" />
       </div>
     </>
   )

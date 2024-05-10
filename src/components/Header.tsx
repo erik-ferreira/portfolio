@@ -24,7 +24,7 @@ export function Header({ className, ...rest }: HeaderProps) {
         className={twMerge(
           "max-w-content w-content mx-auto px-8 py-4",
           "flex items-center justify-between",
-          "max-[900px]:w-[95%]",
+          "max-[1000px]:w-[95%]",
           "max-[600px]:px-4",
           "max-xs:px-2"
         )}
@@ -36,7 +36,7 @@ export function Header({ className, ...rest }: HeaderProps) {
             viewBox="0 0 150 40"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
-            className="max-[900px]:w-28 fill-slate-900 dark:fill-slate-200"
+            className="max-[1000px]:w-28 fill-slate-900 dark:fill-slate-200"
           >
             {illustrations.Logo}
           </svg>

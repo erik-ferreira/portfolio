@@ -1,6 +1,5 @@
 "use client"
 
-import { HTMLAttributes } from "react"
 import { usePathname } from "next/navigation"
 import * as NavigationMenu from "@radix-ui/react-navigation-menu"
 
@@ -37,7 +36,7 @@ export function Navbar({
                   label={item.label}
                   hideIcon
                   variant={isLinkSelected ? "selected" : "default"}
-                  className="max-[900px]:text-2xl"
+                  className="max-[1000px]:text-2xl"
                   onClick={onCloseNavBar}
                 />
               </NavigationMenu.Link>
