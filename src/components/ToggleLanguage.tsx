@@ -1,32 +1,16 @@
 import Image from "next/image"
-import { ComponentProps, useEffect, useState } from "react"
+import { ComponentProps } from "react"
 
-import { LanguageDTO } from "@/dtos/LanguageDTO"
+import { useLanguage } from "@/providers/LanguageProvider"
 
 import { twMerge } from "@/utils/twMerge"
 
 interface ToggleLanguageProps extends ComponentProps<"button"> {}
 
 export function ToggleLanguage({ className, ...rest }: ToggleLanguageProps) {
-  const [language, setLanguage] = useState<LanguageDTO>("BR")
+  const { language, handleToggleLanguage } = useLanguage()
 
   const src = language === "BR" ? "/countries/brasil.svg" : "/countries/usa.svg"
-
-  function handleToggleLanguage() {
-    setLanguage((prevState) => (prevState === "BR" ? "USA" : "BR"))
-
-    localStorage.setItem("@portfolio:erik-ferreira", language)
-  }
-
-  useEffect(() => {
-    const storageLanguage = localStorage.getItem(
-      "@portfolio:erik-ferreira"
-    ) as LanguageDTO
-
-    if (storageLanguage) {
-      setLanguage(storageLanguage)
-    }
-  }, [])
 
   return (
     <button

@@ -8,6 +8,7 @@ import { SocialIcons } from "@/components/SocialIcons"
 import { ButtonGoToTop } from "@/components/ButtonGoToTop"
 
 import { ThemeProvider } from "@/providers/ThemeProvider"
+import { LanguageFnProvider } from "@/providers/LanguageProvider"
 
 import { twMerge } from "@/utils/twMerge"
 
@@ -51,23 +52,25 @@ export default function RootLayout({
         )}
       >
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          <NextTopLoader
-            color="#3b82f6"
-            showSpinner={false}
-            height={3}
-            initialPosition={0.3}
-            speed={300}
-          />
+          <LanguageFnProvider>
+            <NextTopLoader
+              color="#3b82f6"
+              showSpinner={false}
+              height={3}
+              initialPosition={0.3}
+              speed={300}
+            />
 
-          <Header />
+            <Header />
 
-          {children}
+            {children}
 
-          <Footer />
+            <Footer />
 
-          <SocialIcons variant="fixed" className="hidden md:flex" />
+            <SocialIcons variant="fixed" className="hidden md:flex" />
 
-          <ButtonGoToTop />
+            <ButtonGoToTop />
+          </LanguageFnProvider>
         </ThemeProvider>
       </body>
     </html>

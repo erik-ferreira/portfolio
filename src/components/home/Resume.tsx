@@ -1,3 +1,5 @@
+"use client"
+
 import Image from "next/image"
 import { ComponentProps } from "react"
 
@@ -9,10 +11,13 @@ import { illustrations } from "@/defaults/illustrations"
 import { twMerge } from "@/utils/twMerge"
 
 import preview from "@/assets/preview.png"
+import { useLanguage } from "@/providers/LanguageProvider"
 
 interface ResumeProps extends ComponentProps<"section"> {}
 
 export function Resume({ className, ...rest }: ResumeProps) {
+  const { language } = useLanguage()
+
   return (
     <section
       className={twMerge(
@@ -158,7 +163,7 @@ export function Resume({ className, ...rest }: ResumeProps) {
               "text-blue-600 dark:text-blue-500"
             )}
           >
-            Um pouco sobre mim
+            {language === "BR" ? "Um pouco sobre mim" : "Little about me"}
           </h2>
           <p className="text-base font-semibold">
             Olá, sou um desenvolvedor front-end com 2 anos de experiência e moro
