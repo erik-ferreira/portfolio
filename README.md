@@ -1,36 +1,31 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Portfólio <img src=".github/favicon.png" width="40px">
 
-## Getting Started
+<br>
 
-First, run the development server:
+<div style="display: flex; justify-content: space-between;">
+  <img src=".github/cover-dark.png" width="49%">
+  <img src=".github/cover-light.png" width="49%">
+</div>
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+<br>
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## :computer: Projeto
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Este é meu portfólio, criado com dois objetivos: o primeiro, mostrar um pouco mais dos meus projetos; e o segundo, treinar minhas habilidades tanto no Figma quanto no código. Inicialmente, construí o layout de todo o projeto no modo dark, depois apliquei a responsividade em todas as telas e, por fim, criei o modo light.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## :rocket: Tecnologias
 
-## Learn More
+- [Next.js](https://nextjs.org)
+- [Typescript](https://www.typescriptlang.org)
+- [TailwindCSS](tailwindcss.com)
+- [React Hook Form](react-hook-form.com)
+- [Zod](https://zod.dev)
+- [React Player](https://github.com/cookpete/react-player)
+- [SwiperJS](https://swiperjs.com)
+- [Google Fonts](https://fonts.google.com)
 
-To learn more about Next.js, take a look at the following resources:
+## :thinking: Como rodar o projeto?
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. `npm i` ou `yarn` para instalar as dependências
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+2. `npm run dev` ou `yarn dev` para rodar o projeto que vai ficar executando no endereço [http://localhost:3000](http://localhost:3000)
