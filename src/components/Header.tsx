@@ -6,7 +6,7 @@ import { HeaderSectionRight } from "@/components/HeaderSectionRight"
 
 import { twMerge } from "@/utils/twMerge"
 
-import { illustrations } from "@/defaults/illustrations"
+import logoSVG from "@/assets/logo.png"
 
 interface HeaderProps extends ComponentProps<"header"> {}
 
@@ -30,16 +30,15 @@ export function Header({ className, ...rest }: HeaderProps) {
         )}
       >
         <Link href="/">
-          <svg
-            width="150"
-            height="40"
-            viewBox="0 0 150 40"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            className="max-[900px]:w-28 fill-slate-900 dark:fill-slate-200"
-          >
-            {illustrations.Logo}
-          </svg>
+          <div className="w-32 min-[900px]:w-[162px]">
+            <Image
+              src={logoSVG}
+              alt="Logo"
+              width={162}
+              height={40}
+              className="w-full h-full"
+            />
+          </div>
         </Link>
 
         <HeaderSectionRight />
