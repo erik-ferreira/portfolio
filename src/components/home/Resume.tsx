@@ -8,7 +8,7 @@ import { illustrations } from "@/defaults/illustrations"
 
 import { twMerge } from "@/utils/twMerge"
 
-import preview from "@/assets/preview.png"
+import aboutMePNG from "@/assets/about-me.png"
 
 interface ResumeProps extends ComponentProps<"section"> {}
 
@@ -178,10 +178,10 @@ export function Resume({ className, ...rest }: ResumeProps) {
 
         <div className="w-[18.75rem] min-[820px]:w-[21.875rem]">
           <Image
-            src={preview}
+            src={aboutMePNG}
             alt="Uma imagem minha trabalhando em alguns projetos em casa"
-            width={350}
-            height={233}
+            width={1600}
+            height={1200}
             className="rounded-lg w-full h-full object-contain"
           />
         </div>
