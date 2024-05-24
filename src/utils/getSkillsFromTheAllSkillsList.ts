@@ -1,13 +1,12 @@
-import { SkillDTO } from "@/dtos/SkillDTO"
+import { SkillDTO, SkillDefault } from "@/dtos/SkillDTO"
 
-import { allSkills } from "@/defaults/skills"
+import { SkillNameToFilter } from "@/defaults/skills"
 
 import { convertColorHexToRgb } from "@/utils/convertColorHexToRgb"
 
-type SkillName = (typeof allSkills)[number]["name"]
-
 export function getSkillsFromTheAllSkillsList(
-  skillsToFilter: SkillName[]
+  allSkills: SkillDefault[],
+  skillsToFilter: SkillNameToFilter[]
 ): SkillDTO[] {
   const filteredSkills = allSkills.filter((skill) =>
     skillsToFilter.includes(skill.name)

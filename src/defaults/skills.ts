@@ -156,7 +156,9 @@ export const allSkills: SkillDefault[] = [
   },
 ]
 
-const skillsDefault = getSkillsFromTheAllSkillsList([
+export type SkillNameToFilter = (typeof allSkills)[number]["name"]
+
+const skillsDefault = getSkillsFromTheAllSkillsList(allSkills, [
   "React",
   "Next",
   "Typescript",

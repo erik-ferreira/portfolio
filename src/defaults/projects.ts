@@ -1,5 +1,7 @@
 import { ProjectDTO, ProjectsDefault } from "@/dtos/ProjectDTO"
 
+import { allSkills } from "@/defaults/skills"
+
 import { generateSlug } from "@/utils/generateSlug"
 import { formatScreenshotsByProject } from "@/utils/formatScreenshotsByProject"
 import { getSkillsFromTheAllSkillsList } from "@/utils/getSkillsFromTheAllSkillsList"
@@ -12,7 +14,7 @@ const projectsDefault: ProjectsDefault[] = [
     src: "/projects/design-system/default.png",
     altSrc:
       "Imagem de uma das telas do projeto Design System. Na imagem consta a lista dos tokens de cores do projeto",
-    skills: getSkillsFromTheAllSkillsList([
+    skills: getSkillsFromTheAllSkillsList(allSkills, [
       "React",
       "Typescript",
       "Stitches",
@@ -34,7 +36,7 @@ const projectsDefault: ProjectsDefault[] = [
     src: "/projects/ignite-shop/default.png",
     altSrc:
       "Tela principal do projeto Ignite Shop com um carousel de imagens das camisetas que estão sendo vendidas; O modal do carrinho para finalizar a compra esta aberto.",
-    skills: getSkillsFromTheAllSkillsList([
+    skills: getSkillsFromTheAllSkillsList(allSkills, [
       "React",
       "Typescript",
       "Stitches",
@@ -53,7 +55,7 @@ const projectsDefault: ProjectsDefault[] = [
     src: "/projects/coffee-delivery/default.png",
     altSrc:
       "Tela de home do Coffee Delivery com alguns de seus produtos, um título contendo 'Encontre o café perfeito para qualquer hora do dia', com uma imagem do copo com alguns grãos de café.",
-    skills: getSkillsFromTheAllSkillsList([
+    skills: getSkillsFromTheAllSkillsList(allSkills, [
       "React",
       "Typescript",
       "TailwindCSS",
@@ -74,7 +76,11 @@ const projectsDefault: ProjectsDefault[] = [
     src: "/projects/reminder-calendar/default.png",
     altSrc:
       "Tela principal do Reminder Calendar, contendo um título escrito 'Janeiro de 2024' e um calendário com os dias do mês.",
-    skills: getSkillsFromTheAllSkillsList(["HTML", "CSS", "Javascript"]),
+    skills: getSkillsFromTheAllSkillsList(allSkills, [
+      "HTML",
+      "CSS",
+      "Javascript",
+    ]),
     githubHref: "https://github.com/erik-ferreira/reminder-calendar",
     demoHref: "https://reminder-calendar-virid.vercel.app",
     screenshots: formatScreenshotsByProject(3, "reminder-calendar"),
@@ -88,7 +94,7 @@ const projectsDefault: ProjectsDefault[] = [
     src: "/projects/book-wise/default.png",
     altSrc:
       "Tela de início do projeto Book Wise, contendo um menu lateral na esquerda para navegação entre as páginas, uma lista de avaliações mais recentes no meio da tela e uma lista de livros populares na direita.",
-    skills: getSkillsFromTheAllSkillsList([
+    skills: getSkillsFromTheAllSkillsList(allSkills, [
       "React",
       "Typescript",
       "Next",
@@ -112,7 +118,7 @@ const projectsDefault: ProjectsDefault[] = [
     src: "/projects/dt-money/default.png",
     altSrc:
       "Imagem de início do DT Money, contendo 2 botões, um para cadastrar uma nova transação e outro de configurações; Mais abaixo 3 cards com os valores de entradas, saídas e total respectivamente.",
-    skills: getSkillsFromTheAllSkillsList([
+    skills: getSkillsFromTheAllSkillsList(allSkills, [
       "React",
       "Typescript",
       "Styled Components",
@@ -131,7 +137,7 @@ const projectsDefault: ProjectsDefault[] = [
     src: "/projects/ignews/default.png",
     altSrc:
       "Tela de início do Ig.news, na esquerda tem um título, subtítulo, descrição e botão para assinar o serviço; Na direita uma imagem de uma mulher de camisa amarela, óculos e cabelo liso preto amarrado, com um café do lado da mesa, lendo alguns posts na plataforma.",
-    skills: getSkillsFromTheAllSkillsList([
+    skills: getSkillsFromTheAllSkillsList(allSkills, [
       "React",
       "Typescript",
       "Next",
@@ -152,7 +158,7 @@ const projectsDefault: ProjectsDefault[] = [
     src: "/projects/rocketshoes/default.png",
     altSrc:
       "Rocket Shoes, um site incrível para comprar seus tênis. Na imagem tem alguns cards de cada tênis, de cores branco e preto, com o botão para adicionar o produto ao carrinho.",
-    skills: getSkillsFromTheAllSkillsList([
+    skills: getSkillsFromTheAllSkillsList(allSkills, [
       "React",
       "Typescript",
       "Styled Components",
@@ -172,7 +178,7 @@ const projectsDefault: ProjectsDefault[] = [
     src: "/projects/ignite-timer/default.png",
     altSrc:
       "Tela com um contador de tempo para executar uma atividade. Uma navegação o canto superior direito para listar as atividades já executadas.",
-    skills: getSkillsFromTheAllSkillsList([
+    skills: getSkillsFromTheAllSkillsList(allSkills, [
       "React",
       "Typescript",
       "Styled Components",
@@ -193,7 +199,7 @@ const projectsDefault: ProjectsDefault[] = [
     src: "/projects/redux-zustand/default.png",
     altSrc:
       "Tela com um player de video e uma lista de módulos e aulas. Botão superior para alterar entre autoplay e um botão para enviar o feedback.",
-    skills: getSkillsFromTheAllSkillsList([
+    skills: getSkillsFromTheAllSkillsList(allSkills, [
       "React",
       "Typescript",
       "TailwindCSS",
@@ -214,7 +220,7 @@ const projectsDefault: ProjectsDefault[] = [
     src: "/projects/github-blog/default.png",
     altSrc:
       "Tela principal do Github Blog, contando com a logo, um sessão de perfil com a foto, nome e bio. Mais abaixo um campo de pesquisa para filtrar a lista de issues de um repositório.",
-    skills: getSkillsFromTheAllSkillsList([
+    skills: getSkillsFromTheAllSkillsList(allSkills, [
       "React",
       "Typescript",
       "Styled Components",
@@ -234,7 +240,7 @@ const projectsDefault: ProjectsDefault[] = [
     src: "/projects/mastering-tailwind/default.png",
     altSrc:
       "Única tela do projeto Mastering Tailwind, contendo um várias informações, como inputs, drawer menu, navegação em tab e etc.",
-    skills: getSkillsFromTheAllSkillsList([
+    skills: getSkillsFromTheAllSkillsList(allSkills, [
       "React",
       "Typescript",
       "TailwindCSS",
