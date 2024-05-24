@@ -3,6 +3,17 @@ import { ExperienceDTO } from "@/dtos/ExperienceDTO"
 export const experiences: ExperienceDTO[] = [
   {
     id: 1,
+    office: "Software Developer Pleno",
+    company: "Deway Tecnologia",
+    description:
+      "Tralbaho no desenvolvimento, manutenção e criação de soluções para o cliente Corpvs Segurança, atuando em dois projetos. No Vanguarda Cash, criamos cofres inteligentes que permitem armazenamento seguro de dinheiro e acesso a crédito diário, além de monitoramento em tempo real dos depósitos. No Vanguarda Log, oferecemos um sistema para monitorar e administrar entregas, com otimização de rotas, histórico detalhado, cálculo de cubagem e exportação de relatórios.",
+    startDate: new Date("2024-01-15"),
+    src: "/experiences/deway.png",
+    altSrc:
+      "Logo da empresa Deway. A logo é composta por um D maiúsculo na cor branca, com algumas formas geométricas dentro da letra.",
+  },
+  {
+    id: 2,
     office: "Desenvolvedor Frontend",
     company: "Tecla T",
     description:
@@ -14,7 +25,7 @@ export const experiences: ExperienceDTO[] = [
       "Logo da empresa Tecla T. A logo é composta por um T maiúsculo na cor azul, com um círculo em volta na cor branca.",
   },
   {
-    id: 2,
+    id: 3,
     office: "Estagiário",
     company: "Softtek - Soluções em Sistemas LTDA",
     description:

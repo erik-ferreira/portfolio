@@ -21,6 +21,7 @@ Este é meu portfólio, criado com dois objetivos: o primeiro, mostrar um pouco 
 - [React Hook Form](react-hook-form.com)
 - [Zod](https://zod.dev)
 - [React Player](https://github.com/cookpete/react-player)
+- [Resend](https://resend.com)
 - [SwiperJS](https://swiperjs.com)
 - [Google Fonts](https://fonts.google.com)
 

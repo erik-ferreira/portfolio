@@ -161,13 +161,14 @@ export function Resume({ className, ...rest }: ResumeProps) {
             Um pouco sobre mim
           </h2>
           <p className="text-base font-semibold">
-            Olá, sou um desenvolvedor front-end com 2 anos de experiência e moro
-            no Ceará, Brasil. Sou apaixonado pela stack do Javascript e estou me
-            especializando em React e React Native para criação de interfaces
-            totalmente responsivas com a melhor experiência possível para o
-            usuário. Sou dedicado e organizado, também ja trabalhei com outras
-            tecnologias como Next, Typescript, Tailwindcss, Socket.io, Zod e
-            etc. Navegue pelo site para conhecer um pouco mais sobre mim.
+            Olá, sou um desenvolvedor front-end com mais de 2 anos de
+            experiência e moro no Ceará, Brasil. Sou apaixonado pela stack do
+            Javascript e estou me especializando em React e React Native para
+            criação de interfaces totalmente responsivas com a melhor
+            experiência possível para o usuário. Sou dedicado e organizado,
+            também ja trabalhei com outras tecnologias como Next, Typescript,
+            Tailwindcss, Socket.io, Zod e etc. Navegue pelo site para conhecer
+            um pouco mais sobre mim.
           </p>
           <Link
             href="/about"

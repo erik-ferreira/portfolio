@@ -9,7 +9,7 @@ const title = tv({
       "md:blur-[2px] md:mb-0",
       "text-slate-300 dark:text-slate-800",
     ],
-    text: "font-marker w-max text-transparent bg-clip-text bg-gradient-to-b from-blue-500 to-violet-600 absolute top-2/4 left-2/4 -translate-x-2/4 -translate-y-2/4",
+    text: "font-marker text-transparent bg-clip-text bg-gradient-to-b from-blue-500 to-violet-600 absolute top-2/4 left-2/4 -translate-x-2/4 -translate-y-2/4 ",
   },
 
   variants: {
@@ -18,9 +18,13 @@ const title = tv({
         background: [
           "text-4.5xl leading-none",
           "min-[490px]:text-6xl",
-          "md:text-8xl md:leading-snug",
+          "md:text-8xl md:leading-none",
         ],
-        text: "text-4.5xl md:text-5.5xl",
+        text: [
+          "w-fit text-4.5xl leading-none",
+          "min-[470px]:w-max",
+          "md:text-5.5xl",
+        ],
       },
       subtitle: {
         background: ["text-4.5xl", "md:text-6.5xl"],
