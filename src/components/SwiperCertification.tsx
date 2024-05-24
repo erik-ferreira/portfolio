@@ -68,18 +68,18 @@ export function SwiperCertification({
           "relative",
 
           // before styles
-          "before:content-normal before:w-full before:h-[300px] before:absolute before:top-0 before:left-0 before:right-0 before:z-[2]",
+          "2xl:before:content-normal 2xl:before:w-full 2xl:before:h-[300px] 2xl:before:absolute 2xl:before:top-0 2xl:before:left-0 2xl:before:right-0 2xl:before:z-[2]",
 
-          "before:from-slate-100 dark:before:from-page",
+          "2xl:before:from-slate-100 2xl:dark:before:from-page",
 
-          "before:bg-gradient-to-b before:from-0% before:to-transparent before:to-100%",
+          "2xl:before:bg-gradient-to-b 2xl:before:from-0% 2xl:before:to-transparent 2xl:before:to-100%",
 
           // after styles
-          "after:content-normal after:w-full after:h-[300px] after:absolute after:bottom-0 after:left-0 after:right-0 after:z-[2]",
+          "2xl:after:content-normal 2xl:after:w-full 2xl:after:h-[300px] 2xl:after:absolute 2xl:after:bottom-0 2xl:after:left-0 2xl:after:right-0 2xl:after:z-[2]",
 
-          "after:from-slate-100 dark:after:from-page",
+          "2xl:after:from-slate-100 2xl:dark:after:from-page",
 
-          "after:bg-gradient-to-t after:from-0% after:to-transparent after:to-100%"
+          "2xl:after:bg-gradient-to-t 2xl:after:from-0% 2xl:after:to-transparent 2xl:after:to-100%"
         )}
         spaceBetween={32}
         centeredSlides

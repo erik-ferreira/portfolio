@@ -18,6 +18,7 @@ export default function Certifications() {
         label="Certificados"
         labelBackground="Certifications"
         isTitlePage
+        classNameBackground="text-3.5xl min-[490px]:text-5xl sm:text-6xl md:text-7xl lg:text-8xl"
       />
       <Description label="Aqui você vai encontrar os meus certificados" />
 
