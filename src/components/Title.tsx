@@ -44,6 +44,7 @@ type TitleProps = ComponentProps<"div"> &
     labelBackground?: string
     isTitlePage?: boolean
     classNameBackground?: string
+    classNameLabel?: string
   }
 
 export function Title({
@@ -53,6 +54,7 @@ export function Title({
   isTitlePage = false,
   className,
   classNameBackground,
+  classNameLabel,
   ...rest
 }: TitleProps) {
   const Component = isTitlePage ? "h1" : "h2"
@@ -64,7 +66,9 @@ export function Title({
         {labelBackground}
       </span>
 
-      <Component className={text()}>{label}</Component>
+      <Component className={text({ className: classNameLabel })}>
+        {label}
+      </Component>
     </div>
   )
 }

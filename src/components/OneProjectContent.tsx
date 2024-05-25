@@ -40,6 +40,7 @@ export function OneProjectContent() {
           label={project.title}
           labelBackground={project.title}
           isTitlePage
+          classNameLabel="whitespace-nowrap"
         />
 
         <div className={twMerge("w-fit mx-auto flex gap-6 my-4")}>
