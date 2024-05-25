@@ -1,4 +1,5 @@
 import Link from "next/link"
+import { Metadata } from "next"
 
 import { Icon } from "@/components/Icon"
 import { Title } from "@/components/Title"
@@ -7,6 +8,10 @@ import { Curriculum } from "@/components/Curriculum"
 import { Description } from "@/components/Description"
 
 import { twMerge } from "@/utils/twMerge"
+
+export const metadata: Metadata = {
+  title: "Resumo | Erik Ferreira",
+}
 
 export default function About() {
   return (

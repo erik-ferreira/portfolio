@@ -1,8 +1,14 @@
+import type { Metadata } from "next"
+
 import { Title } from "@/components/Title"
 import { Description } from "@/components/Description"
 import { ContactForm } from "@/components/ContactForm"
 
 import { twMerge } from "@/utils/twMerge"
+
+export const metadata: Metadata = {
+  title: "Contato | Erik Ferreira",
+}
 
 export default function Contact() {
   return (

@@ -1,9 +1,14 @@
+import type { Metadata } from "next"
 import { Title } from "@/components/Title"
 import { Description } from "@/components/Description"
 
 import { SwiperCertification } from "@/components/SwiperCertification"
 
 import { twMerge } from "@/utils/twMerge"
+
+export const metadata: Metadata = {
+  title: "Certificados | Erik Ferreira",
+}
 
 export default function Certifications() {
   return (

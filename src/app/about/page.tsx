@@ -1,5 +1,6 @@
 import Link from "next/link"
 import Image from "next/image"
+import type { Metadata } from "next"
 
 import { Icon } from "@/components/Icon"
 import { Title } from "@/components/Title"
@@ -11,6 +12,10 @@ import { Description } from "@/components/Description"
 import erikPNG from "@/assets/erik.png"
 
 import { twMerge } from "@/utils/twMerge"
+
+export const metadata: Metadata = {
+  title: "Sobre | Erik Ferreira",
+}
 
 export default function About() {
   return (
