@@ -86,6 +86,7 @@ export function OneProjectContent() {
           labelBackground="Screenshot"
           variant="subtitle"
           className="mt-8"
+          classNameLabel="whitespace-nowrap"
         />
         <div className="w-fit mx-auto flex flex-wrap items-center justify-center gap-8">
           {project.screenshots.map((screenshot) => (
